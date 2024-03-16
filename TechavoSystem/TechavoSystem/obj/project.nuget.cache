@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "riTSpBLUrPb2G7yYXBeDDvRoytTIMcW8BAYse4kEb/4AgQ8lqFFGanJuVWqj0JZJEzGJkIQ3EDazUhYJidrt/Q==",
+  "dgSpecHash": "J/5hH71EhUfLF4DFZ1TEtqNB7bw53uL1LyuL80C6CcyvkT4g67fDykYXGJSogSNbUHJTMjIXlCLA6MDtBzXqFg==",
   "success": true,
-  "projectFilePath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
+    "C:\\Users\\ghosh\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

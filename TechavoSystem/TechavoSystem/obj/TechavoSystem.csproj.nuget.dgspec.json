@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj": {}
+    "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj": {}
   },
   "projects": {
-    "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj": {
+    "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
+        "projectUniqueName": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
         "projectName": "TechavoSystem",
-        "projectPath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
+        "projectPath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\TechavoSystem.csproj",
         "packagesPath": "C:\\Users\\ghosh\\.nuget\\packages\\",
-        "outputPath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\TechavoSystem\\TechavoSystem\\obj\\",
+        "outputPath": "I:\\Documents\\PROJECT\\Srijit\\SrijitPersonalComReadWrite\\Git Repo\\TechavoSystem\\TechavoSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ghosh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
