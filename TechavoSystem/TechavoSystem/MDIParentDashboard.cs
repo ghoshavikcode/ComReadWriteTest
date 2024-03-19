@@ -215,16 +215,18 @@ namespace TechavoSystem
 
             if (incomingDetails.ToUpper().Contains("DESKAI"))
             {
+                //Thread th = new Thread(setFieldsIpSett);
+                //th.Start(incomingDetails);
                 setFieldsIpSett(incomingDetails);
             }
         }
 
-        private void setFieldsIpSett(string details)
+        private void setFieldsIpSett(object details)
         {
             try
             {
-                details = details.Substring(details.IndexOf(" ") + 2, details.Length - 1 - (details.IndexOf(" ") + 2));
-                string[] fields = details.Split(",");
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
                 cmbSelectChannel.SelectedIndex = Convert.ToInt32(fields[0]);
                 cmbAIType.SelectedIndex = Convert.ToInt32(fields[1]);
                 cmbAIAlarm.SelectedIndex = Convert.ToInt32(fields[2]);
@@ -257,7 +259,7 @@ namespace TechavoSystem
                 chkUser4.Checked = fields[19].Substring(3, 1) == "0" ? false : true;
                 chkUser5.Checked = fields[19].Substring(4, 1) == "0" ? false : true;
                 chkUser6.Checked = fields[19].Substring(5, 1) == "0" ? false : true;
-                port.Close();
+                //port.Close();
             }
             catch (Exception ex)
             {
