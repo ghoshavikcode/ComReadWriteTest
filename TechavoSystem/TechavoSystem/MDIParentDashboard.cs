@@ -24,7 +24,7 @@ namespace TechavoSystem
 
         private void Dashboard_FormClosing(object? sender, FormClosingEventArgs e)
         {
-            if (port.IsOpen)
+            if (port is not null && port.IsOpen)
                 port.Close();
         }
 
@@ -70,30 +70,69 @@ namespace TechavoSystem
             pnlGeneralSettings.Visible = false;
             pnlModbusSettings.Visible = false;
             pnlAISettings.Visible = false;
+            pnlDOSettings.Visible = false;
+            pnlDISettings.Visible = false;
+            pnlPulseSettings.Visible = false;
+            pnlUser.Visible = false;
+            pnlModbusSettings.Visible = false;
+            pnlModbusMaster.Visible = false;
+            pnlModbusSlave.Visible = false;
         }
 
         private void menu_Click(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (e.Node.Name == null)
+            try
             {
-                return;
+                if (e.Node.Name == null)
+                {
+                    return;
+                }
+                HideAllPanel();
+                if (e.Node.Name == "GeneralSettings")
+                {
+                    pnlGeneralSettings.Visible = true;
+                }
+                else if (e.Node.Name == "AISettings")
+                {
+                    pnlAISettings.Visible = true;
+                }
+                else if (e.Node.Name == "DISettings")
+                {
+                    pnlDISettings.Visible = true;
+                }
+                else if (e.Node.Name == "DOSettings")
+                {
+                    pnlDOSettings.Visible = true;
+                }
+                else if (e.Node.Name == "ModbusSettings")
+                {
+                    pnlModbusSettings.Visible = true;
+                }
+                else if (e.Node.Name == "GPRSSettings")
+                {
+                    pnlAISettings.Visible = true;
+                }
+                else if (e.Node.Name == "PulseSettings")
+                {
+                    pnlPulseSettings.Visible = true;
+                }
+                else if (e.Node.Name == "User")
+                {
+                    pnlUser.Visible = true;
+                }
+                else if (e.Node.Name == "ModbusSlave")
+                {
+                    pnlModbusSlave.Visible = true;
+                }
+                else if (e.Node.Name == "ModbusMaster")
+                {
+                    pnlModbusMaster.Visible = true;
+                }
             }
-            HideAllPanel();
-            if (e.Node.Name == "GeneralSettings")
+            catch (Exception ex)
             {
-                pnlGeneralSettings.Visible = true;
-            }
-            else if (e.Node.Name == "AISettings")
-            {
-                pnlAISettings.Visible = true;
-            }
-            else if (e.Node.Name == "ModbusSettings")
-            {
-                pnlModbusSettings.Visible = true;
-            }
-            else if (e.Node.Name == "GPRSSettings")
-            {
-                pnlAISettings.Visible = true;
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
             }
         }
 
@@ -192,21 +231,37 @@ namespace TechavoSystem
                 {
                     if (port.IsOpen)
                     {
-                        port.Close();
-                        btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
-                        btnConnect.Text = "Connect";
-                        IsConnected = 0;
+                        CloseConnection();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace.ToString());
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
             }
+        }
+        private void CloseConnection()
+        {
+            if (port.IsOpen)
+            {
+                port.Close();
+            }
+            btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
+            btnConnect.Text = "Connect";
+            IsConnected = 0;
         }
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            this.Invoke(new EventHandler(DoUpDate));
+            try
+            {
+                this.Invoke(new EventHandler(DoUpDate));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
         }
 
         private void DoUpDate(object s, EventArgs e)
@@ -217,11 +272,11 @@ namespace TechavoSystem
             {
                 //Thread th = new Thread(setFieldsIpSett);
                 //th.Start(incomingDetails);
-                setFieldsIpSett(incomingDetails);
+                setFieldsAISett(incomingDetails);
             }
         }
 
-        private void setFieldsIpSett(object details)
+        private void setFieldsAISett(object details)
         {
             try
             {
@@ -263,21 +318,30 @@ namespace TechavoSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace.ToString(), "Information");
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
             }
         }
 
         private void btnWriteMemory_Click(object sender, EventArgs e)
         {
-            string sendData = CreateCommaSeparatedAI();
-            pbProcessing.Value = 0;
-            if (IsConnected == 0)
+            try
             {
-                MessageBox.Show("No port is connected.", "Warning");
-                return;
+                string sendData = CreateCommaSeparatedAI();
+                pbProcessing.Value = 0;
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
             }
-            IsReadyToSend = true;
-            uploadSettings(sendData);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
         }
         private void uploadSettings(string data)
         {
@@ -298,6 +362,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
             }
         }
 
@@ -305,7 +370,7 @@ namespace TechavoSystem
         {
             try
             {
-                if(!port.IsOpen)
+                if (!port.IsOpen)
                 {
                     port.Open();
                 }
@@ -317,6 +382,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
             }
         }
     }
