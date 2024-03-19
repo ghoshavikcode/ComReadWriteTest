@@ -292,7 +292,7 @@ namespace TechavoSystem
                     pbProcessing.Value = 100;
                     IsReadyToSend = false;
                     MessageBox.Show("Data uploaded successfully.", "Information");
-                    port.Close();
+                    //port.Close();
                 }
             }
             catch (Exception ex)
