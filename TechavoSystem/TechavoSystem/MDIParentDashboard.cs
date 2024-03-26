@@ -17,14 +17,6 @@ namespace TechavoSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
-
-            //if (aiControls[0].GetType().ToString().ToLower().Contains("combobox")) {
-            //    ((ComboBox)aiControls[0]).SelectedIndex = 0;
-            //}
-
-
-
             this.menu.NodeMouseClick += menu_Click;
             this.FormClosing += Dashboard_FormClosing;
             cmbComPorts.DataSource = SerialPort.GetPortNames();
@@ -161,21 +153,6 @@ namespace TechavoSystem
         private List<Control> aiControls = new List<Control>();
         private string CreateCommaSeparatedAI()
         {
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(txtMinValue);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
-            //aiControls.Add(cmbSelectChannel);
             StringBuilder sb = new StringBuilder();
             sb.Append("*DESKAI, ,");
             sb.Append(cmbSelectChannel.SelectedIndex.ToString());
