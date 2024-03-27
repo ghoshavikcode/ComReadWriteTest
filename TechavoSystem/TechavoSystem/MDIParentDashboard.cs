@@ -210,6 +210,45 @@ namespace TechavoSystem
             return sb.ToString();
         }
 
+        private string CreateCommaSeparatedDI()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*DESKDI, ,");
+            sb.Append(cmbDISelectChannel.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbDIType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbDIAlarm.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtDIAlarmVerifySec.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDISmsRepeatTime.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDISMSRepeatSec.Text.Trim());
+            sb.Append(",");
+            sb.Append(chkDIDataReport.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(cmbDIType.SelectedIndex);
+            sb.Append(",");
+            sb.Append(cmbDIDO1.SelectedIndex.ToString());
+            sb.Append(cmbDIDO2.SelectedIndex.ToString());
+            sb.Append(cmbDIDO3.SelectedIndex.ToString());
+            sb.Append(cmbDIDO4.SelectedIndex.ToString());
+            sb.Append(cmbDIDO5.SelectedIndex.ToString());
+            sb.Append(cmbDIDO6.SelectedIndex.ToString());
+            sb.Append(cmbDIDO7.SelectedIndex.ToString());
+            sb.Append(cmbDIDO8.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(chkDIUser1.Checked ? 1 : 0);
+            sb.Append(chkDIUser2.Checked ? 1 : 0);
+            sb.Append(chkDIUser3.Checked ? 1 : 0);
+            sb.Append(chkDIUser4.Checked ? 1 : 0);
+            sb.Append(chkDIUser5.Checked ? 1 : 0);
+            sb.Append(chkDIUser6.Checked ? 1 : 0);
+            sb.Append("#");
+            return sb.ToString();
+        }
+
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
@@ -270,9 +309,11 @@ namespace TechavoSystem
 
             if (incomingDetails.ToUpper().Contains("DESKAI"))
             {
-                //Thread th = new Thread(setFieldsIpSett);
-                //th.Start(incomingDetails);
                 setFieldsAISett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("DESKDI"))
+            {
+                setFieldsDISett(incomingDetails);
             }
         }
 
@@ -323,6 +364,42 @@ namespace TechavoSystem
             }
         }
 
+        private void setFieldsDISett(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                cmbDISelectChannel.SelectedIndex = Convert.ToInt32(fields[0]);
+                cmbDIType.SelectedIndex = Convert.ToInt32(fields[1]);
+                cmbDIAlarm.SelectedIndex = Convert.ToInt32(fields[2]);
+                txtDIAlarmVerifySec.Text = fields[3];
+                txtDISmsRepeatTime.Text = fields[4];
+                txtDISMSRepeatSec.Text = fields[5];
+                chkDIDataReport.Checked = fields[6] == "0" ? false : true;
+                cmbDIType.SelectedIndex = Convert.ToInt32(fields[7]);
+                cmbDIDO1.SelectedIndex = Convert.ToInt32(fields[8].Substring(0, 1));
+                cmbDIDO2.SelectedIndex = Convert.ToInt32(fields[8].Substring(1, 1));
+                cmbDIDO3.SelectedIndex = Convert.ToInt32(fields[8].Substring(2, 1));
+                cmbDIDO4.SelectedIndex = Convert.ToInt32(fields[8].Substring(3, 1));
+                cmbDIDO5.SelectedIndex = Convert.ToInt32(fields[8].Substring(4, 1));
+                cmbDIDO6.SelectedIndex = Convert.ToInt32(fields[8].Substring(5, 1));
+                cmbDIDO7.SelectedIndex = Convert.ToInt32(fields[8].Substring(6, 1));
+                cmbDIDO8.SelectedIndex = Convert.ToInt32(fields[8].Substring(7, 1));
+                chkDIUser1.Checked = fields[9].Substring(0, 1) == "0" ? false : true;
+                chkDIUser2.Checked = fields[9].Substring(1, 1) == "0" ? false : true;
+                chkDIUser3.Checked = fields[9].Substring(2, 1) == "0" ? false : true;
+                chkDIUser4.Checked = fields[9].Substring(3, 1) == "0" ? false : true;
+                chkDIUser5.Checked = fields[9].Substring(4, 1) == "0" ? false : true;
+                chkDIUser6.Checked = fields[9].Substring(5, 1) == "0" ? false : true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+
         private void btnWriteMemory_Click(object sender, EventArgs e)
         {
             try
@@ -356,7 +433,6 @@ namespace TechavoSystem
                     pbProcessing.Value = 100;
                     IsReadyToSend = false;
                     MessageBox.Show("Data uploaded successfully.", "Information");
-                    //port.Close();
                 }
             }
             catch (Exception ex)
@@ -376,12 +452,53 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
-                    port.WriteLine("*readdevice#");
+                    port.WriteLine("*readdeviceAI#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+
+        private void btnDIReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceDI#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+
+        private void btnDIWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedDI();
+                pbProcessing.Value = 0;
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
                 CloseConnection();
             }
         }

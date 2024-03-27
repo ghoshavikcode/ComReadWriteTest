@@ -29,21 +29,99 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode13 = new TreeNode("General Settings");
-            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
-            TreeNode treeNode18 = new TreeNode("Modbus Settings");
-            TreeNode treeNode19 = new TreeNode("GPRS Settings");
-            TreeNode treeNode20 = new TreeNode("Alarm Settings");
-            TreeNode treeNode21 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode22 = new TreeNode("User", 0, 0);
-            TreeNode treeNode23 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode24 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode1 = new TreeNode("General Settings");
+            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
+            TreeNode treeNode6 = new TreeNode("Modbus Settings");
+            TreeNode treeNode7 = new TreeNode("GPRS Settings");
+            TreeNode treeNode8 = new TreeNode("Alarm Settings");
+            TreeNode treeNode9 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode10 = new TreeNode("User", 0, 0);
+            TreeNode treeNode11 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode12 = new TreeNode("Modbus Slave", 0, 0);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlDISettings = new Panel();
+            btnDIWriteMemory = new Button();
+            btnDIReadMemory = new Button();
+            groupBox5 = new GroupBox();
+            chkDIUser6 = new CheckBox();
+            label46 = new Label();
+            chkDIUser5 = new CheckBox();
+            label47 = new Label();
+            chkDIUser4 = new CheckBox();
+            label48 = new Label();
+            chkDIUser3 = new CheckBox();
+            label49 = new Label();
+            chkDIUser2 = new CheckBox();
+            label50 = new Label();
+            chkDIUser1 = new CheckBox();
+            label51 = new Label();
+            groupBox6 = new GroupBox();
+            cmbDIDO8 = new ComboBox();
+            label52 = new Label();
+            cmbDIDO7 = new ComboBox();
+            label53 = new Label();
+            cmbDIDO6 = new ComboBox();
+            label54 = new Label();
+            cmbDIDO5 = new ComboBox();
+            label55 = new Label();
+            cmbDIDO4 = new ComboBox();
+            label56 = new Label();
+            cmbDIDO3 = new ComboBox();
+            label57 = new Label();
+            cmbDIDO2 = new ComboBox();
+            label58 = new Label();
+            cmbDIDO1 = new ComboBox();
+            label59 = new Label();
+            cmbDISelectChannel = new ComboBox();
+            label68 = new Label();
+            groupBox8 = new GroupBox();
+            txtDISMSRepeatSec = new TextBox();
+            label69 = new Label();
+            chkDIDataReport = new CheckBox();
+            label102 = new Label();
+            txtDISmsRepeatTime = new TextBox();
+            label103 = new Label();
+            txtDIAlarmVerifySec = new TextBox();
+            label104 = new Label();
+            cmbDIAlarm = new ComboBox();
+            cmbDIType = new ComboBox();
+            txtDIUnit = new TextBox();
+            txtDIName = new TextBox();
+            label105 = new Label();
+            label106 = new Label();
+            label107 = new Label();
+            label108 = new Label();
+            label41 = new Label();
+            pnlUser = new Panel();
+            cmbUserIndex = new ComboBox();
+            label128 = new Label();
+            btnUserWriteMemory = new Button();
+            btnUserReadMemory = new Button();
+            groupBox15 = new GroupBox();
+            cmbSelectDo = new ComboBox();
+            chkIsVolatile = new CheckBox();
+            label129 = new Label();
+            label112 = new Label();
+            chkCanCall = new CheckBox();
+            chkIsAlarm = new CheckBox();
+            chkIsAdmin = new CheckBox();
+            chkSmsOnGprsFail = new CheckBox();
+            chkSmsOnLowTower = new CheckBox();
+            label113 = new Label();
+            label122 = new Label();
+            chkSmsOnPowerOn = new CheckBox();
+            txtUserMobileNo = new TextBox();
+            label123 = new Label();
+            label124 = new Label();
+            label125 = new Label();
+            label126 = new Label();
+            label127 = new Label();
+            label43 = new Label();
             pnlGeneralSettings = new Panel();
             btnGeneralWriteMemory = new Button();
             btnGeneralReadMemory = new Button();
@@ -83,59 +161,6 @@
             cmbDOType = new ComboBox();
             label114 = new Label();
             label40 = new Label();
-            pnlDISettings = new Panel();
-            btnDIWriteMemory = new Button();
-            btnDIReadMemory = new Button();
-            groupBox5 = new GroupBox();
-            chkDIUser6 = new CheckBox();
-            label46 = new Label();
-            chkDIUser5 = new CheckBox();
-            label47 = new Label();
-            chkDIUser4 = new CheckBox();
-            label48 = new Label();
-            chkDIUser3 = new CheckBox();
-            label49 = new Label();
-            chkDIUser2 = new CheckBox();
-            label50 = new Label();
-            chkDIUser1 = new CheckBox();
-            label51 = new Label();
-            groupBox6 = new GroupBox();
-            cmbDIDO8 = new ComboBox();
-            label52 = new Label();
-            cmbDIDO7 = new ComboBox();
-            label53 = new Label();
-            cmbDIDO6 = new ComboBox();
-            label54 = new Label();
-            cmbDIDO5 = new ComboBox();
-            label55 = new Label();
-            cmbDIDO4 = new ComboBox();
-            label56 = new Label();
-            cmbDIDO3 = new ComboBox();
-            label57 = new Label();
-            cmbDIDO2 = new ComboBox();
-            label58 = new Label();
-            cmbDIDO1 = new ComboBox();
-            label59 = new Label();
-            cmbDISelectChannel = new ComboBox();
-            label68 = new Label();
-            groupBox8 = new GroupBox();
-            txtSMSRepeatSec = new TextBox();
-            label69 = new Label();
-            chkDIDataReport = new CheckBox();
-            label102 = new Label();
-            txtDISmsRepeatTime = new TextBox();
-            label103 = new Label();
-            txtDIAlarmVerifySec = new TextBox();
-            label104 = new Label();
-            cmbDIAlarm = new ComboBox();
-            cmbDIType = new ComboBox();
-            txtDIUnit = new TextBox();
-            txtDIName = new TextBox();
-            label105 = new Label();
-            label106 = new Label();
-            label107 = new Label();
-            label108 = new Label();
-            label41 = new Label();
             pnlModbusSettings = new Panel();
             button5 = new Button();
             button6 = new Button();
@@ -215,8 +240,6 @@
             label45 = new Label();
             pnlModbusSlave = new Panel();
             label44 = new Label();
-            pnlUser = new Panel();
-            label43 = new Label();
             pnlAISettings = new Panel();
             btnWriteMemoryAI = new Button();
             btnReadMemoryAI = new Button();
@@ -312,38 +335,17 @@
             label14 = new Label();
             pnlConnect = new Panel();
             pbProcessing = new ProgressBar();
-            btnUserWriteMemory = new Button();
-            btnUserReadMemory = new Button();
-            groupBox15 = new GroupBox();
-            label113 = new Label();
-            label122 = new Label();
-            chkSmsOnPowerOn = new CheckBox();
-            txtUserMobileNo = new TextBox();
-            label123 = new Label();
-            label124 = new Label();
-            label125 = new Label();
-            label126 = new Label();
-            label127 = new Label();
-            label128 = new Label();
-            cmbUserIndex = new ComboBox();
-            chkSmsOnLowTower = new CheckBox();
-            chkSmsOnGprsFail = new CheckBox();
-            chkIsAdmin = new CheckBox();
-            chkIsAlarm = new CheckBox();
-            chkCanCall = new CheckBox();
-            label112 = new Label();
-            label129 = new Label();
-            chkIsVolatile = new CheckBox();
-            cmbSelectDo = new ComboBox();
             pnlDashboard.SuspendLayout();
-            pnlGeneralSettings.SuspendLayout();
-            groupBox13.SuspendLayout();
-            pnlDOSettings.SuspendLayout();
-            groupBox14.SuspendLayout();
             pnlDISettings.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox8.SuspendLayout();
+            pnlUser.SuspendLayout();
+            groupBox15.SuspendLayout();
+            pnlGeneralSettings.SuspendLayout();
+            groupBox13.SuspendLayout();
+            pnlDOSettings.SuspendLayout();
+            groupBox14.SuspendLayout();
             pnlModbusSettings.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox10.SuspendLayout();
@@ -352,7 +354,6 @@
             pnlMenu.SuspendLayout();
             pnlModbusMaster.SuspendLayout();
             pnlModbusSlave.SuspendLayout();
-            pnlUser.SuspendLayout();
             pnlAISettings.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -361,7 +362,6 @@
             pnlPulseSettings.SuspendLayout();
             groupBox7.SuspendLayout();
             pnlConnect.SuspendLayout();
-            groupBox15.SuspendLayout();
             SuspendLayout();
             // 
             // lnkLogin
@@ -377,10 +377,10 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlDISettings);
             pnlDashboard.Controls.Add(pnlUser);
             pnlDashboard.Controls.Add(pnlGeneralSettings);
             pnlDashboard.Controls.Add(pnlDOSettings);
-            pnlDashboard.Controls.Add(pnlDISettings);
             pnlDashboard.Controls.Add(pnlModbusSettings);
             pnlDashboard.Controls.Add(pnlMenu);
             pnlDashboard.Controls.Add(pnlModbusMaster);
@@ -392,6 +392,820 @@
             pnlDashboard.Size = new Size(1460, 834);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlDISettings
+            // 
+            pnlDISettings.Controls.Add(btnDIWriteMemory);
+            pnlDISettings.Controls.Add(btnDIReadMemory);
+            pnlDISettings.Controls.Add(groupBox5);
+            pnlDISettings.Controls.Add(groupBox6);
+            pnlDISettings.Controls.Add(cmbDISelectChannel);
+            pnlDISettings.Controls.Add(label68);
+            pnlDISettings.Controls.Add(groupBox8);
+            pnlDISettings.Controls.Add(label41);
+            pnlDISettings.Location = new Point(321, 9);
+            pnlDISettings.Name = "pnlDISettings";
+            pnlDISettings.Size = new Size(1133, 822);
+            pnlDISettings.TabIndex = 3;
+            pnlDISettings.Visible = false;
+            // 
+            // btnDIWriteMemory
+            // 
+            btnDIWriteMemory.BackColor = Color.Red;
+            btnDIWriteMemory.Cursor = Cursors.Hand;
+            btnDIWriteMemory.ForeColor = Color.White;
+            btnDIWriteMemory.Location = new Point(597, 757);
+            btnDIWriteMemory.Name = "btnDIWriteMemory";
+            btnDIWriteMemory.Size = new Size(172, 42);
+            btnDIWriteMemory.TabIndex = 49;
+            btnDIWriteMemory.Text = "Write Memory";
+            btnDIWriteMemory.UseVisualStyleBackColor = false;
+            btnDIWriteMemory.Click += btnDIWriteMemory_Click;
+            // 
+            // btnDIReadMemory
+            // 
+            btnDIReadMemory.BackColor = Color.DarkKhaki;
+            btnDIReadMemory.Cursor = Cursors.Hand;
+            btnDIReadMemory.ForeColor = Color.White;
+            btnDIReadMemory.Location = new Point(325, 757);
+            btnDIReadMemory.Name = "btnDIReadMemory";
+            btnDIReadMemory.Size = new Size(190, 42);
+            btnDIReadMemory.TabIndex = 48;
+            btnDIReadMemory.Text = "Read Memory";
+            btnDIReadMemory.UseVisualStyleBackColor = false;
+            btnDIReadMemory.Click += btnDIReadMemory_Click;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(chkDIUser6);
+            groupBox5.Controls.Add(label46);
+            groupBox5.Controls.Add(chkDIUser5);
+            groupBox5.Controls.Add(label47);
+            groupBox5.Controls.Add(chkDIUser4);
+            groupBox5.Controls.Add(label48);
+            groupBox5.Controls.Add(chkDIUser3);
+            groupBox5.Controls.Add(label49);
+            groupBox5.Controls.Add(chkDIUser2);
+            groupBox5.Controls.Add(label50);
+            groupBox5.Controls.Add(chkDIUser1);
+            groupBox5.Controls.Add(label51);
+            groupBox5.Location = new Point(763, 126);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(355, 364);
+            groupBox5.TabIndex = 47;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Telephone to Alarm";
+            // 
+            // chkDIUser6
+            // 
+            chkDIUser6.AutoSize = true;
+            chkDIUser6.Location = new Point(119, 199);
+            chkDIUser6.Name = "chkDIUser6";
+            chkDIUser6.Size = new Size(18, 17);
+            chkDIUser6.TabIndex = 37;
+            chkDIUser6.UseVisualStyleBackColor = true;
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Location = new Point(15, 196);
+            label46.Name = "label46";
+            label46.Size = new Size(58, 20);
+            label46.TabIndex = 36;
+            label46.Text = "USER-6";
+            // 
+            // chkDIUser5
+            // 
+            chkDIUser5.AutoSize = true;
+            chkDIUser5.Location = new Point(119, 167);
+            chkDIUser5.Name = "chkDIUser5";
+            chkDIUser5.Size = new Size(18, 17);
+            chkDIUser5.TabIndex = 35;
+            chkDIUser5.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Location = new Point(15, 164);
+            label47.Name = "label47";
+            label47.Size = new Size(58, 20);
+            label47.TabIndex = 34;
+            label47.Text = "USER-5";
+            // 
+            // chkDIUser4
+            // 
+            chkDIUser4.AutoSize = true;
+            chkDIUser4.Location = new Point(119, 135);
+            chkDIUser4.Name = "chkDIUser4";
+            chkDIUser4.Size = new Size(18, 17);
+            chkDIUser4.TabIndex = 33;
+            chkDIUser4.UseVisualStyleBackColor = true;
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Location = new Point(15, 132);
+            label48.Name = "label48";
+            label48.Size = new Size(58, 20);
+            label48.TabIndex = 32;
+            label48.Text = "USER-4";
+            // 
+            // chkDIUser3
+            // 
+            chkDIUser3.AutoSize = true;
+            chkDIUser3.Location = new Point(119, 103);
+            chkDIUser3.Name = "chkDIUser3";
+            chkDIUser3.Size = new Size(18, 17);
+            chkDIUser3.TabIndex = 31;
+            chkDIUser3.UseVisualStyleBackColor = true;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Location = new Point(15, 100);
+            label49.Name = "label49";
+            label49.Size = new Size(58, 20);
+            label49.TabIndex = 30;
+            label49.Text = "USER-3";
+            // 
+            // chkDIUser2
+            // 
+            chkDIUser2.AutoSize = true;
+            chkDIUser2.Location = new Point(119, 71);
+            chkDIUser2.Name = "chkDIUser2";
+            chkDIUser2.Size = new Size(18, 17);
+            chkDIUser2.TabIndex = 29;
+            chkDIUser2.UseVisualStyleBackColor = true;
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Location = new Point(15, 68);
+            label50.Name = "label50";
+            label50.Size = new Size(58, 20);
+            label50.TabIndex = 28;
+            label50.Text = "USER-2";
+            // 
+            // chkDIUser1
+            // 
+            chkDIUser1.AutoSize = true;
+            chkDIUser1.Location = new Point(119, 39);
+            chkDIUser1.Name = "chkDIUser1";
+            chkDIUser1.Size = new Size(18, 17);
+            chkDIUser1.TabIndex = 27;
+            chkDIUser1.UseVisualStyleBackColor = true;
+            // 
+            // label51
+            // 
+            label51.AutoSize = true;
+            label51.Location = new Point(15, 36);
+            label51.Name = "label51";
+            label51.Size = new Size(58, 20);
+            label51.TabIndex = 26;
+            label51.Text = "USER-1";
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(cmbDIDO8);
+            groupBox6.Controls.Add(label52);
+            groupBox6.Controls.Add(cmbDIDO7);
+            groupBox6.Controls.Add(label53);
+            groupBox6.Controls.Add(cmbDIDO6);
+            groupBox6.Controls.Add(label54);
+            groupBox6.Controls.Add(cmbDIDO5);
+            groupBox6.Controls.Add(label55);
+            groupBox6.Controls.Add(cmbDIDO4);
+            groupBox6.Controls.Add(label56);
+            groupBox6.Controls.Add(cmbDIDO3);
+            groupBox6.Controls.Add(label57);
+            groupBox6.Controls.Add(cmbDIDO2);
+            groupBox6.Controls.Add(label58);
+            groupBox6.Controls.Add(cmbDIDO1);
+            groupBox6.Controls.Add(label59);
+            groupBox6.Location = new Point(389, 126);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(361, 364);
+            groupBox6.TabIndex = 46;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Digital Output";
+            // 
+            // cmbDIDO8
+            // 
+            cmbDIDO8.FormattingEnabled = true;
+            cmbDIDO8.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO8.Location = new Point(166, 289);
+            cmbDIDO8.Name = "cmbDIDO8";
+            cmbDIDO8.Size = new Size(185, 28);
+            cmbDIDO8.TabIndex = 43;
+            // 
+            // label52
+            // 
+            label52.AutoSize = true;
+            label52.Location = new Point(8, 303);
+            label52.Name = "label52";
+            label52.Size = new Size(53, 20);
+            label52.TabIndex = 42;
+            label52.Text = "DO - 8";
+            // 
+            // cmbDIDO7
+            // 
+            cmbDIDO7.FormattingEnabled = true;
+            cmbDIDO7.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO7.Location = new Point(166, 252);
+            cmbDIDO7.Name = "cmbDIDO7";
+            cmbDIDO7.Size = new Size(185, 28);
+            cmbDIDO7.TabIndex = 41;
+            // 
+            // label53
+            // 
+            label53.AutoSize = true;
+            label53.Location = new Point(6, 265);
+            label53.Name = "label53";
+            label53.Size = new Size(53, 20);
+            label53.TabIndex = 40;
+            label53.Text = "DO - 7";
+            // 
+            // cmbDIDO6
+            // 
+            cmbDIDO6.FormattingEnabled = true;
+            cmbDIDO6.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO6.Location = new Point(166, 215);
+            cmbDIDO6.Name = "cmbDIDO6";
+            cmbDIDO6.Size = new Size(185, 28);
+            cmbDIDO6.TabIndex = 39;
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Location = new Point(8, 227);
+            label54.Name = "label54";
+            label54.Size = new Size(53, 20);
+            label54.TabIndex = 38;
+            label54.Text = "DO - 6";
+            // 
+            // cmbDIDO5
+            // 
+            cmbDIDO5.FormattingEnabled = true;
+            cmbDIDO5.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO5.Location = new Point(166, 178);
+            cmbDIDO5.Name = "cmbDIDO5";
+            cmbDIDO5.Size = new Size(185, 28);
+            cmbDIDO5.TabIndex = 37;
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Location = new Point(8, 189);
+            label55.Name = "label55";
+            label55.Size = new Size(53, 20);
+            label55.TabIndex = 36;
+            label55.Text = "DO - 5";
+            // 
+            // cmbDIDO4
+            // 
+            cmbDIDO4.FormattingEnabled = true;
+            cmbDIDO4.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO4.Location = new Point(166, 141);
+            cmbDIDO4.Name = "cmbDIDO4";
+            cmbDIDO4.Size = new Size(185, 28);
+            cmbDIDO4.TabIndex = 35;
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Location = new Point(6, 151);
+            label56.Name = "label56";
+            label56.Size = new Size(53, 20);
+            label56.TabIndex = 34;
+            label56.Text = "DO - 4";
+            // 
+            // cmbDIDO3
+            // 
+            cmbDIDO3.FormattingEnabled = true;
+            cmbDIDO3.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO3.Location = new Point(166, 104);
+            cmbDIDO3.Name = "cmbDIDO3";
+            cmbDIDO3.Size = new Size(185, 28);
+            cmbDIDO3.TabIndex = 33;
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Location = new Point(6, 113);
+            label57.Name = "label57";
+            label57.Size = new Size(53, 20);
+            label57.TabIndex = 32;
+            label57.Text = "DO - 3";
+            // 
+            // cmbDIDO2
+            // 
+            cmbDIDO2.FormattingEnabled = true;
+            cmbDIDO2.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO2.Location = new Point(166, 67);
+            cmbDIDO2.Name = "cmbDIDO2";
+            cmbDIDO2.Size = new Size(185, 28);
+            cmbDIDO2.TabIndex = 31;
+            // 
+            // label58
+            // 
+            label58.AutoSize = true;
+            label58.Location = new Point(6, 75);
+            label58.Name = "label58";
+            label58.Size = new Size(53, 20);
+            label58.TabIndex = 30;
+            label58.Text = "DO - 2";
+            // 
+            // cmbDIDO1
+            // 
+            cmbDIDO1.FormattingEnabled = true;
+            cmbDIDO1.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
+            cmbDIDO1.Location = new Point(166, 30);
+            cmbDIDO1.Name = "cmbDIDO1";
+            cmbDIDO1.Size = new Size(185, 28);
+            cmbDIDO1.TabIndex = 29;
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Location = new Point(6, 37);
+            label59.Name = "label59";
+            label59.Size = new Size(53, 20);
+            label59.TabIndex = 28;
+            label59.Text = "DO - 1";
+            // 
+            // cmbDISelectChannel
+            // 
+            cmbDISelectChannel.BackColor = SystemColors.HighlightText;
+            cmbDISelectChannel.Cursor = Cursors.Hand;
+            cmbDISelectChannel.FlatStyle = FlatStyle.Popup;
+            cmbDISelectChannel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            cmbDISelectChannel.FormattingEnabled = true;
+            cmbDISelectChannel.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7" });
+            cmbDISelectChannel.Location = new Point(491, 79);
+            cmbDISelectChannel.Name = "cmbDISelectChannel";
+            cmbDISelectChannel.Size = new Size(224, 28);
+            cmbDISelectChannel.TabIndex = 44;
+            // 
+            // label68
+            // 
+            label68.AutoSize = true;
+            label68.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label68.Location = new Point(362, 82);
+            label68.Name = "label68";
+            label68.Size = new Size(110, 20);
+            label68.TabIndex = 43;
+            label68.Text = "Select Channel";
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(txtDISMSRepeatSec);
+            groupBox8.Controls.Add(label69);
+            groupBox8.Controls.Add(chkDIDataReport);
+            groupBox8.Controls.Add(label102);
+            groupBox8.Controls.Add(txtDISmsRepeatTime);
+            groupBox8.Controls.Add(label103);
+            groupBox8.Controls.Add(txtDIAlarmVerifySec);
+            groupBox8.Controls.Add(label104);
+            groupBox8.Controls.Add(cmbDIAlarm);
+            groupBox8.Controls.Add(cmbDIType);
+            groupBox8.Controls.Add(txtDIUnit);
+            groupBox8.Controls.Add(txtDIName);
+            groupBox8.Controls.Add(label105);
+            groupBox8.Controls.Add(label106);
+            groupBox8.Controls.Add(label107);
+            groupBox8.Controls.Add(label108);
+            groupBox8.Location = new Point(14, 126);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(361, 364);
+            groupBox8.TabIndex = 42;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "Channel Setup";
+            // 
+            // txtDISMSRepeatSec
+            // 
+            txtDISMSRepeatSec.BorderStyle = BorderStyle.FixedSingle;
+            txtDISMSRepeatSec.Location = new Point(165, 228);
+            txtDISMSRepeatSec.MaxLength = 2;
+            txtDISMSRepeatSec.Name = "txtDISMSRepeatSec";
+            txtDISMSRepeatSec.Size = new Size(185, 27);
+            txtDISMSRepeatSec.TabIndex = 29;
+            // 
+            // label69
+            // 
+            label69.AutoSize = true;
+            label69.Location = new Point(14, 235);
+            label69.MaximumSize = new Size(164, 60);
+            label69.Name = "label69";
+            label69.Size = new Size(142, 20);
+            label69.TabIndex = 28;
+            label69.Text = "SMS Repeat Second";
+            // 
+            // chkDIDataReport
+            // 
+            chkDIDataReport.AutoSize = true;
+            chkDIDataReport.Location = new Point(164, 118);
+            chkDIDataReport.Name = "chkDIDataReport";
+            chkDIDataReport.Size = new Size(18, 17);
+            chkDIDataReport.TabIndex = 24;
+            chkDIDataReport.UseVisualStyleBackColor = true;
+            // 
+            // label102
+            // 
+            label102.AutoSize = true;
+            label102.Location = new Point(14, 118);
+            label102.Name = "label102";
+            label102.Size = new Size(109, 20);
+            label102.TabIndex = 23;
+            label102.Text = "DI Data Report";
+            // 
+            // txtDISmsRepeatTime
+            // 
+            txtDISmsRepeatTime.BorderStyle = BorderStyle.FixedSingle;
+            txtDISmsRepeatTime.Location = new Point(165, 188);
+            txtDISmsRepeatTime.MaxLength = 2;
+            txtDISmsRepeatTime.Name = "txtDISmsRepeatTime";
+            txtDISmsRepeatTime.Size = new Size(185, 27);
+            txtDISmsRepeatTime.TabIndex = 22;
+            // 
+            // label103
+            // 
+            label103.AutoSize = true;
+            label103.Location = new Point(15, 196);
+            label103.Name = "label103";
+            label103.Size = new Size(126, 20);
+            label103.TabIndex = 21;
+            label103.Text = "SMS Repeat Time";
+            // 
+            // txtDIAlarmVerifySec
+            // 
+            txtDIAlarmVerifySec.BorderStyle = BorderStyle.FixedSingle;
+            txtDIAlarmVerifySec.Location = new Point(164, 148);
+            txtDIAlarmVerifySec.MaxLength = 2;
+            txtDIAlarmVerifySec.Name = "txtDIAlarmVerifySec";
+            txtDIAlarmVerifySec.Size = new Size(185, 27);
+            txtDIAlarmVerifySec.TabIndex = 20;
+            // 
+            // label104
+            // 
+            label104.AutoSize = true;
+            label104.Location = new Point(14, 157);
+            label104.MaximumSize = new Size(150, 0);
+            label104.Name = "label104";
+            label104.Size = new Size(117, 20);
+            label104.TabIndex = 19;
+            label104.Text = "Alarm Verify Sec";
+            // 
+            // cmbDIAlarm
+            // 
+            cmbDIAlarm.FormattingEnabled = true;
+            cmbDIAlarm.Items.AddRange(new object[] { "AQUIRE 4~20mA", "AQUIRE & ALARM ABOVE HIGH THRESHOLD ", "AQUIRE & ALARM AT BELOW  LOW THRESHOLD 0~10 V", "AQUIRE & ALARM AT BOTH THRESHOLD" });
+            cmbDIAlarm.Location = new Point(164, 309);
+            cmbDIAlarm.Name = "cmbDIAlarm";
+            cmbDIAlarm.Size = new Size(185, 28);
+            cmbDIAlarm.TabIndex = 18;
+            // 
+            // cmbDIType
+            // 
+            cmbDIType.FormattingEnabled = true;
+            cmbDIType.Items.AddRange(new object[] { "Ignore - 0", "4~20mA-1", "0~20mA-2", "0~5 V-3", "0~10 V-4" });
+            cmbDIType.Location = new Point(164, 268);
+            cmbDIType.Name = "cmbDIType";
+            cmbDIType.Size = new Size(185, 28);
+            cmbDIType.TabIndex = 17;
+            // 
+            // txtDIUnit
+            // 
+            txtDIUnit.BorderStyle = BorderStyle.FixedSingle;
+            txtDIUnit.Location = new Point(164, 78);
+            txtDIUnit.MaxLength = 10;
+            txtDIUnit.Name = "txtDIUnit";
+            txtDIUnit.Size = new Size(185, 27);
+            txtDIUnit.TabIndex = 12;
+            // 
+            // txtDIName
+            // 
+            txtDIName.BorderStyle = BorderStyle.FixedSingle;
+            txtDIName.Location = new Point(164, 38);
+            txtDIName.MaxLength = 10;
+            txtDIName.Name = "txtDIName";
+            txtDIName.Size = new Size(185, 27);
+            txtDIName.TabIndex = 11;
+            // 
+            // label105
+            // 
+            label105.AutoSize = true;
+            label105.Location = new Point(14, 40);
+            label105.Name = "label105";
+            label105.Size = new Size(49, 20);
+            label105.TabIndex = 1;
+            label105.Text = "Name";
+            // 
+            // label106
+            // 
+            label106.AutoSize = true;
+            label106.Location = new Point(14, 313);
+            label106.Name = "label106";
+            label106.Size = new Size(68, 20);
+            label106.TabIndex = 10;
+            label106.Text = "DI Alarm";
+            // 
+            // label107
+            // 
+            label107.AutoSize = true;
+            label107.Location = new Point(14, 79);
+            label107.Name = "label107";
+            label107.Size = new Size(36, 20);
+            label107.TabIndex = 2;
+            label107.Text = "Unit";
+            // 
+            // label108
+            // 
+            label108.AutoSize = true;
+            label108.Location = new Point(14, 274);
+            label108.Name = "label108";
+            label108.Size = new Size(59, 20);
+            label108.TabIndex = 9;
+            label108.Text = "DI Type";
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label41.Location = new Point(498, 14);
+            label41.Name = "label41";
+            label41.Size = new Size(132, 31);
+            label41.TabIndex = 1;
+            label41.Text = "DI Settings";
+            // 
+            // pnlUser
+            // 
+            pnlUser.Controls.Add(cmbUserIndex);
+            pnlUser.Controls.Add(label128);
+            pnlUser.Controls.Add(btnUserWriteMemory);
+            pnlUser.Controls.Add(btnUserReadMemory);
+            pnlUser.Controls.Add(groupBox15);
+            pnlUser.Controls.Add(label43);
+            pnlUser.Location = new Point(321, 9);
+            pnlUser.Name = "pnlUser";
+            pnlUser.Size = new Size(1133, 822);
+            pnlUser.TabIndex = 5;
+            pnlUser.Visible = false;
+            // 
+            // cmbUserIndex
+            // 
+            cmbUserIndex.FormattingEnabled = true;
+            cmbUserIndex.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5" });
+            cmbUserIndex.Location = new Point(556, 75);
+            cmbUserIndex.Name = "cmbUserIndex";
+            cmbUserIndex.Size = new Size(151, 28);
+            cmbUserIndex.TabIndex = 64;
+            // 
+            // label128
+            // 
+            label128.AutoSize = true;
+            label128.Location = new Point(424, 79);
+            label128.Name = "label128";
+            label128.Size = new Size(122, 20);
+            label128.TabIndex = 63;
+            label128.Text = "Select User Index";
+            // 
+            // btnUserWriteMemory
+            // 
+            btnUserWriteMemory.BackColor = Color.Red;
+            btnUserWriteMemory.Cursor = Cursors.Hand;
+            btnUserWriteMemory.ForeColor = Color.White;
+            btnUserWriteMemory.Location = new Point(631, 689);
+            btnUserWriteMemory.Name = "btnUserWriteMemory";
+            btnUserWriteMemory.Size = new Size(172, 42);
+            btnUserWriteMemory.TabIndex = 62;
+            btnUserWriteMemory.Text = "Write Memory";
+            btnUserWriteMemory.UseVisualStyleBackColor = false;
+            // 
+            // btnUserReadMemory
+            // 
+            btnUserReadMemory.BackColor = Color.DarkKhaki;
+            btnUserReadMemory.Cursor = Cursors.Hand;
+            btnUserReadMemory.ForeColor = Color.White;
+            btnUserReadMemory.Location = new Point(359, 689);
+            btnUserReadMemory.Name = "btnUserReadMemory";
+            btnUserReadMemory.Size = new Size(190, 42);
+            btnUserReadMemory.TabIndex = 61;
+            btnUserReadMemory.Text = "Read Memory";
+            btnUserReadMemory.UseVisualStyleBackColor = false;
+            // 
+            // groupBox15
+            // 
+            groupBox15.Controls.Add(cmbSelectDo);
+            groupBox15.Controls.Add(chkIsVolatile);
+            groupBox15.Controls.Add(label129);
+            groupBox15.Controls.Add(label112);
+            groupBox15.Controls.Add(chkCanCall);
+            groupBox15.Controls.Add(chkIsAlarm);
+            groupBox15.Controls.Add(chkIsAdmin);
+            groupBox15.Controls.Add(chkSmsOnGprsFail);
+            groupBox15.Controls.Add(chkSmsOnLowTower);
+            groupBox15.Controls.Add(label113);
+            groupBox15.Controls.Add(label122);
+            groupBox15.Controls.Add(chkSmsOnPowerOn);
+            groupBox15.Controls.Add(txtUserMobileNo);
+            groupBox15.Controls.Add(label123);
+            groupBox15.Controls.Add(label124);
+            groupBox15.Controls.Add(label125);
+            groupBox15.Controls.Add(label126);
+            groupBox15.Controls.Add(label127);
+            groupBox15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox15.Location = new Point(300, 120);
+            groupBox15.Name = "groupBox15";
+            groupBox15.Size = new Size(533, 455);
+            groupBox15.TabIndex = 60;
+            groupBox15.TabStop = false;
+            groupBox15.Text = "User Setup";
+            // 
+            // cmbSelectDo
+            // 
+            cmbSelectDo.FormattingEnabled = true;
+            cmbSelectDo.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" });
+            cmbSelectDo.Location = new Point(324, 365);
+            cmbSelectDo.Name = "cmbSelectDo";
+            cmbSelectDo.Size = new Size(188, 28);
+            cmbSelectDo.TabIndex = 65;
+            // 
+            // chkIsVolatile
+            // 
+            chkIsVolatile.AutoSize = true;
+            chkIsVolatile.Enabled = false;
+            chkIsVolatile.Location = new Point(325, 421);
+            chkIsVolatile.Name = "chkIsVolatile";
+            chkIsVolatile.Size = new Size(18, 17);
+            chkIsVolatile.TabIndex = 45;
+            chkIsVolatile.UseVisualStyleBackColor = true;
+            // 
+            // label129
+            // 
+            label129.AutoSize = true;
+            label129.Location = new Point(15, 409);
+            label129.MaximumSize = new Size(164, 60);
+            label129.Name = "label129";
+            label129.Size = new Size(88, 20);
+            label129.TabIndex = 44;
+            label129.Text = "is VOolatile";
+            // 
+            // label112
+            // 
+            label112.AutoSize = true;
+            label112.Location = new Point(13, 363);
+            label112.MaximumSize = new Size(164, 60);
+            label112.Name = "label112";
+            label112.Size = new Size(76, 20);
+            label112.TabIndex = 43;
+            label112.Text = "Select DO";
+            // 
+            // chkCanCall
+            // 
+            chkCanCall.AutoSize = true;
+            chkCanCall.Enabled = false;
+            chkCanCall.Location = new Point(325, 320);
+            chkCanCall.Name = "chkCanCall";
+            chkCanCall.Size = new Size(18, 17);
+            chkCanCall.TabIndex = 42;
+            chkCanCall.UseVisualStyleBackColor = true;
+            // 
+            // chkIsAlarm
+            // 
+            chkIsAlarm.AutoSize = true;
+            chkIsAlarm.Enabled = false;
+            chkIsAlarm.Location = new Point(324, 275);
+            chkIsAlarm.Name = "chkIsAlarm";
+            chkIsAlarm.Size = new Size(18, 17);
+            chkIsAlarm.TabIndex = 41;
+            chkIsAlarm.UseVisualStyleBackColor = true;
+            // 
+            // chkIsAdmin
+            // 
+            chkIsAdmin.AutoSize = true;
+            chkIsAdmin.Enabled = false;
+            chkIsAdmin.Location = new Point(325, 230);
+            chkIsAdmin.Name = "chkIsAdmin";
+            chkIsAdmin.Size = new Size(18, 17);
+            chkIsAdmin.TabIndex = 40;
+            chkIsAdmin.UseVisualStyleBackColor = true;
+            // 
+            // chkSmsOnGprsFail
+            // 
+            chkSmsOnGprsFail.AutoSize = true;
+            chkSmsOnGprsFail.Enabled = false;
+            chkSmsOnGprsFail.Location = new Point(325, 185);
+            chkSmsOnGprsFail.Name = "chkSmsOnGprsFail";
+            chkSmsOnGprsFail.Size = new Size(18, 17);
+            chkSmsOnGprsFail.TabIndex = 39;
+            chkSmsOnGprsFail.UseVisualStyleBackColor = true;
+            // 
+            // chkSmsOnLowTower
+            // 
+            chkSmsOnLowTower.AutoSize = true;
+            chkSmsOnLowTower.Enabled = false;
+            chkSmsOnLowTower.Location = new Point(325, 140);
+            chkSmsOnLowTower.Name = "chkSmsOnLowTower";
+            chkSmsOnLowTower.Size = new Size(18, 17);
+            chkSmsOnLowTower.TabIndex = 38;
+            chkSmsOnLowTower.UseVisualStyleBackColor = true;
+            // 
+            // label113
+            // 
+            label113.AutoSize = true;
+            label113.Location = new Point(15, 317);
+            label113.MaximumSize = new Size(164, 60);
+            label113.Name = "label113";
+            label113.Size = new Size(64, 20);
+            label113.TabIndex = 37;
+            label113.Text = "Can Call";
+            // 
+            // label122
+            // 
+            label122.AutoSize = true;
+            label122.Location = new Point(15, 271);
+            label122.MaximumSize = new Size(164, 60);
+            label122.Name = "label122";
+            label122.Size = new Size(68, 20);
+            label122.TabIndex = 36;
+            label122.Text = "Is Alarm";
+            // 
+            // chkSmsOnPowerOn
+            // 
+            chkSmsOnPowerOn.AutoSize = true;
+            chkSmsOnPowerOn.Enabled = false;
+            chkSmsOnPowerOn.Location = new Point(325, 95);
+            chkSmsOnPowerOn.Name = "chkSmsOnPowerOn";
+            chkSmsOnPowerOn.Size = new Size(18, 17);
+            chkSmsOnPowerOn.TabIndex = 35;
+            chkSmsOnPowerOn.UseVisualStyleBackColor = true;
+            // 
+            // txtUserMobileNo
+            // 
+            txtUserMobileNo.BorderStyle = BorderStyle.FixedSingle;
+            txtUserMobileNo.Location = new Point(324, 40);
+            txtUserMobileNo.MaxLength = 10;
+            txtUserMobileNo.Name = "txtUserMobileNo";
+            txtUserMobileNo.Size = new Size(188, 27);
+            txtUserMobileNo.TabIndex = 34;
+            // 
+            // label123
+            // 
+            label123.AutoSize = true;
+            label123.Location = new Point(14, 179);
+            label123.MaximumSize = new Size(164, 60);
+            label123.Name = "label123";
+            label123.Size = new Size(131, 20);
+            label123.TabIndex = 30;
+            label123.Text = "SMS on GPRS Fail";
+            // 
+            // label124
+            // 
+            label124.AutoSize = true;
+            label124.Location = new Point(13, 225);
+            label124.MaximumSize = new Size(164, 60);
+            label124.Name = "label124";
+            label124.Size = new Size(72, 20);
+            label124.TabIndex = 28;
+            label124.Text = "Is Admin";
+            // 
+            // label125
+            // 
+            label125.AutoSize = true;
+            label125.Location = new Point(14, 133);
+            label125.Name = "label125";
+            label125.Size = new Size(141, 20);
+            label125.TabIndex = 21;
+            label125.Text = "SMS on Low Tower";
+            // 
+            // label126
+            // 
+            label126.AutoSize = true;
+            label126.Location = new Point(13, 87);
+            label126.MaximumSize = new Size(150, 0);
+            label126.Name = "label126";
+            label126.Size = new Size(131, 20);
+            label126.TabIndex = 19;
+            label126.Text = "SMS on Power on";
+            // 
+            // label127
+            // 
+            label127.AutoSize = true;
+            label127.Location = new Point(15, 41);
+            label127.Name = "label127";
+            label127.Size = new Size(119, 20);
+            label127.TabIndex = 28;
+            label127.Text = "Mobile Number";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label43.Location = new Point(538, 6);
+            label43.Name = "label43";
+            label43.Size = new Size(62, 31);
+            label43.TabIndex = 1;
+            label43.Text = "User";
             // 
             // pnlGeneralSettings
             // 
@@ -810,548 +1624,6 @@
             label40.Size = new Size(142, 31);
             label40.TabIndex = 0;
             label40.Text = "DO Settings";
-            // 
-            // pnlDISettings
-            // 
-            pnlDISettings.Controls.Add(btnDIWriteMemory);
-            pnlDISettings.Controls.Add(btnDIReadMemory);
-            pnlDISettings.Controls.Add(groupBox5);
-            pnlDISettings.Controls.Add(groupBox6);
-            pnlDISettings.Controls.Add(cmbDISelectChannel);
-            pnlDISettings.Controls.Add(label68);
-            pnlDISettings.Controls.Add(groupBox8);
-            pnlDISettings.Controls.Add(label41);
-            pnlDISettings.Location = new Point(321, 9);
-            pnlDISettings.Name = "pnlDISettings";
-            pnlDISettings.Size = new Size(1133, 822);
-            pnlDISettings.TabIndex = 3;
-            pnlDISettings.Visible = false;
-            // 
-            // btnDIWriteMemory
-            // 
-            btnDIWriteMemory.BackColor = Color.Red;
-            btnDIWriteMemory.Cursor = Cursors.Hand;
-            btnDIWriteMemory.ForeColor = Color.White;
-            btnDIWriteMemory.Location = new Point(597, 757);
-            btnDIWriteMemory.Name = "btnDIWriteMemory";
-            btnDIWriteMemory.Size = new Size(172, 42);
-            btnDIWriteMemory.TabIndex = 49;
-            btnDIWriteMemory.Text = "Write Memory";
-            btnDIWriteMemory.UseVisualStyleBackColor = false;
-            // 
-            // btnDIReadMemory
-            // 
-            btnDIReadMemory.BackColor = Color.DarkKhaki;
-            btnDIReadMemory.Cursor = Cursors.Hand;
-            btnDIReadMemory.ForeColor = Color.White;
-            btnDIReadMemory.Location = new Point(325, 757);
-            btnDIReadMemory.Name = "btnDIReadMemory";
-            btnDIReadMemory.Size = new Size(190, 42);
-            btnDIReadMemory.TabIndex = 48;
-            btnDIReadMemory.Text = "Read Memory";
-            btnDIReadMemory.UseVisualStyleBackColor = false;
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(chkDIUser6);
-            groupBox5.Controls.Add(label46);
-            groupBox5.Controls.Add(chkDIUser5);
-            groupBox5.Controls.Add(label47);
-            groupBox5.Controls.Add(chkDIUser4);
-            groupBox5.Controls.Add(label48);
-            groupBox5.Controls.Add(chkDIUser3);
-            groupBox5.Controls.Add(label49);
-            groupBox5.Controls.Add(chkDIUser2);
-            groupBox5.Controls.Add(label50);
-            groupBox5.Controls.Add(chkDIUser1);
-            groupBox5.Controls.Add(label51);
-            groupBox5.Location = new Point(763, 126);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(355, 364);
-            groupBox5.TabIndex = 47;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Telephone to Alarm";
-            // 
-            // chkDIUser6
-            // 
-            chkDIUser6.AutoSize = true;
-            chkDIUser6.Location = new Point(119, 199);
-            chkDIUser6.Name = "chkDIUser6";
-            chkDIUser6.Size = new Size(18, 17);
-            chkDIUser6.TabIndex = 37;
-            chkDIUser6.UseVisualStyleBackColor = true;
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Location = new Point(15, 196);
-            label46.Name = "label46";
-            label46.Size = new Size(58, 20);
-            label46.TabIndex = 36;
-            label46.Text = "USER-6";
-            // 
-            // chkDIUser5
-            // 
-            chkDIUser5.AutoSize = true;
-            chkDIUser5.Location = new Point(119, 167);
-            chkDIUser5.Name = "chkDIUser5";
-            chkDIUser5.Size = new Size(18, 17);
-            chkDIUser5.TabIndex = 35;
-            chkDIUser5.UseVisualStyleBackColor = true;
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Location = new Point(15, 164);
-            label47.Name = "label47";
-            label47.Size = new Size(58, 20);
-            label47.TabIndex = 34;
-            label47.Text = "USER-5";
-            // 
-            // chkDIUser4
-            // 
-            chkDIUser4.AutoSize = true;
-            chkDIUser4.Location = new Point(119, 135);
-            chkDIUser4.Name = "chkDIUser4";
-            chkDIUser4.Size = new Size(18, 17);
-            chkDIUser4.TabIndex = 33;
-            chkDIUser4.UseVisualStyleBackColor = true;
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.Location = new Point(15, 132);
-            label48.Name = "label48";
-            label48.Size = new Size(58, 20);
-            label48.TabIndex = 32;
-            label48.Text = "USER-4";
-            // 
-            // chkDIUser3
-            // 
-            chkDIUser3.AutoSize = true;
-            chkDIUser3.Location = new Point(119, 103);
-            chkDIUser3.Name = "chkDIUser3";
-            chkDIUser3.Size = new Size(18, 17);
-            chkDIUser3.TabIndex = 31;
-            chkDIUser3.UseVisualStyleBackColor = true;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Location = new Point(15, 100);
-            label49.Name = "label49";
-            label49.Size = new Size(58, 20);
-            label49.TabIndex = 30;
-            label49.Text = "USER-3";
-            // 
-            // chkDIUser2
-            // 
-            chkDIUser2.AutoSize = true;
-            chkDIUser2.Location = new Point(119, 71);
-            chkDIUser2.Name = "chkDIUser2";
-            chkDIUser2.Size = new Size(18, 17);
-            chkDIUser2.TabIndex = 29;
-            chkDIUser2.UseVisualStyleBackColor = true;
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Location = new Point(15, 68);
-            label50.Name = "label50";
-            label50.Size = new Size(58, 20);
-            label50.TabIndex = 28;
-            label50.Text = "USER-2";
-            // 
-            // chkDIUser1
-            // 
-            chkDIUser1.AutoSize = true;
-            chkDIUser1.Location = new Point(119, 39);
-            chkDIUser1.Name = "chkDIUser1";
-            chkDIUser1.Size = new Size(18, 17);
-            chkDIUser1.TabIndex = 27;
-            chkDIUser1.UseVisualStyleBackColor = true;
-            // 
-            // label51
-            // 
-            label51.AutoSize = true;
-            label51.Location = new Point(15, 36);
-            label51.Name = "label51";
-            label51.Size = new Size(58, 20);
-            label51.TabIndex = 26;
-            label51.Text = "USER-1";
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(cmbDIDO8);
-            groupBox6.Controls.Add(label52);
-            groupBox6.Controls.Add(cmbDIDO7);
-            groupBox6.Controls.Add(label53);
-            groupBox6.Controls.Add(cmbDIDO6);
-            groupBox6.Controls.Add(label54);
-            groupBox6.Controls.Add(cmbDIDO5);
-            groupBox6.Controls.Add(label55);
-            groupBox6.Controls.Add(cmbDIDO4);
-            groupBox6.Controls.Add(label56);
-            groupBox6.Controls.Add(cmbDIDO3);
-            groupBox6.Controls.Add(label57);
-            groupBox6.Controls.Add(cmbDIDO2);
-            groupBox6.Controls.Add(label58);
-            groupBox6.Controls.Add(cmbDIDO1);
-            groupBox6.Controls.Add(label59);
-            groupBox6.Location = new Point(389, 126);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(361, 364);
-            groupBox6.TabIndex = 46;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Digital Output";
-            // 
-            // cmbDIDO8
-            // 
-            cmbDIDO8.FormattingEnabled = true;
-            cmbDIDO8.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO8.Location = new Point(166, 289);
-            cmbDIDO8.Name = "cmbDIDO8";
-            cmbDIDO8.Size = new Size(185, 28);
-            cmbDIDO8.TabIndex = 43;
-            // 
-            // label52
-            // 
-            label52.AutoSize = true;
-            label52.Location = new Point(8, 303);
-            label52.Name = "label52";
-            label52.Size = new Size(53, 20);
-            label52.TabIndex = 42;
-            label52.Text = "DO - 8";
-            // 
-            // cmbDIDO7
-            // 
-            cmbDIDO7.FormattingEnabled = true;
-            cmbDIDO7.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO7.Location = new Point(166, 252);
-            cmbDIDO7.Name = "cmbDIDO7";
-            cmbDIDO7.Size = new Size(185, 28);
-            cmbDIDO7.TabIndex = 41;
-            // 
-            // label53
-            // 
-            label53.AutoSize = true;
-            label53.Location = new Point(6, 265);
-            label53.Name = "label53";
-            label53.Size = new Size(53, 20);
-            label53.TabIndex = 40;
-            label53.Text = "DO - 7";
-            // 
-            // cmbDIDO6
-            // 
-            cmbDIDO6.FormattingEnabled = true;
-            cmbDIDO6.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO6.Location = new Point(166, 215);
-            cmbDIDO6.Name = "cmbDIDO6";
-            cmbDIDO6.Size = new Size(185, 28);
-            cmbDIDO6.TabIndex = 39;
-            // 
-            // label54
-            // 
-            label54.AutoSize = true;
-            label54.Location = new Point(8, 227);
-            label54.Name = "label54";
-            label54.Size = new Size(53, 20);
-            label54.TabIndex = 38;
-            label54.Text = "DO - 6";
-            // 
-            // cmbDIDO5
-            // 
-            cmbDIDO5.FormattingEnabled = true;
-            cmbDIDO5.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO5.Location = new Point(166, 178);
-            cmbDIDO5.Name = "cmbDIDO5";
-            cmbDIDO5.Size = new Size(185, 28);
-            cmbDIDO5.TabIndex = 37;
-            // 
-            // label55
-            // 
-            label55.AutoSize = true;
-            label55.Location = new Point(8, 189);
-            label55.Name = "label55";
-            label55.Size = new Size(53, 20);
-            label55.TabIndex = 36;
-            label55.Text = "DO - 5";
-            // 
-            // cmbDIDO4
-            // 
-            cmbDIDO4.FormattingEnabled = true;
-            cmbDIDO4.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO4.Location = new Point(166, 141);
-            cmbDIDO4.Name = "cmbDIDO4";
-            cmbDIDO4.Size = new Size(185, 28);
-            cmbDIDO4.TabIndex = 35;
-            // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Location = new Point(6, 151);
-            label56.Name = "label56";
-            label56.Size = new Size(53, 20);
-            label56.TabIndex = 34;
-            label56.Text = "DO - 4";
-            // 
-            // cmbDIDO3
-            // 
-            cmbDIDO3.FormattingEnabled = true;
-            cmbDIDO3.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO3.Location = new Point(166, 104);
-            cmbDIDO3.Name = "cmbDIDO3";
-            cmbDIDO3.Size = new Size(185, 28);
-            cmbDIDO3.TabIndex = 33;
-            // 
-            // label57
-            // 
-            label57.AutoSize = true;
-            label57.Location = new Point(6, 113);
-            label57.Name = "label57";
-            label57.Size = new Size(53, 20);
-            label57.TabIndex = 32;
-            label57.Text = "DO - 3";
-            // 
-            // cmbDIDO2
-            // 
-            cmbDIDO2.FormattingEnabled = true;
-            cmbDIDO2.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO2.Location = new Point(166, 67);
-            cmbDIDO2.Name = "cmbDIDO2";
-            cmbDIDO2.Size = new Size(185, 28);
-            cmbDIDO2.TabIndex = 31;
-            // 
-            // label58
-            // 
-            label58.AutoSize = true;
-            label58.Location = new Point(6, 75);
-            label58.Name = "label58";
-            label58.Size = new Size(53, 20);
-            label58.TabIndex = 30;
-            label58.Text = "DO - 2";
-            // 
-            // cmbDIDO1
-            // 
-            cmbDIDO1.FormattingEnabled = true;
-            cmbDIDO1.Items.AddRange(new object[] { "DISABLE", "STATIC ALARM", "ONE SHOT", "DELAYED ONE SHOT", "ON-OFF CONTINUOUS" });
-            cmbDIDO1.Location = new Point(166, 30);
-            cmbDIDO1.Name = "cmbDIDO1";
-            cmbDIDO1.Size = new Size(185, 28);
-            cmbDIDO1.TabIndex = 29;
-            // 
-            // label59
-            // 
-            label59.AutoSize = true;
-            label59.Location = new Point(6, 37);
-            label59.Name = "label59";
-            label59.Size = new Size(53, 20);
-            label59.TabIndex = 28;
-            label59.Text = "DO - 1";
-            // 
-            // cmbDISelectChannel
-            // 
-            cmbDISelectChannel.BackColor = SystemColors.HighlightText;
-            cmbDISelectChannel.Cursor = Cursors.No;
-            cmbDISelectChannel.FlatStyle = FlatStyle.Popup;
-            cmbDISelectChannel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            cmbDISelectChannel.FormattingEnabled = true;
-            cmbDISelectChannel.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7" });
-            cmbDISelectChannel.Location = new Point(491, 79);
-            cmbDISelectChannel.Name = "cmbDISelectChannel";
-            cmbDISelectChannel.Size = new Size(224, 28);
-            cmbDISelectChannel.TabIndex = 44;
-            // 
-            // label68
-            // 
-            label68.AutoSize = true;
-            label68.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label68.Location = new Point(362, 82);
-            label68.Name = "label68";
-            label68.Size = new Size(110, 20);
-            label68.TabIndex = 43;
-            label68.Text = "Select Channel";
-            // 
-            // groupBox8
-            // 
-            groupBox8.Controls.Add(txtSMSRepeatSec);
-            groupBox8.Controls.Add(label69);
-            groupBox8.Controls.Add(chkDIDataReport);
-            groupBox8.Controls.Add(label102);
-            groupBox8.Controls.Add(txtDISmsRepeatTime);
-            groupBox8.Controls.Add(label103);
-            groupBox8.Controls.Add(txtDIAlarmVerifySec);
-            groupBox8.Controls.Add(label104);
-            groupBox8.Controls.Add(cmbDIAlarm);
-            groupBox8.Controls.Add(cmbDIType);
-            groupBox8.Controls.Add(txtDIUnit);
-            groupBox8.Controls.Add(txtDIName);
-            groupBox8.Controls.Add(label105);
-            groupBox8.Controls.Add(label106);
-            groupBox8.Controls.Add(label107);
-            groupBox8.Controls.Add(label108);
-            groupBox8.Location = new Point(14, 126);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(361, 364);
-            groupBox8.TabIndex = 42;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Channel Setup";
-            // 
-            // txtSMSRepeatSec
-            // 
-            txtSMSRepeatSec.BorderStyle = BorderStyle.FixedSingle;
-            txtSMSRepeatSec.Location = new Point(165, 228);
-            txtSMSRepeatSec.MaxLength = 2;
-            txtSMSRepeatSec.Name = "txtSMSRepeatSec";
-            txtSMSRepeatSec.Size = new Size(185, 27);
-            txtSMSRepeatSec.TabIndex = 29;
-            // 
-            // label69
-            // 
-            label69.AutoSize = true;
-            label69.Location = new Point(14, 235);
-            label69.MaximumSize = new Size(164, 60);
-            label69.Name = "label69";
-            label69.Size = new Size(142, 20);
-            label69.TabIndex = 28;
-            label69.Text = "SMS Repeat Second";
-            // 
-            // chkDIDataReport
-            // 
-            chkDIDataReport.AutoSize = true;
-            chkDIDataReport.Location = new Point(164, 118);
-            chkDIDataReport.Name = "chkDIDataReport";
-            chkDIDataReport.Size = new Size(18, 17);
-            chkDIDataReport.TabIndex = 24;
-            chkDIDataReport.UseVisualStyleBackColor = true;
-            // 
-            // label102
-            // 
-            label102.AutoSize = true;
-            label102.Location = new Point(14, 118);
-            label102.Name = "label102";
-            label102.Size = new Size(109, 20);
-            label102.TabIndex = 23;
-            label102.Text = "DI Data Report";
-            // 
-            // txtDISmsRepeatTime
-            // 
-            txtDISmsRepeatTime.BorderStyle = BorderStyle.FixedSingle;
-            txtDISmsRepeatTime.Location = new Point(165, 188);
-            txtDISmsRepeatTime.MaxLength = 2;
-            txtDISmsRepeatTime.Name = "txtDISmsRepeatTime";
-            txtDISmsRepeatTime.Size = new Size(185, 27);
-            txtDISmsRepeatTime.TabIndex = 22;
-            // 
-            // label103
-            // 
-            label103.AutoSize = true;
-            label103.Location = new Point(15, 196);
-            label103.Name = "label103";
-            label103.Size = new Size(126, 20);
-            label103.TabIndex = 21;
-            label103.Text = "SMS Repeat Time";
-            // 
-            // txtDIAlarmVerifySec
-            // 
-            txtDIAlarmVerifySec.BorderStyle = BorderStyle.FixedSingle;
-            txtDIAlarmVerifySec.Location = new Point(164, 148);
-            txtDIAlarmVerifySec.MaxLength = 2;
-            txtDIAlarmVerifySec.Name = "txtDIAlarmVerifySec";
-            txtDIAlarmVerifySec.Size = new Size(185, 27);
-            txtDIAlarmVerifySec.TabIndex = 20;
-            // 
-            // label104
-            // 
-            label104.AutoSize = true;
-            label104.Location = new Point(14, 157);
-            label104.MaximumSize = new Size(150, 0);
-            label104.Name = "label104";
-            label104.Size = new Size(117, 20);
-            label104.TabIndex = 19;
-            label104.Text = "Alarm Verify Sec";
-            // 
-            // cmbDIAlarm
-            // 
-            cmbDIAlarm.FormattingEnabled = true;
-            cmbDIAlarm.Items.AddRange(new object[] { "AQUIRE 4~20mA", "AQUIRE & ALARM ABOVE HIGH THRESHOLD ", "AQUIRE & ALARM AT BELOW  LOW THRESHOLD 0~10 V", "AQUIRE & ALARM AT BOTH THRESHOLD" });
-            cmbDIAlarm.Location = new Point(164, 309);
-            cmbDIAlarm.Name = "cmbDIAlarm";
-            cmbDIAlarm.Size = new Size(185, 28);
-            cmbDIAlarm.TabIndex = 18;
-            // 
-            // cmbDIType
-            // 
-            cmbDIType.FormattingEnabled = true;
-            cmbDIType.Items.AddRange(new object[] { "Ignore - 0", "4~20mA-1", "0~20mA-2", "0~5 V-3", "0~10 V-4" });
-            cmbDIType.Location = new Point(164, 268);
-            cmbDIType.Name = "cmbDIType";
-            cmbDIType.Size = new Size(185, 28);
-            cmbDIType.TabIndex = 17;
-            // 
-            // txtDIUnit
-            // 
-            txtDIUnit.BorderStyle = BorderStyle.FixedSingle;
-            txtDIUnit.Location = new Point(164, 78);
-            txtDIUnit.MaxLength = 10;
-            txtDIUnit.Name = "txtDIUnit";
-            txtDIUnit.Size = new Size(185, 27);
-            txtDIUnit.TabIndex = 12;
-            // 
-            // txtDIName
-            // 
-            txtDIName.BorderStyle = BorderStyle.FixedSingle;
-            txtDIName.Location = new Point(164, 38);
-            txtDIName.MaxLength = 10;
-            txtDIName.Name = "txtDIName";
-            txtDIName.Size = new Size(185, 27);
-            txtDIName.TabIndex = 11;
-            // 
-            // label105
-            // 
-            label105.AutoSize = true;
-            label105.Location = new Point(14, 40);
-            label105.Name = "label105";
-            label105.Size = new Size(49, 20);
-            label105.TabIndex = 1;
-            label105.Text = "Name";
-            // 
-            // label106
-            // 
-            label106.AutoSize = true;
-            label106.Location = new Point(14, 313);
-            label106.Name = "label106";
-            label106.Size = new Size(68, 20);
-            label106.TabIndex = 10;
-            label106.Text = "DI Alarm";
-            // 
-            // label107
-            // 
-            label107.AutoSize = true;
-            label107.Location = new Point(14, 79);
-            label107.Name = "label107";
-            label107.Size = new Size(36, 20);
-            label107.TabIndex = 2;
-            label107.Text = "Unit";
-            // 
-            // label108
-            // 
-            label108.AutoSize = true;
-            label108.Location = new Point(14, 274);
-            label108.Name = "label108";
-            label108.Size = new Size(59, 20);
-            label108.TabIndex = 9;
-            label108.Text = "DI Type";
-            // 
-            // label41
-            // 
-            label41.AutoSize = true;
-            label41.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label41.Location = new Point(498, 14);
-            label41.Name = "label41";
-            label41.Size = new Size(132, 31);
-            label41.TabIndex = 1;
-            label41.Text = "DI Settings";
             // 
             // pnlModbusSettings
             // 
@@ -2070,45 +2342,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode13.Name = "GeneralSettings";
-            treeNode13.Text = "General Settings";
-            treeNode14.ImageIndex = 1;
-            treeNode14.Name = "DOSettings";
-            treeNode14.SelectedImageIndex = 1;
-            treeNode14.Text = "DO Settings";
-            treeNode15.ImageIndex = 1;
-            treeNode15.Name = "DISettings";
-            treeNode15.SelectedImageIndex = 1;
-            treeNode15.Text = "DI Settings";
-            treeNode16.ImageIndex = 1;
-            treeNode16.Name = "AISettings";
-            treeNode16.SelectedImageIndex = 1;
-            treeNode16.Text = "AI Settings";
-            treeNode17.Name = "IOSettings";
-            treeNode17.Text = "IO Settings";
-            treeNode18.Name = "ModbusSettings";
-            treeNode18.Text = "Modbus Settings";
-            treeNode19.Name = "GPRSSettings";
-            treeNode19.Text = "GPRS Settings";
-            treeNode20.Name = "AlarmSettings";
-            treeNode20.Text = "Alarm Settings";
-            treeNode21.ImageIndex = 0;
-            treeNode21.Name = "PulseSettings";
-            treeNode21.SelectedImageIndex = 0;
-            treeNode21.Text = "Pulse Settings";
-            treeNode22.ImageIndex = 0;
-            treeNode22.Name = "User";
-            treeNode22.SelectedImageIndex = 0;
-            treeNode22.Text = "User";
-            treeNode23.ImageIndex = 0;
-            treeNode23.Name = "ModbusMaster";
-            treeNode23.SelectedImageIndex = 0;
-            treeNode23.Text = "Modbus Master";
-            treeNode24.ImageIndex = 0;
-            treeNode24.Name = "ModbusSlave";
-            treeNode24.SelectedImageIndex = 0;
-            treeNode24.Text = "Modbus Slave";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
+            treeNode1.Name = "GeneralSettings";
+            treeNode1.Text = "General Settings";
+            treeNode2.ImageIndex = 1;
+            treeNode2.Name = "DOSettings";
+            treeNode2.SelectedImageIndex = 1;
+            treeNode2.Text = "DO Settings";
+            treeNode3.ImageIndex = 1;
+            treeNode3.Name = "DISettings";
+            treeNode3.SelectedImageIndex = 1;
+            treeNode3.Text = "DI Settings";
+            treeNode4.ImageIndex = 1;
+            treeNode4.Name = "AISettings";
+            treeNode4.SelectedImageIndex = 1;
+            treeNode4.Text = "AI Settings";
+            treeNode5.Name = "IOSettings";
+            treeNode5.Text = "IO Settings";
+            treeNode6.Name = "ModbusSettings";
+            treeNode6.Text = "Modbus Settings";
+            treeNode7.Name = "GPRSSettings";
+            treeNode7.Text = "GPRS Settings";
+            treeNode8.Name = "AlarmSettings";
+            treeNode8.Text = "Alarm Settings";
+            treeNode9.ImageIndex = 0;
+            treeNode9.Name = "PulseSettings";
+            treeNode9.SelectedImageIndex = 0;
+            treeNode9.Text = "Pulse Settings";
+            treeNode10.ImageIndex = 0;
+            treeNode10.Name = "User";
+            treeNode10.SelectedImageIndex = 0;
+            treeNode10.Text = "User";
+            treeNode11.ImageIndex = 0;
+            treeNode11.Name = "ModbusMaster";
+            treeNode11.SelectedImageIndex = 0;
+            treeNode11.Text = "Modbus Master";
+            treeNode12.ImageIndex = 0;
+            treeNode12.Name = "ModbusSlave";
+            treeNode12.SelectedImageIndex = 0;
+            treeNode12.Text = "Modbus Slave";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -2158,30 +2430,6 @@
             label44.Size = new Size(164, 31);
             label44.TabIndex = 1;
             label44.Text = "Modbus Slave";
-            // 
-            // pnlUser
-            // 
-            pnlUser.Controls.Add(cmbUserIndex);
-            pnlUser.Controls.Add(label128);
-            pnlUser.Controls.Add(btnUserWriteMemory);
-            pnlUser.Controls.Add(btnUserReadMemory);
-            pnlUser.Controls.Add(groupBox15);
-            pnlUser.Controls.Add(label43);
-            pnlUser.Location = new Point(321, 9);
-            pnlUser.Name = "pnlUser";
-            pnlUser.Size = new Size(1133, 822);
-            pnlUser.TabIndex = 5;
-            pnlUser.Visible = false;
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label43.Location = new Point(538, 6);
-            label43.Name = "label43";
-            label43.Size = new Size(62, 31);
-            label43.TabIndex = 1;
-            label43.Text = "User";
             // 
             // pnlAISettings
             // 
@@ -3160,252 +3408,6 @@
             pbProcessing.Size = new Size(248, 56);
             pbProcessing.TabIndex = 37;
             // 
-            // btnUserWriteMemory
-            // 
-            btnUserWriteMemory.BackColor = Color.Red;
-            btnUserWriteMemory.Cursor = Cursors.Hand;
-            btnUserWriteMemory.ForeColor = Color.White;
-            btnUserWriteMemory.Location = new Point(631, 689);
-            btnUserWriteMemory.Name = "btnUserWriteMemory";
-            btnUserWriteMemory.Size = new Size(172, 42);
-            btnUserWriteMemory.TabIndex = 62;
-            btnUserWriteMemory.Text = "Write Memory";
-            btnUserWriteMemory.UseVisualStyleBackColor = false;
-            // 
-            // btnUserReadMemory
-            // 
-            btnUserReadMemory.BackColor = Color.DarkKhaki;
-            btnUserReadMemory.Cursor = Cursors.Hand;
-            btnUserReadMemory.ForeColor = Color.White;
-            btnUserReadMemory.Location = new Point(359, 689);
-            btnUserReadMemory.Name = "btnUserReadMemory";
-            btnUserReadMemory.Size = new Size(190, 42);
-            btnUserReadMemory.TabIndex = 61;
-            btnUserReadMemory.Text = "Read Memory";
-            btnUserReadMemory.UseVisualStyleBackColor = false;
-            // 
-            // groupBox15
-            // 
-            groupBox15.Controls.Add(cmbSelectDo);
-            groupBox15.Controls.Add(chkIsVolatile);
-            groupBox15.Controls.Add(label129);
-            groupBox15.Controls.Add(label112);
-            groupBox15.Controls.Add(chkCanCall);
-            groupBox15.Controls.Add(chkIsAlarm);
-            groupBox15.Controls.Add(chkIsAdmin);
-            groupBox15.Controls.Add(chkSmsOnGprsFail);
-            groupBox15.Controls.Add(chkSmsOnLowTower);
-            groupBox15.Controls.Add(label113);
-            groupBox15.Controls.Add(label122);
-            groupBox15.Controls.Add(chkSmsOnPowerOn);
-            groupBox15.Controls.Add(txtUserMobileNo);
-            groupBox15.Controls.Add(label123);
-            groupBox15.Controls.Add(label124);
-            groupBox15.Controls.Add(label125);
-            groupBox15.Controls.Add(label126);
-            groupBox15.Controls.Add(label127);
-            groupBox15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox15.Location = new Point(300, 120);
-            groupBox15.Name = "groupBox15";
-            groupBox15.Size = new Size(533, 455);
-            groupBox15.TabIndex = 60;
-            groupBox15.TabStop = false;
-            groupBox15.Text = "User Setup";
-            // 
-            // label113
-            // 
-            label113.AutoSize = true;
-            label113.Location = new Point(15, 317);
-            label113.MaximumSize = new Size(164, 60);
-            label113.Name = "label113";
-            label113.Size = new Size(64, 20);
-            label113.TabIndex = 37;
-            label113.Text = "Can Call";
-            // 
-            // label122
-            // 
-            label122.AutoSize = true;
-            label122.Location = new Point(15, 271);
-            label122.MaximumSize = new Size(164, 60);
-            label122.Name = "label122";
-            label122.Size = new Size(68, 20);
-            label122.TabIndex = 36;
-            label122.Text = "Is Alarm";
-            // 
-            // chkSmsOnPowerOn
-            // 
-            chkSmsOnPowerOn.AutoSize = true;
-            chkSmsOnPowerOn.Enabled = false;
-            chkSmsOnPowerOn.Location = new Point(325, 95);
-            chkSmsOnPowerOn.Name = "chkSmsOnPowerOn";
-            chkSmsOnPowerOn.Size = new Size(18, 17);
-            chkSmsOnPowerOn.TabIndex = 35;
-            chkSmsOnPowerOn.UseVisualStyleBackColor = true;
-            // 
-            // txtUserMobileNo
-            // 
-            txtUserMobileNo.BorderStyle = BorderStyle.FixedSingle;
-            txtUserMobileNo.Location = new Point(324, 40);
-            txtUserMobileNo.MaxLength = 10;
-            txtUserMobileNo.Name = "txtUserMobileNo";
-            txtUserMobileNo.Size = new Size(188, 27);
-            txtUserMobileNo.TabIndex = 34;
-            // 
-            // label123
-            // 
-            label123.AutoSize = true;
-            label123.Location = new Point(14, 179);
-            label123.MaximumSize = new Size(164, 60);
-            label123.Name = "label123";
-            label123.Size = new Size(131, 20);
-            label123.TabIndex = 30;
-            label123.Text = "SMS on GPRS Fail";
-            // 
-            // label124
-            // 
-            label124.AutoSize = true;
-            label124.Location = new Point(13, 225);
-            label124.MaximumSize = new Size(164, 60);
-            label124.Name = "label124";
-            label124.Size = new Size(72, 20);
-            label124.TabIndex = 28;
-            label124.Text = "Is Admin";
-            // 
-            // label125
-            // 
-            label125.AutoSize = true;
-            label125.Location = new Point(14, 133);
-            label125.Name = "label125";
-            label125.Size = new Size(141, 20);
-            label125.TabIndex = 21;
-            label125.Text = "SMS on Low Tower";
-            // 
-            // label126
-            // 
-            label126.AutoSize = true;
-            label126.Location = new Point(13, 87);
-            label126.MaximumSize = new Size(150, 0);
-            label126.Name = "label126";
-            label126.Size = new Size(131, 20);
-            label126.TabIndex = 19;
-            label126.Text = "SMS on Power on";
-            // 
-            // label127
-            // 
-            label127.AutoSize = true;
-            label127.Location = new Point(15, 41);
-            label127.Name = "label127";
-            label127.Size = new Size(119, 20);
-            label127.TabIndex = 28;
-            label127.Text = "Mobile Number";
-            // 
-            // label128
-            // 
-            label128.AutoSize = true;
-            label128.Location = new Point(424, 79);
-            label128.Name = "label128";
-            label128.Size = new Size(122, 20);
-            label128.TabIndex = 63;
-            label128.Text = "Select User Index";
-            // 
-            // cmbUserIndex
-            // 
-            cmbUserIndex.FormattingEnabled = true;
-            cmbUserIndex.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5" });
-            cmbUserIndex.Location = new Point(556, 75);
-            cmbUserIndex.Name = "cmbUserIndex";
-            cmbUserIndex.Size = new Size(151, 28);
-            cmbUserIndex.TabIndex = 64;
-            // 
-            // chkSmsOnLowTower
-            // 
-            chkSmsOnLowTower.AutoSize = true;
-            chkSmsOnLowTower.Enabled = false;
-            chkSmsOnLowTower.Location = new Point(325, 140);
-            chkSmsOnLowTower.Name = "chkSmsOnLowTower";
-            chkSmsOnLowTower.Size = new Size(18, 17);
-            chkSmsOnLowTower.TabIndex = 38;
-            chkSmsOnLowTower.UseVisualStyleBackColor = true;
-            // 
-            // chkSmsOnGprsFail
-            // 
-            chkSmsOnGprsFail.AutoSize = true;
-            chkSmsOnGprsFail.Enabled = false;
-            chkSmsOnGprsFail.Location = new Point(325, 185);
-            chkSmsOnGprsFail.Name = "chkSmsOnGprsFail";
-            chkSmsOnGprsFail.Size = new Size(18, 17);
-            chkSmsOnGprsFail.TabIndex = 39;
-            chkSmsOnGprsFail.UseVisualStyleBackColor = true;
-            // 
-            // chkIsAdmin
-            // 
-            chkIsAdmin.AutoSize = true;
-            chkIsAdmin.Enabled = false;
-            chkIsAdmin.Location = new Point(325, 230);
-            chkIsAdmin.Name = "chkIsAdmin";
-            chkIsAdmin.Size = new Size(18, 17);
-            chkIsAdmin.TabIndex = 40;
-            chkIsAdmin.UseVisualStyleBackColor = true;
-            // 
-            // chkIsAlarm
-            // 
-            chkIsAlarm.AutoSize = true;
-            chkIsAlarm.Enabled = false;
-            chkIsAlarm.Location = new Point(324, 275);
-            chkIsAlarm.Name = "chkIsAlarm";
-            chkIsAlarm.Size = new Size(18, 17);
-            chkIsAlarm.TabIndex = 41;
-            chkIsAlarm.UseVisualStyleBackColor = true;
-            // 
-            // chkCanCall
-            // 
-            chkCanCall.AutoSize = true;
-            chkCanCall.Enabled = false;
-            chkCanCall.Location = new Point(325, 320);
-            chkCanCall.Name = "chkCanCall";
-            chkCanCall.Size = new Size(18, 17);
-            chkCanCall.TabIndex = 42;
-            chkCanCall.UseVisualStyleBackColor = true;
-            // 
-            // label112
-            // 
-            label112.AutoSize = true;
-            label112.Location = new Point(13, 363);
-            label112.MaximumSize = new Size(164, 60);
-            label112.Name = "label112";
-            label112.Size = new Size(76, 20);
-            label112.TabIndex = 43;
-            label112.Text = "Select DO";
-            // 
-            // label129
-            // 
-            label129.AutoSize = true;
-            label129.Location = new Point(15, 409);
-            label129.MaximumSize = new Size(164, 60);
-            label129.Name = "label129";
-            label129.Size = new Size(88, 20);
-            label129.TabIndex = 44;
-            label129.Text = "is VOolatile";
-            // 
-            // chkIsVolatile
-            // 
-            chkIsVolatile.AutoSize = true;
-            chkIsVolatile.Enabled = false;
-            chkIsVolatile.Location = new Point(325, 421);
-            chkIsVolatile.Name = "chkIsVolatile";
-            chkIsVolatile.Size = new Size(18, 17);
-            chkIsVolatile.TabIndex = 45;
-            chkIsVolatile.UseVisualStyleBackColor = true;
-            // 
-            // cmbSelectDo
-            // 
-            cmbSelectDo.FormattingEnabled = true;
-            cmbSelectDo.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" });
-            cmbSelectDo.Location = new Point(324, 365);
-            cmbSelectDo.Name = "cmbSelectDo";
-            cmbSelectDo.Size = new Size(188, 28);
-            cmbSelectDo.TabIndex = 65;
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -3421,14 +3423,6 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
-            pnlGeneralSettings.ResumeLayout(false);
-            pnlGeneralSettings.PerformLayout();
-            groupBox13.ResumeLayout(false);
-            groupBox13.PerformLayout();
-            pnlDOSettings.ResumeLayout(false);
-            pnlDOSettings.PerformLayout();
-            groupBox14.ResumeLayout(false);
-            groupBox14.PerformLayout();
             pnlDISettings.ResumeLayout(false);
             pnlDISettings.PerformLayout();
             groupBox5.ResumeLayout(false);
@@ -3437,6 +3431,18 @@
             groupBox6.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
+            pnlUser.ResumeLayout(false);
+            pnlUser.PerformLayout();
+            groupBox15.ResumeLayout(false);
+            groupBox15.PerformLayout();
+            pnlGeneralSettings.ResumeLayout(false);
+            pnlGeneralSettings.PerformLayout();
+            groupBox13.ResumeLayout(false);
+            groupBox13.PerformLayout();
+            pnlDOSettings.ResumeLayout(false);
+            pnlDOSettings.PerformLayout();
+            groupBox14.ResumeLayout(false);
+            groupBox14.PerformLayout();
             pnlModbusSettings.ResumeLayout(false);
             pnlModbusSettings.PerformLayout();
             groupBox9.ResumeLayout(false);
@@ -3452,8 +3458,6 @@
             pnlModbusMaster.PerformLayout();
             pnlModbusSlave.ResumeLayout(false);
             pnlModbusSlave.PerformLayout();
-            pnlUser.ResumeLayout(false);
-            pnlUser.PerformLayout();
             pnlAISettings.ResumeLayout(false);
             pnlAISettings.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -3470,8 +3474,6 @@
             groupBox7.PerformLayout();
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
-            groupBox15.ResumeLayout(false);
-            groupBox15.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -3703,7 +3705,7 @@
         private Label label106;
         private Label label107;
         private Label label108;
-        private TextBox txtSMSRepeatSec;
+        private TextBox txtDISMSRepeatSec;
         private Button button1;
         private Button button2;
         private ComboBox comboBox9;
