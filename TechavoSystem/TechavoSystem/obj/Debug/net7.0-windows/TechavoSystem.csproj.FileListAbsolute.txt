@@ -37,9 +37,10 @@ I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\Te
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\bin\Debug\net7.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\bin\Debug\net7.0-windows\runtimes\unix\lib\net7.0\System.IO.Ports.dll
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.IO.Ports.dll
-I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoSystem.csproj.CopyComplete
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoSystem.dll
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\refint\TechavoSystem.dll
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoSystem.pdb
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoSystem.genruntimeconfig.cache
 I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\ref\TechavoSystem.dll
+I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoSystem.sourcelink.json
+I:\Documents\PROJECT\Srijit\SrijitPersonalComReadWrite\Git Repo\TechavoSystem\TechavoSystem\obj\Debug\net7.0-windows\TechavoS.DFAB1788.Up2Date

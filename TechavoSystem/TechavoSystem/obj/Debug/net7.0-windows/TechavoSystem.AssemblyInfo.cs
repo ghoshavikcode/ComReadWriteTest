@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechavoSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c247e92205cfb259415f4cd8e6b4734789aa300b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechavoSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechavoSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
