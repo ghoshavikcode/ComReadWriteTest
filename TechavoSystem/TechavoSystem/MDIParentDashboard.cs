@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualBasic;
-using System.IO.Ports;
+﻿using System.IO.Ports;
 using System.Text;
 
 namespace TechavoSystem
 {
     public partial class Dashboard : Form
     {
+        #region CommonToAll
         private static int IsConnected = 0;
         static SerialPort port;
         private static bool IsReadyToSend = false;
@@ -151,6 +151,103 @@ namespace TechavoSystem
             txtTotalizerUnit.Enabled = isChecked;
         }
         private List<Control> aiControls = new List<Control>();
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (IsConnected == 0)
+                {
+                    port = new SerialPort(cmbComPorts.SelectedItem.ToString(), 9600, Parity.None, 8, StopBits.One);
+                    port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
+                    // open serial port
+                    if (!port.IsOpen)
+                    {
+                        port.Open();
+                        btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\greenconnect.jpg");
+                        btnConnect.Text = "Connected";
+                        IsConnected = 1;
+                    }
+                }
+                else if (IsConnected == 1)
+                {
+                    if (port.IsOpen)
+                    {
+                        CloseConnection();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void CloseConnection()
+        {
+            if (port.IsOpen)
+            {
+                port.Close();
+            }
+            btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
+            btnConnect.Text = "Connect";
+            IsConnected = 0;
+        }
+        private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                this.Invoke(new EventHandler(DoUpDate));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void DoUpDate(object s, EventArgs e)
+        {
+            string incomingDetails = port.ReadExisting();
+
+            if (incomingDetails.ToUpper().Contains("DESKAI"))
+            {
+                setFieldsAISett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("DESKDI"))
+            {
+                setFieldsDISett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("DESKDO"))
+            {
+                setFieldsDOSett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("DESKPULSE"))
+            {
+                setFieldsPulseSett(incomingDetails);
+            }
+        }
+        private void uploadSettings(string data)
+        {
+            try
+            {
+                if (IsReadyToSend)
+                {
+                    if (port.IsOpen)
+                    {
+                        port.WriteLine(data);
+                    }
+                    pbProcessing.Value = 100;
+                    IsReadyToSend = false;
+                    MessageBox.Show("Data uploaded successfully.", "Information");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
+        #region AI
         private string CreateCommaSeparatedAI()
         {
             StringBuilder sb = new StringBuilder();
@@ -209,114 +306,6 @@ namespace TechavoSystem
             sb.Append("#");
             return sb.ToString();
         }
-
-        private string CreateCommaSeparatedDI()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("*DESKDI, ,");
-            sb.Append(cmbDISelectChannel.SelectedIndex.ToString());
-            sb.Append(",");
-            sb.Append(cmbDIType.SelectedIndex.ToString());
-            sb.Append(",");
-            sb.Append(cmbDIAlarm.SelectedIndex.ToString());
-            sb.Append(",");
-            sb.Append(txtDIAlarmVerifySec.Text.Trim());
-            sb.Append(",");
-            sb.Append(txtDISmsRepeatTime.Text.Trim());
-            sb.Append(",");
-            sb.Append(txtDISMSRepeatSec.Text.Trim());
-            sb.Append(",");
-            sb.Append(chkDIDataReport.Checked ? 1 : 0);
-            sb.Append(",");
-            sb.Append(cmbDIType.SelectedIndex);
-            sb.Append(",");
-            sb.Append(cmbDIDO1.SelectedIndex.ToString());
-            sb.Append(cmbDIDO2.SelectedIndex.ToString());
-            sb.Append(cmbDIDO3.SelectedIndex.ToString());
-            sb.Append(cmbDIDO4.SelectedIndex.ToString());
-            sb.Append(cmbDIDO5.SelectedIndex.ToString());
-            sb.Append(cmbDIDO6.SelectedIndex.ToString());
-            sb.Append(cmbDIDO7.SelectedIndex.ToString());
-            sb.Append(cmbDIDO8.SelectedIndex.ToString());
-            sb.Append(",");
-            sb.Append(chkDIUser1.Checked ? 1 : 0);
-            sb.Append(chkDIUser2.Checked ? 1 : 0);
-            sb.Append(chkDIUser3.Checked ? 1 : 0);
-            sb.Append(chkDIUser4.Checked ? 1 : 0);
-            sb.Append(chkDIUser5.Checked ? 1 : 0);
-            sb.Append(chkDIUser6.Checked ? 1 : 0);
-            sb.Append("#");
-            return sb.ToString();
-        }
-
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (IsConnected == 0)
-                {
-                    port = new SerialPort(cmbComPorts.SelectedItem.ToString(), 9600, Parity.None, 8, StopBits.One);
-                    port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
-                    // open serial port
-                    if (!port.IsOpen)
-                    {
-                        port.Open();
-                        btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\greenconnect.jpg");
-                        btnConnect.Text = "Connected";
-                        IsConnected = 1;
-                    }
-                }
-                else if (IsConnected == 1)
-                {
-                    if (port.IsOpen)
-                    {
-                        CloseConnection();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                CloseConnection();
-            }
-        }
-        private void CloseConnection()
-        {
-            if (port.IsOpen)
-            {
-                port.Close();
-            }
-            btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
-            btnConnect.Text = "Connect";
-            IsConnected = 0;
-        }
-        private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            try
-            {
-                this.Invoke(new EventHandler(DoUpDate));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                CloseConnection();
-            }
-        }
-
-        private void DoUpDate(object s, EventArgs e)
-        {
-            string incomingDetails = port.ReadExisting();
-
-            if (incomingDetails.ToUpper().Contains("DESKAI"))
-            {
-                setFieldsAISett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("DESKDI"))
-            {
-                setFieldsDISett(incomingDetails);
-            }
-        }
-
         private void setFieldsAISett(object details)
         {
             try
@@ -363,7 +352,47 @@ namespace TechavoSystem
                 CloseConnection();
             }
         }
-
+        private void btnReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceAI#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedAI();
+                pbProcessing.Value = 0;
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
+        #region DI
         private void setFieldsDISett(object details)
         {
             try
@@ -377,7 +406,7 @@ namespace TechavoSystem
                 txtDISmsRepeatTime.Text = fields[4];
                 txtDISMSRepeatSec.Text = fields[5];
                 chkDIDataReport.Checked = fields[6] == "0" ? false : true;
-                cmbDIType.SelectedIndex = Convert.ToInt32(fields[7]);
+                cmbDIReportDt.SelectedIndex = Convert.ToInt32(fields[7]);
                 cmbDIDO1.SelectedIndex = Convert.ToInt32(fields[8].Substring(0, 1));
                 cmbDIDO2.SelectedIndex = Convert.ToInt32(fields[8].Substring(1, 1));
                 cmbDIDO3.SelectedIndex = Convert.ToInt32(fields[8].Substring(2, 1));
@@ -399,69 +428,6 @@ namespace TechavoSystem
                 CloseConnection();
             }
         }
-
-        private void btnWriteMemory_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string sendData = CreateCommaSeparatedAI();
-                pbProcessing.Value = 0;
-                if (IsConnected == 0)
-                {
-                    MessageBox.Show("No port is connected.", "Warning");
-                    return;
-                }
-                IsReadyToSend = true;
-                uploadSettings(sendData);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                CloseConnection();
-            }
-        }
-        private void uploadSettings(string data)
-        {
-            try
-            {
-                if (IsReadyToSend)
-                {
-                    if (port.IsOpen)
-                    {
-                        port.WriteLine(data);
-                    }
-                    pbProcessing.Value = 100;
-                    IsReadyToSend = false;
-                    MessageBox.Show("Data uploaded successfully.", "Information");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                CloseConnection();
-            }
-        }
-
-        private void btnReadMemory_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!port.IsOpen)
-                {
-                    port.Open();
-                }
-                if (port.IsOpen)
-                {
-                    port.WriteLine("*readdeviceAI#");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error");
-                CloseConnection();
-            }
-        }
-
         private void btnDIReadMemory_Click(object sender, EventArgs e)
         {
             try
@@ -502,5 +468,197 @@ namespace TechavoSystem
                 CloseConnection();
             }
         }
+        private string CreateCommaSeparatedDI()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*DESKDI, ,");
+            sb.Append(cmbDISelectChannel.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbDIType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbDIAlarm.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtDIAlarmVerifySec.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDISmsRepeatTime.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDISMSRepeatSec.Text.Trim());
+            sb.Append(",");
+            sb.Append(chkDIDataReport.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(cmbDIReportDt.SelectedIndex);
+            sb.Append(",");
+            sb.Append(cmbDIDO1.SelectedIndex.ToString());
+            sb.Append(cmbDIDO2.SelectedIndex.ToString());
+            sb.Append(cmbDIDO3.SelectedIndex.ToString());
+            sb.Append(cmbDIDO4.SelectedIndex.ToString());
+            sb.Append(cmbDIDO5.SelectedIndex.ToString());
+            sb.Append(cmbDIDO6.SelectedIndex.ToString());
+            sb.Append(cmbDIDO7.SelectedIndex.ToString());
+            sb.Append(cmbDIDO8.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(chkDIUser1.Checked ? 1 : 0);
+            sb.Append(chkDIUser2.Checked ? 1 : 0);
+            sb.Append(chkDIUser3.Checked ? 1 : 0);
+            sb.Append(chkDIUser4.Checked ? 1 : 0);
+            sb.Append(chkDIUser5.Checked ? 1 : 0);
+            sb.Append(chkDIUser6.Checked ? 1 : 0);
+            sb.Append("#");
+            return sb.ToString();
+        }
+        #endregion
+        #region DO
+        private void btnDOReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceDI#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnDOWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedDO();
+                pbProcessing.Value = 0;
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedDO()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*DESKDO, ,");
+            sb.Append(cmbDOSelectChannel.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbDOType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtDoRelayCloseOn.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDoRelayDelayTime.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDoOnTime.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtDoOffTime.Text.Trim());
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsDOSett(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                cmbDOSelectChannel.SelectedIndex = Convert.ToInt32(fields[0]);
+                cmbDOType.SelectedIndex = Convert.ToInt32(fields[1]);
+                txtDoRelayCloseOn.Text = fields[2];
+                txtDoRelayDelayTime.Text = fields[3];
+                txtDoOnTime.Text = fields[4];
+                txtDoOffTime.Text = fields[5];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
+        #region Pulse
+        private void btnPulseReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceDI#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnPulseWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedPulse();
+                pbProcessing.Value = 0;
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedPulse()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*DESKPULSE, ,");
+            sb.Append(txtAdjustPulseCount.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtPulseKfactor.Text.Trim());
+            sb.Append(",");
+            sb.Append(chkPulseIsVolatile.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(txtPulseDurationRef.Text.Trim());
+            sb.Append(",");
+            sb.Append(cmbPulseReportDT.SelectedIndex.ToString());
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsPulseSett(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                txtAdjustPulseCount.Text = fields[0];
+                txtPulseKfactor.Text = fields[1];
+                chkPulseIsVolatile.Checked = fields[2] == "0" ? false : true;
+                txtPulseDurationRef.Text = fields[3];
+                cmbPulseReportDT.SelectedIndex = Convert.ToInt32(fields[4]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
     }
 }
