@@ -88,6 +88,8 @@ namespace TechavoSystem
                     return;
                 }
                 HideAllPanel();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
                 if (e.Node.Name == "GeneralSettings")
                 {
                     pnlGeneralSettings.Visible = true;
@@ -236,6 +238,7 @@ namespace TechavoSystem
                         port.WriteLine(data);
                     }
                     pbProcessing.Value = 100;
+                    lblProgressPercent.Text = pbProcessing.Value + "%";
                     IsReadyToSend = false;
                     MessageBox.Show("Data uploaded successfully.", "Information");
                 }
@@ -377,6 +380,7 @@ namespace TechavoSystem
             {
                 string sendData = CreateCommaSeparatedAI();
                 pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
                 if (IsConnected == 0)
                 {
                     MessageBox.Show("No port is connected.", "Warning");
@@ -454,6 +458,7 @@ namespace TechavoSystem
             {
                 string sendData = CreateCommaSeparatedDI();
                 pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0";
                 if (IsConnected == 0)
                 {
                     MessageBox.Show("No port is connected.", "Warning");
@@ -533,6 +538,7 @@ namespace TechavoSystem
             {
                 string sendData = CreateCommaSeparatedDO();
                 pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
                 if (IsConnected == 0)
                 {
                     MessageBox.Show("No port is connected.", "Warning");
@@ -611,6 +617,7 @@ namespace TechavoSystem
             {
                 string sendData = CreateCommaSeparatedPulse();
                 pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
                 if (IsConnected == 0)
                 {
                     MessageBox.Show("No port is connected.", "Warning");

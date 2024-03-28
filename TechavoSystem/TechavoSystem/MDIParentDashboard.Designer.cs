@@ -35,15 +35,32 @@
             TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
             TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
             TreeNode treeNode6 = new TreeNode("Modbus Settings");
-            TreeNode treeNode7 = new TreeNode("GPRS Settings");
-            TreeNode treeNode8 = new TreeNode("Alarm Settings");
-            TreeNode treeNode9 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode10 = new TreeNode("User", 0, 0);
-            TreeNode treeNode11 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode12 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode7 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode8 = new TreeNode("User", 0, 0);
+            TreeNode treeNode9 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode10 = new TreeNode("Modbus Slave", 0, 0);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlDOSettings = new Panel();
+            btnDOWriteMemory = new Button();
+            btnDOReadMemory = new Button();
+            cmbDOSelectChannel = new ComboBox();
+            label115 = new Label();
+            groupBox14 = new GroupBox();
+            label121 = new Label();
+            label120 = new Label();
+            txtDoOnTime = new TextBox();
+            label117 = new Label();
+            txtDoOffTime = new TextBox();
+            label116 = new Label();
+            txtDoRelayDelayTime = new TextBox();
+            label118 = new Label();
+            txtDoRelayCloseOn = new TextBox();
+            label119 = new Label();
+            cmbDOType = new ComboBox();
+            label114 = new Label();
+            label40 = new Label();
             pnlDISettings = new Panel();
             btnDIWriteMemory = new Button();
             btnDIReadMemory = new Button();
@@ -99,25 +116,6 @@
             label107 = new Label();
             label108 = new Label();
             label41 = new Label();
-            pnlDOSettings = new Panel();
-            btnDOWriteMemory = new Button();
-            btnDOReadMemory = new Button();
-            cmbDOSelectChannel = new ComboBox();
-            label115 = new Label();
-            groupBox14 = new GroupBox();
-            label121 = new Label();
-            label120 = new Label();
-            txtDoOnTime = new TextBox();
-            label117 = new Label();
-            txtDoOffTime = new TextBox();
-            label116 = new Label();
-            txtDoRelayDelayTime = new TextBox();
-            label118 = new Label();
-            txtDoRelayCloseOn = new TextBox();
-            label119 = new Label();
-            cmbDOType = new ComboBox();
-            label114 = new Label();
-            label40 = new Label();
             pnlPulseSettings = new Panel();
             btnPulseWriteMemory = new Button();
             btnPulseReadMemory = new Button();
@@ -340,14 +338,16 @@
             cmbComPorts = new ComboBox();
             label14 = new Label();
             pnlConnect = new Panel();
+            label133 = new Label();
+            lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
             pnlDashboard.SuspendLayout();
+            pnlDOSettings.SuspendLayout();
+            groupBox14.SuspendLayout();
             pnlDISettings.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox8.SuspendLayout();
-            pnlDOSettings.SuspendLayout();
-            groupBox14.SuspendLayout();
             pnlPulseSettings.SuspendLayout();
             groupBox7.SuspendLayout();
             pnlUser.SuspendLayout();
@@ -398,6 +398,214 @@
             pnlDashboard.Size = new Size(1460, 834);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlDOSettings
+            // 
+            pnlDOSettings.Controls.Add(btnDOWriteMemory);
+            pnlDOSettings.Controls.Add(btnDOReadMemory);
+            pnlDOSettings.Controls.Add(cmbDOSelectChannel);
+            pnlDOSettings.Controls.Add(label115);
+            pnlDOSettings.Controls.Add(groupBox14);
+            pnlDOSettings.Controls.Add(label40);
+            pnlDOSettings.Location = new Point(321, 9);
+            pnlDOSettings.Name = "pnlDOSettings";
+            pnlDOSettings.Size = new Size(1133, 822);
+            pnlDOSettings.TabIndex = 2;
+            pnlDOSettings.Visible = false;
+            // 
+            // btnDOWriteMemory
+            // 
+            btnDOWriteMemory.BackColor = Color.Red;
+            btnDOWriteMemory.Cursor = Cursors.Hand;
+            btnDOWriteMemory.ForeColor = Color.White;
+            btnDOWriteMemory.Location = new Point(597, 729);
+            btnDOWriteMemory.Name = "btnDOWriteMemory";
+            btnDOWriteMemory.Size = new Size(172, 42);
+            btnDOWriteMemory.TabIndex = 56;
+            btnDOWriteMemory.Text = "Write Memory";
+            btnDOWriteMemory.UseVisualStyleBackColor = false;
+            btnDOWriteMemory.Click += btnDOWriteMemory_Click;
+            // 
+            // btnDOReadMemory
+            // 
+            btnDOReadMemory.BackColor = Color.DarkKhaki;
+            btnDOReadMemory.Cursor = Cursors.Hand;
+            btnDOReadMemory.ForeColor = Color.White;
+            btnDOReadMemory.Location = new Point(325, 729);
+            btnDOReadMemory.Name = "btnDOReadMemory";
+            btnDOReadMemory.Size = new Size(190, 42);
+            btnDOReadMemory.TabIndex = 55;
+            btnDOReadMemory.Text = "Read Memory";
+            btnDOReadMemory.UseVisualStyleBackColor = false;
+            btnDOReadMemory.Click += btnDOReadMemory_Click;
+            // 
+            // cmbDOSelectChannel
+            // 
+            cmbDOSelectChannel.BackColor = SystemColors.HighlightText;
+            cmbDOSelectChannel.Cursor = Cursors.Hand;
+            cmbDOSelectChannel.FlatStyle = FlatStyle.Popup;
+            cmbDOSelectChannel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            cmbDOSelectChannel.FormattingEnabled = true;
+            cmbDOSelectChannel.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7" });
+            cmbDOSelectChannel.Location = new Point(491, 76);
+            cmbDOSelectChannel.Name = "cmbDOSelectChannel";
+            cmbDOSelectChannel.Size = new Size(224, 28);
+            cmbDOSelectChannel.TabIndex = 52;
+            // 
+            // label115
+            // 
+            label115.AutoSize = true;
+            label115.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label115.Location = new Point(362, 79);
+            label115.Name = "label115";
+            label115.Size = new Size(110, 20);
+            label115.TabIndex = 51;
+            label115.Text = "Select Channel";
+            // 
+            // groupBox14
+            // 
+            groupBox14.Controls.Add(label121);
+            groupBox14.Controls.Add(label120);
+            groupBox14.Controls.Add(txtDoOnTime);
+            groupBox14.Controls.Add(label117);
+            groupBox14.Controls.Add(txtDoOffTime);
+            groupBox14.Controls.Add(label116);
+            groupBox14.Controls.Add(txtDoRelayDelayTime);
+            groupBox14.Controls.Add(label118);
+            groupBox14.Controls.Add(txtDoRelayCloseOn);
+            groupBox14.Controls.Add(label119);
+            groupBox14.Controls.Add(cmbDOType);
+            groupBox14.Controls.Add(label114);
+            groupBox14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox14.Location = new Point(362, 129);
+            groupBox14.Name = "groupBox14";
+            groupBox14.Size = new Size(361, 300);
+            groupBox14.TabIndex = 50;
+            groupBox14.TabStop = false;
+            groupBox14.Text = "DO Channel Setup";
+            // 
+            // label121
+            // 
+            label121.AutoSize = true;
+            label121.Location = new Point(290, 212);
+            label121.MaximumSize = new Size(164, 60);
+            label121.Name = "label121";
+            label121.Size = new Size(63, 20);
+            label121.TabIndex = 33;
+            label121.Text = "HH:MM";
+            // 
+            // label120
+            // 
+            label120.AutoSize = true;
+            label120.Location = new Point(289, 166);
+            label120.MaximumSize = new Size(164, 60);
+            label120.Name = "label120";
+            label120.Size = new Size(63, 20);
+            label120.TabIndex = 32;
+            label120.Text = "HH:MM";
+            // 
+            // txtDoOnTime
+            // 
+            txtDoOnTime.BorderStyle = BorderStyle.FixedSingle;
+            txtDoOnTime.Location = new Point(162, 163);
+            txtDoOnTime.MaxLength = 5;
+            txtDoOnTime.Name = "txtDoOnTime";
+            txtDoOnTime.Size = new Size(118, 27);
+            txtDoOnTime.TabIndex = 31;
+            // 
+            // label117
+            // 
+            label117.AutoSize = true;
+            label117.Location = new Point(14, 169);
+            label117.MaximumSize = new Size(164, 60);
+            label117.Name = "label117";
+            label117.Size = new Size(68, 20);
+            label117.TabIndex = 30;
+            label117.Text = "On Time";
+            // 
+            // txtDoOffTime
+            // 
+            txtDoOffTime.BorderStyle = BorderStyle.FixedSingle;
+            txtDoOffTime.Location = new Point(162, 210);
+            txtDoOffTime.MaxLength = 5;
+            txtDoOffTime.Name = "txtDoOffTime";
+            txtDoOffTime.Size = new Size(117, 27);
+            txtDoOffTime.TabIndex = 29;
+            // 
+            // label116
+            // 
+            label116.AutoSize = true;
+            label116.Location = new Point(13, 211);
+            label116.MaximumSize = new Size(164, 60);
+            label116.Name = "label116";
+            label116.Size = new Size(71, 20);
+            label116.TabIndex = 28;
+            label116.Text = "Off Time";
+            // 
+            // txtDoRelayDelayTime
+            // 
+            txtDoRelayDelayTime.BorderStyle = BorderStyle.FixedSingle;
+            txtDoRelayDelayTime.Location = new Point(162, 120);
+            txtDoRelayDelayTime.MaxLength = 5;
+            txtDoRelayDelayTime.Name = "txtDoRelayDelayTime";
+            txtDoRelayDelayTime.Size = new Size(189, 27);
+            txtDoRelayDelayTime.TabIndex = 22;
+            // 
+            // label118
+            // 
+            label118.AutoSize = true;
+            label118.Location = new Point(14, 127);
+            label118.Name = "label118";
+            label118.Size = new Size(129, 20);
+            label118.TabIndex = 21;
+            label118.Text = "Relay Delay Time";
+            // 
+            // txtDoRelayCloseOn
+            // 
+            txtDoRelayCloseOn.BorderStyle = BorderStyle.FixedSingle;
+            txtDoRelayCloseOn.Location = new Point(162, 77);
+            txtDoRelayCloseOn.MaxLength = 5;
+            txtDoRelayCloseOn.Name = "txtDoRelayCloseOn";
+            txtDoRelayCloseOn.Size = new Size(188, 27);
+            txtDoRelayCloseOn.TabIndex = 20;
+            // 
+            // label119
+            // 
+            label119.AutoSize = true;
+            label119.Location = new Point(13, 85);
+            label119.MaximumSize = new Size(150, 0);
+            label119.Name = "label119";
+            label119.Size = new Size(127, 20);
+            label119.TabIndex = 19;
+            label119.Text = "Relay Close Time";
+            // 
+            // cmbDOType
+            // 
+            cmbDOType.FormattingEnabled = true;
+            cmbDOType.Items.AddRange(new object[] { "Ignore - 0", "Close Alarm-1", "OC-CO-3", "Close Alarm-4", "Static Command-5", "Dynamic Command-6" });
+            cmbDOType.Location = new Point(162, 33);
+            cmbDOType.Name = "cmbDOType";
+            cmbDOType.Size = new Size(187, 28);
+            cmbDOType.TabIndex = 29;
+            // 
+            // label114
+            // 
+            label114.AutoSize = true;
+            label114.Location = new Point(15, 43);
+            label114.Name = "label114";
+            label114.Size = new Size(66, 20);
+            label114.TabIndex = 28;
+            label114.Text = "D0 Type";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label40.Location = new Point(486, 6);
+            label40.Name = "label40";
+            label40.Size = new Size(142, 31);
+            label40.TabIndex = 0;
+            label40.Text = "DO Settings";
             // 
             // pnlDISettings
             // 
@@ -962,214 +1170,6 @@
             label41.Size = new Size(132, 31);
             label41.TabIndex = 1;
             label41.Text = "DI Settings";
-            // 
-            // pnlDOSettings
-            // 
-            pnlDOSettings.Controls.Add(btnDOWriteMemory);
-            pnlDOSettings.Controls.Add(btnDOReadMemory);
-            pnlDOSettings.Controls.Add(cmbDOSelectChannel);
-            pnlDOSettings.Controls.Add(label115);
-            pnlDOSettings.Controls.Add(groupBox14);
-            pnlDOSettings.Controls.Add(label40);
-            pnlDOSettings.Location = new Point(321, 9);
-            pnlDOSettings.Name = "pnlDOSettings";
-            pnlDOSettings.Size = new Size(1133, 822);
-            pnlDOSettings.TabIndex = 2;
-            pnlDOSettings.Visible = false;
-            // 
-            // btnDOWriteMemory
-            // 
-            btnDOWriteMemory.BackColor = Color.Red;
-            btnDOWriteMemory.Cursor = Cursors.Hand;
-            btnDOWriteMemory.ForeColor = Color.White;
-            btnDOWriteMemory.Location = new Point(597, 729);
-            btnDOWriteMemory.Name = "btnDOWriteMemory";
-            btnDOWriteMemory.Size = new Size(172, 42);
-            btnDOWriteMemory.TabIndex = 56;
-            btnDOWriteMemory.Text = "Write Memory";
-            btnDOWriteMemory.UseVisualStyleBackColor = false;
-            btnDOWriteMemory.Click += btnDOWriteMemory_Click;
-            // 
-            // btnDOReadMemory
-            // 
-            btnDOReadMemory.BackColor = Color.DarkKhaki;
-            btnDOReadMemory.Cursor = Cursors.Hand;
-            btnDOReadMemory.ForeColor = Color.White;
-            btnDOReadMemory.Location = new Point(325, 729);
-            btnDOReadMemory.Name = "btnDOReadMemory";
-            btnDOReadMemory.Size = new Size(190, 42);
-            btnDOReadMemory.TabIndex = 55;
-            btnDOReadMemory.Text = "Read Memory";
-            btnDOReadMemory.UseVisualStyleBackColor = false;
-            btnDOReadMemory.Click += btnDOReadMemory_Click;
-            // 
-            // cmbDOSelectChannel
-            // 
-            cmbDOSelectChannel.BackColor = SystemColors.HighlightText;
-            cmbDOSelectChannel.Cursor = Cursors.Hand;
-            cmbDOSelectChannel.FlatStyle = FlatStyle.Popup;
-            cmbDOSelectChannel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            cmbDOSelectChannel.FormattingEnabled = true;
-            cmbDOSelectChannel.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7" });
-            cmbDOSelectChannel.Location = new Point(491, 76);
-            cmbDOSelectChannel.Name = "cmbDOSelectChannel";
-            cmbDOSelectChannel.Size = new Size(224, 28);
-            cmbDOSelectChannel.TabIndex = 52;
-            // 
-            // label115
-            // 
-            label115.AutoSize = true;
-            label115.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label115.Location = new Point(362, 79);
-            label115.Name = "label115";
-            label115.Size = new Size(110, 20);
-            label115.TabIndex = 51;
-            label115.Text = "Select Channel";
-            // 
-            // groupBox14
-            // 
-            groupBox14.Controls.Add(label121);
-            groupBox14.Controls.Add(label120);
-            groupBox14.Controls.Add(txtDoOnTime);
-            groupBox14.Controls.Add(label117);
-            groupBox14.Controls.Add(txtDoOffTime);
-            groupBox14.Controls.Add(label116);
-            groupBox14.Controls.Add(txtDoRelayDelayTime);
-            groupBox14.Controls.Add(label118);
-            groupBox14.Controls.Add(txtDoRelayCloseOn);
-            groupBox14.Controls.Add(label119);
-            groupBox14.Controls.Add(cmbDOType);
-            groupBox14.Controls.Add(label114);
-            groupBox14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox14.Location = new Point(362, 129);
-            groupBox14.Name = "groupBox14";
-            groupBox14.Size = new Size(361, 300);
-            groupBox14.TabIndex = 50;
-            groupBox14.TabStop = false;
-            groupBox14.Text = "DO Channel Setup";
-            // 
-            // label121
-            // 
-            label121.AutoSize = true;
-            label121.Location = new Point(290, 212);
-            label121.MaximumSize = new Size(164, 60);
-            label121.Name = "label121";
-            label121.Size = new Size(63, 20);
-            label121.TabIndex = 33;
-            label121.Text = "HH:MM";
-            // 
-            // label120
-            // 
-            label120.AutoSize = true;
-            label120.Location = new Point(289, 166);
-            label120.MaximumSize = new Size(164, 60);
-            label120.Name = "label120";
-            label120.Size = new Size(63, 20);
-            label120.TabIndex = 32;
-            label120.Text = "HH:MM";
-            // 
-            // txtDoOnTime
-            // 
-            txtDoOnTime.BorderStyle = BorderStyle.FixedSingle;
-            txtDoOnTime.Location = new Point(162, 163);
-            txtDoOnTime.MaxLength = 5;
-            txtDoOnTime.Name = "txtDoOnTime";
-            txtDoOnTime.Size = new Size(118, 27);
-            txtDoOnTime.TabIndex = 31;
-            // 
-            // label117
-            // 
-            label117.AutoSize = true;
-            label117.Location = new Point(14, 169);
-            label117.MaximumSize = new Size(164, 60);
-            label117.Name = "label117";
-            label117.Size = new Size(68, 20);
-            label117.TabIndex = 30;
-            label117.Text = "On Time";
-            // 
-            // txtDoOffTime
-            // 
-            txtDoOffTime.BorderStyle = BorderStyle.FixedSingle;
-            txtDoOffTime.Location = new Point(162, 210);
-            txtDoOffTime.MaxLength = 5;
-            txtDoOffTime.Name = "txtDoOffTime";
-            txtDoOffTime.Size = new Size(117, 27);
-            txtDoOffTime.TabIndex = 29;
-            // 
-            // label116
-            // 
-            label116.AutoSize = true;
-            label116.Location = new Point(13, 211);
-            label116.MaximumSize = new Size(164, 60);
-            label116.Name = "label116";
-            label116.Size = new Size(71, 20);
-            label116.TabIndex = 28;
-            label116.Text = "Off Time";
-            // 
-            // txtDoRelayDelayTime
-            // 
-            txtDoRelayDelayTime.BorderStyle = BorderStyle.FixedSingle;
-            txtDoRelayDelayTime.Location = new Point(162, 120);
-            txtDoRelayDelayTime.MaxLength = 5;
-            txtDoRelayDelayTime.Name = "txtDoRelayDelayTime";
-            txtDoRelayDelayTime.Size = new Size(189, 27);
-            txtDoRelayDelayTime.TabIndex = 22;
-            // 
-            // label118
-            // 
-            label118.AutoSize = true;
-            label118.Location = new Point(14, 127);
-            label118.Name = "label118";
-            label118.Size = new Size(129, 20);
-            label118.TabIndex = 21;
-            label118.Text = "Relay Delay Time";
-            // 
-            // txtDoRelayCloseOn
-            // 
-            txtDoRelayCloseOn.BorderStyle = BorderStyle.FixedSingle;
-            txtDoRelayCloseOn.Location = new Point(162, 77);
-            txtDoRelayCloseOn.MaxLength = 5;
-            txtDoRelayCloseOn.Name = "txtDoRelayCloseOn";
-            txtDoRelayCloseOn.Size = new Size(188, 27);
-            txtDoRelayCloseOn.TabIndex = 20;
-            // 
-            // label119
-            // 
-            label119.AutoSize = true;
-            label119.Location = new Point(13, 85);
-            label119.MaximumSize = new Size(150, 0);
-            label119.Name = "label119";
-            label119.Size = new Size(127, 20);
-            label119.TabIndex = 19;
-            label119.Text = "Relay Close Time";
-            // 
-            // cmbDOType
-            // 
-            cmbDOType.FormattingEnabled = true;
-            cmbDOType.Items.AddRange(new object[] { "Ignore - 0", "Close Alarm-1", "OC-CO-3", "Close Alarm-4", "Static Command-5", "Dynamic Command-6" });
-            cmbDOType.Location = new Point(162, 33);
-            cmbDOType.Name = "cmbDOType";
-            cmbDOType.Size = new Size(187, 28);
-            cmbDOType.TabIndex = 29;
-            // 
-            // label114
-            // 
-            label114.AutoSize = true;
-            label114.Location = new Point(15, 43);
-            label114.Name = "label114";
-            label114.Size = new Size(66, 20);
-            label114.TabIndex = 28;
-            label114.Text = "D0 Type";
-            // 
-            // label40
-            // 
-            label40.AutoSize = true;
-            label40.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label40.Location = new Point(486, 6);
-            label40.Name = "label40";
-            label40.Size = new Size(142, 31);
-            label40.TabIndex = 0;
-            label40.Text = "DO Settings";
             // 
             // pnlPulseSettings
             // 
@@ -2550,27 +2550,23 @@
             treeNode5.Text = "IO Settings";
             treeNode6.Name = "ModbusSettings";
             treeNode6.Text = "Modbus Settings";
-            treeNode7.Name = "GPRSSettings";
-            treeNode7.Text = "GPRS Settings";
-            treeNode8.Name = "AlarmSettings";
-            treeNode8.Text = "Alarm Settings";
+            treeNode7.ImageIndex = 0;
+            treeNode7.Name = "PulseSettings";
+            treeNode7.SelectedImageIndex = 0;
+            treeNode7.Text = "Pulse Settings";
+            treeNode8.ImageIndex = 0;
+            treeNode8.Name = "User";
+            treeNode8.SelectedImageIndex = 0;
+            treeNode8.Text = "User";
             treeNode9.ImageIndex = 0;
-            treeNode9.Name = "PulseSettings";
+            treeNode9.Name = "ModbusMaster";
             treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Pulse Settings";
+            treeNode9.Text = "Modbus Master";
             treeNode10.ImageIndex = 0;
-            treeNode10.Name = "User";
+            treeNode10.Name = "ModbusSlave";
             treeNode10.SelectedImageIndex = 0;
-            treeNode10.Text = "User";
-            treeNode11.ImageIndex = 0;
-            treeNode11.Name = "ModbusMaster";
-            treeNode11.SelectedImageIndex = 0;
-            treeNode11.Text = "Modbus Master";
-            treeNode12.ImageIndex = 0;
-            treeNode12.Name = "ModbusSlave";
-            treeNode12.SelectedImageIndex = 0;
-            treeNode12.Text = "Modbus Slave";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
+            treeNode10.Text = "Modbus Slave";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -3436,7 +3432,7 @@
             btnConnect.BackgroundImageLayout = ImageLayout.Stretch;
             btnConnect.FlatStyle = FlatStyle.Flat;
             btnConnect.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnConnect.Location = new Point(249, 4);
+            btnConnect.Location = new Point(260, 4);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(98, 56);
             btnConnect.TabIndex = 33;
@@ -3447,7 +3443,7 @@
             // cmbComPorts
             // 
             cmbComPorts.FormattingEnabled = true;
-            cmbComPorts.Location = new Point(71, 19);
+            cmbComPorts.Location = new Point(77, 7);
             cmbComPorts.Name = "cmbComPorts";
             cmbComPorts.Size = new Size(151, 28);
             cmbComPorts.TabIndex = 32;
@@ -3455,7 +3451,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(24, 22);
+            label14.Location = new Point(8, 10);
             label14.Name = "label14";
             label14.Size = new Size(41, 20);
             label14.TabIndex = 34;
@@ -3463,21 +3459,43 @@
             // 
             // pnlConnect
             // 
+            pnlConnect.Controls.Add(label133);
+            pnlConnect.Controls.Add(lblProgressPercent);
             pnlConnect.Controls.Add(pbProcessing);
             pnlConnect.Controls.Add(cmbComPorts);
             pnlConnect.Controls.Add(label14);
             pnlConnect.Controls.Add(btnConnect);
-            pnlConnect.Location = new Point(441, 12);
+            pnlConnect.Location = new Point(552, 12);
             pnlConnect.Name = "pnlConnect";
-            pnlConnect.Size = new Size(624, 63);
+            pnlConnect.Size = new Size(376, 63);
             pnlConnect.TabIndex = 35;
             pnlConnect.Visible = false;
             // 
+            // label133
+            // 
+            label133.AutoSize = true;
+            label133.Location = new Point(7, 40);
+            label133.Name = "label133";
+            label133.Size = new Size(65, 20);
+            label133.TabIndex = 39;
+            label133.Text = "Progress";
+            // 
+            // lblProgressPercent
+            // 
+            lblProgressPercent.AutoSize = true;
+            lblProgressPercent.Location = new Point(198, 39);
+            lblProgressPercent.Name = "lblProgressPercent";
+            lblProgressPercent.Size = new Size(29, 20);
+            lblProgressPercent.TabIndex = 38;
+            lblProgressPercent.Text = "0%";
+            // 
             // pbProcessing
             // 
-            pbProcessing.Location = new Point(368, 4);
+            pbProcessing.BackColor = SystemColors.Info;
+            pbProcessing.Location = new Point(77, 41);
             pbProcessing.Name = "pbProcessing";
-            pbProcessing.Size = new Size(248, 56);
+            pbProcessing.Size = new Size(120, 19);
+            pbProcessing.Style = ProgressBarStyle.Continuous;
             pbProcessing.TabIndex = 37;
             // 
             // Dashboard
@@ -3495,6 +3513,10 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlDOSettings.ResumeLayout(false);
+            pnlDOSettings.PerformLayout();
+            groupBox14.ResumeLayout(false);
+            groupBox14.PerformLayout();
             pnlDISettings.ResumeLayout(false);
             pnlDISettings.PerformLayout();
             groupBox5.ResumeLayout(false);
@@ -3503,10 +3525,6 @@
             groupBox6.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
-            pnlDOSettings.ResumeLayout(false);
-            pnlDOSettings.PerformLayout();
-            groupBox14.ResumeLayout(false);
-            groupBox14.PerformLayout();
             pnlPulseSettings.ResumeLayout(false);
             pnlPulseSettings.PerformLayout();
             groupBox7.ResumeLayout(false);
@@ -3851,5 +3869,7 @@
         private Label label131;
         private ComboBox cmbDIReportDt;
         private Label label132;
+        private Label lblProgressPercent;
+        private Label label133;
     }
 }
