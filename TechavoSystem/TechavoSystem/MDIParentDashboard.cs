@@ -226,6 +226,14 @@ namespace TechavoSystem
             {
                 setFieldsPulseSett(incomingDetails);
             }
+            else if (incomingDetails.ToUpper().Contains("USER"))
+            {
+                setFieldsUserSett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("DESKGEN"))
+            {
+                setFieldsGeneralSett(incomingDetails);
+            }
         }
         private void uploadSettings(string data)
         {
@@ -523,7 +531,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
-                    port.WriteLine("*readdeviceDI#");
+                    port.WriteLine("*readdeviceDO#");
                 }
             }
             catch (Exception ex)
@@ -602,7 +610,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
-                    port.WriteLine("*readdeviceDI#");
+                    port.WriteLine("*readdevicePulse#");
                 }
             }
             catch (Exception ex)
@@ -659,6 +667,185 @@ namespace TechavoSystem
                 chkPulseIsVolatile.Checked = fields[2] == "0" ? false : true;
                 txtPulseDurationRef.Text = fields[3];
                 cmbPulseReportDT.SelectedIndex = Convert.ToInt32(fields[4]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
+        #region User
+        private void btnUserReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceUser#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnUserWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedUser();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedUser()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*USER, ,");
+            sb.Append(cmbUserIndex.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtUserMobileNo.Text.Trim());
+            sb.Append(",");
+            sb.Append(chkUserSmsTimerReport.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserSmsOnPowerOn.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserSmsOnLowTower.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserSmsOnGprsFail.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserIsAdmin.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserIsAlarm.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkUserCanCall.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(cmbUserSelectDo.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(chkUserIsVolatile.Checked ? 1 : 0);
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsUserSett(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                cmbUserIndex.SelectedIndex = Convert.ToInt32(fields[0]);
+                txtUserMobileNo.Text = fields[1];
+                chkUserSmsTimerReport.Checked = fields[2] == "0" ? false : true;
+                chkUserSmsOnPowerOn.Checked = fields[3] == "0" ? false : true;
+                chkUserSmsOnLowTower.Checked = fields[4] == "0" ? false : true;
+                chkUserSmsOnGprsFail.Checked = fields[5] == "0" ? false : true;
+                chkUserIsAdmin.Checked = fields[6] == "0" ? false : true;
+                chkUserIsAlarm.Checked = fields[7] == "0" ? false : true;
+                chkUserCanCall.Checked = fields[8] == "0" ? false : true;
+                cmbUserSelectDo.SelectedIndex = Convert.ToInt32(fields[9]);
+                chkUserIsVolatile.Checked = fields[10] == "0" ? false : true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        #endregion
+        #region General
+        private void btnGeneralReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceGeneral#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnGeneralWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedGeneral();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedGeneral()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*DESKGEN, ,");
+            sb.Append(txtGeneralUserId.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtIemiNo.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtGeneralDataLogSec.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtGeneralSmsLogSec.Text.Trim());
+            sb.Append(",");
+            sb.Append(dtGeneralSetDate.Text);
+            sb.Append(",");
+            sb.Append(txtGeneralSetTime.Text.Trim());
+            sb.Append(",");
+            sb.Append(chkGeneralModbusDebug.Checked ? 1 : 0);
+            sb.Append(",");
+            sb.Append(chkGeneralRtcDebug.Checked ? 1 : 0);
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsGeneralSett(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                txtGeneralUserId.Text = fields[0];
+                txtIemiNo.Text = fields[1];
+                txtGeneralDataLogSec.Text = fields[2];
+                txtGeneralSmsLogSec.Text = fields[3];
+                dtGeneralSetDate.Text = fields[4];
+                txtGeneralSetTime.Text = fields[5];
+                chkGeneralModbusDebug.Checked = fields[6] == "0" ? false : true;
+                chkGeneralRtcDebug.Checked = fields[7] == "0" ? false : true;
             }
             catch (Exception ex)
             {
