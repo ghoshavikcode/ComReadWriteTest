@@ -20,6 +20,20 @@ namespace TechavoSystem
             this.menu.NodeMouseClick += menu_Click;
             this.FormClosing += Dashboard_FormClosing;
             cmbComPorts.DataSource = SerialPort.GetPortNames();
+            txtDoOnTime.Leave += TimeFormatCheck;
+            txtDoOffTime.Leave += TimeFormatCheck;
+            txtDoRelayCloseOn.Leave += NumericCheck;
+            txtDoRelayDelayTime.Leave += NumericCheck;
+        }
+
+        private void NumericCheck(object? sender, EventArgs e)
+        {
+            NumericChecker((TextBox)sender);
+        }
+
+        private void TimeFormatCheck(object? sender, EventArgs e)
+        {
+            CheckTime((TextBox)sender);
         }
 
         private void Dashboard_FormClosing(object? sender, FormClosingEventArgs e)
@@ -152,7 +166,6 @@ namespace TechavoSystem
             cmbReportDataType.Enabled = isChecked;
             txtTotalizerUnit.Enabled = isChecked;
         }
-        private List<Control> aiControls = new List<Control>();
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
@@ -255,6 +268,49 @@ namespace TechavoSystem
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
                 CloseConnection();
+            }
+        }
+        private void CheckTime(TextBox textBox)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
+                return;
+            if (!textBox.Text.Contains(":"))
+            {
+                MessageBox.Show("Time format should be HH:MM");
+                textBox.Text = string.Empty;
+            }
+            else
+            {
+                string[] hourMin = textBox.Text.Split(':');
+                if (hourMin[0].Length != 2 || hourMin[1].Length != 2)
+                {
+                    MessageBox.Show("Time format should be HH:MM");
+                    textBox.Text = string.Empty;
+                }
+                else
+                {
+                    int hour = 0;
+                    int minute = 0;
+                    bool successHour = int.TryParse(hourMin[0], out hour);
+                    bool successMin = int.TryParse(hourMin[1], out minute);
+                    if(!successHour || !successMin || hour > 23 || minute > 59)
+                    {
+                        MessageBox.Show("Invalid Time");
+                        textBox.Text = string.Empty;
+                    }
+                }
+            }
+        }
+        private void NumericChecker(TextBox textBox)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
+                return;
+            long value = 0;
+            bool success = long.TryParse(textBox.Text, out value);
+            if (!success)
+            {
+                MessageBox.Show("Please enter numeric value");
+                textBox.Text = string.Empty;
             }
         }
         #endregion
