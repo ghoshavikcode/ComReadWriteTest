@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             TreeNode treeNode1 = new TreeNode("General Settings");
             TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
             TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
@@ -39,9 +40,96 @@
             TreeNode treeNode8 = new TreeNode("User", 0, 0);
             TreeNode treeNode9 = new TreeNode("Modbus Master", 0, 0);
             TreeNode treeNode10 = new TreeNode("Modbus Slave", 0, 0);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            TreeNode treeNode11 = new TreeNode("GPRS Settings");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlGPRSSettings = new Panel();
+            btnGPRSWriteMemory = new Button();
+            btnGPRSReadMemory = new Button();
+            groupBox19 = new GroupBox();
+            txtSubscribeCmd = new TextBox();
+            txtPublishCMDReply = new TextBox();
+            txtPublishEvent = new TextBox();
+            label149 = new Label();
+            label150 = new Label();
+            label151 = new Label();
+            groupBox20 = new GroupBox();
+            btnMQTTShowPass = new Button();
+            cmbQosLevel = new ComboBox();
+            label152 = new Label();
+            chkAuthEnable = new CheckBox();
+            txtMQTTPassword = new TextBox();
+            txtMQTTUserName = new TextBox();
+            txtClientId = new TextBox();
+            txtBrokerPort = new TextBox();
+            txtBrokerIPDomain = new TextBox();
+            label153 = new Label();
+            label154 = new Label();
+            label155 = new Label();
+            label156 = new Label();
+            label157 = new Label();
+            label158 = new Label();
+            label159 = new Label();
+            groupBox16 = new GroupBox();
+            btnSSLModuleReupdate = new Button();
+            btnClientKey = new Button();
+            btnClientCertificate = new Button();
+            btnCACertificate = new Button();
+            txtClientKey = new TextBox();
+            txtClientCertificate = new TextBox();
+            txtCAServerCertificate = new TextBox();
+            label137 = new Label();
+            label138 = new Label();
+            label139 = new Label();
+            groupBox17 = new GroupBox();
+            btnIPSettPassView = new Button();
+            txtIPSettPassword = new TextBox();
+            txtIPSettUserName = new TextBox();
+            txtAPN = new TextBox();
+            label140 = new Label();
+            label141 = new Label();
+            label142 = new Label();
+            label143 = new Label();
+            groupBox18 = new GroupBox();
+            cmbEventTransmission = new ComboBox();
+            cmbSSLSecurityEnabled = new ComboBox();
+            chkSSLSecurityEnable = new CheckBox();
+            txtServerPort = new TextBox();
+            txtServerIPURL = new TextBox();
+            cmbConnectProtocol = new ComboBox();
+            label144 = new Label();
+            label145 = new Label();
+            label146 = new Label();
+            label147 = new Label();
+            label148 = new Label();
+            label67 = new Label();
+            pnlUser = new Panel();
+            cmbUserIndex = new ComboBox();
+            label128 = new Label();
+            btnUserWriteMemory = new Button();
+            btnUserReadMemory = new Button();
+            groupBox15 = new GroupBox();
+            chkUserSmsTimerReport = new CheckBox();
+            label134 = new Label();
+            cmbUserSelectDo = new ComboBox();
+            chkUserIsVolatile = new CheckBox();
+            label129 = new Label();
+            label112 = new Label();
+            chkUserCanCall = new CheckBox();
+            chkUserIsAlarm = new CheckBox();
+            chkUserIsAdmin = new CheckBox();
+            chkUserSmsOnGprsFail = new CheckBox();
+            chkUserSmsOnLowTower = new CheckBox();
+            label113 = new Label();
+            label122 = new Label();
+            chkUserSmsOnPowerOn = new CheckBox();
+            txtUserMobileNo = new TextBox();
+            label123 = new Label();
+            label124 = new Label();
+            label125 = new Label();
+            label126 = new Label();
+            label127 = new Label();
+            label43 = new Label();
             pnlPulseSettings = new Panel();
             btnPulseWriteMemory = new Button();
             btnPulseReadMemory = new Button();
@@ -231,33 +319,6 @@
             cmbDOType = new ComboBox();
             label114 = new Label();
             label40 = new Label();
-            pnlUser = new Panel();
-            cmbUserIndex = new ComboBox();
-            label128 = new Label();
-            btnUserWriteMemory = new Button();
-            btnUserReadMemory = new Button();
-            groupBox15 = new GroupBox();
-            chkUserSmsTimerReport = new CheckBox();
-            label134 = new Label();
-            cmbUserSelectDo = new ComboBox();
-            chkUserIsVolatile = new CheckBox();
-            label129 = new Label();
-            label112 = new Label();
-            chkUserCanCall = new CheckBox();
-            chkUserIsAlarm = new CheckBox();
-            chkUserIsAdmin = new CheckBox();
-            chkUserSmsOnGprsFail = new CheckBox();
-            chkUserSmsOnLowTower = new CheckBox();
-            label113 = new Label();
-            label122 = new Label();
-            chkUserSmsOnPowerOn = new CheckBox();
-            txtUserMobileNo = new TextBox();
-            label123 = new Label();
-            label124 = new Label();
-            label125 = new Label();
-            label126 = new Label();
-            label127 = new Label();
-            label43 = new Label();
             pnlModbusSettings = new Panel();
             button5 = new Button();
             button6 = new Button();
@@ -346,6 +407,14 @@
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
             pnlDashboard.SuspendLayout();
+            pnlGPRSSettings.SuspendLayout();
+            groupBox19.SuspendLayout();
+            groupBox20.SuspendLayout();
+            groupBox16.SuspendLayout();
+            groupBox17.SuspendLayout();
+            groupBox18.SuspendLayout();
+            pnlUser.SuspendLayout();
+            groupBox15.SuspendLayout();
             pnlPulseSettings.SuspendLayout();
             groupBox7.SuspendLayout();
             pnlDISettings.SuspendLayout();
@@ -361,8 +430,6 @@
             groupBox13.SuspendLayout();
             pnlDOSettings.SuspendLayout();
             groupBox14.SuspendLayout();
-            pnlUser.SuspendLayout();
-            groupBox15.SuspendLayout();
             pnlModbusSettings.SuspendLayout();
             groupBox9.SuspendLayout();
             groupBox10.SuspendLayout();
@@ -387,6 +454,7 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlGPRSSettings);
             pnlDashboard.Controls.Add(pnlUser);
             pnlDashboard.Controls.Add(pnlPulseSettings);
             pnlDashboard.Controls.Add(pnlDISettings);
@@ -399,9 +467,883 @@
             pnlDashboard.Controls.Add(pnlModbusSlave);
             pnlDashboard.Location = new Point(7, 87);
             pnlDashboard.Name = "pnlDashboard";
-            pnlDashboard.Size = new Size(1460, 834);
+            pnlDashboard.Size = new Size(1460, 838);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlGPRSSettings
+            // 
+            pnlGPRSSettings.Controls.Add(btnGPRSWriteMemory);
+            pnlGPRSSettings.Controls.Add(btnGPRSReadMemory);
+            pnlGPRSSettings.Controls.Add(groupBox19);
+            pnlGPRSSettings.Controls.Add(groupBox20);
+            pnlGPRSSettings.Controls.Add(groupBox16);
+            pnlGPRSSettings.Controls.Add(groupBox17);
+            pnlGPRSSettings.Controls.Add(groupBox18);
+            pnlGPRSSettings.Controls.Add(label67);
+            pnlGPRSSettings.Location = new Point(321, 9);
+            pnlGPRSSettings.Name = "pnlGPRSSettings";
+            pnlGPRSSettings.Size = new Size(1133, 823);
+            pnlGPRSSettings.TabIndex = 8;
+            pnlGPRSSettings.Visible = false;
+            // 
+            // btnGPRSWriteMemory
+            // 
+            btnGPRSWriteMemory.BackColor = Color.Red;
+            btnGPRSWriteMemory.Cursor = Cursors.Hand;
+            btnGPRSWriteMemory.ForeColor = Color.White;
+            btnGPRSWriteMemory.Location = new Point(628, 688);
+            btnGPRSWriteMemory.Name = "btnGPRSWriteMemory";
+            btnGPRSWriteMemory.Size = new Size(172, 42);
+            btnGPRSWriteMemory.TabIndex = 60;
+            btnGPRSWriteMemory.Text = "Write Memory";
+            btnGPRSWriteMemory.UseVisualStyleBackColor = false;
+            // 
+            // btnGPRSReadMemory
+            // 
+            btnGPRSReadMemory.BackColor = Color.DarkKhaki;
+            btnGPRSReadMemory.Cursor = Cursors.Hand;
+            btnGPRSReadMemory.ForeColor = Color.White;
+            btnGPRSReadMemory.Location = new Point(356, 688);
+            btnGPRSReadMemory.Name = "btnGPRSReadMemory";
+            btnGPRSReadMemory.Size = new Size(190, 42);
+            btnGPRSReadMemory.TabIndex = 59;
+            btnGPRSReadMemory.Text = "Read Memory";
+            btnGPRSReadMemory.UseVisualStyleBackColor = false;
+            // 
+            // groupBox19
+            // 
+            groupBox19.Controls.Add(txtSubscribeCmd);
+            groupBox19.Controls.Add(txtPublishCMDReply);
+            groupBox19.Controls.Add(txtPublishEvent);
+            groupBox19.Controls.Add(label149);
+            groupBox19.Controls.Add(label150);
+            groupBox19.Controls.Add(label151);
+            groupBox19.Location = new Point(531, 286);
+            groupBox19.Name = "groupBox19";
+            groupBox19.Size = new Size(442, 152);
+            groupBox19.TabIndex = 7;
+            groupBox19.TabStop = false;
+            groupBox19.Text = "Topics";
+            // 
+            // txtSubscribeCmd
+            // 
+            txtSubscribeCmd.Location = new Point(184, 114);
+            txtSubscribeCmd.Name = "txtSubscribeCmd";
+            txtSubscribeCmd.Size = new Size(219, 27);
+            txtSubscribeCmd.TabIndex = 5;
+            // 
+            // txtPublishCMDReply
+            // 
+            txtPublishCMDReply.Location = new Point(184, 75);
+            txtPublishCMDReply.Name = "txtPublishCMDReply";
+            txtPublishCMDReply.Size = new Size(219, 27);
+            txtPublishCMDReply.TabIndex = 4;
+            // 
+            // txtPublishEvent
+            // 
+            txtPublishEvent.Location = new Point(184, 37);
+            txtPublishEvent.Name = "txtPublishEvent";
+            txtPublishEvent.Size = new Size(219, 27);
+            txtPublishEvent.TabIndex = 3;
+            // 
+            // label149
+            // 
+            label149.AutoSize = true;
+            label149.Location = new Point(17, 119);
+            label149.Name = "label149";
+            label149.Size = new Size(108, 20);
+            label149.TabIndex = 2;
+            label149.Text = "Subscribe Cmd";
+            // 
+            // label150
+            // 
+            label150.AutoSize = true;
+            label150.Location = new Point(17, 80);
+            label150.Name = "label150";
+            label150.Size = new Size(134, 20);
+            label150.TabIndex = 1;
+            label150.Text = "Publish CMD Reply";
+            // 
+            // label151
+            // 
+            label151.AutoSize = true;
+            label151.Location = new Point(17, 42);
+            label151.Name = "label151";
+            label151.Size = new Size(96, 20);
+            label151.TabIndex = 0;
+            label151.Text = "Publish Event";
+            // 
+            // groupBox20
+            // 
+            groupBox20.Controls.Add(btnMQTTShowPass);
+            groupBox20.Controls.Add(cmbQosLevel);
+            groupBox20.Controls.Add(label152);
+            groupBox20.Controls.Add(chkAuthEnable);
+            groupBox20.Controls.Add(txtMQTTPassword);
+            groupBox20.Controls.Add(txtMQTTUserName);
+            groupBox20.Controls.Add(txtClientId);
+            groupBox20.Controls.Add(txtBrokerPort);
+            groupBox20.Controls.Add(txtBrokerIPDomain);
+            groupBox20.Controls.Add(label153);
+            groupBox20.Controls.Add(label154);
+            groupBox20.Controls.Add(label155);
+            groupBox20.Controls.Add(label156);
+            groupBox20.Controls.Add(label157);
+            groupBox20.Controls.Add(label158);
+            groupBox20.Controls.Add(label159);
+            groupBox20.Location = new Point(20, 287);
+            groupBox20.Name = "groupBox20";
+            groupBox20.Size = new Size(502, 319);
+            groupBox20.TabIndex = 6;
+            groupBox20.TabStop = false;
+            groupBox20.Text = "Broker Sett.";
+            // 
+            // btnMQTTShowPass
+            // 
+            btnMQTTShowPass.BackgroundImage = (Image)resources.GetObject("btnMQTTShowPass.BackgroundImage");
+            btnMQTTShowPass.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMQTTShowPass.Location = new Point(412, 222);
+            btnMQTTShowPass.Name = "btnMQTTShowPass";
+            btnMQTTShowPass.Size = new Size(28, 27);
+            btnMQTTShowPass.TabIndex = 16;
+            btnMQTTShowPass.UseVisualStyleBackColor = true;
+            // 
+            // cmbQosLevel
+            // 
+            cmbQosLevel.FormattingEnabled = true;
+            cmbQosLevel.Items.AddRange(new object[] { "0", "1" });
+            cmbQosLevel.Location = new Point(182, 260);
+            cmbQosLevel.Name = "cmbQosLevel";
+            cmbQosLevel.Size = new Size(150, 28);
+            cmbQosLevel.TabIndex = 15;
+            // 
+            // label152
+            // 
+            label152.AutoSize = true;
+            label152.Location = new Point(10, 268);
+            label152.Name = "label152";
+            label152.Size = new Size(77, 20);
+            label152.TabIndex = 14;
+            label152.Text = "QOS Level";
+            // 
+            // chkAuthEnable
+            // 
+            chkAuthEnable.AutoSize = true;
+            chkAuthEnable.Location = new Point(182, 153);
+            chkAuthEnable.Name = "chkAuthEnable";
+            chkAuthEnable.Size = new Size(18, 17);
+            chkAuthEnable.TabIndex = 13;
+            chkAuthEnable.UseVisualStyleBackColor = true;
+            // 
+            // txtMQTTPassword
+            // 
+            txtMQTTPassword.Location = new Point(182, 220);
+            txtMQTTPassword.Name = "txtMQTTPassword";
+            txtMQTTPassword.Size = new Size(219, 27);
+            txtMQTTPassword.TabIndex = 12;
+            txtMQTTPassword.UseSystemPasswordChar = true;
+            // 
+            // txtMQTTUserName
+            // 
+            txtMQTTUserName.Location = new Point(182, 181);
+            txtMQTTUserName.Name = "txtMQTTUserName";
+            txtMQTTUserName.Size = new Size(219, 27);
+            txtMQTTUserName.TabIndex = 11;
+            // 
+            // txtClientId
+            // 
+            txtClientId.Location = new Point(182, 108);
+            txtClientId.Name = "txtClientId";
+            txtClientId.Size = new Size(219, 27);
+            txtClientId.TabIndex = 10;
+            // 
+            // txtBrokerPort
+            // 
+            txtBrokerPort.Location = new Point(182, 70);
+            txtBrokerPort.Name = "txtBrokerPort";
+            txtBrokerPort.Size = new Size(219, 27);
+            txtBrokerPort.TabIndex = 9;
+            // 
+            // txtBrokerIPDomain
+            // 
+            txtBrokerIPDomain.Location = new Point(182, 35);
+            txtBrokerIPDomain.Name = "txtBrokerIPDomain";
+            txtBrokerIPDomain.Size = new Size(219, 27);
+            txtBrokerIPDomain.TabIndex = 8;
+            // 
+            // label153
+            // 
+            label153.Location = new Point(406, 62);
+            label153.Name = "label153";
+            label153.Size = new Size(80, 46);
+            label153.TabIndex = 7;
+            label153.Text = "do Sett. in IP Sett Tab";
+            // 
+            // label154
+            // 
+            label154.AutoSize = true;
+            label154.Location = new Point(11, 224);
+            label154.Name = "label154";
+            label154.Size = new Size(70, 20);
+            label154.TabIndex = 6;
+            label154.Text = "Password";
+            // 
+            // label155
+            // 
+            label155.AutoSize = true;
+            label155.Location = new Point(11, 187);
+            label155.Name = "label155";
+            label155.Size = new Size(82, 20);
+            label155.TabIndex = 5;
+            label155.Text = "User Name";
+            // 
+            // label156
+            // 
+            label156.AutoSize = true;
+            label156.Location = new Point(11, 151);
+            label156.Name = "label156";
+            label156.Size = new Size(92, 20);
+            label156.TabIndex = 4;
+            label156.Text = "Auth. Enable";
+            // 
+            // label157
+            // 
+            label157.AutoSize = true;
+            label157.Location = new Point(11, 112);
+            label157.Name = "label157";
+            label157.Size = new Size(66, 20);
+            label157.TabIndex = 3;
+            label157.Text = "Client ID";
+            // 
+            // label158
+            // 
+            label158.AutoSize = true;
+            label158.Location = new Point(11, 75);
+            label158.Name = "label158";
+            label158.Size = new Size(82, 20);
+            label158.TabIndex = 2;
+            label158.Text = "Broker Port";
+            // 
+            // label159
+            // 
+            label159.AutoSize = true;
+            label159.Location = new Point(11, 38);
+            label159.Name = "label159";
+            label159.Size = new Size(127, 20);
+            label159.TabIndex = 0;
+            label159.Text = "Broker IP/Domain";
+            // 
+            // groupBox16
+            // 
+            groupBox16.Controls.Add(btnSSLModuleReupdate);
+            groupBox16.Controls.Add(btnClientKey);
+            groupBox16.Controls.Add(btnClientCertificate);
+            groupBox16.Controls.Add(btnCACertificate);
+            groupBox16.Controls.Add(txtClientKey);
+            groupBox16.Controls.Add(txtClientCertificate);
+            groupBox16.Controls.Add(txtCAServerCertificate);
+            groupBox16.Controls.Add(label137);
+            groupBox16.Controls.Add(label138);
+            groupBox16.Controls.Add(label139);
+            groupBox16.Location = new Point(381, 61);
+            groupBox16.Name = "groupBox16";
+            groupBox16.Size = new Size(388, 206);
+            groupBox16.TabIndex = 5;
+            groupBox16.TabStop = false;
+            groupBox16.Text = "SSL Settings";
+            // 
+            // btnSSLModuleReupdate
+            // 
+            btnSSLModuleReupdate.BackColor = Color.DarkGray;
+            btnSSLModuleReupdate.Enabled = false;
+            btnSSLModuleReupdate.Location = new Point(48, 154);
+            btnSSLModuleReupdate.Name = "btnSSLModuleReupdate";
+            btnSSLModuleReupdate.Size = new Size(288, 29);
+            btnSSLModuleReupdate.TabIndex = 9;
+            btnSSLModuleReupdate.Text = "SSL Module Re-Update";
+            btnSSLModuleReupdate.UseVisualStyleBackColor = false;
+            // 
+            // btnClientKey
+            // 
+            btnClientKey.BackColor = Color.DarkGray;
+            btnClientKey.Enabled = false;
+            btnClientKey.Location = new Point(316, 108);
+            btnClientKey.Name = "btnClientKey";
+            btnClientKey.Size = new Size(66, 29);
+            btnClientKey.TabIndex = 8;
+            btnClientKey.Text = "Browse";
+            btnClientKey.UseVisualStyleBackColor = false;
+            // 
+            // btnClientCertificate
+            // 
+            btnClientCertificate.BackColor = Color.DarkGray;
+            btnClientCertificate.Enabled = false;
+            btnClientCertificate.Location = new Point(316, 70);
+            btnClientCertificate.Name = "btnClientCertificate";
+            btnClientCertificate.Size = new Size(66, 29);
+            btnClientCertificate.TabIndex = 7;
+            btnClientCertificate.Text = "Browse";
+            btnClientCertificate.UseVisualStyleBackColor = false;
+            // 
+            // btnCACertificate
+            // 
+            btnCACertificate.BackColor = Color.DarkGray;
+            btnCACertificate.Enabled = false;
+            btnCACertificate.Location = new Point(316, 29);
+            btnCACertificate.Name = "btnCACertificate";
+            btnCACertificate.Size = new Size(66, 29);
+            btnCACertificate.TabIndex = 6;
+            btnCACertificate.Text = "Browse";
+            btnCACertificate.UseVisualStyleBackColor = false;
+            // 
+            // txtClientKey
+            // 
+            txtClientKey.Enabled = false;
+            txtClientKey.Location = new Point(159, 107);
+            txtClientKey.Name = "txtClientKey";
+            txtClientKey.Size = new Size(148, 27);
+            txtClientKey.TabIndex = 5;
+            // 
+            // txtClientCertificate
+            // 
+            txtClientCertificate.Enabled = false;
+            txtClientCertificate.Location = new Point(159, 70);
+            txtClientCertificate.Name = "txtClientCertificate";
+            txtClientCertificate.Size = new Size(148, 27);
+            txtClientCertificate.TabIndex = 4;
+            // 
+            // txtCAServerCertificate
+            // 
+            txtCAServerCertificate.Enabled = false;
+            txtCAServerCertificate.Location = new Point(159, 32);
+            txtCAServerCertificate.Name = "txtCAServerCertificate";
+            txtCAServerCertificate.Size = new Size(148, 27);
+            txtCAServerCertificate.TabIndex = 3;
+            // 
+            // label137
+            // 
+            label137.AutoSize = true;
+            label137.Location = new Point(8, 110);
+            label137.Name = "label137";
+            label137.Size = new Size(75, 20);
+            label137.TabIndex = 2;
+            label137.Text = "Client Key";
+            // 
+            // label138
+            // 
+            label138.AutoSize = true;
+            label138.Location = new Point(8, 72);
+            label138.Name = "label138";
+            label138.Size = new Size(119, 20);
+            label138.TabIndex = 1;
+            label138.Text = "Client Certificate";
+            // 
+            // label139
+            // 
+            label139.AutoSize = true;
+            label139.Location = new Point(8, 36);
+            label139.Name = "label139";
+            label139.Size = new Size(145, 20);
+            label139.TabIndex = 0;
+            label139.Text = "CA Server Certificate";
+            // 
+            // groupBox17
+            // 
+            groupBox17.Controls.Add(btnIPSettPassView);
+            groupBox17.Controls.Add(txtIPSettPassword);
+            groupBox17.Controls.Add(txtIPSettUserName);
+            groupBox17.Controls.Add(txtAPN);
+            groupBox17.Controls.Add(label140);
+            groupBox17.Controls.Add(label141);
+            groupBox17.Controls.Add(label142);
+            groupBox17.Controls.Add(label143);
+            groupBox17.Location = new Point(780, 61);
+            groupBox17.Name = "groupBox17";
+            groupBox17.Size = new Size(350, 162);
+            groupBox17.TabIndex = 4;
+            groupBox17.TabStop = false;
+            groupBox17.Text = "Modem Settings";
+            // 
+            // btnIPSettPassView
+            // 
+            btnIPSettPassView.BackgroundImage = (Image)resources.GetObject("btnIPSettPassView.BackgroundImage");
+            btnIPSettPassView.BackgroundImageLayout = ImageLayout.Stretch;
+            btnIPSettPassView.Location = new Point(304, 125);
+            btnIPSettPassView.Name = "btnIPSettPassView";
+            btnIPSettPassView.Size = new Size(28, 27);
+            btnIPSettPassView.TabIndex = 7;
+            btnIPSettPassView.UseVisualStyleBackColor = true;
+            // 
+            // txtIPSettPassword
+            // 
+            txtIPSettPassword.Location = new Point(138, 125);
+            txtIPSettPassword.Name = "txtIPSettPassword";
+            txtIPSettPassword.Size = new Size(165, 27);
+            txtIPSettPassword.TabIndex = 6;
+            txtIPSettPassword.UseSystemPasswordChar = true;
+            // 
+            // txtIPSettUserName
+            // 
+            txtIPSettUserName.Location = new Point(138, 90);
+            txtIPSettUserName.Name = "txtIPSettUserName";
+            txtIPSettUserName.Size = new Size(165, 27);
+            txtIPSettUserName.TabIndex = 5;
+            // 
+            // txtAPN
+            // 
+            txtAPN.Location = new Point(138, 56);
+            txtAPN.Name = "txtAPN";
+            txtAPN.Size = new Size(165, 27);
+            txtAPN.TabIndex = 4;
+            // 
+            // label140
+            // 
+            label140.AutoSize = true;
+            label140.Location = new Point(19, 125);
+            label140.Name = "label140";
+            label140.Size = new Size(99, 20);
+            label140.TabIndex = 3;
+            label140.Text = "SIM Password";
+            // 
+            // label141
+            // 
+            label141.AutoSize = true;
+            label141.Location = new Point(20, 93);
+            label141.Name = "label141";
+            label141.Size = new Size(111, 20);
+            label141.TabIndex = 2;
+            label141.Text = "SIM User Name";
+            // 
+            // label142
+            // 
+            label142.AutoSize = true;
+            label142.Location = new Point(20, 59);
+            label142.Name = "label142";
+            label142.Size = new Size(38, 20);
+            label142.TabIndex = 1;
+            label142.Text = "APN";
+            // 
+            // label143
+            // 
+            label143.AutoSize = true;
+            label143.Location = new Point(49, 22);
+            label143.Name = "label143";
+            label143.Size = new Size(234, 20);
+            label143.TabIndex = 0;
+            label143.Text = "(Note - Applicable Only For India)";
+            // 
+            // groupBox18
+            // 
+            groupBox18.Controls.Add(cmbEventTransmission);
+            groupBox18.Controls.Add(cmbSSLSecurityEnabled);
+            groupBox18.Controls.Add(chkSSLSecurityEnable);
+            groupBox18.Controls.Add(txtServerPort);
+            groupBox18.Controls.Add(txtServerIPURL);
+            groupBox18.Controls.Add(cmbConnectProtocol);
+            groupBox18.Controls.Add(label144);
+            groupBox18.Controls.Add(label145);
+            groupBox18.Controls.Add(label146);
+            groupBox18.Controls.Add(label147);
+            groupBox18.Controls.Add(label148);
+            groupBox18.Location = new Point(20, 61);
+            groupBox18.Name = "groupBox18";
+            groupBox18.Size = new Size(353, 217);
+            groupBox18.TabIndex = 3;
+            groupBox18.TabStop = false;
+            groupBox18.Text = "IP Settings";
+            // 
+            // cmbEventTransmission
+            // 
+            cmbEventTransmission.Enabled = false;
+            cmbEventTransmission.FormattingEnabled = true;
+            cmbEventTransmission.Items.AddRange(new object[] { "GSM Only" });
+            cmbEventTransmission.Location = new Point(161, 169);
+            cmbEventTransmission.Name = "cmbEventTransmission";
+            cmbEventTransmission.Size = new Size(183, 28);
+            cmbEventTransmission.TabIndex = 10;
+            // 
+            // cmbSSLSecurityEnabled
+            // 
+            cmbSSLSecurityEnabled.FormattingEnabled = true;
+            cmbSSLSecurityEnabled.Items.AddRange(new object[] { "No", "Yes" });
+            cmbSSLSecurityEnabled.Location = new Point(197, 134);
+            cmbSSLSecurityEnabled.Name = "cmbSSLSecurityEnabled";
+            cmbSSLSecurityEnabled.Size = new Size(147, 28);
+            cmbSSLSecurityEnabled.TabIndex = 9;
+            // 
+            // chkSSLSecurityEnable
+            // 
+            chkSSLSecurityEnable.AutoSize = true;
+            chkSSLSecurityEnable.Location = new Point(161, 141);
+            chkSSLSecurityEnable.Name = "chkSSLSecurityEnable";
+            chkSSLSecurityEnable.Size = new Size(18, 17);
+            chkSSLSecurityEnable.TabIndex = 8;
+            chkSSLSecurityEnable.UseVisualStyleBackColor = true;
+            // 
+            // txtServerPort
+            // 
+            txtServerPort.Location = new Point(161, 100);
+            txtServerPort.Name = "txtServerPort";
+            txtServerPort.Size = new Size(183, 27);
+            txtServerPort.TabIndex = 7;
+            // 
+            // txtServerIPURL
+            // 
+            txtServerIPURL.Location = new Point(161, 66);
+            txtServerIPURL.Name = "txtServerIPURL";
+            txtServerIPURL.Size = new Size(181, 27);
+            txtServerIPURL.TabIndex = 6;
+            // 
+            // cmbConnectProtocol
+            // 
+            cmbConnectProtocol.FormattingEnabled = true;
+            cmbConnectProtocol.Items.AddRange(new object[] { "MQTT", "HTTP", "TCP" });
+            cmbConnectProtocol.Location = new Point(161, 31);
+            cmbConnectProtocol.Name = "cmbConnectProtocol";
+            cmbConnectProtocol.Size = new Size(181, 28);
+            cmbConnectProtocol.TabIndex = 5;
+            // 
+            // label144
+            // 
+            label144.AutoSize = true;
+            label144.Location = new Point(10, 171);
+            label144.Name = "label144";
+            label144.Size = new Size(133, 20);
+            label144.TabIndex = 4;
+            label144.Text = "Event Transmission";
+            // 
+            // label145
+            // 
+            label145.AutoSize = true;
+            label145.Location = new Point(10, 138);
+            label145.Name = "label145";
+            label145.Size = new Size(137, 20);
+            label145.TabIndex = 3;
+            label145.Text = "SSL Security Enable";
+            // 
+            // label146
+            // 
+            label146.AutoSize = true;
+            label146.Location = new Point(10, 102);
+            label146.Name = "label146";
+            label146.Size = new Size(80, 20);
+            label146.TabIndex = 2;
+            label146.Text = "Server Port";
+            // 
+            // label147
+            // 
+            label147.AutoSize = true;
+            label147.Location = new Point(10, 68);
+            label147.Name = "label147";
+            label147.Size = new Size(98, 20);
+            label147.TabIndex = 1;
+            label147.Text = "Server IP/URL";
+            // 
+            // label148
+            // 
+            label148.AutoSize = true;
+            label148.Location = new Point(10, 34);
+            label148.Name = "label148";
+            label148.Size = new Size(123, 20);
+            label148.TabIndex = 0;
+            label148.Text = "Connect Protocol";
+            // 
+            // label67
+            // 
+            label67.AutoSize = true;
+            label67.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label67.Location = new Point(469, 13);
+            label67.Name = "label67";
+            label67.Size = new Size(174, 35);
+            label67.TabIndex = 0;
+            label67.Text = "GPRS Settings";
+            // 
+            // pnlUser
+            // 
+            pnlUser.Controls.Add(cmbUserIndex);
+            pnlUser.Controls.Add(label128);
+            pnlUser.Controls.Add(btnUserWriteMemory);
+            pnlUser.Controls.Add(btnUserReadMemory);
+            pnlUser.Controls.Add(groupBox15);
+            pnlUser.Controls.Add(label43);
+            pnlUser.Location = new Point(321, 9);
+            pnlUser.Name = "pnlUser";
+            pnlUser.Size = new Size(1133, 822);
+            pnlUser.TabIndex = 5;
+            pnlUser.Visible = false;
+            // 
+            // cmbUserIndex
+            // 
+            cmbUserIndex.FormattingEnabled = true;
+            cmbUserIndex.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5" });
+            cmbUserIndex.Location = new Point(556, 75);
+            cmbUserIndex.Name = "cmbUserIndex";
+            cmbUserIndex.Size = new Size(151, 28);
+            cmbUserIndex.TabIndex = 64;
+            // 
+            // label128
+            // 
+            label128.AutoSize = true;
+            label128.Location = new Point(424, 79);
+            label128.Name = "label128";
+            label128.Size = new Size(122, 20);
+            label128.TabIndex = 63;
+            label128.Text = "Select User Index";
+            // 
+            // btnUserWriteMemory
+            // 
+            btnUserWriteMemory.BackColor = Color.Red;
+            btnUserWriteMemory.Cursor = Cursors.Hand;
+            btnUserWriteMemory.ForeColor = Color.White;
+            btnUserWriteMemory.Location = new Point(631, 689);
+            btnUserWriteMemory.Name = "btnUserWriteMemory";
+            btnUserWriteMemory.Size = new Size(172, 42);
+            btnUserWriteMemory.TabIndex = 62;
+            btnUserWriteMemory.Text = "Write Memory";
+            btnUserWriteMemory.UseVisualStyleBackColor = false;
+            btnUserWriteMemory.Click += btnUserWriteMemory_Click;
+            // 
+            // btnUserReadMemory
+            // 
+            btnUserReadMemory.BackColor = Color.DarkKhaki;
+            btnUserReadMemory.Cursor = Cursors.Hand;
+            btnUserReadMemory.ForeColor = Color.White;
+            btnUserReadMemory.Location = new Point(359, 689);
+            btnUserReadMemory.Name = "btnUserReadMemory";
+            btnUserReadMemory.Size = new Size(190, 42);
+            btnUserReadMemory.TabIndex = 61;
+            btnUserReadMemory.Text = "Read Memory";
+            btnUserReadMemory.UseVisualStyleBackColor = false;
+            btnUserReadMemory.Click += btnUserReadMemory_Click;
+            // 
+            // groupBox15
+            // 
+            groupBox15.Controls.Add(chkUserSmsTimerReport);
+            groupBox15.Controls.Add(label134);
+            groupBox15.Controls.Add(cmbUserSelectDo);
+            groupBox15.Controls.Add(chkUserIsVolatile);
+            groupBox15.Controls.Add(label129);
+            groupBox15.Controls.Add(label112);
+            groupBox15.Controls.Add(chkUserCanCall);
+            groupBox15.Controls.Add(chkUserIsAlarm);
+            groupBox15.Controls.Add(chkUserIsAdmin);
+            groupBox15.Controls.Add(chkUserSmsOnGprsFail);
+            groupBox15.Controls.Add(chkUserSmsOnLowTower);
+            groupBox15.Controls.Add(label113);
+            groupBox15.Controls.Add(label122);
+            groupBox15.Controls.Add(chkUserSmsOnPowerOn);
+            groupBox15.Controls.Add(txtUserMobileNo);
+            groupBox15.Controls.Add(label123);
+            groupBox15.Controls.Add(label124);
+            groupBox15.Controls.Add(label125);
+            groupBox15.Controls.Add(label126);
+            groupBox15.Controls.Add(label127);
+            groupBox15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox15.Location = new Point(300, 120);
+            groupBox15.Name = "groupBox15";
+            groupBox15.Size = new Size(533, 509);
+            groupBox15.TabIndex = 60;
+            groupBox15.TabStop = false;
+            groupBox15.Text = "User Setup";
+            // 
+            // chkUserSmsTimerReport
+            // 
+            chkUserSmsTimerReport.AutoSize = true;
+            chkUserSmsTimerReport.Location = new Point(325, 92);
+            chkUserSmsTimerReport.Name = "chkUserSmsTimerReport";
+            chkUserSmsTimerReport.Size = new Size(18, 17);
+            chkUserSmsTimerReport.TabIndex = 67;
+            chkUserSmsTimerReport.UseVisualStyleBackColor = true;
+            // 
+            // label134
+            // 
+            label134.AutoSize = true;
+            label134.Location = new Point(15, 84);
+            label134.MaximumSize = new Size(150, 0);
+            label134.Name = "label134";
+            label134.Size = new Size(135, 20);
+            label134.TabIndex = 66;
+            label134.Text = "Sms Timer Report";
+            // 
+            // cmbUserSelectDo
+            // 
+            cmbUserSelectDo.FormattingEnabled = true;
+            cmbUserSelectDo.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" });
+            cmbUserSelectDo.Location = new Point(324, 386);
+            cmbUserSelectDo.Name = "cmbUserSelectDo";
+            cmbUserSelectDo.Size = new Size(188, 28);
+            cmbUserSelectDo.TabIndex = 65;
+            // 
+            // chkUserIsVolatile
+            // 
+            chkUserIsVolatile.AutoSize = true;
+            chkUserIsVolatile.Location = new Point(325, 439);
+            chkUserIsVolatile.Name = "chkUserIsVolatile";
+            chkUserIsVolatile.Size = new Size(18, 17);
+            chkUserIsVolatile.TabIndex = 45;
+            chkUserIsVolatile.UseVisualStyleBackColor = true;
+            // 
+            // label129
+            // 
+            label129.AutoSize = true;
+            label129.Location = new Point(15, 435);
+            label129.MaximumSize = new Size(164, 60);
+            label129.Name = "label129";
+            label129.Size = new Size(77, 20);
+            label129.TabIndex = 44;
+            label129.Text = "Is Volatile";
+            // 
+            // label112
+            // 
+            label112.AutoSize = true;
+            label112.Location = new Point(13, 390);
+            label112.MaximumSize = new Size(164, 60);
+            label112.Name = "label112";
+            label112.Size = new Size(76, 20);
+            label112.TabIndex = 43;
+            label112.Text = "Select DO";
+            // 
+            // chkUserCanCall
+            // 
+            chkUserCanCall.AutoSize = true;
+            chkUserCanCall.Location = new Point(325, 344);
+            chkUserCanCall.Name = "chkUserCanCall";
+            chkUserCanCall.Size = new Size(18, 17);
+            chkUserCanCall.TabIndex = 42;
+            chkUserCanCall.UseVisualStyleBackColor = true;
+            // 
+            // chkUserIsAlarm
+            // 
+            chkUserIsAlarm.AutoSize = true;
+            chkUserIsAlarm.Location = new Point(324, 302);
+            chkUserIsAlarm.Name = "chkUserIsAlarm";
+            chkUserIsAlarm.Size = new Size(18, 17);
+            chkUserIsAlarm.TabIndex = 41;
+            chkUserIsAlarm.UseVisualStyleBackColor = true;
+            // 
+            // chkUserIsAdmin
+            // 
+            chkUserIsAdmin.AutoSize = true;
+            chkUserIsAdmin.Location = new Point(325, 260);
+            chkUserIsAdmin.Name = "chkUserIsAdmin";
+            chkUserIsAdmin.Size = new Size(18, 17);
+            chkUserIsAdmin.TabIndex = 40;
+            chkUserIsAdmin.UseVisualStyleBackColor = true;
+            // 
+            // chkUserSmsOnGprsFail
+            // 
+            chkUserSmsOnGprsFail.AutoSize = true;
+            chkUserSmsOnGprsFail.Location = new Point(325, 218);
+            chkUserSmsOnGprsFail.Name = "chkUserSmsOnGprsFail";
+            chkUserSmsOnGprsFail.Size = new Size(18, 17);
+            chkUserSmsOnGprsFail.TabIndex = 39;
+            chkUserSmsOnGprsFail.UseVisualStyleBackColor = true;
+            // 
+            // chkUserSmsOnLowTower
+            // 
+            chkUserSmsOnLowTower.AutoSize = true;
+            chkUserSmsOnLowTower.Location = new Point(325, 176);
+            chkUserSmsOnLowTower.Name = "chkUserSmsOnLowTower";
+            chkUserSmsOnLowTower.Size = new Size(18, 17);
+            chkUserSmsOnLowTower.TabIndex = 38;
+            chkUserSmsOnLowTower.UseVisualStyleBackColor = true;
+            // 
+            // label113
+            // 
+            label113.AutoSize = true;
+            label113.Location = new Point(15, 342);
+            label113.MaximumSize = new Size(164, 60);
+            label113.Name = "label113";
+            label113.Size = new Size(64, 20);
+            label113.TabIndex = 37;
+            label113.Text = "Can Call";
+            // 
+            // label122
+            // 
+            label122.AutoSize = true;
+            label122.Location = new Point(15, 299);
+            label122.MaximumSize = new Size(164, 60);
+            label122.Name = "label122";
+            label122.Size = new Size(68, 20);
+            label122.TabIndex = 36;
+            label122.Text = "Is Alarm";
+            // 
+            // chkUserSmsOnPowerOn
+            // 
+            chkUserSmsOnPowerOn.AutoSize = true;
+            chkUserSmsOnPowerOn.Location = new Point(325, 134);
+            chkUserSmsOnPowerOn.Name = "chkUserSmsOnPowerOn";
+            chkUserSmsOnPowerOn.Size = new Size(18, 17);
+            chkUserSmsOnPowerOn.TabIndex = 35;
+            chkUserSmsOnPowerOn.UseVisualStyleBackColor = true;
+            // 
+            // txtUserMobileNo
+            // 
+            txtUserMobileNo.BorderStyle = BorderStyle.FixedSingle;
+            txtUserMobileNo.Location = new Point(324, 40);
+            txtUserMobileNo.MaxLength = 10;
+            txtUserMobileNo.Name = "txtUserMobileNo";
+            txtUserMobileNo.Size = new Size(188, 27);
+            txtUserMobileNo.TabIndex = 34;
+            // 
+            // label123
+            // 
+            label123.AutoSize = true;
+            label123.Location = new Point(14, 213);
+            label123.MaximumSize = new Size(164, 60);
+            label123.Name = "label123";
+            label123.Size = new Size(131, 20);
+            label123.TabIndex = 30;
+            label123.Text = "SMS on GPRS Fail";
+            // 
+            // label124
+            // 
+            label124.AutoSize = true;
+            label124.Location = new Point(13, 256);
+            label124.MaximumSize = new Size(164, 60);
+            label124.Name = "label124";
+            label124.Size = new Size(72, 20);
+            label124.TabIndex = 28;
+            label124.Text = "Is Admin";
+            // 
+            // label125
+            // 
+            label125.AutoSize = true;
+            label125.Location = new Point(14, 170);
+            label125.Name = "label125";
+            label125.Size = new Size(141, 20);
+            label125.TabIndex = 21;
+            label125.Text = "SMS on Low Tower";
+            // 
+            // label126
+            // 
+            label126.AutoSize = true;
+            label126.Location = new Point(13, 127);
+            label126.MaximumSize = new Size(150, 0);
+            label126.Name = "label126";
+            label126.Size = new Size(131, 20);
+            label126.TabIndex = 19;
+            label126.Text = "SMS on Power on";
+            // 
+            // label127
+            // 
+            label127.AutoSize = true;
+            label127.Location = new Point(15, 41);
+            label127.Name = "label127";
+            label127.Size = new Size(119, 20);
+            label127.TabIndex = 28;
+            label127.Text = "Mobile Number";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label43.Location = new Point(538, 6);
+            label43.Name = "label43";
+            label43.Size = new Size(62, 31);
+            label43.TabIndex = 1;
+            label43.Text = "User";
             // 
             // pnlPulseSettings
             // 
@@ -2374,292 +3316,6 @@
             label40.TabIndex = 0;
             label40.Text = "DO Settings";
             // 
-            // pnlUser
-            // 
-            pnlUser.Controls.Add(cmbUserIndex);
-            pnlUser.Controls.Add(label128);
-            pnlUser.Controls.Add(btnUserWriteMemory);
-            pnlUser.Controls.Add(btnUserReadMemory);
-            pnlUser.Controls.Add(groupBox15);
-            pnlUser.Controls.Add(label43);
-            pnlUser.Location = new Point(321, 9);
-            pnlUser.Name = "pnlUser";
-            pnlUser.Size = new Size(1133, 822);
-            pnlUser.TabIndex = 5;
-            pnlUser.Visible = false;
-            // 
-            // cmbUserIndex
-            // 
-            cmbUserIndex.FormattingEnabled = true;
-            cmbUserIndex.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5" });
-            cmbUserIndex.Location = new Point(556, 75);
-            cmbUserIndex.Name = "cmbUserIndex";
-            cmbUserIndex.Size = new Size(151, 28);
-            cmbUserIndex.TabIndex = 64;
-            // 
-            // label128
-            // 
-            label128.AutoSize = true;
-            label128.Location = new Point(424, 79);
-            label128.Name = "label128";
-            label128.Size = new Size(122, 20);
-            label128.TabIndex = 63;
-            label128.Text = "Select User Index";
-            // 
-            // btnUserWriteMemory
-            // 
-            btnUserWriteMemory.BackColor = Color.Red;
-            btnUserWriteMemory.Cursor = Cursors.Hand;
-            btnUserWriteMemory.ForeColor = Color.White;
-            btnUserWriteMemory.Location = new Point(631, 689);
-            btnUserWriteMemory.Name = "btnUserWriteMemory";
-            btnUserWriteMemory.Size = new Size(172, 42);
-            btnUserWriteMemory.TabIndex = 62;
-            btnUserWriteMemory.Text = "Write Memory";
-            btnUserWriteMemory.UseVisualStyleBackColor = false;
-            btnUserWriteMemory.Click += btnUserWriteMemory_Click;
-            // 
-            // btnUserReadMemory
-            // 
-            btnUserReadMemory.BackColor = Color.DarkKhaki;
-            btnUserReadMemory.Cursor = Cursors.Hand;
-            btnUserReadMemory.ForeColor = Color.White;
-            btnUserReadMemory.Location = new Point(359, 689);
-            btnUserReadMemory.Name = "btnUserReadMemory";
-            btnUserReadMemory.Size = new Size(190, 42);
-            btnUserReadMemory.TabIndex = 61;
-            btnUserReadMemory.Text = "Read Memory";
-            btnUserReadMemory.UseVisualStyleBackColor = false;
-            btnUserReadMemory.Click += btnUserReadMemory_Click;
-            // 
-            // groupBox15
-            // 
-            groupBox15.Controls.Add(chkUserSmsTimerReport);
-            groupBox15.Controls.Add(label134);
-            groupBox15.Controls.Add(cmbUserSelectDo);
-            groupBox15.Controls.Add(chkUserIsVolatile);
-            groupBox15.Controls.Add(label129);
-            groupBox15.Controls.Add(label112);
-            groupBox15.Controls.Add(chkUserCanCall);
-            groupBox15.Controls.Add(chkUserIsAlarm);
-            groupBox15.Controls.Add(chkUserIsAdmin);
-            groupBox15.Controls.Add(chkUserSmsOnGprsFail);
-            groupBox15.Controls.Add(chkUserSmsOnLowTower);
-            groupBox15.Controls.Add(label113);
-            groupBox15.Controls.Add(label122);
-            groupBox15.Controls.Add(chkUserSmsOnPowerOn);
-            groupBox15.Controls.Add(txtUserMobileNo);
-            groupBox15.Controls.Add(label123);
-            groupBox15.Controls.Add(label124);
-            groupBox15.Controls.Add(label125);
-            groupBox15.Controls.Add(label126);
-            groupBox15.Controls.Add(label127);
-            groupBox15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox15.Location = new Point(300, 120);
-            groupBox15.Name = "groupBox15";
-            groupBox15.Size = new Size(533, 509);
-            groupBox15.TabIndex = 60;
-            groupBox15.TabStop = false;
-            groupBox15.Text = "User Setup";
-            // 
-            // chkUserSmsTimerReport
-            // 
-            chkUserSmsTimerReport.AutoSize = true;
-            chkUserSmsTimerReport.Location = new Point(325, 92);
-            chkUserSmsTimerReport.Name = "chkUserSmsTimerReport";
-            chkUserSmsTimerReport.Size = new Size(18, 17);
-            chkUserSmsTimerReport.TabIndex = 67;
-            chkUserSmsTimerReport.UseVisualStyleBackColor = true;
-            // 
-            // label134
-            // 
-            label134.AutoSize = true;
-            label134.Location = new Point(15, 84);
-            label134.MaximumSize = new Size(150, 0);
-            label134.Name = "label134";
-            label134.Size = new Size(135, 20);
-            label134.TabIndex = 66;
-            label134.Text = "Sms Timer Report";
-            // 
-            // cmbUserSelectDo
-            // 
-            cmbUserSelectDo.FormattingEnabled = true;
-            cmbUserSelectDo.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" });
-            cmbUserSelectDo.Location = new Point(324, 386);
-            cmbUserSelectDo.Name = "cmbUserSelectDo";
-            cmbUserSelectDo.Size = new Size(188, 28);
-            cmbUserSelectDo.TabIndex = 65;
-            // 
-            // chkUserIsVolatile
-            // 
-            chkUserIsVolatile.AutoSize = true;
-            chkUserIsVolatile.Location = new Point(325, 439);
-            chkUserIsVolatile.Name = "chkUserIsVolatile";
-            chkUserIsVolatile.Size = new Size(18, 17);
-            chkUserIsVolatile.TabIndex = 45;
-            chkUserIsVolatile.UseVisualStyleBackColor = true;
-            // 
-            // label129
-            // 
-            label129.AutoSize = true;
-            label129.Location = new Point(15, 435);
-            label129.MaximumSize = new Size(164, 60);
-            label129.Name = "label129";
-            label129.Size = new Size(77, 20);
-            label129.TabIndex = 44;
-            label129.Text = "Is Volatile";
-            // 
-            // label112
-            // 
-            label112.AutoSize = true;
-            label112.Location = new Point(13, 390);
-            label112.MaximumSize = new Size(164, 60);
-            label112.Name = "label112";
-            label112.Size = new Size(76, 20);
-            label112.TabIndex = 43;
-            label112.Text = "Select DO";
-            // 
-            // chkUserCanCall
-            // 
-            chkUserCanCall.AutoSize = true;
-            chkUserCanCall.Location = new Point(325, 344);
-            chkUserCanCall.Name = "chkUserCanCall";
-            chkUserCanCall.Size = new Size(18, 17);
-            chkUserCanCall.TabIndex = 42;
-            chkUserCanCall.UseVisualStyleBackColor = true;
-            // 
-            // chkUserIsAlarm
-            // 
-            chkUserIsAlarm.AutoSize = true;
-            chkUserIsAlarm.Location = new Point(324, 302);
-            chkUserIsAlarm.Name = "chkUserIsAlarm";
-            chkUserIsAlarm.Size = new Size(18, 17);
-            chkUserIsAlarm.TabIndex = 41;
-            chkUserIsAlarm.UseVisualStyleBackColor = true;
-            // 
-            // chkUserIsAdmin
-            // 
-            chkUserIsAdmin.AutoSize = true;
-            chkUserIsAdmin.Location = new Point(325, 260);
-            chkUserIsAdmin.Name = "chkUserIsAdmin";
-            chkUserIsAdmin.Size = new Size(18, 17);
-            chkUserIsAdmin.TabIndex = 40;
-            chkUserIsAdmin.UseVisualStyleBackColor = true;
-            // 
-            // chkUserSmsOnGprsFail
-            // 
-            chkUserSmsOnGprsFail.AutoSize = true;
-            chkUserSmsOnGprsFail.Location = new Point(325, 218);
-            chkUserSmsOnGprsFail.Name = "chkUserSmsOnGprsFail";
-            chkUserSmsOnGprsFail.Size = new Size(18, 17);
-            chkUserSmsOnGprsFail.TabIndex = 39;
-            chkUserSmsOnGprsFail.UseVisualStyleBackColor = true;
-            // 
-            // chkUserSmsOnLowTower
-            // 
-            chkUserSmsOnLowTower.AutoSize = true;
-            chkUserSmsOnLowTower.Location = new Point(325, 176);
-            chkUserSmsOnLowTower.Name = "chkUserSmsOnLowTower";
-            chkUserSmsOnLowTower.Size = new Size(18, 17);
-            chkUserSmsOnLowTower.TabIndex = 38;
-            chkUserSmsOnLowTower.UseVisualStyleBackColor = true;
-            // 
-            // label113
-            // 
-            label113.AutoSize = true;
-            label113.Location = new Point(15, 342);
-            label113.MaximumSize = new Size(164, 60);
-            label113.Name = "label113";
-            label113.Size = new Size(64, 20);
-            label113.TabIndex = 37;
-            label113.Text = "Can Call";
-            // 
-            // label122
-            // 
-            label122.AutoSize = true;
-            label122.Location = new Point(15, 299);
-            label122.MaximumSize = new Size(164, 60);
-            label122.Name = "label122";
-            label122.Size = new Size(68, 20);
-            label122.TabIndex = 36;
-            label122.Text = "Is Alarm";
-            // 
-            // chkUserSmsOnPowerOn
-            // 
-            chkUserSmsOnPowerOn.AutoSize = true;
-            chkUserSmsOnPowerOn.Location = new Point(325, 134);
-            chkUserSmsOnPowerOn.Name = "chkUserSmsOnPowerOn";
-            chkUserSmsOnPowerOn.Size = new Size(18, 17);
-            chkUserSmsOnPowerOn.TabIndex = 35;
-            chkUserSmsOnPowerOn.UseVisualStyleBackColor = true;
-            // 
-            // txtUserMobileNo
-            // 
-            txtUserMobileNo.BorderStyle = BorderStyle.FixedSingle;
-            txtUserMobileNo.Location = new Point(324, 40);
-            txtUserMobileNo.MaxLength = 10;
-            txtUserMobileNo.Name = "txtUserMobileNo";
-            txtUserMobileNo.Size = new Size(188, 27);
-            txtUserMobileNo.TabIndex = 34;
-            // 
-            // label123
-            // 
-            label123.AutoSize = true;
-            label123.Location = new Point(14, 213);
-            label123.MaximumSize = new Size(164, 60);
-            label123.Name = "label123";
-            label123.Size = new Size(131, 20);
-            label123.TabIndex = 30;
-            label123.Text = "SMS on GPRS Fail";
-            // 
-            // label124
-            // 
-            label124.AutoSize = true;
-            label124.Location = new Point(13, 256);
-            label124.MaximumSize = new Size(164, 60);
-            label124.Name = "label124";
-            label124.Size = new Size(72, 20);
-            label124.TabIndex = 28;
-            label124.Text = "Is Admin";
-            // 
-            // label125
-            // 
-            label125.AutoSize = true;
-            label125.Location = new Point(14, 170);
-            label125.Name = "label125";
-            label125.Size = new Size(141, 20);
-            label125.TabIndex = 21;
-            label125.Text = "SMS on Low Tower";
-            // 
-            // label126
-            // 
-            label126.AutoSize = true;
-            label126.Location = new Point(13, 127);
-            label126.MaximumSize = new Size(150, 0);
-            label126.Name = "label126";
-            label126.Size = new Size(131, 20);
-            label126.TabIndex = 19;
-            label126.Text = "SMS on Power on";
-            // 
-            // label127
-            // 
-            label127.AutoSize = true;
-            label127.Location = new Point(15, 41);
-            label127.Name = "label127";
-            label127.Size = new Size(119, 20);
-            label127.TabIndex = 28;
-            label127.Text = "Mobile Number";
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label43.Location = new Point(538, 6);
-            label43.Name = "label43";
-            label43.Size = new Size(62, 31);
-            label43.TabIndex = 1;
-            label43.Text = "User";
-            // 
             // pnlModbusSettings
             // 
             pnlModbusSettings.Controls.Add(button5);
@@ -3411,7 +4067,9 @@
             treeNode10.Name = "ModbusSlave";
             treeNode10.SelectedImageIndex = 0;
             treeNode10.Text = "Modbus Slave";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10 });
+            treeNode11.Name = "GPRSSettings";
+            treeNode11.Text = "GPRS Settings";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -3544,7 +4202,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1471, 927);
+            ClientSize = new Size(1471, 928);
             Controls.Add(pnlConnect);
             Controls.Add(pnlDashboard);
             Controls.Add(lnkLogin);
@@ -3555,6 +4213,22 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlGPRSSettings.ResumeLayout(false);
+            pnlGPRSSettings.PerformLayout();
+            groupBox19.ResumeLayout(false);
+            groupBox19.PerformLayout();
+            groupBox20.ResumeLayout(false);
+            groupBox20.PerformLayout();
+            groupBox16.ResumeLayout(false);
+            groupBox16.PerformLayout();
+            groupBox17.ResumeLayout(false);
+            groupBox17.PerformLayout();
+            groupBox18.ResumeLayout(false);
+            groupBox18.PerformLayout();
+            pnlUser.ResumeLayout(false);
+            pnlUser.PerformLayout();
+            groupBox15.ResumeLayout(false);
+            groupBox15.PerformLayout();
             pnlPulseSettings.ResumeLayout(false);
             pnlPulseSettings.PerformLayout();
             groupBox7.ResumeLayout(false);
@@ -3585,10 +4259,6 @@
             pnlDOSettings.PerformLayout();
             groupBox14.ResumeLayout(false);
             groupBox14.PerformLayout();
-            pnlUser.ResumeLayout(false);
-            pnlUser.PerformLayout();
-            groupBox15.ResumeLayout(false);
-            groupBox15.PerformLayout();
             pnlModbusSettings.ResumeLayout(false);
             pnlModbusSettings.PerformLayout();
             groupBox9.ResumeLayout(false);
@@ -3917,5 +4587,65 @@
         private CheckBox chkGeneralModbusDebug;
         private Label label135;
         private TextBox txtIemiNo;
+        private Panel pnlGPRSSettings;
+        private Label label67;
+        private GroupBox groupBox16;
+        private Button btnSSLModuleReupdate;
+        private Button btnClientKey;
+        private Button btnClientCertificate;
+        private Button btnCACertificate;
+        private TextBox txtClientKey;
+        private TextBox txtClientCertificate;
+        private TextBox txtCAServerCertificate;
+        private Label label137;
+        private Label label138;
+        private Label label139;
+        private GroupBox groupBox17;
+        private Button btnIPSettPassView;
+        private TextBox txtIPSettPassword;
+        private TextBox txtIPSettUserName;
+        private TextBox txtAPN;
+        private Label label140;
+        private Label label141;
+        private Label label142;
+        private Label label143;
+        private GroupBox groupBox18;
+        private ComboBox cmbEventTransmission;
+        private ComboBox cmbSSLSecurityEnabled;
+        private CheckBox chkSSLSecurityEnable;
+        private TextBox txtServerPort;
+        private TextBox txtServerIPURL;
+        private ComboBox cmbConnectProtocol;
+        private Label label144;
+        private Label label145;
+        private Label label146;
+        private Label label147;
+        private Label label148;
+        private GroupBox groupBox19;
+        private TextBox txtSubscribeCmd;
+        private TextBox txtPublishCMDReply;
+        private TextBox txtPublishEvent;
+        private Label label149;
+        private Label label150;
+        private Label label151;
+        private GroupBox groupBox20;
+        private Button btnMQTTShowPass;
+        private ComboBox cmbQosLevel;
+        private Label label152;
+        private CheckBox chkAuthEnable;
+        private TextBox txtMQTTPassword;
+        private TextBox txtMQTTUserName;
+        private TextBox txtClientId;
+        private TextBox txtBrokerPort;
+        private TextBox txtBrokerIPDomain;
+        private Label label153;
+        private Label label154;
+        private Label label155;
+        private Label label156;
+        private Label label157;
+        private Label label158;
+        private Label label159;
+        private Button btnGPRSWriteMemory;
+        private Button btnGPRSReadMemory;
     }
 }

@@ -115,6 +115,7 @@ namespace TechavoSystem
             pnlModbusSettings.Visible = false;
             pnlModbusMaster.Visible = false;
             pnlModbusSlave.Visible = false;
+            pnlGPRSSettings.Visible = false;
         }
 
         private void menu_Click(object sender, TreeNodeMouseClickEventArgs e)
@@ -150,7 +151,7 @@ namespace TechavoSystem
                 }
                 else if (e.Node.Name == "GPRSSettings")
                 {
-                    pnlAISettings.Visible = true;
+                    pnlGPRSSettings.Visible = true;
                 }
                 else if (e.Node.Name == "PulseSettings")
                 {
