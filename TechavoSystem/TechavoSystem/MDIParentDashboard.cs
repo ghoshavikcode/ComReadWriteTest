@@ -17,6 +17,7 @@ namespace TechavoSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            #region Events
             this.menu.NodeMouseClick += menu_Click;
             this.FormClosing += Dashboard_FormClosing;
             cmbComPorts.DataSource = SerialPort.GetPortNames();
@@ -24,11 +25,34 @@ namespace TechavoSystem
             txtDoOffTime.Leave += TimeFormatCheck;
             txtDoRelayCloseOn.Leave += NumericCheck;
             txtDoRelayDelayTime.Leave += NumericCheck;
+            txtGeneralDataLogSec.Leave += NumericCheck;
+            txtGeneralSmsLogSec.Leave += NumericCheck;
+            txtGeneralSetTime.Leave += TimeFormatCheck;
+            txtMinValue.Leave += NumericCheck;
+            txtMaxValue.Leave += NumericCheck;
+            txtThresoldHigh.Leave += NumericCheck;
+            txtThresoldLow.Leave += NumericCheck;
+            txtAlarmConfirmationSec.Leave += NumericCheck;
+            txtAlarmSmsInterval.Leave += NumericCheck;
+            txtDisplayDecimalPoint.Leave += DecimalCheck;
+            txtDIAlarmVerifySec.Leave += NumericCheck;
+            txtDISmsRepeatTime.Leave += NumericCheck;
+            txtDISMSRepeatSec.Leave += NumericCheck;
+            txtAdjustPulseCount.Leave += NumericCheck;
+            txtPulseKfactor.Leave += NumericCheck;
+            txtKFactor.Leave += NumericCheck;
+            txtPulseDurationRef.Leave += NumericCheck;
+            txtUserMobileNo.Leave += NumericCheck;
+            #endregion
         }
 
         private void NumericCheck(object? sender, EventArgs e)
         {
             NumericChecker((TextBox)sender);
+        }
+        private void DecimalCheck(object? sender, EventArgs e)
+        {
+            DecimalChecker((TextBox)sender);
         }
 
         private void TimeFormatCheck(object? sender, EventArgs e)
@@ -293,7 +317,7 @@ namespace TechavoSystem
                     int minute = 0;
                     bool successHour = int.TryParse(hourMin[0], out hour);
                     bool successMin = int.TryParse(hourMin[1], out minute);
-                    if(!successHour || !successMin || hour > 23 || minute > 59)
+                    if (!successHour || !successMin || hour > 23 || minute > 59)
                     {
                         MessageBox.Show("Invalid Time");
                         textBox.Text = string.Empty;
@@ -310,6 +334,18 @@ namespace TechavoSystem
             if (!success)
             {
                 MessageBox.Show("Please enter numeric value");
+                textBox.Text = string.Empty;
+            }
+        }
+        private void DecimalChecker(TextBox textBox)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
+                return;
+            decimal value = 0;
+            bool success = decimal.TryParse(textBox.Text, out value);
+            if (!success)
+            {
+                MessageBox.Show("Please enter decimal value");
                 textBox.Text = string.Empty;
             }
         }
