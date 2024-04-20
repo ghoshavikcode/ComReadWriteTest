@@ -30,21 +30,99 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode1 = new TreeNode("General Settings");
-            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Modbus Settings");
-            TreeNode treeNode7 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode8 = new TreeNode("User", 0, 0);
-            TreeNode treeNode9 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode10 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode11 = new TreeNode("GPRS Settings");
+            TreeNode treeNode14 = new TreeNode("General Settings");
+            TreeNode treeNode15 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode16 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode17 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode18 = new TreeNode("IO Settings", new TreeNode[] { treeNode15, treeNode16, treeNode17 });
+            TreeNode treeNode19 = new TreeNode("Modbus Settings");
+            TreeNode treeNode20 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode21 = new TreeNode("User", 0, 0);
+            TreeNode treeNode22 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode23 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode24 = new TreeNode("GPRS Settings");
+            TreeNode treeNode25 = new TreeNode("Status");
+            TreeNode treeNode26 = new TreeNode("Console");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlConsole = new Panel();
+            txtSystemLog = new TextBox();
+            txtConsoleInput = new TextBox();
+            btnConsoleSend = new Button();
+            groupBox23 = new GroupBox();
+            btnModbusRead = new Button();
+            btnLogMonitorOff = new Button();
+            btnClear = new Button();
+            label188 = new Label();
+            pnlStatus = new Panel();
+            groupBox27 = new GroupBox();
+            btnIOStatusRead = new Button();
+            btnStatusReset = new Button();
+            btnStatusIOOff = new Button();
+            btnStatusIOOn = new Button();
+            label165 = new Label();
+            label166 = new Label();
+            label167 = new Label();
+            label168 = new Label();
+            label169 = new Label();
+            label170 = new Label();
+            lblDigitalInput2 = new Label();
+            lblDigitalInput2Volt = new Label();
+            lblDigitalInput1 = new Label();
+            lblDigitalInput1Volt = new Label();
+            lblOutputState = new Label();
+            lblInput3Volt = new Label();
+            lblInput3 = new Label();
+            lblPulseCounter = new Label();
+            lblSystemVolt = new Label();
+            groupBox26 = new GroupBox();
+            btnStatusGSMRead = new Button();
+            lblSignal2 = new Label();
+            lblSignal3 = new Label();
+            lblSignal4 = new Label();
+            lblSignal5 = new Label();
+            lblSignal1 = new Label();
+            lblStatusProvider = new Label();
+            lblStatusModule = new Label();
+            lblStatusDecimal = new Label();
+            label171 = new Label();
+            label172 = new Label();
+            label173 = new Label();
+            label174 = new Label();
+            label175 = new Label();
+            label176 = new Label();
+            lblTime = new Label();
+            lblGprsAttach = new Label();
+            lblGprs = new Label();
+            lblGprsTech = new Label();
+            lblIMEI = new Label();
+            lblPowerOn = new Label();
+            lblNtpTimeSync = new Label();
+            label177 = new Label();
+            groupBox25 = new GroupBox();
+            lblSSLFile = new Label();
+            lblCfgFile = new Label();
+            lblMbusDBFile = new Label();
+            lblDataFlash = new Label();
+            lblFwFile = new Label();
+            lblFirmwareVer = new Label();
+            lblClientID = new Label();
+            lblHardwareVer = new Label();
+            lblAppID = new Label();
+            lblDeviceModel = new Label();
+            label178 = new Label();
+            label179 = new Label();
+            label180 = new Label();
+            label181 = new Label();
+            label182 = new Label();
+            label183 = new Label();
+            label184 = new Label();
+            label185 = new Label();
+            label186 = new Label();
+            label187 = new Label();
+            label164 = new Label();
             pnlGPRSSettings = new Panel();
-            groupBox21 = new GroupBox();
+            gbGprsIPSett2 = new GroupBox();
             cmbIp2EventTransmission = new ComboBox();
             cmbIp2SSLSecurityEnabled = new ComboBox();
             chkIp2SSLSecurityEnable = new CheckBox();
@@ -56,14 +134,14 @@
             label163 = new Label();
             btnGPRSWriteMemory = new Button();
             btnGPRSReadMemory = new Button();
-            groupBox19 = new GroupBox();
+            gbGprsTopics = new GroupBox();
             txtSubscribeCmd = new TextBox();
             txtPublishCMDReply = new TextBox();
             txtPublishEvent = new TextBox();
             label149 = new Label();
             label150 = new Label();
             label151 = new Label();
-            groupBox20 = new GroupBox();
+            gbGprsBrokerSett = new GroupBox();
             btnMQTTShowPass = new Button();
             cmbQosLevel = new ComboBox();
             label152 = new Label();
@@ -80,6 +158,7 @@
             label157 = new Label();
             label158 = new Label();
             label159 = new Label();
+            cmbConnectProtocol = new ComboBox();
             groupBox16 = new GroupBox();
             btnSSLModuleReupdate = new Button();
             btnClientKey = new Button();
@@ -91,7 +170,7 @@
             label137 = new Label();
             label138 = new Label();
             label139 = new Label();
-            groupBox17 = new GroupBox();
+            gbGprsModemSett = new GroupBox();
             btnIPSettPassView = new Button();
             txtIPSettPassword = new TextBox();
             txtIPSettUserName = new TextBox();
@@ -100,19 +179,18 @@
             label141 = new Label();
             label142 = new Label();
             label143 = new Label();
-            groupBox18 = new GroupBox();
+            gbGprsIPSett1 = new GroupBox();
             cmbEventTransmission = new ComboBox();
             cmbSSLSecurityEnabled = new ComboBox();
             chkSSLSecurityEnable = new CheckBox();
             txtServerPort = new TextBox();
             txtServerIPURL = new TextBox();
-            cmbConnectProtocol = new ComboBox();
             label144 = new Label();
             label145 = new Label();
             label146 = new Label();
             label147 = new Label();
-            label148 = new Label();
             label67 = new Label();
+            label148 = new Label();
             pnlUser = new Panel();
             cmbUserIndex = new ComboBox();
             label128 = new Label();
@@ -417,13 +495,19 @@
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
             pnlDashboard.SuspendLayout();
+            pnlConsole.SuspendLayout();
+            groupBox23.SuspendLayout();
+            pnlStatus.SuspendLayout();
+            groupBox27.SuspendLayout();
+            groupBox26.SuspendLayout();
+            groupBox25.SuspendLayout();
             pnlGPRSSettings.SuspendLayout();
-            groupBox21.SuspendLayout();
-            groupBox19.SuspendLayout();
-            groupBox20.SuspendLayout();
+            gbGprsIPSett2.SuspendLayout();
+            gbGprsTopics.SuspendLayout();
+            gbGprsBrokerSett.SuspendLayout();
             groupBox16.SuspendLayout();
-            groupBox17.SuspendLayout();
-            groupBox18.SuspendLayout();
+            gbGprsModemSett.SuspendLayout();
+            gbGprsIPSett1.SuspendLayout();
             pnlUser.SuspendLayout();
             groupBox15.SuspendLayout();
             pnlPulseSettings.SuspendLayout();
@@ -465,6 +549,8 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlConsole);
+            pnlDashboard.Controls.Add(pnlStatus);
             pnlDashboard.Controls.Add(pnlGPRSSettings);
             pnlDashboard.Controls.Add(pnlUser);
             pnlDashboard.Controls.Add(pnlPulseSettings);
@@ -478,21 +564,787 @@
             pnlDashboard.Controls.Add(pnlModbusSlave);
             pnlDashboard.Location = new Point(7, 87);
             pnlDashboard.Name = "pnlDashboard";
-            pnlDashboard.Size = new Size(1460, 838);
+            pnlDashboard.Size = new Size(1460, 837);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
             // 
+            // pnlConsole
+            // 
+            pnlConsole.Controls.Add(txtSystemLog);
+            pnlConsole.Controls.Add(txtConsoleInput);
+            pnlConsole.Controls.Add(btnConsoleSend);
+            pnlConsole.Controls.Add(groupBox23);
+            pnlConsole.Controls.Add(label188);
+            pnlConsole.Location = new Point(321, 9);
+            pnlConsole.Name = "pnlConsole";
+            pnlConsole.Size = new Size(1133, 823);
+            pnlConsole.TabIndex = 10;
+            pnlConsole.Visible = false;
+            // 
+            // txtSystemLog
+            // 
+            txtSystemLog.BorderStyle = BorderStyle.FixedSingle;
+            txtSystemLog.Enabled = false;
+            txtSystemLog.Location = new Point(12, 325);
+            txtSystemLog.Multiline = true;
+            txtSystemLog.Name = "txtSystemLog";
+            txtSystemLog.ScrollBars = ScrollBars.Vertical;
+            txtSystemLog.Size = new Size(1119, 485);
+            txtSystemLog.TabIndex = 7;
+            // 
+            // txtConsoleInput
+            // 
+            txtConsoleInput.Location = new Point(12, 135);
+            txtConsoleInput.Multiline = true;
+            txtConsoleInput.Name = "txtConsoleInput";
+            txtConsoleInput.ScrollBars = ScrollBars.Vertical;
+            txtConsoleInput.Size = new Size(1010, 183);
+            txtConsoleInput.TabIndex = 5;
+            // 
+            // btnConsoleSend
+            // 
+            btnConsoleSend.Location = new Point(1032, 208);
+            btnConsoleSend.Name = "btnConsoleSend";
+            btnConsoleSend.Size = new Size(95, 39);
+            btnConsoleSend.TabIndex = 6;
+            btnConsoleSend.Text = "Send";
+            btnConsoleSend.UseVisualStyleBackColor = true;
+            // 
+            // groupBox23
+            // 
+            groupBox23.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox23.Controls.Add(btnModbusRead);
+            groupBox23.Controls.Add(btnLogMonitorOff);
+            groupBox23.Controls.Add(btnClear);
+            groupBox23.Location = new Point(12, 51);
+            groupBox23.Name = "groupBox23";
+            groupBox23.Size = new Size(1118, 77);
+            groupBox23.TabIndex = 4;
+            groupBox23.TabStop = false;
+            // 
+            // btnModbusRead
+            // 
+            btnModbusRead.Location = new Point(1152, 26);
+            btnModbusRead.Name = "btnModbusRead";
+            btnModbusRead.Size = new Size(123, 29);
+            btnModbusRead.TabIndex = 2;
+            btnModbusRead.Text = "Modbus Read";
+            btnModbusRead.UseVisualStyleBackColor = true;
+            // 
+            // btnLogMonitorOff
+            // 
+            btnLogMonitorOff.Location = new Point(961, 26);
+            btnLogMonitorOff.Name = "btnLogMonitorOff";
+            btnLogMonitorOff.Size = new Size(141, 29);
+            btnLogMonitorOff.TabIndex = 1;
+            btnLogMonitorOff.Text = "Log Monitor Off";
+            btnLogMonitorOff.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(805, 26);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 0;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            // 
+            // label188
+            // 
+            label188.AutoSize = true;
+            label188.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label188.Location = new Point(498, 4);
+            label188.Name = "label188";
+            label188.Size = new Size(107, 35);
+            label188.TabIndex = 2;
+            label188.Text = "Console";
+            // 
+            // pnlStatus
+            // 
+            pnlStatus.Controls.Add(groupBox27);
+            pnlStatus.Controls.Add(groupBox26);
+            pnlStatus.Controls.Add(groupBox25);
+            pnlStatus.Controls.Add(label164);
+            pnlStatus.Location = new Point(321, 9);
+            pnlStatus.Name = "pnlStatus";
+            pnlStatus.Size = new Size(1133, 823);
+            pnlStatus.TabIndex = 9;
+            pnlStatus.Visible = false;
+            // 
+            // groupBox27
+            // 
+            groupBox27.Controls.Add(btnIOStatusRead);
+            groupBox27.Controls.Add(btnStatusReset);
+            groupBox27.Controls.Add(btnStatusIOOff);
+            groupBox27.Controls.Add(btnStatusIOOn);
+            groupBox27.Controls.Add(label165);
+            groupBox27.Controls.Add(label166);
+            groupBox27.Controls.Add(label167);
+            groupBox27.Controls.Add(label168);
+            groupBox27.Controls.Add(label169);
+            groupBox27.Controls.Add(label170);
+            groupBox27.Controls.Add(lblDigitalInput2);
+            groupBox27.Controls.Add(lblDigitalInput2Volt);
+            groupBox27.Controls.Add(lblDigitalInput1);
+            groupBox27.Controls.Add(lblDigitalInput1Volt);
+            groupBox27.Controls.Add(lblOutputState);
+            groupBox27.Controls.Add(lblInput3Volt);
+            groupBox27.Controls.Add(lblInput3);
+            groupBox27.Controls.Add(lblPulseCounter);
+            groupBox27.Controls.Add(lblSystemVolt);
+            groupBox27.Location = new Point(652, 50);
+            groupBox27.Name = "groupBox27";
+            groupBox27.Size = new Size(471, 660);
+            groupBox27.TabIndex = 5;
+            groupBox27.TabStop = false;
+            groupBox27.Text = "IO Status";
+            // 
+            // btnIOStatusRead
+            // 
+            btnIOStatusRead.Location = new Point(188, 612);
+            btnIOStatusRead.Name = "btnIOStatusRead";
+            btnIOStatusRead.Size = new Size(94, 29);
+            btnIOStatusRead.TabIndex = 26;
+            btnIOStatusRead.Text = "Read";
+            btnIOStatusRead.UseVisualStyleBackColor = true;
+            // 
+            // btnStatusReset
+            // 
+            btnStatusReset.Location = new Point(339, 231);
+            btnStatusReset.Name = "btnStatusReset";
+            btnStatusReset.Size = new Size(94, 29);
+            btnStatusReset.TabIndex = 25;
+            btnStatusReset.Text = "Reset";
+            btnStatusReset.UseVisualStyleBackColor = true;
+            // 
+            // btnStatusIOOff
+            // 
+            btnStatusIOOff.Location = new Point(372, 186);
+            btnStatusIOOff.Name = "btnStatusIOOff";
+            btnStatusIOOff.Size = new Size(61, 29);
+            btnStatusIOOff.TabIndex = 24;
+            btnStatusIOOff.Text = "Off";
+            btnStatusIOOff.UseVisualStyleBackColor = true;
+            // 
+            // btnStatusIOOn
+            // 
+            btnStatusIOOn.Location = new Point(296, 186);
+            btnStatusIOOn.Name = "btnStatusIOOn";
+            btnStatusIOOn.Size = new Size(61, 29);
+            btnStatusIOOn.TabIndex = 23;
+            btnStatusIOOn.Text = "ON";
+            btnStatusIOOn.UseVisualStyleBackColor = true;
+            // 
+            // label165
+            // 
+            label165.AutoSize = true;
+            label165.Location = new Point(19, 32);
+            label165.Name = "label165";
+            label165.Size = new Size(109, 20);
+            label165.TabIndex = 22;
+            label165.Text = "Digital Input-1:";
+            // 
+            // label166
+            // 
+            label166.AutoSize = true;
+            label166.Location = new Point(19, 82);
+            label166.Name = "label166";
+            label166.Size = new Size(109, 20);
+            label166.TabIndex = 21;
+            label166.Text = "Digital Input-2:";
+            // 
+            // label167
+            // 
+            label167.AutoSize = true;
+            label167.Location = new Point(19, 131);
+            label167.Name = "label167";
+            label167.Size = new Size(125, 20);
+            label167.TabIndex = 20;
+            label167.Text = "Input-3 (4-20ma):";
+            // 
+            // label168
+            // 
+            label168.AutoSize = true;
+            label168.Location = new Point(19, 186);
+            label168.Name = "label168";
+            label168.Size = new Size(96, 20);
+            label168.TabIndex = 19;
+            label168.Text = "Output State:";
+            // 
+            // label169
+            // 
+            label169.AutoSize = true;
+            label169.Location = new Point(19, 235);
+            label169.Name = "label169";
+            label169.Size = new Size(102, 20);
+            label169.TabIndex = 18;
+            label169.Text = "Pulse Counter:";
+            // 
+            // label170
+            // 
+            label170.AutoSize = true;
+            label170.Location = new Point(19, 288);
+            label170.Name = "label170";
+            label170.Size = new Size(89, 20);
+            label170.TabIndex = 17;
+            label170.Text = "System Volt:";
+            // 
+            // lblDigitalInput2
+            // 
+            lblDigitalInput2.AutoSize = true;
+            lblDigitalInput2.Location = new Point(163, 82);
+            lblDigitalInput2.Name = "lblDigitalInput2";
+            lblDigitalInput2.Size = new Size(66, 20);
+            lblDigitalInput2.TabIndex = 16;
+            lblDigitalInput2.Text = "label116";
+            // 
+            // lblDigitalInput2Volt
+            // 
+            lblDigitalInput2Volt.AutoSize = true;
+            lblDigitalInput2Volt.Location = new Point(307, 82);
+            lblDigitalInput2Volt.Name = "lblDigitalInput2Volt";
+            lblDigitalInput2Volt.Size = new Size(66, 20);
+            lblDigitalInput2Volt.TabIndex = 15;
+            lblDigitalInput2Volt.Text = "label116";
+            // 
+            // lblDigitalInput1
+            // 
+            lblDigitalInput1.AutoSize = true;
+            lblDigitalInput1.Location = new Point(163, 32);
+            lblDigitalInput1.Name = "lblDigitalInput1";
+            lblDigitalInput1.Size = new Size(90, 20);
+            lblDigitalInput1.TabIndex = 14;
+            lblDigitalInput1.Text = "digital input";
+            // 
+            // lblDigitalInput1Volt
+            // 
+            lblDigitalInput1Volt.AutoSize = true;
+            lblDigitalInput1Volt.Location = new Point(307, 32);
+            lblDigitalInput1Volt.Name = "lblDigitalInput1Volt";
+            lblDigitalInput1Volt.Size = new Size(66, 20);
+            lblDigitalInput1Volt.TabIndex = 13;
+            lblDigitalInput1Volt.Text = "label116";
+            // 
+            // lblOutputState
+            // 
+            lblOutputState.AutoSize = true;
+            lblOutputState.Location = new Point(163, 186);
+            lblOutputState.Name = "lblOutputState";
+            lblOutputState.Size = new Size(66, 20);
+            lblOutputState.TabIndex = 12;
+            lblOutputState.Text = "label116";
+            // 
+            // lblInput3Volt
+            // 
+            lblInput3Volt.AutoSize = true;
+            lblInput3Volt.Location = new Point(307, 131);
+            lblInput3Volt.Name = "lblInput3Volt";
+            lblInput3Volt.Size = new Size(66, 20);
+            lblInput3Volt.TabIndex = 11;
+            lblInput3Volt.Text = "label116";
+            // 
+            // lblInput3
+            // 
+            lblInput3.AutoSize = true;
+            lblInput3.Location = new Point(163, 131);
+            lblInput3.Name = "lblInput3";
+            lblInput3.Size = new Size(66, 20);
+            lblInput3.TabIndex = 10;
+            lblInput3.Text = "label116";
+            // 
+            // lblPulseCounter
+            // 
+            lblPulseCounter.AutoSize = true;
+            lblPulseCounter.Location = new Point(163, 235);
+            lblPulseCounter.Name = "lblPulseCounter";
+            lblPulseCounter.Size = new Size(66, 20);
+            lblPulseCounter.TabIndex = 9;
+            lblPulseCounter.Text = "label116";
+            // 
+            // lblSystemVolt
+            // 
+            lblSystemVolt.AutoSize = true;
+            lblSystemVolt.Location = new Point(163, 288);
+            lblSystemVolt.Name = "lblSystemVolt";
+            lblSystemVolt.Size = new Size(66, 20);
+            lblSystemVolt.TabIndex = 8;
+            lblSystemVolt.Text = "label116";
+            // 
+            // groupBox26
+            // 
+            groupBox26.Controls.Add(btnStatusGSMRead);
+            groupBox26.Controls.Add(lblSignal2);
+            groupBox26.Controls.Add(lblSignal3);
+            groupBox26.Controls.Add(lblSignal4);
+            groupBox26.Controls.Add(lblSignal5);
+            groupBox26.Controls.Add(lblSignal1);
+            groupBox26.Controls.Add(lblStatusProvider);
+            groupBox26.Controls.Add(lblStatusModule);
+            groupBox26.Controls.Add(lblStatusDecimal);
+            groupBox26.Controls.Add(label171);
+            groupBox26.Controls.Add(label172);
+            groupBox26.Controls.Add(label173);
+            groupBox26.Controls.Add(label174);
+            groupBox26.Controls.Add(label175);
+            groupBox26.Controls.Add(label176);
+            groupBox26.Controls.Add(lblTime);
+            groupBox26.Controls.Add(lblGprsAttach);
+            groupBox26.Controls.Add(lblGprs);
+            groupBox26.Controls.Add(lblGprsTech);
+            groupBox26.Controls.Add(lblIMEI);
+            groupBox26.Controls.Add(lblPowerOn);
+            groupBox26.Controls.Add(lblNtpTimeSync);
+            groupBox26.Controls.Add(label177);
+            groupBox26.Location = new Point(313, 52);
+            groupBox26.Name = "groupBox26";
+            groupBox26.Size = new Size(328, 660);
+            groupBox26.TabIndex = 4;
+            groupBox26.TabStop = false;
+            groupBox26.Text = "GSM Status";
+            // 
+            // btnStatusGSMRead
+            // 
+            btnStatusGSMRead.Location = new Point(115, 614);
+            btnStatusGSMRead.Name = "btnStatusGSMRead";
+            btnStatusGSMRead.Size = new Size(94, 29);
+            btnStatusGSMRead.TabIndex = 22;
+            btnStatusGSMRead.Text = "Read";
+            btnStatusGSMRead.UseVisualStyleBackColor = true;
+            // 
+            // lblSignal2
+            // 
+            lblSignal2.BackColor = Color.White;
+            lblSignal2.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal2.Location = new Point(41, 103);
+            lblSignal2.Name = "lblSignal2";
+            lblSignal2.Size = new Size(10, 20);
+            lblSignal2.TabIndex = 21;
+            // 
+            // lblSignal3
+            // 
+            lblSignal3.BackColor = Color.White;
+            lblSignal3.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal3.Location = new Point(57, 96);
+            lblSignal3.Name = "lblSignal3";
+            lblSignal3.Size = new Size(10, 27);
+            lblSignal3.TabIndex = 20;
+            // 
+            // lblSignal4
+            // 
+            lblSignal4.BackColor = Color.White;
+            lblSignal4.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal4.Location = new Point(73, 89);
+            lblSignal4.Name = "lblSignal4";
+            lblSignal4.Size = new Size(10, 34);
+            lblSignal4.TabIndex = 19;
+            // 
+            // lblSignal5
+            // 
+            lblSignal5.BackColor = Color.White;
+            lblSignal5.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal5.Location = new Point(89, 82);
+            lblSignal5.Name = "lblSignal5";
+            lblSignal5.Size = new Size(10, 41);
+            lblSignal5.TabIndex = 18;
+            // 
+            // lblSignal1
+            // 
+            lblSignal1.BackColor = Color.White;
+            lblSignal1.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal1.Location = new Point(25, 110);
+            lblSignal1.Name = "lblSignal1";
+            lblSignal1.Size = new Size(10, 13);
+            lblSignal1.TabIndex = 17;
+            // 
+            // lblStatusProvider
+            // 
+            lblStatusProvider.AutoSize = true;
+            lblStatusProvider.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusProvider.ForeColor = Color.Blue;
+            lblStatusProvider.Location = new Point(253, 39);
+            lblStatusProvider.Name = "lblStatusProvider";
+            lblStatusProvider.Size = new Size(56, 28);
+            lblStatusProvider.TabIndex = 16;
+            lblStatusProvider.Text = "airtel";
+            // 
+            // lblStatusModule
+            // 
+            lblStatusModule.AutoSize = true;
+            lblStatusModule.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusModule.ForeColor = Color.Blue;
+            lblStatusModule.Location = new Point(253, 101);
+            lblStatusModule.Name = "lblStatusModule";
+            lblStatusModule.Size = new Size(65, 28);
+            lblStatusModule.TabIndex = 15;
+            lblStatusModule.Text = "Home";
+            // 
+            // lblStatusDecimal
+            // 
+            lblStatusDecimal.AutoSize = true;
+            lblStatusDecimal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusDecimal.ForeColor = Color.Blue;
+            lblStatusDecimal.Location = new Point(146, 103);
+            lblStatusDecimal.Name = "lblStatusDecimal";
+            lblStatusDecimal.Size = new Size(58, 28);
+            lblStatusDecimal.TabIndex = 14;
+            lblStatusDecimal.Text = "15db";
+            // 
+            // label171
+            // 
+            label171.AutoSize = true;
+            label171.Location = new Point(16, 235);
+            label171.Name = "label171";
+            label171.Size = new Size(94, 20);
+            label171.TabIndex = 13;
+            label171.Text = "GPRS Attach:";
+            // 
+            // label172
+            // 
+            label172.AutoSize = true;
+            label172.Location = new Point(16, 288);
+            label172.Name = "label172";
+            label172.Size = new Size(47, 20);
+            label172.TabIndex = 12;
+            label172.Text = "GPRS:";
+            // 
+            // label173
+            // 
+            label173.AutoSize = true;
+            label173.Location = new Point(16, 346);
+            label173.Name = "label173";
+            label173.Size = new Size(81, 20);
+            label173.TabIndex = 11;
+            label173.Text = "GPRS Tech:";
+            // 
+            // label174
+            // 
+            label174.AutoSize = true;
+            label174.Location = new Point(16, 408);
+            label174.Name = "label174";
+            label174.Size = new Size(41, 20);
+            label174.TabIndex = 10;
+            label174.Text = "IMEI:";
+            // 
+            // label175
+            // 
+            label175.AutoSize = true;
+            label175.Location = new Point(16, 463);
+            label175.Name = "label175";
+            label175.Size = new Size(78, 20);
+            label175.TabIndex = 9;
+            label175.Text = "Power ON:";
+            // 
+            // label176
+            // 
+            label176.AutoSize = true;
+            label176.Location = new Point(16, 509);
+            label176.Name = "label176";
+            label176.Size = new Size(106, 20);
+            label176.TabIndex = 8;
+            label176.Text = "NTP TimeSync:";
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Location = new Point(156, 175);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(66, 20);
+            lblTime.TabIndex = 7;
+            lblTime.Text = "label116";
+            // 
+            // lblGprsAttach
+            // 
+            lblGprsAttach.AutoSize = true;
+            lblGprsAttach.Location = new Point(156, 235);
+            lblGprsAttach.Name = "lblGprsAttach";
+            lblGprsAttach.Size = new Size(66, 20);
+            lblGprsAttach.TabIndex = 6;
+            lblGprsAttach.Text = "label115";
+            // 
+            // lblGprs
+            // 
+            lblGprs.AutoSize = true;
+            lblGprs.Location = new Point(156, 288);
+            lblGprs.Name = "lblGprs";
+            lblGprs.Size = new Size(66, 20);
+            lblGprs.TabIndex = 5;
+            lblGprs.Text = "label114";
+            // 
+            // lblGprsTech
+            // 
+            lblGprsTech.AutoSize = true;
+            lblGprsTech.Location = new Point(156, 346);
+            lblGprsTech.Name = "lblGprsTech";
+            lblGprsTech.Size = new Size(66, 20);
+            lblGprsTech.TabIndex = 4;
+            lblGprsTech.Text = "label113";
+            // 
+            // lblIMEI
+            // 
+            lblIMEI.AutoSize = true;
+            lblIMEI.Location = new Point(156, 408);
+            lblIMEI.Name = "lblIMEI";
+            lblIMEI.Size = new Size(66, 20);
+            lblIMEI.TabIndex = 3;
+            lblIMEI.Text = "label112";
+            // 
+            // lblPowerOn
+            // 
+            lblPowerOn.AutoSize = true;
+            lblPowerOn.Location = new Point(156, 463);
+            lblPowerOn.Name = "lblPowerOn";
+            lblPowerOn.Size = new Size(66, 20);
+            lblPowerOn.TabIndex = 2;
+            lblPowerOn.Text = "label111";
+            // 
+            // lblNtpTimeSync
+            // 
+            lblNtpTimeSync.AutoSize = true;
+            lblNtpTimeSync.Location = new Point(156, 509);
+            lblNtpTimeSync.Name = "lblNtpTimeSync";
+            lblNtpTimeSync.Size = new Size(66, 20);
+            lblNtpTimeSync.TabIndex = 1;
+            lblNtpTimeSync.Text = "label110";
+            // 
+            // label177
+            // 
+            label177.AutoSize = true;
+            label177.Location = new Point(16, 175);
+            label177.Name = "label177";
+            label177.Size = new Size(45, 20);
+            label177.TabIndex = 0;
+            label177.Text = "TIME:";
+            // 
+            // groupBox25
+            // 
+            groupBox25.Controls.Add(lblSSLFile);
+            groupBox25.Controls.Add(lblCfgFile);
+            groupBox25.Controls.Add(lblMbusDBFile);
+            groupBox25.Controls.Add(lblDataFlash);
+            groupBox25.Controls.Add(lblFwFile);
+            groupBox25.Controls.Add(lblFirmwareVer);
+            groupBox25.Controls.Add(lblClientID);
+            groupBox25.Controls.Add(lblHardwareVer);
+            groupBox25.Controls.Add(lblAppID);
+            groupBox25.Controls.Add(lblDeviceModel);
+            groupBox25.Controls.Add(label178);
+            groupBox25.Controls.Add(label179);
+            groupBox25.Controls.Add(label180);
+            groupBox25.Controls.Add(label181);
+            groupBox25.Controls.Add(label182);
+            groupBox25.Controls.Add(label183);
+            groupBox25.Controls.Add(label184);
+            groupBox25.Controls.Add(label185);
+            groupBox25.Controls.Add(label186);
+            groupBox25.Controls.Add(label187);
+            groupBox25.Location = new Point(8, 52);
+            groupBox25.Name = "groupBox25";
+            groupBox25.Size = new Size(286, 660);
+            groupBox25.TabIndex = 3;
+            groupBox25.TabStop = false;
+            groupBox25.Text = "Device Info.";
+            // 
+            // lblSSLFile
+            // 
+            lblSSLFile.AutoSize = true;
+            lblSSLFile.Location = new Point(164, 480);
+            lblSSLFile.Name = "lblSSLFile";
+            lblSSLFile.Size = new Size(59, 20);
+            lblSSLFile.TabIndex = 19;
+            lblSSLFile.Text = "SSL File";
+            // 
+            // lblCfgFile
+            // 
+            lblCfgFile.AutoSize = true;
+            lblCfgFile.Location = new Point(164, 386);
+            lblCfgFile.Name = "lblCfgFile";
+            lblCfgFile.Size = new Size(59, 20);
+            lblCfgFile.TabIndex = 18;
+            lblCfgFile.Text = "Cfg File";
+            // 
+            // lblMbusDBFile
+            // 
+            lblMbusDBFile.AutoSize = true;
+            lblMbusDBFile.Location = new Point(164, 435);
+            lblMbusDBFile.Name = "lblMbusDBFile";
+            lblMbusDBFile.Size = new Size(96, 20);
+            lblMbusDBFile.TabIndex = 17;
+            lblMbusDBFile.Text = "Mbus DB File";
+            // 
+            // lblDataFlash
+            // 
+            lblDataFlash.AutoSize = true;
+            lblDataFlash.Location = new Point(164, 266);
+            lblDataFlash.Name = "lblDataFlash";
+            lblDataFlash.Size = new Size(78, 20);
+            lblDataFlash.TabIndex = 16;
+            lblDataFlash.Text = "Data Flash";
+            // 
+            // lblFwFile
+            // 
+            lblFwFile.AutoSize = true;
+            lblFwFile.Location = new Point(164, 336);
+            lblFwFile.Name = "lblFwFile";
+            lblFwFile.Size = new Size(54, 20);
+            lblFwFile.TabIndex = 15;
+            lblFwFile.Text = "Fw File";
+            // 
+            // lblFirmwareVer
+            // 
+            lblFirmwareVer.AutoSize = true;
+            lblFirmwareVer.Location = new Point(164, 175);
+            lblFirmwareVer.Name = "lblFirmwareVer";
+            lblFirmwareVer.Size = new Size(95, 20);
+            lblFirmwareVer.TabIndex = 14;
+            lblFirmwareVer.Text = "Firmware Ver";
+            // 
+            // lblClientID
+            // 
+            lblClientID.AutoSize = true;
+            lblClientID.Location = new Point(164, 221);
+            lblClientID.Name = "lblClientID";
+            lblClientID.Size = new Size(66, 20);
+            lblClientID.TabIndex = 13;
+            lblClientID.Text = "Client ID";
+            // 
+            // lblHardwareVer
+            // 
+            lblHardwareVer.AutoSize = true;
+            lblHardwareVer.Location = new Point(164, 131);
+            lblHardwareVer.Name = "lblHardwareVer";
+            lblHardwareVer.Size = new Size(99, 20);
+            lblHardwareVer.TabIndex = 12;
+            lblHardwareVer.Text = "Hardware Ver";
+            // 
+            // lblAppID
+            // 
+            lblAppID.AutoSize = true;
+            lblAppID.Location = new Point(164, 85);
+            lblAppID.Name = "lblAppID";
+            lblAppID.Size = new Size(56, 20);
+            lblAppID.TabIndex = 11;
+            lblAppID.Text = "App ID";
+            // 
+            // lblDeviceModel
+            // 
+            lblDeviceModel.AutoSize = true;
+            lblDeviceModel.Location = new Point(164, 41);
+            lblDeviceModel.Name = "lblDeviceModel";
+            lblDeviceModel.Size = new Size(101, 20);
+            lblDeviceModel.TabIndex = 10;
+            lblDeviceModel.Text = "Device Model";
+            // 
+            // label178
+            // 
+            label178.AutoSize = true;
+            label178.Location = new Point(19, 480);
+            label178.Name = "label178";
+            label178.Size = new Size(62, 20);
+            label178.TabIndex = 9;
+            label178.Text = "SSL File:";
+            // 
+            // label179
+            // 
+            label179.AutoSize = true;
+            label179.Location = new Point(19, 435);
+            label179.Name = "label179";
+            label179.Size = new Size(99, 20);
+            label179.TabIndex = 8;
+            label179.Text = "Mbus DB File:";
+            // 
+            // label180
+            // 
+            label180.AutoSize = true;
+            label180.Location = new Point(19, 386);
+            label180.Name = "label180";
+            label180.Size = new Size(65, 20);
+            label180.TabIndex = 7;
+            label180.Text = "Cfg. File:";
+            // 
+            // label181
+            // 
+            label181.AutoSize = true;
+            label181.Location = new Point(19, 336);
+            label181.Name = "label181";
+            label181.Size = new Size(60, 20);
+            label181.TabIndex = 6;
+            label181.Text = "Fw. File:";
+            // 
+            // label182
+            // 
+            label182.AutoSize = true;
+            label182.Location = new Point(19, 266);
+            label182.Name = "label182";
+            label182.Size = new Size(81, 20);
+            label182.TabIndex = 5;
+            label182.Text = "Data Flash:";
+            // 
+            // label183
+            // 
+            label183.AutoSize = true;
+            label183.Location = new Point(19, 175);
+            label183.Name = "label183";
+            label183.Size = new Size(98, 20);
+            label183.TabIndex = 4;
+            label183.Text = "Firmware Ver:";
+            // 
+            // label184
+            // 
+            label184.AutoSize = true;
+            label184.Location = new Point(19, 221);
+            label184.Name = "label184";
+            label184.Size = new Size(69, 20);
+            label184.TabIndex = 3;
+            label184.Text = "Client ID:";
+            // 
+            // label185
+            // 
+            label185.AutoSize = true;
+            label185.Location = new Point(19, 131);
+            label185.Name = "label185";
+            label185.Size = new Size(102, 20);
+            label185.TabIndex = 2;
+            label185.Text = "Hardware Ver:";
+            // 
+            // label186
+            // 
+            label186.AutoSize = true;
+            label186.Location = new Point(19, 85);
+            label186.Name = "label186";
+            label186.Size = new Size(62, 20);
+            label186.TabIndex = 1;
+            label186.Text = "App. ID:";
+            // 
+            // label187
+            // 
+            label187.AutoSize = true;
+            label187.Location = new Point(19, 41);
+            label187.Name = "label187";
+            label187.Size = new Size(104, 20);
+            label187.TabIndex = 0;
+            label187.Text = "Device Model:";
+            // 
+            // label164
+            // 
+            label164.AutoSize = true;
+            label164.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label164.Location = new Point(498, 4);
+            label164.Name = "label164";
+            label164.Size = new Size(88, 35);
+            label164.TabIndex = 1;
+            label164.Text = "Status";
+            // 
             // pnlGPRSSettings
             // 
-            pnlGPRSSettings.Controls.Add(groupBox21);
+            pnlGPRSSettings.Controls.Add(gbGprsIPSett2);
             pnlGPRSSettings.Controls.Add(btnGPRSWriteMemory);
             pnlGPRSSettings.Controls.Add(btnGPRSReadMemory);
-            pnlGPRSSettings.Controls.Add(groupBox19);
-            pnlGPRSSettings.Controls.Add(groupBox20);
+            pnlGPRSSettings.Controls.Add(gbGprsTopics);
+            pnlGPRSSettings.Controls.Add(gbGprsBrokerSett);
             pnlGPRSSettings.Controls.Add(cmbConnectProtocol);
             pnlGPRSSettings.Controls.Add(groupBox16);
-            pnlGPRSSettings.Controls.Add(groupBox17);
-            pnlGPRSSettings.Controls.Add(groupBox18);
+            pnlGPRSSettings.Controls.Add(gbGprsModemSett);
+            pnlGPRSSettings.Controls.Add(gbGprsIPSett1);
             pnlGPRSSettings.Controls.Add(label67);
             pnlGPRSSettings.Controls.Add(label148);
             pnlGPRSSettings.Location = new Point(321, 9);
@@ -501,23 +1353,23 @@
             pnlGPRSSettings.TabIndex = 8;
             pnlGPRSSettings.Visible = false;
             // 
-            // groupBox21
+            // gbGprsIPSett2
             // 
-            groupBox21.Controls.Add(cmbIp2EventTransmission);
-            groupBox21.Controls.Add(cmbIp2SSLSecurityEnabled);
-            groupBox21.Controls.Add(chkIp2SSLSecurityEnable);
-            groupBox21.Controls.Add(txtIP2ServerPort);
-            groupBox21.Controls.Add(txtIP2ServerIP);
-            groupBox21.Controls.Add(label160);
-            groupBox21.Controls.Add(label161);
-            groupBox21.Controls.Add(label162);
-            groupBox21.Controls.Add(label163);
-            groupBox21.Location = new Point(393, 139);
-            groupBox21.Name = "groupBox21";
-            groupBox21.Size = new Size(353, 190);
-            groupBox21.TabIndex = 11;
-            groupBox21.TabStop = false;
-            groupBox21.Text = "IP Settings 2";
+            gbGprsIPSett2.Controls.Add(cmbIp2EventTransmission);
+            gbGprsIPSett2.Controls.Add(cmbIp2SSLSecurityEnabled);
+            gbGprsIPSett2.Controls.Add(chkIp2SSLSecurityEnable);
+            gbGprsIPSett2.Controls.Add(txtIP2ServerPort);
+            gbGprsIPSett2.Controls.Add(txtIP2ServerIP);
+            gbGprsIPSett2.Controls.Add(label160);
+            gbGprsIPSett2.Controls.Add(label161);
+            gbGprsIPSett2.Controls.Add(label162);
+            gbGprsIPSett2.Controls.Add(label163);
+            gbGprsIPSett2.Location = new Point(393, 139);
+            gbGprsIPSett2.Name = "gbGprsIPSett2";
+            gbGprsIPSett2.Size = new Size(353, 190);
+            gbGprsIPSett2.TabIndex = 11;
+            gbGprsIPSett2.TabStop = false;
+            gbGprsIPSett2.Text = "IP Settings 2";
             // 
             // cmbIp2EventTransmission
             // 
@@ -622,20 +1474,20 @@
             btnGPRSReadMemory.Text = "Read Memory";
             btnGPRSReadMemory.UseVisualStyleBackColor = false;
             // 
-            // groupBox19
+            // gbGprsTopics
             // 
-            groupBox19.Controls.Add(txtSubscribeCmd);
-            groupBox19.Controls.Add(txtPublishCMDReply);
-            groupBox19.Controls.Add(txtPublishEvent);
-            groupBox19.Controls.Add(label149);
-            groupBox19.Controls.Add(label150);
-            groupBox19.Controls.Add(label151);
-            groupBox19.Location = new Point(531, 340);
-            groupBox19.Name = "groupBox19";
-            groupBox19.Size = new Size(581, 140);
-            groupBox19.TabIndex = 7;
-            groupBox19.TabStop = false;
-            groupBox19.Text = "Topics";
+            gbGprsTopics.Controls.Add(txtSubscribeCmd);
+            gbGprsTopics.Controls.Add(txtPublishCMDReply);
+            gbGprsTopics.Controls.Add(txtPublishEvent);
+            gbGprsTopics.Controls.Add(label149);
+            gbGprsTopics.Controls.Add(label150);
+            gbGprsTopics.Controls.Add(label151);
+            gbGprsTopics.Location = new Point(531, 340);
+            gbGprsTopics.Name = "gbGprsTopics";
+            gbGprsTopics.Size = new Size(581, 140);
+            gbGprsTopics.TabIndex = 7;
+            gbGprsTopics.TabStop = false;
+            gbGprsTopics.Text = "Topics";
             // 
             // txtSubscribeCmd
             // 
@@ -688,30 +1540,30 @@
             label151.TabIndex = 0;
             label151.Text = "Publish Event";
             // 
-            // groupBox20
+            // gbGprsBrokerSett
             // 
-            groupBox20.Controls.Add(btnMQTTShowPass);
-            groupBox20.Controls.Add(cmbQosLevel);
-            groupBox20.Controls.Add(label152);
-            groupBox20.Controls.Add(chkAuthEnable);
-            groupBox20.Controls.Add(txtMQTTPassword);
-            groupBox20.Controls.Add(txtMQTTUserName);
-            groupBox20.Controls.Add(txtClientId);
-            groupBox20.Controls.Add(txtBrokerPort);
-            groupBox20.Controls.Add(txtBrokerIPDomain);
-            groupBox20.Controls.Add(label153);
-            groupBox20.Controls.Add(label154);
-            groupBox20.Controls.Add(label155);
-            groupBox20.Controls.Add(label156);
-            groupBox20.Controls.Add(label157);
-            groupBox20.Controls.Add(label158);
-            groupBox20.Controls.Add(label159);
-            groupBox20.Location = new Point(20, 341);
-            groupBox20.Name = "groupBox20";
-            groupBox20.Size = new Size(502, 350);
-            groupBox20.TabIndex = 6;
-            groupBox20.TabStop = false;
-            groupBox20.Text = "Broker Sett.";
+            gbGprsBrokerSett.Controls.Add(btnMQTTShowPass);
+            gbGprsBrokerSett.Controls.Add(cmbQosLevel);
+            gbGprsBrokerSett.Controls.Add(label152);
+            gbGprsBrokerSett.Controls.Add(chkAuthEnable);
+            gbGprsBrokerSett.Controls.Add(txtMQTTPassword);
+            gbGprsBrokerSett.Controls.Add(txtMQTTUserName);
+            gbGprsBrokerSett.Controls.Add(txtClientId);
+            gbGprsBrokerSett.Controls.Add(txtBrokerPort);
+            gbGprsBrokerSett.Controls.Add(txtBrokerIPDomain);
+            gbGprsBrokerSett.Controls.Add(label153);
+            gbGprsBrokerSett.Controls.Add(label154);
+            gbGprsBrokerSett.Controls.Add(label155);
+            gbGprsBrokerSett.Controls.Add(label156);
+            gbGprsBrokerSett.Controls.Add(label157);
+            gbGprsBrokerSett.Controls.Add(label158);
+            gbGprsBrokerSett.Controls.Add(label159);
+            gbGprsBrokerSett.Location = new Point(20, 341);
+            gbGprsBrokerSett.Name = "gbGprsBrokerSett";
+            gbGprsBrokerSett.Size = new Size(502, 350);
+            gbGprsBrokerSett.TabIndex = 6;
+            gbGprsBrokerSett.TabStop = false;
+            gbGprsBrokerSett.Text = "Broker Sett.";
             // 
             // btnMQTTShowPass
             // 
@@ -853,6 +1705,16 @@
             label159.TabIndex = 0;
             label159.Text = "Broker IP/Domain";
             // 
+            // cmbConnectProtocol
+            // 
+            cmbConnectProtocol.FormattingEnabled = true;
+            cmbConnectProtocol.Items.AddRange(new object[] { "MQTT", "HTTP", "TCP" });
+            cmbConnectProtocol.Location = new Point(517, 99);
+            cmbConnectProtocol.Name = "cmbConnectProtocol";
+            cmbConnectProtocol.Size = new Size(181, 28);
+            cmbConnectProtocol.TabIndex = 5;
+            cmbConnectProtocol.SelectedIndexChanged += cmbConnectProtocol_SelectedIndexChanged;
+            // 
             // groupBox16
             // 
             groupBox16.Controls.Add(btnSSLModuleReupdate);
@@ -970,22 +1832,22 @@
             label139.TabIndex = 0;
             label139.Text = "CA Server Certificate";
             // 
-            // groupBox17
+            // gbGprsModemSett
             // 
-            groupBox17.Controls.Add(btnIPSettPassView);
-            groupBox17.Controls.Add(txtIPSettPassword);
-            groupBox17.Controls.Add(txtIPSettUserName);
-            groupBox17.Controls.Add(txtAPN);
-            groupBox17.Controls.Add(label140);
-            groupBox17.Controls.Add(label141);
-            groupBox17.Controls.Add(label142);
-            groupBox17.Controls.Add(label143);
-            groupBox17.Location = new Point(766, 137);
-            groupBox17.Name = "groupBox17";
-            groupBox17.Size = new Size(350, 190);
-            groupBox17.TabIndex = 4;
-            groupBox17.TabStop = false;
-            groupBox17.Text = "Modem Settings";
+            gbGprsModemSett.Controls.Add(btnIPSettPassView);
+            gbGprsModemSett.Controls.Add(txtIPSettPassword);
+            gbGprsModemSett.Controls.Add(txtIPSettUserName);
+            gbGprsModemSett.Controls.Add(txtAPN);
+            gbGprsModemSett.Controls.Add(label140);
+            gbGprsModemSett.Controls.Add(label141);
+            gbGprsModemSett.Controls.Add(label142);
+            gbGprsModemSett.Controls.Add(label143);
+            gbGprsModemSett.Location = new Point(766, 137);
+            gbGprsModemSett.Name = "gbGprsModemSett";
+            gbGprsModemSett.Size = new Size(350, 190);
+            gbGprsModemSett.TabIndex = 4;
+            gbGprsModemSett.TabStop = false;
+            gbGprsModemSett.Text = "Modem Settings";
             // 
             // btnIPSettPassView
             // 
@@ -1058,23 +1920,23 @@
             label143.TabIndex = 0;
             label143.Text = "(Note - Applicable Only For India)";
             // 
-            // groupBox18
+            // gbGprsIPSett1
             // 
-            groupBox18.Controls.Add(cmbEventTransmission);
-            groupBox18.Controls.Add(cmbSSLSecurityEnabled);
-            groupBox18.Controls.Add(chkSSLSecurityEnable);
-            groupBox18.Controls.Add(txtServerPort);
-            groupBox18.Controls.Add(txtServerIPURL);
-            groupBox18.Controls.Add(label144);
-            groupBox18.Controls.Add(label145);
-            groupBox18.Controls.Add(label146);
-            groupBox18.Controls.Add(label147);
-            groupBox18.Location = new Point(20, 137);
-            groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(353, 190);
-            groupBox18.TabIndex = 3;
-            groupBox18.TabStop = false;
-            groupBox18.Text = "IP Settings 1";
+            gbGprsIPSett1.Controls.Add(cmbEventTransmission);
+            gbGprsIPSett1.Controls.Add(cmbSSLSecurityEnabled);
+            gbGprsIPSett1.Controls.Add(chkSSLSecurityEnable);
+            gbGprsIPSett1.Controls.Add(txtServerPort);
+            gbGprsIPSett1.Controls.Add(txtServerIPURL);
+            gbGprsIPSett1.Controls.Add(label144);
+            gbGprsIPSett1.Controls.Add(label145);
+            gbGprsIPSett1.Controls.Add(label146);
+            gbGprsIPSett1.Controls.Add(label147);
+            gbGprsIPSett1.Location = new Point(20, 139);
+            gbGprsIPSett1.Name = "gbGprsIPSett1";
+            gbGprsIPSett1.Size = new Size(353, 190);
+            gbGprsIPSett1.TabIndex = 3;
+            gbGprsIPSett1.TabStop = false;
+            gbGprsIPSett1.Text = "IP Settings 1";
             // 
             // cmbEventTransmission
             // 
@@ -1119,15 +1981,6 @@
             txtServerIPURL.Size = new Size(181, 27);
             txtServerIPURL.TabIndex = 6;
             // 
-            // cmbConnectProtocol
-            // 
-            cmbConnectProtocol.FormattingEnabled = true;
-            cmbConnectProtocol.Items.AddRange(new object[] { "MQTT", "HTTP", "TCP" });
-            cmbConnectProtocol.Location = new Point(517, 99);
-            cmbConnectProtocol.Name = "cmbConnectProtocol";
-            cmbConnectProtocol.Size = new Size(181, 28);
-            cmbConnectProtocol.TabIndex = 5;
-            // 
             // label144
             // 
             label144.AutoSize = true;
@@ -1164,15 +2017,6 @@
             label147.TabIndex = 1;
             label147.Text = "Server IP/URL";
             // 
-            // label148
-            // 
-            label148.AutoSize = true;
-            label148.Location = new Point(366, 102);
-            label148.Name = "label148";
-            label148.Size = new Size(123, 20);
-            label148.TabIndex = 0;
-            label148.Text = "Connect Protocol";
-            // 
             // label67
             // 
             label67.AutoSize = true;
@@ -1182,6 +2026,15 @@
             label67.Size = new Size(174, 35);
             label67.TabIndex = 0;
             label67.Text = "GPRS Settings";
+            // 
+            // label148
+            // 
+            label148.AutoSize = true;
+            label148.Location = new Point(366, 102);
+            label148.Name = "label148";
+            label148.Size = new Size(123, 20);
+            label148.TabIndex = 0;
+            label148.Text = "Connect Protocol";
             // 
             // pnlUser
             // 
@@ -4157,43 +5010,47 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode1.Name = "GeneralSettings";
-            treeNode1.Text = "General Settings";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "DOSettings";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "DO Settings";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "DISettings";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "DI Settings";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "AISettings";
-            treeNode4.SelectedImageIndex = 1;
-            treeNode4.Text = "AI Settings";
-            treeNode5.Name = "IOSettings";
-            treeNode5.Text = "IO Settings";
-            treeNode6.Name = "ModbusSettings";
-            treeNode6.Text = "Modbus Settings";
-            treeNode7.ImageIndex = 0;
-            treeNode7.Name = "PulseSettings";
-            treeNode7.SelectedImageIndex = 0;
-            treeNode7.Text = "Pulse Settings";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "User";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "User";
-            treeNode9.ImageIndex = 0;
-            treeNode9.Name = "ModbusMaster";
-            treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Modbus Master";
-            treeNode10.ImageIndex = 0;
-            treeNode10.Name = "ModbusSlave";
-            treeNode10.SelectedImageIndex = 0;
-            treeNode10.Text = "Modbus Slave";
-            treeNode11.Name = "GPRSSettings";
-            treeNode11.Text = "GPRS Settings";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11 });
+            treeNode14.Name = "GeneralSettings";
+            treeNode14.Text = "General Settings";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "DOSettings";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "DO Settings";
+            treeNode16.ImageIndex = 1;
+            treeNode16.Name = "DISettings";
+            treeNode16.SelectedImageIndex = 1;
+            treeNode16.Text = "DI Settings";
+            treeNode17.ImageIndex = 1;
+            treeNode17.Name = "AISettings";
+            treeNode17.SelectedImageIndex = 1;
+            treeNode17.Text = "AI Settings";
+            treeNode18.Name = "IOSettings";
+            treeNode18.Text = "IO Settings";
+            treeNode19.Name = "ModbusSettings";
+            treeNode19.Text = "Modbus Settings";
+            treeNode20.ImageIndex = 0;
+            treeNode20.Name = "PulseSettings";
+            treeNode20.SelectedImageIndex = 0;
+            treeNode20.Text = "Pulse Settings";
+            treeNode21.ImageIndex = 0;
+            treeNode21.Name = "User";
+            treeNode21.SelectedImageIndex = 0;
+            treeNode21.Text = "User";
+            treeNode22.ImageIndex = 0;
+            treeNode22.Name = "ModbusMaster";
+            treeNode22.SelectedImageIndex = 0;
+            treeNode22.Text = "Modbus Master";
+            treeNode23.ImageIndex = 0;
+            treeNode23.Name = "ModbusSlave";
+            treeNode23.SelectedImageIndex = 0;
+            treeNode23.Text = "Modbus Slave";
+            treeNode24.Name = "GPRSSettings";
+            treeNode24.Text = "GPRS Settings";
+            treeNode25.Name = "status";
+            treeNode25.Text = "Status";
+            treeNode26.Name = "console";
+            treeNode26.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode14, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24, treeNode25, treeNode26 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -4326,7 +5183,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1471, 928);
+            ClientSize = new Size(1471, 931);
             Controls.Add(pnlConnect);
             Controls.Add(pnlDashboard);
             Controls.Add(lnkLogin);
@@ -4337,20 +5194,31 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlConsole.ResumeLayout(false);
+            pnlConsole.PerformLayout();
+            groupBox23.ResumeLayout(false);
+            pnlStatus.ResumeLayout(false);
+            pnlStatus.PerformLayout();
+            groupBox27.ResumeLayout(false);
+            groupBox27.PerformLayout();
+            groupBox26.ResumeLayout(false);
+            groupBox26.PerformLayout();
+            groupBox25.ResumeLayout(false);
+            groupBox25.PerformLayout();
             pnlGPRSSettings.ResumeLayout(false);
             pnlGPRSSettings.PerformLayout();
-            groupBox21.ResumeLayout(false);
-            groupBox21.PerformLayout();
-            groupBox19.ResumeLayout(false);
-            groupBox19.PerformLayout();
-            groupBox20.ResumeLayout(false);
-            groupBox20.PerformLayout();
+            gbGprsIPSett2.ResumeLayout(false);
+            gbGprsIPSett2.PerformLayout();
+            gbGprsTopics.ResumeLayout(false);
+            gbGprsTopics.PerformLayout();
+            gbGprsBrokerSett.ResumeLayout(false);
+            gbGprsBrokerSett.PerformLayout();
             groupBox16.ResumeLayout(false);
             groupBox16.PerformLayout();
-            groupBox17.ResumeLayout(false);
-            groupBox17.PerformLayout();
-            groupBox18.ResumeLayout(false);
-            groupBox18.PerformLayout();
+            gbGprsModemSett.ResumeLayout(false);
+            gbGprsModemSett.PerformLayout();
+            gbGprsIPSett1.ResumeLayout(false);
+            gbGprsIPSett1.PerformLayout();
             pnlUser.ResumeLayout(false);
             pnlUser.PerformLayout();
             groupBox15.ResumeLayout(false);
@@ -4726,7 +5594,7 @@
         private Label label137;
         private Label label138;
         private Label label139;
-        private GroupBox groupBox17;
+        private GroupBox gbGprsModemSett;
         private Button btnIPSettPassView;
         private TextBox txtIPSettPassword;
         private TextBox txtIPSettUserName;
@@ -4735,7 +5603,7 @@
         private Label label141;
         private Label label142;
         private Label label143;
-        private GroupBox groupBox18;
+        private GroupBox gbGprsIPSett1;
         private ComboBox cmbEventTransmission;
         private ComboBox cmbSSLSecurityEnabled;
         private CheckBox chkSSLSecurityEnable;
@@ -4747,14 +5615,14 @@
         private Label label146;
         private Label label147;
         private Label label148;
-        private GroupBox groupBox19;
+        private GroupBox gbGprsTopics;
         private TextBox txtSubscribeCmd;
         private TextBox txtPublishCMDReply;
         private TextBox txtPublishEvent;
         private Label label149;
         private Label label150;
         private Label label151;
-        private GroupBox groupBox20;
+        private GroupBox gbGprsBrokerSett;
         private Button btnMQTTShowPass;
         private ComboBox cmbQosLevel;
         private Label label152;
@@ -4773,7 +5641,7 @@
         private Label label159;
         private Button btnGPRSWriteMemory;
         private Button btnGPRSReadMemory;
-        private GroupBox groupBox21;
+        private GroupBox gbGprsIPSett2;
         private ComboBox cmbIp2EventTransmission;
         private ComboBox cmbIp2SSLSecurityEnabled;
         private CheckBox chkIp2SSLSecurityEnable;
@@ -4783,5 +5651,81 @@
         private Label label161;
         private Label label162;
         private Label label163;
+        private Panel pnlStatus;
+        private Label label164;
+        private GroupBox groupBox27;
+        private Button btnIOStatusRead;
+        private Button btnStatusReset;
+        private Button btnStatusIOOff;
+        private Button btnStatusIOOn;
+        private Label label165;
+        private Label label166;
+        private Label label167;
+        private Label label168;
+        private Label label169;
+        private Label label170;
+        private Label lblDigitalInput2;
+        private Label lblDigitalInput2Volt;
+        private Label lblDigitalInput1;
+        private Label lblDigitalInput1Volt;
+        private Label lblOutputState;
+        private Label lblInput3Volt;
+        private Label lblInput3;
+        private Label lblPulseCounter;
+        private Label lblSystemVolt;
+        private GroupBox groupBox26;
+        private Button btnStatusGSMRead;
+        private Label lblSignal2;
+        private Label lblSignal3;
+        private Label lblSignal4;
+        private Label lblSignal5;
+        private Label lblSignal1;
+        private Label lblStatusProvider;
+        private Label lblStatusModule;
+        private Label lblStatusDecimal;
+        private Label label171;
+        private Label label172;
+        private Label label173;
+        private Label label174;
+        private Label label175;
+        private Label label176;
+        private Label lblTime;
+        private Label lblGprsAttach;
+        private Label lblGprs;
+        private Label lblGprsTech;
+        private Label lblIMEI;
+        private Label lblPowerOn;
+        private Label lblNtpTimeSync;
+        private Label label177;
+        private GroupBox groupBox25;
+        private Label lblSSLFile;
+        private Label lblCfgFile;
+        private Label lblMbusDBFile;
+        private Label lblDataFlash;
+        private Label lblFwFile;
+        private Label lblFirmwareVer;
+        private Label lblClientID;
+        private Label lblHardwareVer;
+        private Label lblAppID;
+        private Label lblDeviceModel;
+        private Label label178;
+        private Label label179;
+        private Label label180;
+        private Label label181;
+        private Label label182;
+        private Label label183;
+        private Label label184;
+        private Label label185;
+        private Label label186;
+        private Label label187;
+        private Panel pnlConsole;
+        private Label label188;
+        private TextBox txtSystemLog;
+        private TextBox txtConsoleInput;
+        private Button btnConsoleSend;
+        private GroupBox groupBox23;
+        private Button btnModbusRead;
+        private Button btnLogMonitorOff;
+        private Button btnClear;
     }
 }

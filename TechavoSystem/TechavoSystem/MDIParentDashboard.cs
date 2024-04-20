@@ -116,6 +116,8 @@ namespace TechavoSystem
             pnlModbusMaster.Visible = false;
             pnlModbusSlave.Visible = false;
             pnlGPRSSettings.Visible = false;
+            pnlStatus.Visible = false;
+            pnlConsole.Visible = false;
         }
 
         private void menu_Click(object sender, TreeNodeMouseClickEventArgs e)
@@ -168,6 +170,14 @@ namespace TechavoSystem
                 else if (e.Node.Name == "ModbusMaster")
                 {
                     pnlModbusMaster.Visible = true;
+                }
+                else if (e.Node.Name == "status")
+                {
+                    pnlStatus.Visible = true;
+                }
+                else if (e.Node.Name == "console")
+                {
+                    pnlConsole.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -945,6 +955,28 @@ namespace TechavoSystem
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
                 CloseConnection();
             }
+        }
+        #endregion
+        #region GPRS
+        private void cmbConnectProtocol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbConnectProtocol.SelectedIndex == 0)
+            {
+                EnableDisableGPRSControls(true);
+            }
+            else
+            {
+                EnableDisableGPRSControls(false);
+            }
+        }
+        private void EnableDisableGPRSControls(bool enableGPRSControls)
+        {
+            gbGprsIPSett1.Enabled = !enableGPRSControls;
+            gbGprsIPSett2.Enabled = !enableGPRSControls;
+            gbGprsModemSett.Enabled = !enableGPRSControls;
+
+            gbGprsBrokerSett.Enabled = enableGPRSControls;
+            gbGprsTopics.Enabled = enableGPRSControls;
         }
         #endregion
     }
