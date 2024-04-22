@@ -43,7 +43,23 @@ namespace TechavoSystem
             txtKFactor.Leave += NumericCheck;
             txtPulseDurationRef.Leave += NumericCheck;
             txtUserMobileNo.Leave += NumericCheck;
+            txtModbusPollingInterval.Leave += NumericCheck;
+            txtModbusTimeout.Leave += NumericCheck;
+            txtModbusSlaveId.Leave += TxtModbusSlaveId_Leave;
             #endregion
+        }
+
+        private void TxtModbusSlaveId_Leave(object? sender, EventArgs e)
+        {
+            NumericChecker((TextBox)sender);
+            if (Int32.TryParse(((TextBox)sender).Text, out int value))
+            {
+                if(value < 1 || value > 255)
+                {
+                    MessageBox.Show("Please enter numeric value from 1 to 255");
+                    ((TextBox)sender).Text = string.Empty;
+                }
+            }
         }
 
         private void NumericCheck(object? sender, EventArgs e)
@@ -281,6 +297,10 @@ namespace TechavoSystem
             else if (incomingDetails.ToUpper().Contains("DESKGEN"))
             {
                 setFieldsGeneralSett(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("STRANS"))
+            {
+                setFieldsModbusSlave(incomingDetails);
             }
         }
         private void uploadSettings(string data)
@@ -960,7 +980,7 @@ namespace TechavoSystem
         #region GPRS
         private void cmbConnectProtocol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbConnectProtocol.SelectedIndex == 0)
+            if (cmbConnectProtocol.SelectedIndex == 0)
             {
                 EnableDisableGPRSControls(true);
             }
@@ -977,6 +997,85 @@ namespace TechavoSystem
 
             gbGprsBrokerSett.Enabled = enableGPRSControls;
             gbGprsTopics.Enabled = enableGPRSControls;
+        }
+        #endregion
+        #region Modbus Slave
+        private void btnModbusSlaveReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceSlave#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnModbusSlaveWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedSlave();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedSlave()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*STRANS, ,");
+            sb.Append(cmbModbusPortType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtModbusSlaveId.Text.Trim());
+            sb.Append(",");
+            sb.Append(cmbModbusBaudRate.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbModbusUartType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtModbusPollingInterval.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtModbusTimeout.Text.Trim());
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsModbusSlave(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                cmbModbusPortType.SelectedIndex = Convert.ToInt32(fields[0]);
+                txtModbusSlaveId.Text = fields[1];
+                cmbModbusBaudRate.SelectedIndex = Convert.ToInt32(fields[2]);
+                cmbModbusUartType.SelectedIndex = Convert.ToInt32(fields[3]);
+                txtModbusPollingInterval.Text = fields[4];
+                txtModbusTimeout.Text = fields[5];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
         }
         #endregion
     }

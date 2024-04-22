@@ -30,21 +30,38 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode14 = new TreeNode("General Settings");
-            TreeNode treeNode15 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode16 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode17 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode18 = new TreeNode("IO Settings", new TreeNode[] { treeNode15, treeNode16, treeNode17 });
-            TreeNode treeNode19 = new TreeNode("Modbus Settings");
-            TreeNode treeNode20 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode21 = new TreeNode("User", 0, 0);
-            TreeNode treeNode22 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode23 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode24 = new TreeNode("GPRS Settings");
-            TreeNode treeNode25 = new TreeNode("Status");
-            TreeNode treeNode26 = new TreeNode("Console");
+            TreeNode treeNode1 = new TreeNode("General Settings");
+            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
+            TreeNode treeNode6 = new TreeNode("Modbus Settings");
+            TreeNode treeNode7 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode8 = new TreeNode("User", 0, 0);
+            TreeNode treeNode9 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode10 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode11 = new TreeNode("GPRS Settings");
+            TreeNode treeNode12 = new TreeNode("Status");
+            TreeNode treeNode13 = new TreeNode("Console");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlModbusSlave = new Panel();
+            btnModbusSlaveWriteMemory = new Button();
+            btnModbusSlaveReadMemory = new Button();
+            groupBox17 = new GroupBox();
+            cmbModbusUartType = new ComboBox();
+            cmbModbusPortType = new ComboBox();
+            txtModbusSlaveId = new TextBox();
+            txtModbusTimeout = new TextBox();
+            label194 = new Label();
+            txtModbusPollingInterval = new TextBox();
+            label193 = new Label();
+            label192 = new Label();
+            cmbModbusBaudRate = new ComboBox();
+            label191 = new Label();
+            lblPortType = new Label();
+            label190 = new Label();
+            label44 = new Label();
             pnlConsole = new Panel();
             txtSystemLog = new TextBox();
             txtConsoleInput = new TextBox();
@@ -484,8 +501,6 @@
             menuImgList = new ImageList(components);
             pnlModbusMaster = new Panel();
             label45 = new Label();
-            pnlModbusSlave = new Panel();
-            label44 = new Label();
             LoginTimer = new System.Windows.Forms.Timer(components);
             btnConnect = new Button();
             cmbComPorts = new ComboBox();
@@ -495,6 +510,8 @@
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
             pnlDashboard.SuspendLayout();
+            pnlModbusSlave.SuspendLayout();
+            groupBox17.SuspendLayout();
             pnlConsole.SuspendLayout();
             groupBox23.SuspendLayout();
             pnlStatus.SuspendLayout();
@@ -532,7 +549,6 @@
             groupBox12.SuspendLayout();
             pnlMenu.SuspendLayout();
             pnlModbusMaster.SuspendLayout();
-            pnlModbusSlave.SuspendLayout();
             pnlConnect.SuspendLayout();
             SuspendLayout();
             // 
@@ -549,6 +565,7 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlModbusSlave);
             pnlDashboard.Controls.Add(pnlConsole);
             pnlDashboard.Controls.Add(pnlStatus);
             pnlDashboard.Controls.Add(pnlGPRSSettings);
@@ -561,12 +578,191 @@
             pnlDashboard.Controls.Add(pnlModbusSettings);
             pnlDashboard.Controls.Add(pnlMenu);
             pnlDashboard.Controls.Add(pnlModbusMaster);
-            pnlDashboard.Controls.Add(pnlModbusSlave);
             pnlDashboard.Location = new Point(7, 87);
             pnlDashboard.Name = "pnlDashboard";
             pnlDashboard.Size = new Size(1460, 837);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlModbusSlave
+            // 
+            pnlModbusSlave.Controls.Add(btnModbusSlaveWriteMemory);
+            pnlModbusSlave.Controls.Add(btnModbusSlaveReadMemory);
+            pnlModbusSlave.Controls.Add(groupBox17);
+            pnlModbusSlave.Controls.Add(label44);
+            pnlModbusSlave.Location = new Point(321, 10);
+            pnlModbusSlave.Name = "pnlModbusSlave";
+            pnlModbusSlave.Size = new Size(1133, 821);
+            pnlModbusSlave.TabIndex = 6;
+            pnlModbusSlave.Visible = false;
+            // 
+            // btnModbusSlaveWriteMemory
+            // 
+            btnModbusSlaveWriteMemory.BackColor = Color.Red;
+            btnModbusSlaveWriteMemory.Cursor = Cursors.Hand;
+            btnModbusSlaveWriteMemory.ForeColor = Color.White;
+            btnModbusSlaveWriteMemory.Location = new Point(631, 521);
+            btnModbusSlaveWriteMemory.Name = "btnModbusSlaveWriteMemory";
+            btnModbusSlaveWriteMemory.Size = new Size(172, 42);
+            btnModbusSlaveWriteMemory.TabIndex = 64;
+            btnModbusSlaveWriteMemory.Text = "Write Memory";
+            btnModbusSlaveWriteMemory.UseVisualStyleBackColor = false;
+            btnModbusSlaveWriteMemory.Click += btnModbusSlaveWriteMemory_Click;
+            // 
+            // btnModbusSlaveReadMemory
+            // 
+            btnModbusSlaveReadMemory.BackColor = Color.DarkKhaki;
+            btnModbusSlaveReadMemory.Cursor = Cursors.Hand;
+            btnModbusSlaveReadMemory.ForeColor = Color.White;
+            btnModbusSlaveReadMemory.Location = new Point(359, 521);
+            btnModbusSlaveReadMemory.Name = "btnModbusSlaveReadMemory";
+            btnModbusSlaveReadMemory.Size = new Size(190, 42);
+            btnModbusSlaveReadMemory.TabIndex = 63;
+            btnModbusSlaveReadMemory.Text = "Read Memory";
+            btnModbusSlaveReadMemory.UseVisualStyleBackColor = false;
+            btnModbusSlaveReadMemory.Click += btnModbusSlaveReadMemory_Click;
+            // 
+            // groupBox17
+            // 
+            groupBox17.Controls.Add(cmbModbusUartType);
+            groupBox17.Controls.Add(cmbModbusPortType);
+            groupBox17.Controls.Add(txtModbusSlaveId);
+            groupBox17.Controls.Add(txtModbusTimeout);
+            groupBox17.Controls.Add(label194);
+            groupBox17.Controls.Add(txtModbusPollingInterval);
+            groupBox17.Controls.Add(label193);
+            groupBox17.Controls.Add(label192);
+            groupBox17.Controls.Add(cmbModbusBaudRate);
+            groupBox17.Controls.Add(label191);
+            groupBox17.Controls.Add(lblPortType);
+            groupBox17.Controls.Add(label190);
+            groupBox17.Location = new Point(100, 74);
+            groupBox17.Name = "groupBox17";
+            groupBox17.Size = new Size(926, 384);
+            groupBox17.TabIndex = 2;
+            groupBox17.TabStop = false;
+            groupBox17.Text = "Settings";
+            // 
+            // cmbModbusUartType
+            // 
+            cmbModbusUartType.FormattingEnabled = true;
+            cmbModbusUartType.Items.AddRange(new object[] { "8N1", "8E1", "8O1", "8N2" });
+            cmbModbusUartType.Location = new Point(448, 209);
+            cmbModbusUartType.Name = "cmbModbusUartType";
+            cmbModbusUartType.Size = new Size(224, 28);
+            cmbModbusUartType.TabIndex = 82;
+            // 
+            // cmbModbusPortType
+            // 
+            cmbModbusPortType.FormattingEnabled = true;
+            cmbModbusPortType.Items.AddRange(new object[] { "RS232", "RS485" });
+            cmbModbusPortType.Location = new Point(448, 102);
+            cmbModbusPortType.Name = "cmbModbusPortType";
+            cmbModbusPortType.Size = new Size(224, 28);
+            cmbModbusPortType.TabIndex = 81;
+            // 
+            // txtModbusSlaveId
+            // 
+            txtModbusSlaveId.BorderStyle = BorderStyle.FixedSingle;
+            txtModbusSlaveId.Location = new Point(448, 47);
+            txtModbusSlaveId.MaxLength = 10;
+            txtModbusSlaveId.Name = "txtModbusSlaveId";
+            txtModbusSlaveId.Size = new Size(224, 27);
+            txtModbusSlaveId.TabIndex = 80;
+            // 
+            // txtModbusTimeout
+            // 
+            txtModbusTimeout.BorderStyle = BorderStyle.FixedSingle;
+            txtModbusTimeout.Location = new Point(448, 320);
+            txtModbusTimeout.MaxLength = 10;
+            txtModbusTimeout.Name = "txtModbusTimeout";
+            txtModbusTimeout.Size = new Size(224, 27);
+            txtModbusTimeout.TabIndex = 79;
+            // 
+            // label194
+            // 
+            label194.AutoSize = true;
+            label194.Location = new Point(290, 326);
+            label194.Name = "label194";
+            label194.Size = new Size(64, 20);
+            label194.TabIndex = 78;
+            label194.Text = "Timeout";
+            // 
+            // txtModbusPollingInterval
+            // 
+            txtModbusPollingInterval.BorderStyle = BorderStyle.FixedSingle;
+            txtModbusPollingInterval.Location = new Point(448, 266);
+            txtModbusPollingInterval.MaxLength = 10;
+            txtModbusPollingInterval.Name = "txtModbusPollingInterval";
+            txtModbusPollingInterval.Size = new Size(224, 27);
+            txtModbusPollingInterval.TabIndex = 77;
+            // 
+            // label193
+            // 
+            label193.AutoSize = true;
+            label193.Location = new Point(290, 271);
+            label193.Name = "label193";
+            label193.Size = new Size(107, 20);
+            label193.TabIndex = 76;
+            label193.Text = "Polling Interval";
+            // 
+            // label192
+            // 
+            label192.AutoSize = true;
+            label192.Location = new Point(290, 216);
+            label192.MaximumSize = new Size(164, 60);
+            label192.Name = "label192";
+            label192.Size = new Size(72, 20);
+            label192.TabIndex = 74;
+            label192.Text = "Uart Type";
+            // 
+            // cmbModbusBaudRate
+            // 
+            cmbModbusBaudRate.FormattingEnabled = true;
+            cmbModbusBaudRate.Items.AddRange(new object[] { "300", "600", "1200", "2400", "4800", "9600", "19200", "38400", "57600", "115200" });
+            cmbModbusBaudRate.Location = new Point(448, 156);
+            cmbModbusBaudRate.Name = "cmbModbusBaudRate";
+            cmbModbusBaudRate.Size = new Size(224, 28);
+            cmbModbusBaudRate.TabIndex = 73;
+            // 
+            // label191
+            // 
+            label191.AutoSize = true;
+            label191.Location = new Point(290, 161);
+            label191.MaximumSize = new Size(164, 60);
+            label191.Name = "label191";
+            label191.Size = new Size(77, 20);
+            label191.TabIndex = 72;
+            label191.Text = "Baud Rate";
+            // 
+            // lblPortType
+            // 
+            lblPortType.AutoSize = true;
+            lblPortType.Location = new Point(290, 106);
+            lblPortType.MaximumSize = new Size(164, 60);
+            lblPortType.Name = "lblPortType";
+            lblPortType.Size = new Size(70, 20);
+            lblPortType.TabIndex = 70;
+            lblPortType.Text = "Port Type";
+            // 
+            // label190
+            // 
+            label190.AutoSize = true;
+            label190.Location = new Point(290, 51);
+            label190.Name = "label190";
+            label190.Size = new Size(61, 20);
+            label190.TabIndex = 66;
+            label190.Text = "Slave Id";
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label44.Location = new Point(464, 19);
+            label44.Name = "label44";
+            label44.Size = new Size(164, 31);
+            label44.TabIndex = 1;
+            label44.Text = "Modbus Slave";
             // 
             // pnlConsole
             // 
@@ -5010,47 +5206,47 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode14.Name = "GeneralSettings";
-            treeNode14.Text = "General Settings";
-            treeNode15.ImageIndex = 1;
-            treeNode15.Name = "DOSettings";
-            treeNode15.SelectedImageIndex = 1;
-            treeNode15.Text = "DO Settings";
-            treeNode16.ImageIndex = 1;
-            treeNode16.Name = "DISettings";
-            treeNode16.SelectedImageIndex = 1;
-            treeNode16.Text = "DI Settings";
-            treeNode17.ImageIndex = 1;
-            treeNode17.Name = "AISettings";
-            treeNode17.SelectedImageIndex = 1;
-            treeNode17.Text = "AI Settings";
-            treeNode18.Name = "IOSettings";
-            treeNode18.Text = "IO Settings";
-            treeNode19.Name = "ModbusSettings";
-            treeNode19.Text = "Modbus Settings";
-            treeNode20.ImageIndex = 0;
-            treeNode20.Name = "PulseSettings";
-            treeNode20.SelectedImageIndex = 0;
-            treeNode20.Text = "Pulse Settings";
-            treeNode21.ImageIndex = 0;
-            treeNode21.Name = "User";
-            treeNode21.SelectedImageIndex = 0;
-            treeNode21.Text = "User";
-            treeNode22.ImageIndex = 0;
-            treeNode22.Name = "ModbusMaster";
-            treeNode22.SelectedImageIndex = 0;
-            treeNode22.Text = "Modbus Master";
-            treeNode23.ImageIndex = 0;
-            treeNode23.Name = "ModbusSlave";
-            treeNode23.SelectedImageIndex = 0;
-            treeNode23.Text = "Modbus Slave";
-            treeNode24.Name = "GPRSSettings";
-            treeNode24.Text = "GPRS Settings";
-            treeNode25.Name = "status";
-            treeNode25.Text = "Status";
-            treeNode26.Name = "console";
-            treeNode26.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode14, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24, treeNode25, treeNode26 });
+            treeNode1.Name = "GeneralSettings";
+            treeNode1.Text = "General Settings";
+            treeNode2.ImageIndex = 1;
+            treeNode2.Name = "DOSettings";
+            treeNode2.SelectedImageIndex = 1;
+            treeNode2.Text = "DO Settings";
+            treeNode3.ImageIndex = 1;
+            treeNode3.Name = "DISettings";
+            treeNode3.SelectedImageIndex = 1;
+            treeNode3.Text = "DI Settings";
+            treeNode4.ImageIndex = 1;
+            treeNode4.Name = "AISettings";
+            treeNode4.SelectedImageIndex = 1;
+            treeNode4.Text = "AI Settings";
+            treeNode5.Name = "IOSettings";
+            treeNode5.Text = "IO Settings";
+            treeNode6.Name = "ModbusSettings";
+            treeNode6.Text = "Modbus Settings";
+            treeNode7.ImageIndex = 0;
+            treeNode7.Name = "PulseSettings";
+            treeNode7.SelectedImageIndex = 0;
+            treeNode7.Text = "Pulse Settings";
+            treeNode8.ImageIndex = 0;
+            treeNode8.Name = "User";
+            treeNode8.SelectedImageIndex = 0;
+            treeNode8.Text = "User";
+            treeNode9.ImageIndex = 0;
+            treeNode9.Name = "ModbusMaster";
+            treeNode9.SelectedImageIndex = 0;
+            treeNode9.Text = "Modbus Master";
+            treeNode10.ImageIndex = 0;
+            treeNode10.Name = "ModbusSlave";
+            treeNode10.SelectedImageIndex = 0;
+            treeNode10.Text = "Modbus Slave";
+            treeNode11.Name = "GPRSSettings";
+            treeNode11.Text = "GPRS Settings";
+            treeNode12.Name = "status";
+            treeNode12.Text = "Status";
+            treeNode13.Name = "console";
+            treeNode13.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12, treeNode13 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -5081,25 +5277,6 @@
             label45.Size = new Size(182, 31);
             label45.TabIndex = 1;
             label45.Text = "Modbus Master";
-            // 
-            // pnlModbusSlave
-            // 
-            pnlModbusSlave.Controls.Add(label44);
-            pnlModbusSlave.Location = new Point(321, 77);
-            pnlModbusSlave.Name = "pnlModbusSlave";
-            pnlModbusSlave.Size = new Size(1133, 754);
-            pnlModbusSlave.TabIndex = 6;
-            pnlModbusSlave.Visible = false;
-            // 
-            // label44
-            // 
-            label44.AutoSize = true;
-            label44.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label44.Location = new Point(464, 19);
-            label44.Name = "label44";
-            label44.Size = new Size(164, 31);
-            label44.TabIndex = 1;
-            label44.Text = "Modbus Slave";
             // 
             // LoginTimer
             // 
@@ -5194,6 +5371,10 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlModbusSlave.ResumeLayout(false);
+            pnlModbusSlave.PerformLayout();
+            groupBox17.ResumeLayout(false);
+            groupBox17.PerformLayout();
             pnlConsole.ResumeLayout(false);
             pnlConsole.PerformLayout();
             groupBox23.ResumeLayout(false);
@@ -5266,8 +5447,6 @@
             pnlMenu.ResumeLayout(false);
             pnlModbusMaster.ResumeLayout(false);
             pnlModbusMaster.PerformLayout();
-            pnlModbusSlave.ResumeLayout(false);
-            pnlModbusSlave.PerformLayout();
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
             ResumeLayout(false);
@@ -5727,5 +5906,24 @@
         private Button btnModbusRead;
         private Button btnLogMonitorOff;
         private Button btnClear;
+        private GroupBox groupBox17;
+        private ComboBox cmbModbusUartType;
+        private Label lblPortType;
+        private ComboBox cmbSelectDevice;
+        private Label label189;
+        private TextBox textBox1;
+        private Label label190;
+        private TextBox txtModbusTimeout;
+        private Label label194;
+        private TextBox txtModbusPollingInterval;
+        private Label label193;
+        private ComboBox comboBox4;
+        private Label label192;
+        private ComboBox cmbModbusBaudRate;
+        private Label label191;
+        private Button btnModbusSlaveWriteMemory;
+        private Button btnModbusSlaveReadMemory;
+        private TextBox txtModbusSlaveId;
+        private ComboBox cmbModbusPortType;
     }
 }
