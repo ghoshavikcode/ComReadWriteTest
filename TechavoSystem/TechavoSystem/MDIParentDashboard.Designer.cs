@@ -29,22 +29,271 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Button btnMasterReadAll;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode1 = new TreeNode("General Settings");
-            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Modbus Settings");
-            TreeNode treeNode7 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode8 = new TreeNode("User", 0, 0);
-            TreeNode treeNode9 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode10 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode11 = new TreeNode("GPRS Settings");
-            TreeNode treeNode12 = new TreeNode("Status");
-            TreeNode treeNode13 = new TreeNode("Console");
+            TreeNode treeNode14 = new TreeNode("General Settings");
+            TreeNode treeNode15 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode16 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode17 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode18 = new TreeNode("IO Settings", new TreeNode[] { treeNode15, treeNode16, treeNode17 });
+            TreeNode treeNode19 = new TreeNode("Modbus Settings");
+            TreeNode treeNode20 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode21 = new TreeNode("User", 0, 0);
+            TreeNode treeNode22 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode23 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode24 = new TreeNode("GPRS Settings");
+            TreeNode treeNode25 = new TreeNode("Status");
+            TreeNode treeNode26 = new TreeNode("Console");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlModbusMaster = new Panel();
+            groupBox19 = new GroupBox();
+            pnlMasterScroll = new Panel();
+            groupBox34 = new GroupBox();
+            comboBox51 = new ComboBox();
+            comboBox52 = new ComboBox();
+            comboBox53 = new ComboBox();
+            comboBox54 = new ComboBox();
+            button23 = new Button();
+            button24 = new Button();
+            textBox46 = new TextBox();
+            textBox47 = new TextBox();
+            txtMasterRegStartAddress12 = new TextBox();
+            txtMasterRegIndex12 = new TextBox();
+            groupBox35 = new GroupBox();
+            comboBox55 = new ComboBox();
+            comboBox56 = new ComboBox();
+            comboBox57 = new ComboBox();
+            comboBox58 = new ComboBox();
+            button25 = new Button();
+            button26 = new Button();
+            textBox50 = new TextBox();
+            textBox51 = new TextBox();
+            txtMasterRegStartAddress20 = new TextBox();
+            txtMasterRegIndex20 = new TextBox();
+            groupBox36 = new GroupBox();
+            comboBox59 = new ComboBox();
+            comboBox60 = new ComboBox();
+            comboBox61 = new ComboBox();
+            comboBox62 = new ComboBox();
+            button27 = new Button();
+            button28 = new Button();
+            textBox54 = new TextBox();
+            textBox55 = new TextBox();
+            txtMasterRegStartAddress19 = new TextBox();
+            txtMasterRegIndex19 = new TextBox();
+            groupBox37 = new GroupBox();
+            comboBox63 = new ComboBox();
+            comboBox64 = new ComboBox();
+            comboBox65 = new ComboBox();
+            comboBox66 = new ComboBox();
+            button29 = new Button();
+            button30 = new Button();
+            textBox58 = new TextBox();
+            textBox59 = new TextBox();
+            txtMasterRegStartAddress18 = new TextBox();
+            txtMasterRegIndex18 = new TextBox();
+            groupBox38 = new GroupBox();
+            comboBox67 = new ComboBox();
+            comboBox68 = new ComboBox();
+            comboBox69 = new ComboBox();
+            comboBox70 = new ComboBox();
+            button31 = new Button();
+            button32 = new Button();
+            textBox62 = new TextBox();
+            textBox63 = new TextBox();
+            txtMasterRegStartAddress16 = new TextBox();
+            txtMasterRegIndex16 = new TextBox();
+            groupBox39 = new GroupBox();
+            comboBox71 = new ComboBox();
+            comboBox72 = new ComboBox();
+            comboBox73 = new ComboBox();
+            comboBox74 = new ComboBox();
+            button33 = new Button();
+            button34 = new Button();
+            textBox66 = new TextBox();
+            textBox67 = new TextBox();
+            txtMasterRegStartAddress17 = new TextBox();
+            txtMasterRegIndex17 = new TextBox();
+            groupBox40 = new GroupBox();
+            comboBox75 = new ComboBox();
+            comboBox76 = new ComboBox();
+            comboBox77 = new ComboBox();
+            comboBox78 = new ComboBox();
+            button35 = new Button();
+            button36 = new Button();
+            textBox70 = new TextBox();
+            textBox71 = new TextBox();
+            txtMasterRegStartAddress15 = new TextBox();
+            txtMasterRegIndex15 = new TextBox();
+            groupBox41 = new GroupBox();
+            comboBox79 = new ComboBox();
+            comboBox80 = new ComboBox();
+            comboBox81 = new ComboBox();
+            comboBox82 = new ComboBox();
+            button37 = new Button();
+            button38 = new Button();
+            textBox74 = new TextBox();
+            textBox75 = new TextBox();
+            txtMasterRegStartAddress14 = new TextBox();
+            txtMasterRegIndex14 = new TextBox();
+            groupBox42 = new GroupBox();
+            comboBox83 = new ComboBox();
+            comboBox84 = new ComboBox();
+            comboBox85 = new ComboBox();
+            comboBox86 = new ComboBox();
+            button39 = new Button();
+            button40 = new Button();
+            textBox78 = new TextBox();
+            textBox79 = new TextBox();
+            txtMasterRegStartAddress13 = new TextBox();
+            txtMasterRegIndex13 = new TextBox();
+            groupBox43 = new GroupBox();
+            comboBox87 = new ComboBox();
+            comboBox88 = new ComboBox();
+            comboBox89 = new ComboBox();
+            comboBox90 = new ComboBox();
+            button41 = new Button();
+            button42 = new Button();
+            textBox82 = new TextBox();
+            textBox83 = new TextBox();
+            txtMasterRegStartAddress11 = new TextBox();
+            txtMasterRegIndex11 = new TextBox();
+            groupBox21 = new GroupBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            comboBox4 = new ComboBox();
+            button1 = new Button();
+            button2 = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            txtMasterRegStartAddress2 = new TextBox();
+            txtMasterRegIndex2 = new TextBox();
+            groupBox32 = new GroupBox();
+            comboBox43 = new ComboBox();
+            comboBox44 = new ComboBox();
+            comboBox45 = new ComboBox();
+            comboBox46 = new ComboBox();
+            button19 = new Button();
+            button20 = new Button();
+            textBox38 = new TextBox();
+            textBox39 = new TextBox();
+            txtMasterRegStartAddress10 = new TextBox();
+            txtMasterRegIndex10 = new TextBox();
+            groupBox33 = new GroupBox();
+            comboBox47 = new ComboBox();
+            comboBox48 = new ComboBox();
+            comboBox49 = new ComboBox();
+            comboBox50 = new ComboBox();
+            button21 = new Button();
+            button22 = new Button();
+            textBox42 = new TextBox();
+            textBox43 = new TextBox();
+            txtMasterRegStartAddress9 = new TextBox();
+            txtMasterRegIndex9 = new TextBox();
+            groupBox28 = new GroupBox();
+            comboBox13 = new ComboBox();
+            comboBox14 = new ComboBox();
+            comboBox15 = new ComboBox();
+            comboBox16 = new ComboBox();
+            button11 = new Button();
+            button12 = new Button();
+            textBox13 = new TextBox();
+            textBox14 = new TextBox();
+            txtMasterRegStartAddress8 = new TextBox();
+            txtMasterRegIndex8 = new TextBox();
+            groupBox29 = new GroupBox();
+            comboBox17 = new ComboBox();
+            comboBox18 = new ComboBox();
+            comboBox19 = new ComboBox();
+            comboBox20 = new ComboBox();
+            button13 = new Button();
+            button14 = new Button();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            txtMasterRegStartAddress6 = new TextBox();
+            txtMasterRegIndex6 = new TextBox();
+            groupBox30 = new GroupBox();
+            comboBox21 = new ComboBox();
+            comboBox22 = new ComboBox();
+            comboBox23 = new ComboBox();
+            comboBox24 = new ComboBox();
+            button15 = new Button();
+            button16 = new Button();
+            textBox30 = new TextBox();
+            textBox31 = new TextBox();
+            txtMasterRegStartAddress7 = new TextBox();
+            txtMasterRegIndex7 = new TextBox();
+            groupBox31 = new GroupBox();
+            comboBox25 = new ComboBox();
+            comboBox26 = new ComboBox();
+            comboBox27 = new ComboBox();
+            comboBox28 = new ComboBox();
+            button17 = new Button();
+            button18 = new Button();
+            textBox34 = new TextBox();
+            textBox35 = new TextBox();
+            txtMasterRegStartAddress5 = new TextBox();
+            txtMasterRegIndex5 = new TextBox();
+            groupBox22 = new GroupBox();
+            comboBox5 = new ComboBox();
+            comboBox6 = new ComboBox();
+            comboBox7 = new ComboBox();
+            comboBox8 = new ComboBox();
+            button7 = new Button();
+            button8 = new Button();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            txtMasterRegStartAddress4 = new TextBox();
+            txtMasterRegIndex4 = new TextBox();
+            groupBox24 = new GroupBox();
+            comboBox9 = new ComboBox();
+            comboBox10 = new ComboBox();
+            comboBox11 = new ComboBox();
+            comboBox12 = new ComboBox();
+            button9 = new Button();
+            button10 = new Button();
+            textBox9 = new TextBox();
+            textBox10 = new TextBox();
+            txtMasterRegStartAddress3 = new TextBox();
+            txtMasterRegIndex3 = new TextBox();
+            groupBox20 = new GroupBox();
+            cmbMasterFunctionCode1 = new ComboBox();
+            cmbMasterByteOrder1 = new ComboBox();
+            cmbMasterDataType1 = new ComboBox();
+            cmbMasterActivation1 = new ComboBox();
+            btnRegWriteMemory1 = new Button();
+            btnRegReadMemory1 = new Button();
+            txtMasterScaleFactor1 = new TextBox();
+            txtMasterName1 = new TextBox();
+            txtMasterRegStartAddress1 = new TextBox();
+            txtMasterRegIndex1 = new TextBox();
+            label207 = new Label();
+            label206 = new Label();
+            label205 = new Label();
+            label196 = new Label();
+            label201 = new Label();
+            label202 = new Label();
+            label203 = new Label();
+            label204 = new Label();
+            groupBox18 = new GroupBox();
+            cmbMasterUartType = new ComboBox();
+            cmbMasterBaudRate = new ComboBox();
+            label200 = new Label();
+            label199 = new Label();
+            txtMasterPollingInterval = new TextBox();
+            label198 = new Label();
+            txtMasterTimeout = new TextBox();
+            label189 = new Label();
+            txtMasterSlaveId = new TextBox();
+            label197 = new Label();
+            button3 = new Button();
+            button4 = new Button();
+            cmbMasterSlaveIndex = new ComboBox();
+            label195 = new Label();
+            btnMasterWriteAll = new Button();
+            label45 = new Label();
             pnlModbusSlave = new Panel();
             btnModbusSlaveWriteMemory = new Button();
             btnModbusSlaveReadMemory = new Button();
@@ -499,8 +748,6 @@
             pnlMenu = new Panel();
             menu = new TreeView();
             menuImgList = new ImageList(components);
-            pnlModbusMaster = new Panel();
-            label45 = new Label();
             LoginTimer = new System.Windows.Forms.Timer(components);
             btnConnect = new Button();
             cmbComPorts = new ComboBox();
@@ -509,7 +756,32 @@
             label133 = new Label();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
+            btnMasterReadAll = new Button();
             pnlDashboard.SuspendLayout();
+            pnlModbusMaster.SuspendLayout();
+            groupBox19.SuspendLayout();
+            pnlMasterScroll.SuspendLayout();
+            groupBox34.SuspendLayout();
+            groupBox35.SuspendLayout();
+            groupBox36.SuspendLayout();
+            groupBox37.SuspendLayout();
+            groupBox38.SuspendLayout();
+            groupBox39.SuspendLayout();
+            groupBox40.SuspendLayout();
+            groupBox41.SuspendLayout();
+            groupBox42.SuspendLayout();
+            groupBox43.SuspendLayout();
+            groupBox21.SuspendLayout();
+            groupBox32.SuspendLayout();
+            groupBox33.SuspendLayout();
+            groupBox28.SuspendLayout();
+            groupBox29.SuspendLayout();
+            groupBox30.SuspendLayout();
+            groupBox31.SuspendLayout();
+            groupBox22.SuspendLayout();
+            groupBox24.SuspendLayout();
+            groupBox20.SuspendLayout();
+            groupBox18.SuspendLayout();
             pnlModbusSlave.SuspendLayout();
             groupBox17.SuspendLayout();
             pnlConsole.SuspendLayout();
@@ -548,9 +820,20 @@
             groupBox11.SuspendLayout();
             groupBox12.SuspendLayout();
             pnlMenu.SuspendLayout();
-            pnlModbusMaster.SuspendLayout();
             pnlConnect.SuspendLayout();
             SuspendLayout();
+            // 
+            // btnMasterReadAll
+            // 
+            btnMasterReadAll.BackColor = Color.DarkKhaki;
+            btnMasterReadAll.Cursor = Cursors.Hand;
+            btnMasterReadAll.ForeColor = Color.White;
+            btnMasterReadAll.Location = new Point(312, 764);
+            btnMasterReadAll.Name = "btnMasterReadAll";
+            btnMasterReadAll.Size = new Size(190, 42);
+            btnMasterReadAll.TabIndex = 82;
+            btnMasterReadAll.Text = "Read All";
+            btnMasterReadAll.UseVisualStyleBackColor = false;
             // 
             // lnkLogin
             // 
@@ -565,6 +848,7 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlModbusMaster);
             pnlDashboard.Controls.Add(pnlModbusSlave);
             pnlDashboard.Controls.Add(pnlConsole);
             pnlDashboard.Controls.Add(pnlStatus);
@@ -577,12 +861,2620 @@
             pnlDashboard.Controls.Add(pnlDOSettings);
             pnlDashboard.Controls.Add(pnlModbusSettings);
             pnlDashboard.Controls.Add(pnlMenu);
-            pnlDashboard.Controls.Add(pnlModbusMaster);
             pnlDashboard.Location = new Point(7, 87);
             pnlDashboard.Name = "pnlDashboard";
             pnlDashboard.Size = new Size(1460, 837);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlModbusMaster
+            // 
+            pnlModbusMaster.AutoScroll = true;
+            pnlModbusMaster.Controls.Add(groupBox19);
+            pnlModbusMaster.Controls.Add(groupBox18);
+            pnlModbusMaster.Controls.Add(cmbMasterSlaveIndex);
+            pnlModbusMaster.Controls.Add(label195);
+            pnlModbusMaster.Controls.Add(btnMasterWriteAll);
+            pnlModbusMaster.Controls.Add(btnMasterReadAll);
+            pnlModbusMaster.Controls.Add(label45);
+            pnlModbusMaster.Location = new Point(321, 9);
+            pnlModbusMaster.Name = "pnlModbusMaster";
+            pnlModbusMaster.Size = new Size(1133, 822);
+            pnlModbusMaster.TabIndex = 7;
+            pnlModbusMaster.Visible = false;
+            // 
+            // groupBox19
+            // 
+            groupBox19.Controls.Add(pnlMasterScroll);
+            groupBox19.Controls.Add(label207);
+            groupBox19.Controls.Add(label206);
+            groupBox19.Controls.Add(label205);
+            groupBox19.Controls.Add(label196);
+            groupBox19.Controls.Add(label201);
+            groupBox19.Controls.Add(label202);
+            groupBox19.Controls.Add(label203);
+            groupBox19.Controls.Add(label204);
+            groupBox19.Location = new Point(8, 206);
+            groupBox19.Name = "groupBox19";
+            groupBox19.Size = new Size(1119, 552);
+            groupBox19.TabIndex = 89;
+            groupBox19.TabStop = false;
+            groupBox19.Text = "Register Connection Parameter";
+            // 
+            // pnlMasterScroll
+            // 
+            pnlMasterScroll.AutoScroll = true;
+            pnlMasterScroll.AutoScrollMinSize = new Size(1072, 1087);
+            pnlMasterScroll.Controls.Add(groupBox34);
+            pnlMasterScroll.Controls.Add(groupBox35);
+            pnlMasterScroll.Controls.Add(groupBox36);
+            pnlMasterScroll.Controls.Add(groupBox37);
+            pnlMasterScroll.Controls.Add(groupBox38);
+            pnlMasterScroll.Controls.Add(groupBox39);
+            pnlMasterScroll.Controls.Add(groupBox40);
+            pnlMasterScroll.Controls.Add(groupBox41);
+            pnlMasterScroll.Controls.Add(groupBox42);
+            pnlMasterScroll.Controls.Add(groupBox43);
+            pnlMasterScroll.Controls.Add(groupBox21);
+            pnlMasterScroll.Controls.Add(groupBox32);
+            pnlMasterScroll.Controls.Add(groupBox33);
+            pnlMasterScroll.Controls.Add(groupBox28);
+            pnlMasterScroll.Controls.Add(groupBox29);
+            pnlMasterScroll.Controls.Add(groupBox30);
+            pnlMasterScroll.Controls.Add(groupBox31);
+            pnlMasterScroll.Controls.Add(groupBox22);
+            pnlMasterScroll.Controls.Add(groupBox24);
+            pnlMasterScroll.Controls.Add(groupBox20);
+            pnlMasterScroll.Location = new Point(5, 62);
+            pnlMasterScroll.Name = "pnlMasterScroll";
+            pnlMasterScroll.Size = new Size(1111, 483);
+            pnlMasterScroll.TabIndex = 104;
+            // 
+            // groupBox34
+            // 
+            groupBox34.Controls.Add(comboBox51);
+            groupBox34.Controls.Add(comboBox52);
+            groupBox34.Controls.Add(comboBox53);
+            groupBox34.Controls.Add(comboBox54);
+            groupBox34.Controls.Add(button23);
+            groupBox34.Controls.Add(button24);
+            groupBox34.Controls.Add(textBox46);
+            groupBox34.Controls.Add(textBox47);
+            groupBox34.Controls.Add(txtMasterRegStartAddress12);
+            groupBox34.Controls.Add(txtMasterRegIndex12);
+            groupBox34.Location = new Point(3, 585);
+            groupBox34.Name = "groupBox34";
+            groupBox34.Size = new Size(1084, 51);
+            groupBox34.TabIndex = 120;
+            groupBox34.TabStop = false;
+            // 
+            // comboBox51
+            // 
+            comboBox51.FormattingEnabled = true;
+            comboBox51.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox51.Location = new Point(628, 16);
+            comboBox51.Name = "comboBox51";
+            comboBox51.Size = new Size(155, 28);
+            comboBox51.TabIndex = 100;
+            // 
+            // comboBox52
+            // 
+            comboBox52.FormattingEnabled = true;
+            comboBox52.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox52.Location = new Point(531, 16);
+            comboBox52.Name = "comboBox52";
+            comboBox52.Size = new Size(92, 28);
+            comboBox52.TabIndex = 99;
+            // 
+            // comboBox53
+            // 
+            comboBox53.FormattingEnabled = true;
+            comboBox53.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox53.Location = new Point(396, 16);
+            comboBox53.Name = "comboBox53";
+            comboBox53.Size = new Size(130, 28);
+            comboBox53.TabIndex = 98;
+            // 
+            // comboBox54
+            // 
+            comboBox54.FormattingEnabled = true;
+            comboBox54.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox54.Location = new Point(324, 16);
+            comboBox54.Name = "comboBox54";
+            comboBox54.Size = new Size(68, 28);
+            comboBox54.TabIndex = 97;
+            // 
+            // button23
+            // 
+            button23.BackColor = Color.Red;
+            button23.Cursor = Cursors.Hand;
+            button23.ForeColor = Color.White;
+            button23.Location = new Point(969, 15);
+            button23.Name = "button23";
+            button23.Size = new Size(112, 30);
+            button23.TabIndex = 95;
+            button23.Text = "Write Memory";
+            button23.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            button24.BackColor = Color.DarkKhaki;
+            button24.Cursor = Cursors.Hand;
+            button24.ForeColor = Color.White;
+            button24.Location = new Point(857, 15);
+            button24.Name = "button24";
+            button24.Size = new Size(112, 30);
+            button24.TabIndex = 94;
+            button24.Text = "Read Memory";
+            button24.UseVisualStyleBackColor = false;
+            // 
+            // textBox46
+            // 
+            textBox46.BorderStyle = BorderStyle.FixedSingle;
+            textBox46.Location = new Point(787, 16);
+            textBox46.MaxLength = 10;
+            textBox46.Name = "textBox46";
+            textBox46.Size = new Size(69, 27);
+            textBox46.TabIndex = 93;
+            // 
+            // textBox47
+            // 
+            textBox47.BorderStyle = BorderStyle.FixedSingle;
+            textBox47.Location = new Point(206, 16);
+            textBox47.MaxLength = 50;
+            textBox47.Name = "textBox47";
+            textBox47.Size = new Size(114, 27);
+            textBox47.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress12
+            // 
+            txtMasterRegStartAddress12.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress12.Location = new Point(93, 16);
+            txtMasterRegStartAddress12.MaxLength = 10;
+            txtMasterRegStartAddress12.Name = "txtMasterRegStartAddress12";
+            txtMasterRegStartAddress12.Size = new Size(110, 27);
+            txtMasterRegStartAddress12.TabIndex = 91;
+            // 
+            // txtMasterRegIndex12
+            // 
+            txtMasterRegIndex12.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex12.Location = new Point(12, 16);
+            txtMasterRegIndex12.MaxLength = 2;
+            txtMasterRegIndex12.Name = "txtMasterRegIndex12";
+            txtMasterRegIndex12.Size = new Size(79, 27);
+            txtMasterRegIndex12.TabIndex = 90;
+            txtMasterRegIndex12.Text = "2";
+            // 
+            // groupBox35
+            // 
+            groupBox35.Controls.Add(comboBox55);
+            groupBox35.Controls.Add(comboBox56);
+            groupBox35.Controls.Add(comboBox57);
+            groupBox35.Controls.Add(comboBox58);
+            groupBox35.Controls.Add(button25);
+            groupBox35.Controls.Add(button26);
+            groupBox35.Controls.Add(textBox50);
+            groupBox35.Controls.Add(textBox51);
+            groupBox35.Controls.Add(txtMasterRegStartAddress20);
+            groupBox35.Controls.Add(txtMasterRegIndex20);
+            groupBox35.Location = new Point(3, 1005);
+            groupBox35.Name = "groupBox35";
+            groupBox35.Size = new Size(1084, 51);
+            groupBox35.TabIndex = 119;
+            groupBox35.TabStop = false;
+            // 
+            // comboBox55
+            // 
+            comboBox55.FormattingEnabled = true;
+            comboBox55.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox55.Location = new Point(628, 16);
+            comboBox55.Name = "comboBox55";
+            comboBox55.Size = new Size(155, 28);
+            comboBox55.TabIndex = 100;
+            // 
+            // comboBox56
+            // 
+            comboBox56.FormattingEnabled = true;
+            comboBox56.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox56.Location = new Point(531, 16);
+            comboBox56.Name = "comboBox56";
+            comboBox56.Size = new Size(92, 28);
+            comboBox56.TabIndex = 99;
+            // 
+            // comboBox57
+            // 
+            comboBox57.FormattingEnabled = true;
+            comboBox57.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox57.Location = new Point(396, 16);
+            comboBox57.Name = "comboBox57";
+            comboBox57.Size = new Size(130, 28);
+            comboBox57.TabIndex = 98;
+            // 
+            // comboBox58
+            // 
+            comboBox58.FormattingEnabled = true;
+            comboBox58.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox58.Location = new Point(324, 16);
+            comboBox58.Name = "comboBox58";
+            comboBox58.Size = new Size(68, 28);
+            comboBox58.TabIndex = 97;
+            // 
+            // button25
+            // 
+            button25.BackColor = Color.Red;
+            button25.Cursor = Cursors.Hand;
+            button25.ForeColor = Color.White;
+            button25.Location = new Point(969, 15);
+            button25.Name = "button25";
+            button25.Size = new Size(112, 30);
+            button25.TabIndex = 95;
+            button25.Text = "Write Memory";
+            button25.UseVisualStyleBackColor = false;
+            // 
+            // button26
+            // 
+            button26.BackColor = Color.DarkKhaki;
+            button26.Cursor = Cursors.Hand;
+            button26.ForeColor = Color.White;
+            button26.Location = new Point(857, 15);
+            button26.Name = "button26";
+            button26.Size = new Size(112, 30);
+            button26.TabIndex = 94;
+            button26.Text = "Read Memory";
+            button26.UseVisualStyleBackColor = false;
+            // 
+            // textBox50
+            // 
+            textBox50.BorderStyle = BorderStyle.FixedSingle;
+            textBox50.Location = new Point(787, 16);
+            textBox50.MaxLength = 10;
+            textBox50.Name = "textBox50";
+            textBox50.Size = new Size(69, 27);
+            textBox50.TabIndex = 93;
+            // 
+            // textBox51
+            // 
+            textBox51.BorderStyle = BorderStyle.FixedSingle;
+            textBox51.Location = new Point(206, 16);
+            textBox51.MaxLength = 50;
+            textBox51.Name = "textBox51";
+            textBox51.Size = new Size(114, 27);
+            textBox51.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress20
+            // 
+            txtMasterRegStartAddress20.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress20.Location = new Point(93, 16);
+            txtMasterRegStartAddress20.MaxLength = 10;
+            txtMasterRegStartAddress20.Name = "txtMasterRegStartAddress20";
+            txtMasterRegStartAddress20.Size = new Size(110, 27);
+            txtMasterRegStartAddress20.TabIndex = 91;
+            // 
+            // txtMasterRegIndex20
+            // 
+            txtMasterRegIndex20.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex20.Location = new Point(12, 16);
+            txtMasterRegIndex20.MaxLength = 2;
+            txtMasterRegIndex20.Name = "txtMasterRegIndex20";
+            txtMasterRegIndex20.Size = new Size(79, 27);
+            txtMasterRegIndex20.TabIndex = 90;
+            // 
+            // groupBox36
+            // 
+            groupBox36.Controls.Add(comboBox59);
+            groupBox36.Controls.Add(comboBox60);
+            groupBox36.Controls.Add(comboBox61);
+            groupBox36.Controls.Add(comboBox62);
+            groupBox36.Controls.Add(button27);
+            groupBox36.Controls.Add(button28);
+            groupBox36.Controls.Add(textBox54);
+            groupBox36.Controls.Add(textBox55);
+            groupBox36.Controls.Add(txtMasterRegStartAddress19);
+            groupBox36.Controls.Add(txtMasterRegIndex19);
+            groupBox36.Location = new Point(3, 953);
+            groupBox36.Name = "groupBox36";
+            groupBox36.Size = new Size(1084, 51);
+            groupBox36.TabIndex = 118;
+            groupBox36.TabStop = false;
+            // 
+            // comboBox59
+            // 
+            comboBox59.FormattingEnabled = true;
+            comboBox59.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox59.Location = new Point(628, 16);
+            comboBox59.Name = "comboBox59";
+            comboBox59.Size = new Size(155, 28);
+            comboBox59.TabIndex = 100;
+            // 
+            // comboBox60
+            // 
+            comboBox60.FormattingEnabled = true;
+            comboBox60.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox60.Location = new Point(531, 16);
+            comboBox60.Name = "comboBox60";
+            comboBox60.Size = new Size(92, 28);
+            comboBox60.TabIndex = 99;
+            // 
+            // comboBox61
+            // 
+            comboBox61.FormattingEnabled = true;
+            comboBox61.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox61.Location = new Point(396, 16);
+            comboBox61.Name = "comboBox61";
+            comboBox61.Size = new Size(130, 28);
+            comboBox61.TabIndex = 98;
+            // 
+            // comboBox62
+            // 
+            comboBox62.FormattingEnabled = true;
+            comboBox62.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox62.Location = new Point(324, 16);
+            comboBox62.Name = "comboBox62";
+            comboBox62.Size = new Size(68, 28);
+            comboBox62.TabIndex = 97;
+            // 
+            // button27
+            // 
+            button27.BackColor = Color.Red;
+            button27.Cursor = Cursors.Hand;
+            button27.ForeColor = Color.White;
+            button27.Location = new Point(969, 15);
+            button27.Name = "button27";
+            button27.Size = new Size(112, 30);
+            button27.TabIndex = 95;
+            button27.Text = "Write Memory";
+            button27.UseVisualStyleBackColor = false;
+            // 
+            // button28
+            // 
+            button28.BackColor = Color.DarkKhaki;
+            button28.Cursor = Cursors.Hand;
+            button28.ForeColor = Color.White;
+            button28.Location = new Point(857, 15);
+            button28.Name = "button28";
+            button28.Size = new Size(112, 30);
+            button28.TabIndex = 94;
+            button28.Text = "Read Memory";
+            button28.UseVisualStyleBackColor = false;
+            // 
+            // textBox54
+            // 
+            textBox54.BorderStyle = BorderStyle.FixedSingle;
+            textBox54.Location = new Point(787, 16);
+            textBox54.MaxLength = 10;
+            textBox54.Name = "textBox54";
+            textBox54.Size = new Size(69, 27);
+            textBox54.TabIndex = 93;
+            // 
+            // textBox55
+            // 
+            textBox55.BorderStyle = BorderStyle.FixedSingle;
+            textBox55.Location = new Point(206, 16);
+            textBox55.MaxLength = 50;
+            textBox55.Name = "textBox55";
+            textBox55.Size = new Size(114, 27);
+            textBox55.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress19
+            // 
+            txtMasterRegStartAddress19.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress19.Location = new Point(93, 16);
+            txtMasterRegStartAddress19.MaxLength = 10;
+            txtMasterRegStartAddress19.Name = "txtMasterRegStartAddress19";
+            txtMasterRegStartAddress19.Size = new Size(110, 27);
+            txtMasterRegStartAddress19.TabIndex = 91;
+            // 
+            // txtMasterRegIndex19
+            // 
+            txtMasterRegIndex19.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex19.Location = new Point(12, 16);
+            txtMasterRegIndex19.MaxLength = 2;
+            txtMasterRegIndex19.Name = "txtMasterRegIndex19";
+            txtMasterRegIndex19.Size = new Size(79, 27);
+            txtMasterRegIndex19.TabIndex = 90;
+            txtMasterRegIndex19.Text = "9";
+            // 
+            // groupBox37
+            // 
+            groupBox37.Controls.Add(comboBox63);
+            groupBox37.Controls.Add(comboBox64);
+            groupBox37.Controls.Add(comboBox65);
+            groupBox37.Controls.Add(comboBox66);
+            groupBox37.Controls.Add(button29);
+            groupBox37.Controls.Add(button30);
+            groupBox37.Controls.Add(textBox58);
+            groupBox37.Controls.Add(textBox59);
+            groupBox37.Controls.Add(txtMasterRegStartAddress18);
+            groupBox37.Controls.Add(txtMasterRegIndex18);
+            groupBox37.Location = new Point(3, 901);
+            groupBox37.Name = "groupBox37";
+            groupBox37.Size = new Size(1084, 51);
+            groupBox37.TabIndex = 117;
+            groupBox37.TabStop = false;
+            // 
+            // comboBox63
+            // 
+            comboBox63.FormattingEnabled = true;
+            comboBox63.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox63.Location = new Point(628, 16);
+            comboBox63.Name = "comboBox63";
+            comboBox63.Size = new Size(155, 28);
+            comboBox63.TabIndex = 100;
+            // 
+            // comboBox64
+            // 
+            comboBox64.FormattingEnabled = true;
+            comboBox64.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox64.Location = new Point(531, 16);
+            comboBox64.Name = "comboBox64";
+            comboBox64.Size = new Size(92, 28);
+            comboBox64.TabIndex = 99;
+            // 
+            // comboBox65
+            // 
+            comboBox65.FormattingEnabled = true;
+            comboBox65.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox65.Location = new Point(396, 16);
+            comboBox65.Name = "comboBox65";
+            comboBox65.Size = new Size(130, 28);
+            comboBox65.TabIndex = 98;
+            // 
+            // comboBox66
+            // 
+            comboBox66.FormattingEnabled = true;
+            comboBox66.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox66.Location = new Point(324, 16);
+            comboBox66.Name = "comboBox66";
+            comboBox66.Size = new Size(68, 28);
+            comboBox66.TabIndex = 97;
+            // 
+            // button29
+            // 
+            button29.BackColor = Color.Red;
+            button29.Cursor = Cursors.Hand;
+            button29.ForeColor = Color.White;
+            button29.Location = new Point(969, 15);
+            button29.Name = "button29";
+            button29.Size = new Size(112, 30);
+            button29.TabIndex = 95;
+            button29.Text = "Write Memory";
+            button29.UseVisualStyleBackColor = false;
+            // 
+            // button30
+            // 
+            button30.BackColor = Color.DarkKhaki;
+            button30.Cursor = Cursors.Hand;
+            button30.ForeColor = Color.White;
+            button30.Location = new Point(857, 15);
+            button30.Name = "button30";
+            button30.Size = new Size(112, 30);
+            button30.TabIndex = 94;
+            button30.Text = "Read Memory";
+            button30.UseVisualStyleBackColor = false;
+            // 
+            // textBox58
+            // 
+            textBox58.BorderStyle = BorderStyle.FixedSingle;
+            textBox58.Location = new Point(787, 16);
+            textBox58.MaxLength = 10;
+            textBox58.Name = "textBox58";
+            textBox58.Size = new Size(69, 27);
+            textBox58.TabIndex = 93;
+            // 
+            // textBox59
+            // 
+            textBox59.BorderStyle = BorderStyle.FixedSingle;
+            textBox59.Location = new Point(206, 16);
+            textBox59.MaxLength = 50;
+            textBox59.Name = "textBox59";
+            textBox59.Size = new Size(114, 27);
+            textBox59.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress18
+            // 
+            txtMasterRegStartAddress18.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress18.Location = new Point(93, 16);
+            txtMasterRegStartAddress18.MaxLength = 10;
+            txtMasterRegStartAddress18.Name = "txtMasterRegStartAddress18";
+            txtMasterRegStartAddress18.Size = new Size(110, 27);
+            txtMasterRegStartAddress18.TabIndex = 91;
+            // 
+            // txtMasterRegIndex18
+            // 
+            txtMasterRegIndex18.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex18.Location = new Point(12, 16);
+            txtMasterRegIndex18.MaxLength = 2;
+            txtMasterRegIndex18.Name = "txtMasterRegIndex18";
+            txtMasterRegIndex18.Size = new Size(79, 27);
+            txtMasterRegIndex18.TabIndex = 90;
+            txtMasterRegIndex18.Text = "8";
+            // 
+            // groupBox38
+            // 
+            groupBox38.Controls.Add(comboBox67);
+            groupBox38.Controls.Add(comboBox68);
+            groupBox38.Controls.Add(comboBox69);
+            groupBox38.Controls.Add(comboBox70);
+            groupBox38.Controls.Add(button31);
+            groupBox38.Controls.Add(button32);
+            groupBox38.Controls.Add(textBox62);
+            groupBox38.Controls.Add(textBox63);
+            groupBox38.Controls.Add(txtMasterRegStartAddress16);
+            groupBox38.Controls.Add(txtMasterRegIndex16);
+            groupBox38.Location = new Point(2, 796);
+            groupBox38.Name = "groupBox38";
+            groupBox38.Size = new Size(1084, 51);
+            groupBox38.TabIndex = 116;
+            groupBox38.TabStop = false;
+            // 
+            // comboBox67
+            // 
+            comboBox67.FormattingEnabled = true;
+            comboBox67.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox67.Location = new Point(628, 16);
+            comboBox67.Name = "comboBox67";
+            comboBox67.Size = new Size(155, 28);
+            comboBox67.TabIndex = 100;
+            // 
+            // comboBox68
+            // 
+            comboBox68.FormattingEnabled = true;
+            comboBox68.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox68.Location = new Point(531, 16);
+            comboBox68.Name = "comboBox68";
+            comboBox68.Size = new Size(92, 28);
+            comboBox68.TabIndex = 99;
+            // 
+            // comboBox69
+            // 
+            comboBox69.FormattingEnabled = true;
+            comboBox69.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox69.Location = new Point(396, 16);
+            comboBox69.Name = "comboBox69";
+            comboBox69.Size = new Size(130, 28);
+            comboBox69.TabIndex = 98;
+            // 
+            // comboBox70
+            // 
+            comboBox70.FormattingEnabled = true;
+            comboBox70.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox70.Location = new Point(324, 16);
+            comboBox70.Name = "comboBox70";
+            comboBox70.Size = new Size(68, 28);
+            comboBox70.TabIndex = 97;
+            // 
+            // button31
+            // 
+            button31.BackColor = Color.Red;
+            button31.Cursor = Cursors.Hand;
+            button31.ForeColor = Color.White;
+            button31.Location = new Point(969, 15);
+            button31.Name = "button31";
+            button31.Size = new Size(112, 30);
+            button31.TabIndex = 95;
+            button31.Text = "Write Memory";
+            button31.UseVisualStyleBackColor = false;
+            // 
+            // button32
+            // 
+            button32.BackColor = Color.DarkKhaki;
+            button32.Cursor = Cursors.Hand;
+            button32.ForeColor = Color.White;
+            button32.Location = new Point(857, 15);
+            button32.Name = "button32";
+            button32.Size = new Size(112, 30);
+            button32.TabIndex = 94;
+            button32.Text = "Read Memory";
+            button32.UseVisualStyleBackColor = false;
+            // 
+            // textBox62
+            // 
+            textBox62.BorderStyle = BorderStyle.FixedSingle;
+            textBox62.Location = new Point(787, 16);
+            textBox62.MaxLength = 10;
+            textBox62.Name = "textBox62";
+            textBox62.Size = new Size(69, 27);
+            textBox62.TabIndex = 93;
+            // 
+            // textBox63
+            // 
+            textBox63.BorderStyle = BorderStyle.FixedSingle;
+            textBox63.Location = new Point(206, 16);
+            textBox63.MaxLength = 50;
+            textBox63.Name = "textBox63";
+            textBox63.Size = new Size(114, 27);
+            textBox63.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress16
+            // 
+            txtMasterRegStartAddress16.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress16.Location = new Point(93, 16);
+            txtMasterRegStartAddress16.MaxLength = 10;
+            txtMasterRegStartAddress16.Name = "txtMasterRegStartAddress16";
+            txtMasterRegStartAddress16.Size = new Size(110, 27);
+            txtMasterRegStartAddress16.TabIndex = 91;
+            // 
+            // txtMasterRegIndex16
+            // 
+            txtMasterRegIndex16.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex16.Location = new Point(12, 16);
+            txtMasterRegIndex16.MaxLength = 2;
+            txtMasterRegIndex16.Name = "txtMasterRegIndex16";
+            txtMasterRegIndex16.Size = new Size(79, 27);
+            txtMasterRegIndex16.TabIndex = 90;
+            txtMasterRegIndex16.Text = "6";
+            // 
+            // groupBox39
+            // 
+            groupBox39.Controls.Add(comboBox71);
+            groupBox39.Controls.Add(comboBox72);
+            groupBox39.Controls.Add(comboBox73);
+            groupBox39.Controls.Add(comboBox74);
+            groupBox39.Controls.Add(button33);
+            groupBox39.Controls.Add(button34);
+            groupBox39.Controls.Add(textBox66);
+            groupBox39.Controls.Add(textBox67);
+            groupBox39.Controls.Add(txtMasterRegStartAddress17);
+            groupBox39.Controls.Add(txtMasterRegIndex17);
+            groupBox39.Location = new Point(2, 849);
+            groupBox39.Name = "groupBox39";
+            groupBox39.Size = new Size(1084, 51);
+            groupBox39.TabIndex = 115;
+            groupBox39.TabStop = false;
+            // 
+            // comboBox71
+            // 
+            comboBox71.FormattingEnabled = true;
+            comboBox71.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox71.Location = new Point(628, 16);
+            comboBox71.Name = "comboBox71";
+            comboBox71.Size = new Size(155, 28);
+            comboBox71.TabIndex = 100;
+            // 
+            // comboBox72
+            // 
+            comboBox72.FormattingEnabled = true;
+            comboBox72.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox72.Location = new Point(531, 16);
+            comboBox72.Name = "comboBox72";
+            comboBox72.Size = new Size(92, 28);
+            comboBox72.TabIndex = 99;
+            // 
+            // comboBox73
+            // 
+            comboBox73.FormattingEnabled = true;
+            comboBox73.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox73.Location = new Point(396, 16);
+            comboBox73.Name = "comboBox73";
+            comboBox73.Size = new Size(130, 28);
+            comboBox73.TabIndex = 98;
+            // 
+            // comboBox74
+            // 
+            comboBox74.FormattingEnabled = true;
+            comboBox74.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox74.Location = new Point(324, 16);
+            comboBox74.Name = "comboBox74";
+            comboBox74.Size = new Size(68, 28);
+            comboBox74.TabIndex = 97;
+            // 
+            // button33
+            // 
+            button33.BackColor = Color.Red;
+            button33.Cursor = Cursors.Hand;
+            button33.ForeColor = Color.White;
+            button33.Location = new Point(969, 15);
+            button33.Name = "button33";
+            button33.Size = new Size(112, 30);
+            button33.TabIndex = 95;
+            button33.Text = "Write Memory";
+            button33.UseVisualStyleBackColor = false;
+            // 
+            // button34
+            // 
+            button34.BackColor = Color.DarkKhaki;
+            button34.Cursor = Cursors.Hand;
+            button34.ForeColor = Color.White;
+            button34.Location = new Point(857, 15);
+            button34.Name = "button34";
+            button34.Size = new Size(112, 30);
+            button34.TabIndex = 94;
+            button34.Text = "Read Memory";
+            button34.UseVisualStyleBackColor = false;
+            // 
+            // textBox66
+            // 
+            textBox66.BorderStyle = BorderStyle.FixedSingle;
+            textBox66.Location = new Point(787, 16);
+            textBox66.MaxLength = 10;
+            textBox66.Name = "textBox66";
+            textBox66.Size = new Size(69, 27);
+            textBox66.TabIndex = 93;
+            // 
+            // textBox67
+            // 
+            textBox67.BorderStyle = BorderStyle.FixedSingle;
+            textBox67.Location = new Point(206, 16);
+            textBox67.MaxLength = 50;
+            textBox67.Name = "textBox67";
+            textBox67.Size = new Size(114, 27);
+            textBox67.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress17
+            // 
+            txtMasterRegStartAddress17.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress17.Location = new Point(93, 16);
+            txtMasterRegStartAddress17.MaxLength = 10;
+            txtMasterRegStartAddress17.Name = "txtMasterRegStartAddress17";
+            txtMasterRegStartAddress17.Size = new Size(110, 27);
+            txtMasterRegStartAddress17.TabIndex = 91;
+            // 
+            // txtMasterRegIndex17
+            // 
+            txtMasterRegIndex17.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex17.Location = new Point(12, 16);
+            txtMasterRegIndex17.MaxLength = 2;
+            txtMasterRegIndex17.Name = "txtMasterRegIndex17";
+            txtMasterRegIndex17.Size = new Size(79, 27);
+            txtMasterRegIndex17.TabIndex = 90;
+            txtMasterRegIndex17.Text = "7";
+            // 
+            // groupBox40
+            // 
+            groupBox40.Controls.Add(comboBox75);
+            groupBox40.Controls.Add(comboBox76);
+            groupBox40.Controls.Add(comboBox77);
+            groupBox40.Controls.Add(comboBox78);
+            groupBox40.Controls.Add(button35);
+            groupBox40.Controls.Add(button36);
+            groupBox40.Controls.Add(textBox70);
+            groupBox40.Controls.Add(textBox71);
+            groupBox40.Controls.Add(txtMasterRegStartAddress15);
+            groupBox40.Controls.Add(txtMasterRegIndex15);
+            groupBox40.Location = new Point(3, 743);
+            groupBox40.Name = "groupBox40";
+            groupBox40.Size = new Size(1084, 51);
+            groupBox40.TabIndex = 114;
+            groupBox40.TabStop = false;
+            // 
+            // comboBox75
+            // 
+            comboBox75.FormattingEnabled = true;
+            comboBox75.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox75.Location = new Point(628, 16);
+            comboBox75.Name = "comboBox75";
+            comboBox75.Size = new Size(155, 28);
+            comboBox75.TabIndex = 100;
+            // 
+            // comboBox76
+            // 
+            comboBox76.FormattingEnabled = true;
+            comboBox76.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox76.Location = new Point(531, 16);
+            comboBox76.Name = "comboBox76";
+            comboBox76.Size = new Size(92, 28);
+            comboBox76.TabIndex = 99;
+            // 
+            // comboBox77
+            // 
+            comboBox77.FormattingEnabled = true;
+            comboBox77.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox77.Location = new Point(396, 16);
+            comboBox77.Name = "comboBox77";
+            comboBox77.Size = new Size(130, 28);
+            comboBox77.TabIndex = 98;
+            // 
+            // comboBox78
+            // 
+            comboBox78.FormattingEnabled = true;
+            comboBox78.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox78.Location = new Point(324, 16);
+            comboBox78.Name = "comboBox78";
+            comboBox78.Size = new Size(68, 28);
+            comboBox78.TabIndex = 97;
+            // 
+            // button35
+            // 
+            button35.BackColor = Color.Red;
+            button35.Cursor = Cursors.Hand;
+            button35.ForeColor = Color.White;
+            button35.Location = new Point(969, 15);
+            button35.Name = "button35";
+            button35.Size = new Size(112, 30);
+            button35.TabIndex = 95;
+            button35.Text = "Write Memory";
+            button35.UseVisualStyleBackColor = false;
+            // 
+            // button36
+            // 
+            button36.BackColor = Color.DarkKhaki;
+            button36.Cursor = Cursors.Hand;
+            button36.ForeColor = Color.White;
+            button36.Location = new Point(857, 15);
+            button36.Name = "button36";
+            button36.Size = new Size(112, 30);
+            button36.TabIndex = 94;
+            button36.Text = "Read Memory";
+            button36.UseVisualStyleBackColor = false;
+            // 
+            // textBox70
+            // 
+            textBox70.BorderStyle = BorderStyle.FixedSingle;
+            textBox70.Location = new Point(787, 16);
+            textBox70.MaxLength = 10;
+            textBox70.Name = "textBox70";
+            textBox70.Size = new Size(69, 27);
+            textBox70.TabIndex = 93;
+            // 
+            // textBox71
+            // 
+            textBox71.BorderStyle = BorderStyle.FixedSingle;
+            textBox71.Location = new Point(206, 16);
+            textBox71.MaxLength = 50;
+            textBox71.Name = "textBox71";
+            textBox71.Size = new Size(114, 27);
+            textBox71.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress15
+            // 
+            txtMasterRegStartAddress15.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress15.Location = new Point(93, 16);
+            txtMasterRegStartAddress15.MaxLength = 10;
+            txtMasterRegStartAddress15.Name = "txtMasterRegStartAddress15";
+            txtMasterRegStartAddress15.Size = new Size(110, 27);
+            txtMasterRegStartAddress15.TabIndex = 91;
+            // 
+            // txtMasterRegIndex15
+            // 
+            txtMasterRegIndex15.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex15.Location = new Point(12, 16);
+            txtMasterRegIndex15.MaxLength = 2;
+            txtMasterRegIndex15.Name = "txtMasterRegIndex15";
+            txtMasterRegIndex15.Size = new Size(79, 27);
+            txtMasterRegIndex15.TabIndex = 90;
+            txtMasterRegIndex15.Text = "5";
+            // 
+            // groupBox41
+            // 
+            groupBox41.Controls.Add(comboBox79);
+            groupBox41.Controls.Add(comboBox80);
+            groupBox41.Controls.Add(comboBox81);
+            groupBox41.Controls.Add(comboBox82);
+            groupBox41.Controls.Add(button37);
+            groupBox41.Controls.Add(button38);
+            groupBox41.Controls.Add(textBox74);
+            groupBox41.Controls.Add(textBox75);
+            groupBox41.Controls.Add(txtMasterRegStartAddress14);
+            groupBox41.Controls.Add(txtMasterRegIndex14);
+            groupBox41.Location = new Point(4, 691);
+            groupBox41.Name = "groupBox41";
+            groupBox41.Size = new Size(1084, 51);
+            groupBox41.TabIndex = 113;
+            groupBox41.TabStop = false;
+            // 
+            // comboBox79
+            // 
+            comboBox79.FormattingEnabled = true;
+            comboBox79.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox79.Location = new Point(628, 16);
+            comboBox79.Name = "comboBox79";
+            comboBox79.Size = new Size(155, 28);
+            comboBox79.TabIndex = 100;
+            // 
+            // comboBox80
+            // 
+            comboBox80.FormattingEnabled = true;
+            comboBox80.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox80.Location = new Point(531, 16);
+            comboBox80.Name = "comboBox80";
+            comboBox80.Size = new Size(92, 28);
+            comboBox80.TabIndex = 99;
+            // 
+            // comboBox81
+            // 
+            comboBox81.FormattingEnabled = true;
+            comboBox81.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox81.Location = new Point(396, 16);
+            comboBox81.Name = "comboBox81";
+            comboBox81.Size = new Size(130, 28);
+            comboBox81.TabIndex = 98;
+            // 
+            // comboBox82
+            // 
+            comboBox82.FormattingEnabled = true;
+            comboBox82.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox82.Location = new Point(324, 16);
+            comboBox82.Name = "comboBox82";
+            comboBox82.Size = new Size(68, 28);
+            comboBox82.TabIndex = 97;
+            // 
+            // button37
+            // 
+            button37.BackColor = Color.Red;
+            button37.Cursor = Cursors.Hand;
+            button37.ForeColor = Color.White;
+            button37.Location = new Point(969, 15);
+            button37.Name = "button37";
+            button37.Size = new Size(112, 30);
+            button37.TabIndex = 95;
+            button37.Text = "Write Memory";
+            button37.UseVisualStyleBackColor = false;
+            // 
+            // button38
+            // 
+            button38.BackColor = Color.DarkKhaki;
+            button38.Cursor = Cursors.Hand;
+            button38.ForeColor = Color.White;
+            button38.Location = new Point(857, 15);
+            button38.Name = "button38";
+            button38.Size = new Size(112, 30);
+            button38.TabIndex = 94;
+            button38.Text = "Read Memory";
+            button38.UseVisualStyleBackColor = false;
+            // 
+            // textBox74
+            // 
+            textBox74.BorderStyle = BorderStyle.FixedSingle;
+            textBox74.Location = new Point(787, 16);
+            textBox74.MaxLength = 10;
+            textBox74.Name = "textBox74";
+            textBox74.Size = new Size(69, 27);
+            textBox74.TabIndex = 93;
+            // 
+            // textBox75
+            // 
+            textBox75.BorderStyle = BorderStyle.FixedSingle;
+            textBox75.Location = new Point(206, 16);
+            textBox75.MaxLength = 50;
+            textBox75.Name = "textBox75";
+            textBox75.Size = new Size(114, 27);
+            textBox75.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress14
+            // 
+            txtMasterRegStartAddress14.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress14.Location = new Point(93, 16);
+            txtMasterRegStartAddress14.MaxLength = 10;
+            txtMasterRegStartAddress14.Name = "txtMasterRegStartAddress14";
+            txtMasterRegStartAddress14.Size = new Size(110, 27);
+            txtMasterRegStartAddress14.TabIndex = 91;
+            // 
+            // txtMasterRegIndex14
+            // 
+            txtMasterRegIndex14.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex14.Location = new Point(12, 16);
+            txtMasterRegIndex14.MaxLength = 2;
+            txtMasterRegIndex14.Name = "txtMasterRegIndex14";
+            txtMasterRegIndex14.Size = new Size(79, 27);
+            txtMasterRegIndex14.TabIndex = 90;
+            txtMasterRegIndex14.Text = "4";
+            // 
+            // groupBox42
+            // 
+            groupBox42.Controls.Add(comboBox83);
+            groupBox42.Controls.Add(comboBox84);
+            groupBox42.Controls.Add(comboBox85);
+            groupBox42.Controls.Add(comboBox86);
+            groupBox42.Controls.Add(button39);
+            groupBox42.Controls.Add(button40);
+            groupBox42.Controls.Add(textBox78);
+            groupBox42.Controls.Add(textBox79);
+            groupBox42.Controls.Add(txtMasterRegStartAddress13);
+            groupBox42.Controls.Add(txtMasterRegIndex13);
+            groupBox42.Location = new Point(3, 638);
+            groupBox42.Name = "groupBox42";
+            groupBox42.Size = new Size(1084, 51);
+            groupBox42.TabIndex = 112;
+            groupBox42.TabStop = false;
+            // 
+            // comboBox83
+            // 
+            comboBox83.FormattingEnabled = true;
+            comboBox83.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox83.Location = new Point(628, 16);
+            comboBox83.Name = "comboBox83";
+            comboBox83.Size = new Size(155, 28);
+            comboBox83.TabIndex = 100;
+            // 
+            // comboBox84
+            // 
+            comboBox84.FormattingEnabled = true;
+            comboBox84.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox84.Location = new Point(531, 16);
+            comboBox84.Name = "comboBox84";
+            comboBox84.Size = new Size(92, 28);
+            comboBox84.TabIndex = 99;
+            // 
+            // comboBox85
+            // 
+            comboBox85.FormattingEnabled = true;
+            comboBox85.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox85.Location = new Point(396, 16);
+            comboBox85.Name = "comboBox85";
+            comboBox85.Size = new Size(130, 28);
+            comboBox85.TabIndex = 98;
+            // 
+            // comboBox86
+            // 
+            comboBox86.FormattingEnabled = true;
+            comboBox86.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox86.Location = new Point(324, 16);
+            comboBox86.Name = "comboBox86";
+            comboBox86.Size = new Size(68, 28);
+            comboBox86.TabIndex = 97;
+            // 
+            // button39
+            // 
+            button39.BackColor = Color.Red;
+            button39.Cursor = Cursors.Hand;
+            button39.ForeColor = Color.White;
+            button39.Location = new Point(969, 15);
+            button39.Name = "button39";
+            button39.Size = new Size(112, 30);
+            button39.TabIndex = 95;
+            button39.Text = "Write Memory";
+            button39.UseVisualStyleBackColor = false;
+            // 
+            // button40
+            // 
+            button40.BackColor = Color.DarkKhaki;
+            button40.Cursor = Cursors.Hand;
+            button40.ForeColor = Color.White;
+            button40.Location = new Point(857, 15);
+            button40.Name = "button40";
+            button40.Size = new Size(112, 30);
+            button40.TabIndex = 94;
+            button40.Text = "Read Memory";
+            button40.UseVisualStyleBackColor = false;
+            // 
+            // textBox78
+            // 
+            textBox78.BorderStyle = BorderStyle.FixedSingle;
+            textBox78.Location = new Point(787, 16);
+            textBox78.MaxLength = 10;
+            textBox78.Name = "textBox78";
+            textBox78.Size = new Size(69, 27);
+            textBox78.TabIndex = 93;
+            // 
+            // textBox79
+            // 
+            textBox79.BorderStyle = BorderStyle.FixedSingle;
+            textBox79.Location = new Point(206, 16);
+            textBox79.MaxLength = 50;
+            textBox79.Name = "textBox79";
+            textBox79.Size = new Size(114, 27);
+            textBox79.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress13
+            // 
+            txtMasterRegStartAddress13.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress13.Location = new Point(93, 16);
+            txtMasterRegStartAddress13.MaxLength = 10;
+            txtMasterRegStartAddress13.Name = "txtMasterRegStartAddress13";
+            txtMasterRegStartAddress13.Size = new Size(110, 27);
+            txtMasterRegStartAddress13.TabIndex = 91;
+            // 
+            // txtMasterRegIndex13
+            // 
+            txtMasterRegIndex13.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex13.Location = new Point(12, 16);
+            txtMasterRegIndex13.MaxLength = 2;
+            txtMasterRegIndex13.Name = "txtMasterRegIndex13";
+            txtMasterRegIndex13.Size = new Size(79, 27);
+            txtMasterRegIndex13.TabIndex = 90;
+            txtMasterRegIndex13.Text = "3";
+            // 
+            // groupBox43
+            // 
+            groupBox43.Controls.Add(comboBox87);
+            groupBox43.Controls.Add(comboBox88);
+            groupBox43.Controls.Add(comboBox89);
+            groupBox43.Controls.Add(comboBox90);
+            groupBox43.Controls.Add(button41);
+            groupBox43.Controls.Add(button42);
+            groupBox43.Controls.Add(textBox82);
+            groupBox43.Controls.Add(textBox83);
+            groupBox43.Controls.Add(txtMasterRegStartAddress11);
+            groupBox43.Controls.Add(txtMasterRegIndex11);
+            groupBox43.Location = new Point(4, 532);
+            groupBox43.Name = "groupBox43";
+            groupBox43.Size = new Size(1084, 51);
+            groupBox43.TabIndex = 111;
+            groupBox43.TabStop = false;
+            // 
+            // comboBox87
+            // 
+            comboBox87.FormattingEnabled = true;
+            comboBox87.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox87.Location = new Point(628, 16);
+            comboBox87.Name = "comboBox87";
+            comboBox87.Size = new Size(155, 28);
+            comboBox87.TabIndex = 100;
+            // 
+            // comboBox88
+            // 
+            comboBox88.FormattingEnabled = true;
+            comboBox88.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox88.Location = new Point(531, 16);
+            comboBox88.Name = "comboBox88";
+            comboBox88.Size = new Size(92, 28);
+            comboBox88.TabIndex = 99;
+            // 
+            // comboBox89
+            // 
+            comboBox89.FormattingEnabled = true;
+            comboBox89.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox89.Location = new Point(396, 16);
+            comboBox89.Name = "comboBox89";
+            comboBox89.Size = new Size(130, 28);
+            comboBox89.TabIndex = 98;
+            // 
+            // comboBox90
+            // 
+            comboBox90.FormattingEnabled = true;
+            comboBox90.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox90.Location = new Point(324, 16);
+            comboBox90.Name = "comboBox90";
+            comboBox90.Size = new Size(68, 28);
+            comboBox90.TabIndex = 97;
+            // 
+            // button41
+            // 
+            button41.BackColor = Color.Red;
+            button41.Cursor = Cursors.Hand;
+            button41.ForeColor = Color.White;
+            button41.Location = new Point(969, 15);
+            button41.Name = "button41";
+            button41.Size = new Size(112, 30);
+            button41.TabIndex = 95;
+            button41.Text = "Write Memory";
+            button41.UseVisualStyleBackColor = false;
+            // 
+            // button42
+            // 
+            button42.BackColor = Color.DarkKhaki;
+            button42.Cursor = Cursors.Hand;
+            button42.ForeColor = Color.White;
+            button42.Location = new Point(857, 15);
+            button42.Name = "button42";
+            button42.Size = new Size(112, 30);
+            button42.TabIndex = 94;
+            button42.Text = "Read Memory";
+            button42.UseVisualStyleBackColor = false;
+            // 
+            // textBox82
+            // 
+            textBox82.BorderStyle = BorderStyle.FixedSingle;
+            textBox82.Location = new Point(787, 16);
+            textBox82.MaxLength = 10;
+            textBox82.Name = "textBox82";
+            textBox82.Size = new Size(69, 27);
+            textBox82.TabIndex = 93;
+            // 
+            // textBox83
+            // 
+            textBox83.BorderStyle = BorderStyle.FixedSingle;
+            textBox83.Location = new Point(206, 16);
+            textBox83.MaxLength = 50;
+            textBox83.Name = "textBox83";
+            textBox83.Size = new Size(114, 27);
+            textBox83.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress11
+            // 
+            txtMasterRegStartAddress11.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress11.Location = new Point(93, 16);
+            txtMasterRegStartAddress11.MaxLength = 10;
+            txtMasterRegStartAddress11.Name = "txtMasterRegStartAddress11";
+            txtMasterRegStartAddress11.Size = new Size(110, 27);
+            txtMasterRegStartAddress11.TabIndex = 91;
+            // 
+            // txtMasterRegIndex11
+            // 
+            txtMasterRegIndex11.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex11.Location = new Point(12, 16);
+            txtMasterRegIndex11.MaxLength = 2;
+            txtMasterRegIndex11.Name = "txtMasterRegIndex11";
+            txtMasterRegIndex11.Size = new Size(79, 27);
+            txtMasterRegIndex11.TabIndex = 90;
+            txtMasterRegIndex11.Text = "1";
+            // 
+            // groupBox21
+            // 
+            groupBox21.Controls.Add(comboBox1);
+            groupBox21.Controls.Add(comboBox2);
+            groupBox21.Controls.Add(comboBox3);
+            groupBox21.Controls.Add(comboBox4);
+            groupBox21.Controls.Add(button1);
+            groupBox21.Controls.Add(button2);
+            groupBox21.Controls.Add(textBox1);
+            groupBox21.Controls.Add(textBox2);
+            groupBox21.Controls.Add(txtMasterRegStartAddress2);
+            groupBox21.Controls.Add(txtMasterRegIndex2);
+            groupBox21.Location = new Point(2, 59);
+            groupBox21.Name = "groupBox21";
+            groupBox21.Size = new Size(1084, 51);
+            groupBox21.TabIndex = 110;
+            groupBox21.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox1.Location = new Point(628, 16);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(155, 28);
+            comboBox1.TabIndex = 100;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox2.Location = new Point(531, 16);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(92, 28);
+            comboBox2.TabIndex = 99;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox3.Location = new Point(396, 16);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(130, 28);
+            comboBox3.TabIndex = 98;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox4.Location = new Point(324, 16);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(68, 28);
+            comboBox4.TabIndex = 97;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Red;
+            button1.Cursor = Cursors.Hand;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(969, 15);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 30);
+            button1.TabIndex = 95;
+            button1.Text = "Write Memory";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.DarkKhaki;
+            button2.Cursor = Cursors.Hand;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(857, 15);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 30);
+            button2.TabIndex = 94;
+            button2.Text = "Read Memory";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(787, 16);
+            textBox1.MaxLength = 10;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(69, 27);
+            textBox1.TabIndex = 93;
+            // 
+            // textBox2
+            // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Location = new Point(206, 16);
+            textBox2.MaxLength = 50;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(114, 27);
+            textBox2.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress2
+            // 
+            txtMasterRegStartAddress2.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress2.Location = new Point(93, 16);
+            txtMasterRegStartAddress2.MaxLength = 10;
+            txtMasterRegStartAddress2.Name = "txtMasterRegStartAddress2";
+            txtMasterRegStartAddress2.Size = new Size(110, 27);
+            txtMasterRegStartAddress2.TabIndex = 91;
+            // 
+            // txtMasterRegIndex2
+            // 
+            txtMasterRegIndex2.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex2.Location = new Point(12, 16);
+            txtMasterRegIndex2.MaxLength = 2;
+            txtMasterRegIndex2.Name = "txtMasterRegIndex2";
+            txtMasterRegIndex2.Size = new Size(79, 27);
+            txtMasterRegIndex2.TabIndex = 90;
+            txtMasterRegIndex2.Text = "2";
+            // 
+            // groupBox32
+            // 
+            groupBox32.Controls.Add(comboBox43);
+            groupBox32.Controls.Add(comboBox44);
+            groupBox32.Controls.Add(comboBox45);
+            groupBox32.Controls.Add(comboBox46);
+            groupBox32.Controls.Add(button19);
+            groupBox32.Controls.Add(button20);
+            groupBox32.Controls.Add(textBox38);
+            groupBox32.Controls.Add(textBox39);
+            groupBox32.Controls.Add(txtMasterRegStartAddress10);
+            groupBox32.Controls.Add(txtMasterRegIndex10);
+            groupBox32.Location = new Point(2, 479);
+            groupBox32.Name = "groupBox32";
+            groupBox32.Size = new Size(1084, 51);
+            groupBox32.TabIndex = 109;
+            groupBox32.TabStop = false;
+            // 
+            // comboBox43
+            // 
+            comboBox43.FormattingEnabled = true;
+            comboBox43.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox43.Location = new Point(628, 16);
+            comboBox43.Name = "comboBox43";
+            comboBox43.Size = new Size(155, 28);
+            comboBox43.TabIndex = 100;
+            // 
+            // comboBox44
+            // 
+            comboBox44.FormattingEnabled = true;
+            comboBox44.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox44.Location = new Point(531, 16);
+            comboBox44.Name = "comboBox44";
+            comboBox44.Size = new Size(92, 28);
+            comboBox44.TabIndex = 99;
+            // 
+            // comboBox45
+            // 
+            comboBox45.FormattingEnabled = true;
+            comboBox45.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox45.Location = new Point(396, 16);
+            comboBox45.Name = "comboBox45";
+            comboBox45.Size = new Size(130, 28);
+            comboBox45.TabIndex = 98;
+            // 
+            // comboBox46
+            // 
+            comboBox46.FormattingEnabled = true;
+            comboBox46.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox46.Location = new Point(324, 16);
+            comboBox46.Name = "comboBox46";
+            comboBox46.Size = new Size(68, 28);
+            comboBox46.TabIndex = 97;
+            // 
+            // button19
+            // 
+            button19.BackColor = Color.Red;
+            button19.Cursor = Cursors.Hand;
+            button19.ForeColor = Color.White;
+            button19.Location = new Point(969, 15);
+            button19.Name = "button19";
+            button19.Size = new Size(112, 30);
+            button19.TabIndex = 95;
+            button19.Text = "Write Memory";
+            button19.UseVisualStyleBackColor = false;
+            // 
+            // button20
+            // 
+            button20.BackColor = Color.DarkKhaki;
+            button20.Cursor = Cursors.Hand;
+            button20.ForeColor = Color.White;
+            button20.Location = new Point(857, 15);
+            button20.Name = "button20";
+            button20.Size = new Size(112, 30);
+            button20.TabIndex = 94;
+            button20.Text = "Read Memory";
+            button20.UseVisualStyleBackColor = false;
+            // 
+            // textBox38
+            // 
+            textBox38.BorderStyle = BorderStyle.FixedSingle;
+            textBox38.Location = new Point(787, 16);
+            textBox38.MaxLength = 10;
+            textBox38.Name = "textBox38";
+            textBox38.Size = new Size(69, 27);
+            textBox38.TabIndex = 93;
+            // 
+            // textBox39
+            // 
+            textBox39.BorderStyle = BorderStyle.FixedSingle;
+            textBox39.Location = new Point(206, 16);
+            textBox39.MaxLength = 50;
+            textBox39.Name = "textBox39";
+            textBox39.Size = new Size(114, 27);
+            textBox39.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress10
+            // 
+            txtMasterRegStartAddress10.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress10.Location = new Point(93, 16);
+            txtMasterRegStartAddress10.MaxLength = 10;
+            txtMasterRegStartAddress10.Name = "txtMasterRegStartAddress10";
+            txtMasterRegStartAddress10.Size = new Size(110, 27);
+            txtMasterRegStartAddress10.TabIndex = 91;
+            // 
+            // txtMasterRegIndex10
+            // 
+            txtMasterRegIndex10.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex10.Location = new Point(12, 16);
+            txtMasterRegIndex10.MaxLength = 2;
+            txtMasterRegIndex10.Name = "txtMasterRegIndex10";
+            txtMasterRegIndex10.Size = new Size(79, 27);
+            txtMasterRegIndex10.TabIndex = 90;
+            // 
+            // groupBox33
+            // 
+            groupBox33.Controls.Add(comboBox47);
+            groupBox33.Controls.Add(comboBox48);
+            groupBox33.Controls.Add(comboBox49);
+            groupBox33.Controls.Add(comboBox50);
+            groupBox33.Controls.Add(button21);
+            groupBox33.Controls.Add(button22);
+            groupBox33.Controls.Add(textBox42);
+            groupBox33.Controls.Add(textBox43);
+            groupBox33.Controls.Add(txtMasterRegStartAddress9);
+            groupBox33.Controls.Add(txtMasterRegIndex9);
+            groupBox33.Location = new Point(2, 427);
+            groupBox33.Name = "groupBox33";
+            groupBox33.Size = new Size(1084, 51);
+            groupBox33.TabIndex = 108;
+            groupBox33.TabStop = false;
+            // 
+            // comboBox47
+            // 
+            comboBox47.FormattingEnabled = true;
+            comboBox47.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox47.Location = new Point(628, 16);
+            comboBox47.Name = "comboBox47";
+            comboBox47.Size = new Size(155, 28);
+            comboBox47.TabIndex = 100;
+            // 
+            // comboBox48
+            // 
+            comboBox48.FormattingEnabled = true;
+            comboBox48.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox48.Location = new Point(531, 16);
+            comboBox48.Name = "comboBox48";
+            comboBox48.Size = new Size(92, 28);
+            comboBox48.TabIndex = 99;
+            // 
+            // comboBox49
+            // 
+            comboBox49.FormattingEnabled = true;
+            comboBox49.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox49.Location = new Point(396, 16);
+            comboBox49.Name = "comboBox49";
+            comboBox49.Size = new Size(130, 28);
+            comboBox49.TabIndex = 98;
+            // 
+            // comboBox50
+            // 
+            comboBox50.FormattingEnabled = true;
+            comboBox50.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox50.Location = new Point(324, 16);
+            comboBox50.Name = "comboBox50";
+            comboBox50.Size = new Size(68, 28);
+            comboBox50.TabIndex = 97;
+            // 
+            // button21
+            // 
+            button21.BackColor = Color.Red;
+            button21.Cursor = Cursors.Hand;
+            button21.ForeColor = Color.White;
+            button21.Location = new Point(969, 15);
+            button21.Name = "button21";
+            button21.Size = new Size(112, 30);
+            button21.TabIndex = 95;
+            button21.Text = "Write Memory";
+            button21.UseVisualStyleBackColor = false;
+            // 
+            // button22
+            // 
+            button22.BackColor = Color.DarkKhaki;
+            button22.Cursor = Cursors.Hand;
+            button22.ForeColor = Color.White;
+            button22.Location = new Point(857, 15);
+            button22.Name = "button22";
+            button22.Size = new Size(112, 30);
+            button22.TabIndex = 94;
+            button22.Text = "Read Memory";
+            button22.UseVisualStyleBackColor = false;
+            // 
+            // textBox42
+            // 
+            textBox42.BorderStyle = BorderStyle.FixedSingle;
+            textBox42.Location = new Point(787, 16);
+            textBox42.MaxLength = 10;
+            textBox42.Name = "textBox42";
+            textBox42.Size = new Size(69, 27);
+            textBox42.TabIndex = 93;
+            // 
+            // textBox43
+            // 
+            textBox43.BorderStyle = BorderStyle.FixedSingle;
+            textBox43.Location = new Point(206, 16);
+            textBox43.MaxLength = 50;
+            textBox43.Name = "textBox43";
+            textBox43.Size = new Size(114, 27);
+            textBox43.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress9
+            // 
+            txtMasterRegStartAddress9.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress9.Location = new Point(93, 16);
+            txtMasterRegStartAddress9.MaxLength = 10;
+            txtMasterRegStartAddress9.Name = "txtMasterRegStartAddress9";
+            txtMasterRegStartAddress9.Size = new Size(110, 27);
+            txtMasterRegStartAddress9.TabIndex = 91;
+            // 
+            // txtMasterRegIndex9
+            // 
+            txtMasterRegIndex9.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex9.Location = new Point(12, 16);
+            txtMasterRegIndex9.MaxLength = 2;
+            txtMasterRegIndex9.Name = "txtMasterRegIndex9";
+            txtMasterRegIndex9.Size = new Size(79, 27);
+            txtMasterRegIndex9.TabIndex = 90;
+            txtMasterRegIndex9.Text = "9";
+            // 
+            // groupBox28
+            // 
+            groupBox28.Controls.Add(comboBox13);
+            groupBox28.Controls.Add(comboBox14);
+            groupBox28.Controls.Add(comboBox15);
+            groupBox28.Controls.Add(comboBox16);
+            groupBox28.Controls.Add(button11);
+            groupBox28.Controls.Add(button12);
+            groupBox28.Controls.Add(textBox13);
+            groupBox28.Controls.Add(textBox14);
+            groupBox28.Controls.Add(txtMasterRegStartAddress8);
+            groupBox28.Controls.Add(txtMasterRegIndex8);
+            groupBox28.Location = new Point(2, 375);
+            groupBox28.Name = "groupBox28";
+            groupBox28.Size = new Size(1084, 51);
+            groupBox28.TabIndex = 107;
+            groupBox28.TabStop = false;
+            // 
+            // comboBox13
+            // 
+            comboBox13.FormattingEnabled = true;
+            comboBox13.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox13.Location = new Point(628, 16);
+            comboBox13.Name = "comboBox13";
+            comboBox13.Size = new Size(155, 28);
+            comboBox13.TabIndex = 100;
+            // 
+            // comboBox14
+            // 
+            comboBox14.FormattingEnabled = true;
+            comboBox14.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox14.Location = new Point(531, 16);
+            comboBox14.Name = "comboBox14";
+            comboBox14.Size = new Size(92, 28);
+            comboBox14.TabIndex = 99;
+            // 
+            // comboBox15
+            // 
+            comboBox15.FormattingEnabled = true;
+            comboBox15.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox15.Location = new Point(396, 16);
+            comboBox15.Name = "comboBox15";
+            comboBox15.Size = new Size(130, 28);
+            comboBox15.TabIndex = 98;
+            // 
+            // comboBox16
+            // 
+            comboBox16.FormattingEnabled = true;
+            comboBox16.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox16.Location = new Point(324, 16);
+            comboBox16.Name = "comboBox16";
+            comboBox16.Size = new Size(68, 28);
+            comboBox16.TabIndex = 97;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.Red;
+            button11.Cursor = Cursors.Hand;
+            button11.ForeColor = Color.White;
+            button11.Location = new Point(969, 15);
+            button11.Name = "button11";
+            button11.Size = new Size(112, 30);
+            button11.TabIndex = 95;
+            button11.Text = "Write Memory";
+            button11.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            button12.BackColor = Color.DarkKhaki;
+            button12.Cursor = Cursors.Hand;
+            button12.ForeColor = Color.White;
+            button12.Location = new Point(857, 15);
+            button12.Name = "button12";
+            button12.Size = new Size(112, 30);
+            button12.TabIndex = 94;
+            button12.Text = "Read Memory";
+            button12.UseVisualStyleBackColor = false;
+            // 
+            // textBox13
+            // 
+            textBox13.BorderStyle = BorderStyle.FixedSingle;
+            textBox13.Location = new Point(787, 16);
+            textBox13.MaxLength = 10;
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(69, 27);
+            textBox13.TabIndex = 93;
+            // 
+            // textBox14
+            // 
+            textBox14.BorderStyle = BorderStyle.FixedSingle;
+            textBox14.Location = new Point(206, 16);
+            textBox14.MaxLength = 50;
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(114, 27);
+            textBox14.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress8
+            // 
+            txtMasterRegStartAddress8.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress8.Location = new Point(93, 16);
+            txtMasterRegStartAddress8.MaxLength = 10;
+            txtMasterRegStartAddress8.Name = "txtMasterRegStartAddress8";
+            txtMasterRegStartAddress8.Size = new Size(110, 27);
+            txtMasterRegStartAddress8.TabIndex = 91;
+            // 
+            // txtMasterRegIndex8
+            // 
+            txtMasterRegIndex8.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex8.Location = new Point(12, 16);
+            txtMasterRegIndex8.MaxLength = 2;
+            txtMasterRegIndex8.Name = "txtMasterRegIndex8";
+            txtMasterRegIndex8.Size = new Size(79, 27);
+            txtMasterRegIndex8.TabIndex = 90;
+            txtMasterRegIndex8.Text = "8";
+            // 
+            // groupBox29
+            // 
+            groupBox29.Controls.Add(comboBox17);
+            groupBox29.Controls.Add(comboBox18);
+            groupBox29.Controls.Add(comboBox19);
+            groupBox29.Controls.Add(comboBox20);
+            groupBox29.Controls.Add(button13);
+            groupBox29.Controls.Add(button14);
+            groupBox29.Controls.Add(textBox17);
+            groupBox29.Controls.Add(textBox18);
+            groupBox29.Controls.Add(txtMasterRegStartAddress6);
+            groupBox29.Controls.Add(txtMasterRegIndex6);
+            groupBox29.Location = new Point(1, 270);
+            groupBox29.Name = "groupBox29";
+            groupBox29.Size = new Size(1084, 51);
+            groupBox29.TabIndex = 106;
+            groupBox29.TabStop = false;
+            // 
+            // comboBox17
+            // 
+            comboBox17.FormattingEnabled = true;
+            comboBox17.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox17.Location = new Point(628, 16);
+            comboBox17.Name = "comboBox17";
+            comboBox17.Size = new Size(155, 28);
+            comboBox17.TabIndex = 100;
+            // 
+            // comboBox18
+            // 
+            comboBox18.FormattingEnabled = true;
+            comboBox18.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox18.Location = new Point(531, 16);
+            comboBox18.Name = "comboBox18";
+            comboBox18.Size = new Size(92, 28);
+            comboBox18.TabIndex = 99;
+            // 
+            // comboBox19
+            // 
+            comboBox19.FormattingEnabled = true;
+            comboBox19.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox19.Location = new Point(396, 16);
+            comboBox19.Name = "comboBox19";
+            comboBox19.Size = new Size(130, 28);
+            comboBox19.TabIndex = 98;
+            // 
+            // comboBox20
+            // 
+            comboBox20.FormattingEnabled = true;
+            comboBox20.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox20.Location = new Point(324, 16);
+            comboBox20.Name = "comboBox20";
+            comboBox20.Size = new Size(68, 28);
+            comboBox20.TabIndex = 97;
+            // 
+            // button13
+            // 
+            button13.BackColor = Color.Red;
+            button13.Cursor = Cursors.Hand;
+            button13.ForeColor = Color.White;
+            button13.Location = new Point(969, 15);
+            button13.Name = "button13";
+            button13.Size = new Size(112, 30);
+            button13.TabIndex = 95;
+            button13.Text = "Write Memory";
+            button13.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            button14.BackColor = Color.DarkKhaki;
+            button14.Cursor = Cursors.Hand;
+            button14.ForeColor = Color.White;
+            button14.Location = new Point(857, 15);
+            button14.Name = "button14";
+            button14.Size = new Size(112, 30);
+            button14.TabIndex = 94;
+            button14.Text = "Read Memory";
+            button14.UseVisualStyleBackColor = false;
+            // 
+            // textBox17
+            // 
+            textBox17.BorderStyle = BorderStyle.FixedSingle;
+            textBox17.Location = new Point(787, 16);
+            textBox17.MaxLength = 10;
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(69, 27);
+            textBox17.TabIndex = 93;
+            // 
+            // textBox18
+            // 
+            textBox18.BorderStyle = BorderStyle.FixedSingle;
+            textBox18.Location = new Point(206, 16);
+            textBox18.MaxLength = 50;
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(114, 27);
+            textBox18.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress6
+            // 
+            txtMasterRegStartAddress6.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress6.Location = new Point(93, 16);
+            txtMasterRegStartAddress6.MaxLength = 10;
+            txtMasterRegStartAddress6.Name = "txtMasterRegStartAddress6";
+            txtMasterRegStartAddress6.Size = new Size(110, 27);
+            txtMasterRegStartAddress6.TabIndex = 91;
+            // 
+            // txtMasterRegIndex6
+            // 
+            txtMasterRegIndex6.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex6.Location = new Point(12, 16);
+            txtMasterRegIndex6.MaxLength = 2;
+            txtMasterRegIndex6.Name = "txtMasterRegIndex6";
+            txtMasterRegIndex6.Size = new Size(79, 27);
+            txtMasterRegIndex6.TabIndex = 90;
+            txtMasterRegIndex6.Text = "6";
+            // 
+            // groupBox30
+            // 
+            groupBox30.Controls.Add(comboBox21);
+            groupBox30.Controls.Add(comboBox22);
+            groupBox30.Controls.Add(comboBox23);
+            groupBox30.Controls.Add(comboBox24);
+            groupBox30.Controls.Add(button15);
+            groupBox30.Controls.Add(button16);
+            groupBox30.Controls.Add(textBox30);
+            groupBox30.Controls.Add(textBox31);
+            groupBox30.Controls.Add(txtMasterRegStartAddress7);
+            groupBox30.Controls.Add(txtMasterRegIndex7);
+            groupBox30.Location = new Point(1, 323);
+            groupBox30.Name = "groupBox30";
+            groupBox30.Size = new Size(1084, 51);
+            groupBox30.TabIndex = 105;
+            groupBox30.TabStop = false;
+            // 
+            // comboBox21
+            // 
+            comboBox21.FormattingEnabled = true;
+            comboBox21.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox21.Location = new Point(628, 16);
+            comboBox21.Name = "comboBox21";
+            comboBox21.Size = new Size(155, 28);
+            comboBox21.TabIndex = 100;
+            // 
+            // comboBox22
+            // 
+            comboBox22.FormattingEnabled = true;
+            comboBox22.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox22.Location = new Point(531, 16);
+            comboBox22.Name = "comboBox22";
+            comboBox22.Size = new Size(92, 28);
+            comboBox22.TabIndex = 99;
+            // 
+            // comboBox23
+            // 
+            comboBox23.FormattingEnabled = true;
+            comboBox23.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox23.Location = new Point(396, 16);
+            comboBox23.Name = "comboBox23";
+            comboBox23.Size = new Size(130, 28);
+            comboBox23.TabIndex = 98;
+            // 
+            // comboBox24
+            // 
+            comboBox24.FormattingEnabled = true;
+            comboBox24.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox24.Location = new Point(324, 16);
+            comboBox24.Name = "comboBox24";
+            comboBox24.Size = new Size(68, 28);
+            comboBox24.TabIndex = 97;
+            // 
+            // button15
+            // 
+            button15.BackColor = Color.Red;
+            button15.Cursor = Cursors.Hand;
+            button15.ForeColor = Color.White;
+            button15.Location = new Point(969, 15);
+            button15.Name = "button15";
+            button15.Size = new Size(112, 30);
+            button15.TabIndex = 95;
+            button15.Text = "Write Memory";
+            button15.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            button16.BackColor = Color.DarkKhaki;
+            button16.Cursor = Cursors.Hand;
+            button16.ForeColor = Color.White;
+            button16.Location = new Point(857, 15);
+            button16.Name = "button16";
+            button16.Size = new Size(112, 30);
+            button16.TabIndex = 94;
+            button16.Text = "Read Memory";
+            button16.UseVisualStyleBackColor = false;
+            // 
+            // textBox30
+            // 
+            textBox30.BorderStyle = BorderStyle.FixedSingle;
+            textBox30.Location = new Point(787, 16);
+            textBox30.MaxLength = 10;
+            textBox30.Name = "textBox30";
+            textBox30.Size = new Size(69, 27);
+            textBox30.TabIndex = 93;
+            // 
+            // textBox31
+            // 
+            textBox31.BorderStyle = BorderStyle.FixedSingle;
+            textBox31.Location = new Point(206, 16);
+            textBox31.MaxLength = 50;
+            textBox31.Name = "textBox31";
+            textBox31.Size = new Size(114, 27);
+            textBox31.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress7
+            // 
+            txtMasterRegStartAddress7.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress7.Location = new Point(93, 16);
+            txtMasterRegStartAddress7.MaxLength = 10;
+            txtMasterRegStartAddress7.Name = "txtMasterRegStartAddress7";
+            txtMasterRegStartAddress7.Size = new Size(110, 27);
+            txtMasterRegStartAddress7.TabIndex = 91;
+            // 
+            // txtMasterRegIndex7
+            // 
+            txtMasterRegIndex7.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex7.Location = new Point(12, 16);
+            txtMasterRegIndex7.MaxLength = 2;
+            txtMasterRegIndex7.Name = "txtMasterRegIndex7";
+            txtMasterRegIndex7.Size = new Size(79, 27);
+            txtMasterRegIndex7.TabIndex = 90;
+            txtMasterRegIndex7.Text = "7";
+            // 
+            // groupBox31
+            // 
+            groupBox31.Controls.Add(comboBox25);
+            groupBox31.Controls.Add(comboBox26);
+            groupBox31.Controls.Add(comboBox27);
+            groupBox31.Controls.Add(comboBox28);
+            groupBox31.Controls.Add(button17);
+            groupBox31.Controls.Add(button18);
+            groupBox31.Controls.Add(textBox34);
+            groupBox31.Controls.Add(textBox35);
+            groupBox31.Controls.Add(txtMasterRegStartAddress5);
+            groupBox31.Controls.Add(txtMasterRegIndex5);
+            groupBox31.Location = new Point(2, 217);
+            groupBox31.Name = "groupBox31";
+            groupBox31.Size = new Size(1084, 51);
+            groupBox31.TabIndex = 104;
+            groupBox31.TabStop = false;
+            // 
+            // comboBox25
+            // 
+            comboBox25.FormattingEnabled = true;
+            comboBox25.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox25.Location = new Point(628, 16);
+            comboBox25.Name = "comboBox25";
+            comboBox25.Size = new Size(155, 28);
+            comboBox25.TabIndex = 100;
+            // 
+            // comboBox26
+            // 
+            comboBox26.FormattingEnabled = true;
+            comboBox26.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox26.Location = new Point(531, 16);
+            comboBox26.Name = "comboBox26";
+            comboBox26.Size = new Size(92, 28);
+            comboBox26.TabIndex = 99;
+            // 
+            // comboBox27
+            // 
+            comboBox27.FormattingEnabled = true;
+            comboBox27.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox27.Location = new Point(396, 16);
+            comboBox27.Name = "comboBox27";
+            comboBox27.Size = new Size(130, 28);
+            comboBox27.TabIndex = 98;
+            // 
+            // comboBox28
+            // 
+            comboBox28.FormattingEnabled = true;
+            comboBox28.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox28.Location = new Point(324, 16);
+            comboBox28.Name = "comboBox28";
+            comboBox28.Size = new Size(68, 28);
+            comboBox28.TabIndex = 97;
+            // 
+            // button17
+            // 
+            button17.BackColor = Color.Red;
+            button17.Cursor = Cursors.Hand;
+            button17.ForeColor = Color.White;
+            button17.Location = new Point(969, 15);
+            button17.Name = "button17";
+            button17.Size = new Size(112, 30);
+            button17.TabIndex = 95;
+            button17.Text = "Write Memory";
+            button17.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            button18.BackColor = Color.DarkKhaki;
+            button18.Cursor = Cursors.Hand;
+            button18.ForeColor = Color.White;
+            button18.Location = new Point(857, 15);
+            button18.Name = "button18";
+            button18.Size = new Size(112, 30);
+            button18.TabIndex = 94;
+            button18.Text = "Read Memory";
+            button18.UseVisualStyleBackColor = false;
+            // 
+            // textBox34
+            // 
+            textBox34.BorderStyle = BorderStyle.FixedSingle;
+            textBox34.Location = new Point(787, 16);
+            textBox34.MaxLength = 10;
+            textBox34.Name = "textBox34";
+            textBox34.Size = new Size(69, 27);
+            textBox34.TabIndex = 93;
+            // 
+            // textBox35
+            // 
+            textBox35.BorderStyle = BorderStyle.FixedSingle;
+            textBox35.Location = new Point(206, 16);
+            textBox35.MaxLength = 50;
+            textBox35.Name = "textBox35";
+            textBox35.Size = new Size(114, 27);
+            textBox35.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress5
+            // 
+            txtMasterRegStartAddress5.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress5.Location = new Point(93, 16);
+            txtMasterRegStartAddress5.MaxLength = 10;
+            txtMasterRegStartAddress5.Name = "txtMasterRegStartAddress5";
+            txtMasterRegStartAddress5.Size = new Size(110, 27);
+            txtMasterRegStartAddress5.TabIndex = 91;
+            // 
+            // txtMasterRegIndex5
+            // 
+            txtMasterRegIndex5.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex5.Location = new Point(12, 16);
+            txtMasterRegIndex5.MaxLength = 2;
+            txtMasterRegIndex5.Name = "txtMasterRegIndex5";
+            txtMasterRegIndex5.Size = new Size(79, 27);
+            txtMasterRegIndex5.TabIndex = 90;
+            txtMasterRegIndex5.Text = "5";
+            // 
+            // groupBox22
+            // 
+            groupBox22.Controls.Add(comboBox5);
+            groupBox22.Controls.Add(comboBox6);
+            groupBox22.Controls.Add(comboBox7);
+            groupBox22.Controls.Add(comboBox8);
+            groupBox22.Controls.Add(button7);
+            groupBox22.Controls.Add(button8);
+            groupBox22.Controls.Add(textBox5);
+            groupBox22.Controls.Add(textBox6);
+            groupBox22.Controls.Add(txtMasterRegStartAddress4);
+            groupBox22.Controls.Add(txtMasterRegIndex4);
+            groupBox22.Location = new Point(3, 165);
+            groupBox22.Name = "groupBox22";
+            groupBox22.Size = new Size(1084, 51);
+            groupBox22.TabIndex = 103;
+            groupBox22.TabStop = false;
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox5.Location = new Point(628, 16);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(155, 28);
+            comboBox5.TabIndex = 100;
+            // 
+            // comboBox6
+            // 
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox6.Location = new Point(531, 16);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(92, 28);
+            comboBox6.TabIndex = 99;
+            // 
+            // comboBox7
+            // 
+            comboBox7.FormattingEnabled = true;
+            comboBox7.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox7.Location = new Point(396, 16);
+            comboBox7.Name = "comboBox7";
+            comboBox7.Size = new Size(130, 28);
+            comboBox7.TabIndex = 98;
+            // 
+            // comboBox8
+            // 
+            comboBox8.FormattingEnabled = true;
+            comboBox8.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox8.Location = new Point(324, 16);
+            comboBox8.Name = "comboBox8";
+            comboBox8.Size = new Size(68, 28);
+            comboBox8.TabIndex = 97;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Red;
+            button7.Cursor = Cursors.Hand;
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(969, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(112, 30);
+            button7.TabIndex = 95;
+            button7.Text = "Write Memory";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.DarkKhaki;
+            button8.Cursor = Cursors.Hand;
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(857, 15);
+            button8.Name = "button8";
+            button8.Size = new Size(112, 30);
+            button8.TabIndex = 94;
+            button8.Text = "Read Memory";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // textBox5
+            // 
+            textBox5.BorderStyle = BorderStyle.FixedSingle;
+            textBox5.Location = new Point(787, 16);
+            textBox5.MaxLength = 10;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(69, 27);
+            textBox5.TabIndex = 93;
+            // 
+            // textBox6
+            // 
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
+            textBox6.Location = new Point(206, 16);
+            textBox6.MaxLength = 50;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(114, 27);
+            textBox6.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress4
+            // 
+            txtMasterRegStartAddress4.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress4.Location = new Point(93, 16);
+            txtMasterRegStartAddress4.MaxLength = 10;
+            txtMasterRegStartAddress4.Name = "txtMasterRegStartAddress4";
+            txtMasterRegStartAddress4.Size = new Size(110, 27);
+            txtMasterRegStartAddress4.TabIndex = 91;
+            // 
+            // txtMasterRegIndex4
+            // 
+            txtMasterRegIndex4.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex4.Location = new Point(12, 16);
+            txtMasterRegIndex4.MaxLength = 2;
+            txtMasterRegIndex4.Name = "txtMasterRegIndex4";
+            txtMasterRegIndex4.Size = new Size(79, 27);
+            txtMasterRegIndex4.TabIndex = 90;
+            txtMasterRegIndex4.Text = "4";
+            // 
+            // groupBox24
+            // 
+            groupBox24.Controls.Add(comboBox9);
+            groupBox24.Controls.Add(comboBox10);
+            groupBox24.Controls.Add(comboBox11);
+            groupBox24.Controls.Add(comboBox12);
+            groupBox24.Controls.Add(button9);
+            groupBox24.Controls.Add(button10);
+            groupBox24.Controls.Add(textBox9);
+            groupBox24.Controls.Add(textBox10);
+            groupBox24.Controls.Add(txtMasterRegStartAddress3);
+            groupBox24.Controls.Add(txtMasterRegIndex3);
+            groupBox24.Location = new Point(2, 112);
+            groupBox24.Name = "groupBox24";
+            groupBox24.Size = new Size(1084, 51);
+            groupBox24.TabIndex = 102;
+            groupBox24.TabStop = false;
+            // 
+            // comboBox9
+            // 
+            comboBox9.FormattingEnabled = true;
+            comboBox9.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            comboBox9.Location = new Point(628, 16);
+            comboBox9.Name = "comboBox9";
+            comboBox9.Size = new Size(155, 28);
+            comboBox9.TabIndex = 100;
+            // 
+            // comboBox10
+            // 
+            comboBox10.FormattingEnabled = true;
+            comboBox10.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            comboBox10.Location = new Point(531, 16);
+            comboBox10.Name = "comboBox10";
+            comboBox10.Size = new Size(92, 28);
+            comboBox10.TabIndex = 99;
+            // 
+            // comboBox11
+            // 
+            comboBox11.FormattingEnabled = true;
+            comboBox11.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            comboBox11.Location = new Point(396, 16);
+            comboBox11.Name = "comboBox11";
+            comboBox11.Size = new Size(130, 28);
+            comboBox11.TabIndex = 98;
+            // 
+            // comboBox12
+            // 
+            comboBox12.FormattingEnabled = true;
+            comboBox12.Items.AddRange(new object[] { "Yes", "No" });
+            comboBox12.Location = new Point(324, 16);
+            comboBox12.Name = "comboBox12";
+            comboBox12.Size = new Size(68, 28);
+            comboBox12.TabIndex = 97;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.Red;
+            button9.Cursor = Cursors.Hand;
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(969, 15);
+            button9.Name = "button9";
+            button9.Size = new Size(112, 30);
+            button9.TabIndex = 95;
+            button9.Text = "Write Memory";
+            button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.DarkKhaki;
+            button10.Cursor = Cursors.Hand;
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(857, 15);
+            button10.Name = "button10";
+            button10.Size = new Size(112, 30);
+            button10.TabIndex = 94;
+            button10.Text = "Read Memory";
+            button10.UseVisualStyleBackColor = false;
+            // 
+            // textBox9
+            // 
+            textBox9.BorderStyle = BorderStyle.FixedSingle;
+            textBox9.Location = new Point(787, 16);
+            textBox9.MaxLength = 10;
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(69, 27);
+            textBox9.TabIndex = 93;
+            // 
+            // textBox10
+            // 
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(206, 16);
+            textBox10.MaxLength = 50;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(114, 27);
+            textBox10.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress3
+            // 
+            txtMasterRegStartAddress3.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress3.Location = new Point(93, 16);
+            txtMasterRegStartAddress3.MaxLength = 10;
+            txtMasterRegStartAddress3.Name = "txtMasterRegStartAddress3";
+            txtMasterRegStartAddress3.Size = new Size(110, 27);
+            txtMasterRegStartAddress3.TabIndex = 91;
+            // 
+            // txtMasterRegIndex3
+            // 
+            txtMasterRegIndex3.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex3.Location = new Point(12, 16);
+            txtMasterRegIndex3.MaxLength = 2;
+            txtMasterRegIndex3.Name = "txtMasterRegIndex3";
+            txtMasterRegIndex3.Size = new Size(79, 27);
+            txtMasterRegIndex3.TabIndex = 90;
+            txtMasterRegIndex3.Text = "3";
+            // 
+            // groupBox20
+            // 
+            groupBox20.Controls.Add(cmbMasterFunctionCode1);
+            groupBox20.Controls.Add(cmbMasterByteOrder1);
+            groupBox20.Controls.Add(cmbMasterDataType1);
+            groupBox20.Controls.Add(cmbMasterActivation1);
+            groupBox20.Controls.Add(btnRegWriteMemory1);
+            groupBox20.Controls.Add(btnRegReadMemory1);
+            groupBox20.Controls.Add(txtMasterScaleFactor1);
+            groupBox20.Controls.Add(txtMasterName1);
+            groupBox20.Controls.Add(txtMasterRegStartAddress1);
+            groupBox20.Controls.Add(txtMasterRegIndex1);
+            groupBox20.Location = new Point(3, 6);
+            groupBox20.Name = "groupBox20";
+            groupBox20.Size = new Size(1084, 51);
+            groupBox20.TabIndex = 0;
+            groupBox20.TabStop = false;
+            // 
+            // cmbMasterFunctionCode1
+            // 
+            cmbMasterFunctionCode1.FormattingEnabled = true;
+            cmbMasterFunctionCode1.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode1.Location = new Point(628, 16);
+            cmbMasterFunctionCode1.Name = "cmbMasterFunctionCode1";
+            cmbMasterFunctionCode1.Size = new Size(155, 28);
+            cmbMasterFunctionCode1.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder1
+            // 
+            cmbMasterByteOrder1.FormattingEnabled = true;
+            cmbMasterByteOrder1.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder1.Location = new Point(531, 16);
+            cmbMasterByteOrder1.Name = "cmbMasterByteOrder1";
+            cmbMasterByteOrder1.Size = new Size(92, 28);
+            cmbMasterByteOrder1.TabIndex = 99;
+            // 
+            // cmbMasterDataType1
+            // 
+            cmbMasterDataType1.FormattingEnabled = true;
+            cmbMasterDataType1.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType1.Location = new Point(396, 16);
+            cmbMasterDataType1.Name = "cmbMasterDataType1";
+            cmbMasterDataType1.Size = new Size(130, 28);
+            cmbMasterDataType1.TabIndex = 98;
+            // 
+            // cmbMasterActivation1
+            // 
+            cmbMasterActivation1.FormattingEnabled = true;
+            cmbMasterActivation1.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation1.Location = new Point(324, 16);
+            cmbMasterActivation1.Name = "cmbMasterActivation1";
+            cmbMasterActivation1.Size = new Size(68, 28);
+            cmbMasterActivation1.TabIndex = 97;
+            // 
+            // btnRegWriteMemory1
+            // 
+            btnRegWriteMemory1.BackColor = Color.Red;
+            btnRegWriteMemory1.Cursor = Cursors.Hand;
+            btnRegWriteMemory1.ForeColor = Color.White;
+            btnRegWriteMemory1.Location = new Point(969, 15);
+            btnRegWriteMemory1.Name = "btnRegWriteMemory1";
+            btnRegWriteMemory1.Size = new Size(112, 30);
+            btnRegWriteMemory1.TabIndex = 95;
+            btnRegWriteMemory1.Text = "Write Memory";
+            btnRegWriteMemory1.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory1
+            // 
+            btnRegReadMemory1.BackColor = Color.DarkKhaki;
+            btnRegReadMemory1.Cursor = Cursors.Hand;
+            btnRegReadMemory1.ForeColor = Color.White;
+            btnRegReadMemory1.Location = new Point(857, 15);
+            btnRegReadMemory1.Name = "btnRegReadMemory1";
+            btnRegReadMemory1.Size = new Size(112, 30);
+            btnRegReadMemory1.TabIndex = 94;
+            btnRegReadMemory1.Text = "Read Memory";
+            btnRegReadMemory1.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor1
+            // 
+            txtMasterScaleFactor1.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor1.Location = new Point(787, 16);
+            txtMasterScaleFactor1.MaxLength = 10;
+            txtMasterScaleFactor1.Name = "txtMasterScaleFactor1";
+            txtMasterScaleFactor1.Size = new Size(69, 27);
+            txtMasterScaleFactor1.TabIndex = 93;
+            // 
+            // txtMasterName1
+            // 
+            txtMasterName1.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName1.Location = new Point(206, 16);
+            txtMasterName1.MaxLength = 50;
+            txtMasterName1.Name = "txtMasterName1";
+            txtMasterName1.Size = new Size(114, 27);
+            txtMasterName1.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress1
+            // 
+            txtMasterRegStartAddress1.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress1.Location = new Point(93, 16);
+            txtMasterRegStartAddress1.MaxLength = 10;
+            txtMasterRegStartAddress1.Name = "txtMasterRegStartAddress1";
+            txtMasterRegStartAddress1.Size = new Size(110, 27);
+            txtMasterRegStartAddress1.TabIndex = 91;
+            // 
+            // txtMasterRegIndex1
+            // 
+            txtMasterRegIndex1.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex1.Location = new Point(12, 16);
+            txtMasterRegIndex1.MaxLength = 2;
+            txtMasterRegIndex1.Name = "txtMasterRegIndex1";
+            txtMasterRegIndex1.Size = new Size(79, 27);
+            txtMasterRegIndex1.TabIndex = 90;
+            txtMasterRegIndex1.Text = "1";
+            // 
+            // label207
+            // 
+            label207.AutoSize = true;
+            label207.Location = new Point(659, 35);
+            label207.Name = "label207";
+            label207.Size = new Size(104, 20);
+            label207.TabIndex = 103;
+            label207.Text = "Function Code";
+            // 
+            // label206
+            // 
+            label206.AutoSize = true;
+            label206.Location = new Point(543, 35);
+            label206.Name = "label206";
+            label206.Size = new Size(80, 20);
+            label206.TabIndex = 102;
+            label206.Text = "Byte Order";
+            // 
+            // label205
+            // 
+            label205.AutoSize = true;
+            label205.Location = new Point(787, 35);
+            label205.Name = "label205";
+            label205.Size = new Size(88, 20);
+            label205.TabIndex = 101;
+            label205.Text = "Scale Factor";
+            // 
+            // label196
+            // 
+            label196.AutoSize = true;
+            label196.Location = new Point(325, 35);
+            label196.Name = "label196";
+            label196.Size = new Size(76, 20);
+            label196.TabIndex = 100;
+            label196.Text = "Activation";
+            // 
+            // label201
+            // 
+            label201.AutoSize = true;
+            label201.Location = new Point(94, 35);
+            label201.Name = "label201";
+            label201.Size = new Size(127, 20);
+            label201.TabIndex = 99;
+            label201.Text = "Reg Start Address";
+            // 
+            // label202
+            // 
+            label202.AutoSize = true;
+            label202.Location = new Point(248, 35);
+            label202.Name = "label202";
+            label202.Size = new Size(49, 20);
+            label202.TabIndex = 98;
+            label202.Text = "Name";
+            // 
+            // label203
+            // 
+            label203.AutoSize = true;
+            label203.Location = new Point(425, 35);
+            label203.Name = "label203";
+            label203.Size = new Size(76, 20);
+            label203.TabIndex = 97;
+            label203.Text = "Data Type";
+            // 
+            // label204
+            // 
+            label204.AutoSize = true;
+            label204.Location = new Point(12, 35);
+            label204.Name = "label204";
+            label204.Size = new Size(75, 20);
+            label204.TabIndex = 96;
+            label204.Text = "Reg Index";
+            // 
+            // groupBox18
+            // 
+            groupBox18.Controls.Add(cmbMasterUartType);
+            groupBox18.Controls.Add(cmbMasterBaudRate);
+            groupBox18.Controls.Add(label200);
+            groupBox18.Controls.Add(label199);
+            groupBox18.Controls.Add(txtMasterPollingInterval);
+            groupBox18.Controls.Add(label198);
+            groupBox18.Controls.Add(txtMasterTimeout);
+            groupBox18.Controls.Add(label189);
+            groupBox18.Controls.Add(txtMasterSlaveId);
+            groupBox18.Controls.Add(label197);
+            groupBox18.Controls.Add(button3);
+            groupBox18.Controls.Add(button4);
+            groupBox18.Location = new Point(8, 102);
+            groupBox18.Name = "groupBox18";
+            groupBox18.Size = new Size(1116, 93);
+            groupBox18.TabIndex = 88;
+            groupBox18.TabStop = false;
+            groupBox18.Text = "Slave Connection Parameter";
+            // 
+            // cmbMasterUartType
+            // 
+            cmbMasterUartType.FormattingEnabled = true;
+            cmbMasterUartType.Items.AddRange(new object[] { "8N1", "8E1", "8O1", "8N2" });
+            cmbMasterUartType.Location = new Point(502, 53);
+            cmbMasterUartType.Name = "cmbMasterUartType";
+            cmbMasterUartType.Size = new Size(106, 28);
+            cmbMasterUartType.TabIndex = 97;
+            // 
+            // cmbMasterBaudRate
+            // 
+            cmbMasterBaudRate.FormattingEnabled = true;
+            cmbMasterBaudRate.Items.AddRange(new object[] { "300", "600", "1200", "2400", "4800", "9600", "19200", "38400", "57600", "115200" });
+            cmbMasterBaudRate.Location = new Point(181, 54);
+            cmbMasterBaudRate.Name = "cmbMasterBaudRate";
+            cmbMasterBaudRate.Size = new Size(92, 28);
+            cmbMasterBaudRate.TabIndex = 96;
+            // 
+            // label200
+            // 
+            label200.AutoSize = true;
+            label200.Location = new Point(519, 21);
+            label200.Name = "label200";
+            label200.Size = new Size(72, 20);
+            label200.TabIndex = 95;
+            label200.Text = "Uart Type";
+            // 
+            // label199
+            // 
+            label199.AutoSize = true;
+            label199.Location = new Point(187, 20);
+            label199.Name = "label199";
+            label199.Size = new Size(77, 20);
+            label199.TabIndex = 94;
+            label199.Text = "Baud Rate";
+            // 
+            // txtMasterPollingInterval
+            // 
+            txtMasterPollingInterval.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterPollingInterval.Location = new Point(338, 54);
+            txtMasterPollingInterval.MaxLength = 10;
+            txtMasterPollingInterval.Name = "txtMasterPollingInterval";
+            txtMasterPollingInterval.Size = new Size(99, 27);
+            txtMasterPollingInterval.TabIndex = 93;
+            // 
+            // label198
+            // 
+            label198.AutoSize = true;
+            label198.Location = new Point(336, 21);
+            label198.Name = "label198";
+            label198.Size = new Size(107, 20);
+            label198.TabIndex = 92;
+            label198.Text = "Polling Interval";
+            // 
+            // txtMasterTimeout
+            // 
+            txtMasterTimeout.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterTimeout.Location = new Point(673, 54);
+            txtMasterTimeout.MaxLength = 10;
+            txtMasterTimeout.Name = "txtMasterTimeout";
+            txtMasterTimeout.Size = new Size(99, 27);
+            txtMasterTimeout.TabIndex = 91;
+            // 
+            // label189
+            // 
+            label189.AutoSize = true;
+            label189.Location = new Point(684, 22);
+            label189.Name = "label189";
+            label189.Size = new Size(64, 20);
+            label189.TabIndex = 90;
+            label189.Text = "Timeout";
+            // 
+            // txtMasterSlaveId
+            // 
+            txtMasterSlaveId.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterSlaveId.Location = new Point(17, 54);
+            txtMasterSlaveId.MaxLength = 10;
+            txtMasterSlaveId.Name = "txtMasterSlaveId";
+            txtMasterSlaveId.Size = new Size(99, 27);
+            txtMasterSlaveId.TabIndex = 89;
+            // 
+            // label197
+            // 
+            label197.AutoSize = true;
+            label197.Location = new Point(38, 21);
+            label197.Name = "label197";
+            label197.Size = new Size(61, 20);
+            label197.TabIndex = 86;
+            label197.Text = "Slave Id";
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Red;
+            button3.Cursor = Cursors.Hand;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(968, 54);
+            button3.Name = "button3";
+            button3.Size = new Size(117, 30);
+            button3.TabIndex = 85;
+            button3.Text = "Write Memory";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.DarkKhaki;
+            button4.Cursor = Cursors.Hand;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(834, 54);
+            button4.Name = "button4";
+            button4.Size = new Size(117, 30);
+            button4.TabIndex = 84;
+            button4.Text = "Read Memory";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // cmbMasterSlaveIndex
+            // 
+            cmbMasterSlaveIndex.FormattingEnabled = true;
+            cmbMasterSlaveIndex.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19" });
+            cmbMasterSlaveIndex.Location = new Point(587, 60);
+            cmbMasterSlaveIndex.Name = "cmbMasterSlaveIndex";
+            cmbMasterSlaveIndex.Size = new Size(112, 28);
+            cmbMasterSlaveIndex.TabIndex = 87;
+            // 
+            // label195
+            // 
+            label195.AutoSize = true;
+            label195.Location = new Point(433, 64);
+            label195.MaximumSize = new Size(164, 60);
+            label195.Name = "label195";
+            label195.Size = new Size(128, 20);
+            label195.TabIndex = 85;
+            label195.Text = "Select Slave Index";
+            // 
+            // btnMasterWriteAll
+            // 
+            btnMasterWriteAll.BackColor = Color.Red;
+            btnMasterWriteAll.Cursor = Cursors.Hand;
+            btnMasterWriteAll.ForeColor = Color.White;
+            btnMasterWriteAll.Location = new Point(584, 764);
+            btnMasterWriteAll.Name = "btnMasterWriteAll";
+            btnMasterWriteAll.Size = new Size(172, 42);
+            btnMasterWriteAll.TabIndex = 83;
+            btnMasterWriteAll.Text = "Write All";
+            btnMasterWriteAll.UseVisualStyleBackColor = false;
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label45.Location = new Point(481, 6);
+            label45.Name = "label45";
+            label45.Size = new Size(182, 31);
+            label45.TabIndex = 1;
+            label45.Text = "Modbus Master";
             // 
             // pnlModbusSlave
             // 
@@ -5206,47 +8098,47 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode1.Name = "GeneralSettings";
-            treeNode1.Text = "General Settings";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "DOSettings";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "DO Settings";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "DISettings";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "DI Settings";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "AISettings";
-            treeNode4.SelectedImageIndex = 1;
-            treeNode4.Text = "AI Settings";
-            treeNode5.Name = "IOSettings";
-            treeNode5.Text = "IO Settings";
-            treeNode6.Name = "ModbusSettings";
-            treeNode6.Text = "Modbus Settings";
-            treeNode7.ImageIndex = 0;
-            treeNode7.Name = "PulseSettings";
-            treeNode7.SelectedImageIndex = 0;
-            treeNode7.Text = "Pulse Settings";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "User";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "User";
-            treeNode9.ImageIndex = 0;
-            treeNode9.Name = "ModbusMaster";
-            treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Modbus Master";
-            treeNode10.ImageIndex = 0;
-            treeNode10.Name = "ModbusSlave";
-            treeNode10.SelectedImageIndex = 0;
-            treeNode10.Text = "Modbus Slave";
-            treeNode11.Name = "GPRSSettings";
-            treeNode11.Text = "GPRS Settings";
-            treeNode12.Name = "status";
-            treeNode12.Text = "Status";
-            treeNode13.Name = "console";
-            treeNode13.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12, treeNode13 });
+            treeNode14.Name = "GeneralSettings";
+            treeNode14.Text = "General Settings";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "DOSettings";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "DO Settings";
+            treeNode16.ImageIndex = 1;
+            treeNode16.Name = "DISettings";
+            treeNode16.SelectedImageIndex = 1;
+            treeNode16.Text = "DI Settings";
+            treeNode17.ImageIndex = 1;
+            treeNode17.Name = "AISettings";
+            treeNode17.SelectedImageIndex = 1;
+            treeNode17.Text = "AI Settings";
+            treeNode18.Name = "IOSettings";
+            treeNode18.Text = "IO Settings";
+            treeNode19.Name = "ModbusSettings";
+            treeNode19.Text = "Modbus Settings";
+            treeNode20.ImageIndex = 0;
+            treeNode20.Name = "PulseSettings";
+            treeNode20.SelectedImageIndex = 0;
+            treeNode20.Text = "Pulse Settings";
+            treeNode21.ImageIndex = 0;
+            treeNode21.Name = "User";
+            treeNode21.SelectedImageIndex = 0;
+            treeNode21.Text = "User";
+            treeNode22.ImageIndex = 0;
+            treeNode22.Name = "ModbusMaster";
+            treeNode22.SelectedImageIndex = 0;
+            treeNode22.Text = "Modbus Master";
+            treeNode23.ImageIndex = 0;
+            treeNode23.Name = "ModbusSlave";
+            treeNode23.SelectedImageIndex = 0;
+            treeNode23.Text = "Modbus Slave";
+            treeNode24.Name = "GPRSSettings";
+            treeNode24.Text = "GPRS Settings";
+            treeNode25.Name = "status";
+            treeNode25.Text = "Status";
+            treeNode26.Name = "console";
+            treeNode26.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode14, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24, treeNode25, treeNode26 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -5258,25 +8150,6 @@
             menuImgList.TransparentColor = Color.Transparent;
             menuImgList.Images.SetKeyName(0, "RootNode.png");
             menuImgList.Images.SetKeyName(1, "ChildNode.png");
-            // 
-            // pnlModbusMaster
-            // 
-            pnlModbusMaster.Controls.Add(label45);
-            pnlModbusMaster.Location = new Point(321, 9);
-            pnlModbusMaster.Name = "pnlModbusMaster";
-            pnlModbusMaster.Size = new Size(1133, 822);
-            pnlModbusMaster.TabIndex = 7;
-            pnlModbusMaster.Visible = false;
-            // 
-            // label45
-            // 
-            label45.AutoSize = true;
-            label45.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label45.Location = new Point(481, 19);
-            label45.Name = "label45";
-            label45.Size = new Size(182, 31);
-            label45.TabIndex = 1;
-            label45.Text = "Modbus Master";
             // 
             // LoginTimer
             // 
@@ -5371,6 +8244,53 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlModbusMaster.ResumeLayout(false);
+            pnlModbusMaster.PerformLayout();
+            groupBox19.ResumeLayout(false);
+            groupBox19.PerformLayout();
+            pnlMasterScroll.ResumeLayout(false);
+            groupBox34.ResumeLayout(false);
+            groupBox34.PerformLayout();
+            groupBox35.ResumeLayout(false);
+            groupBox35.PerformLayout();
+            groupBox36.ResumeLayout(false);
+            groupBox36.PerformLayout();
+            groupBox37.ResumeLayout(false);
+            groupBox37.PerformLayout();
+            groupBox38.ResumeLayout(false);
+            groupBox38.PerformLayout();
+            groupBox39.ResumeLayout(false);
+            groupBox39.PerformLayout();
+            groupBox40.ResumeLayout(false);
+            groupBox40.PerformLayout();
+            groupBox41.ResumeLayout(false);
+            groupBox41.PerformLayout();
+            groupBox42.ResumeLayout(false);
+            groupBox42.PerformLayout();
+            groupBox43.ResumeLayout(false);
+            groupBox43.PerformLayout();
+            groupBox21.ResumeLayout(false);
+            groupBox21.PerformLayout();
+            groupBox32.ResumeLayout(false);
+            groupBox32.PerformLayout();
+            groupBox33.ResumeLayout(false);
+            groupBox33.PerformLayout();
+            groupBox28.ResumeLayout(false);
+            groupBox28.PerformLayout();
+            groupBox29.ResumeLayout(false);
+            groupBox29.PerformLayout();
+            groupBox30.ResumeLayout(false);
+            groupBox30.PerformLayout();
+            groupBox31.ResumeLayout(false);
+            groupBox31.PerformLayout();
+            groupBox22.ResumeLayout(false);
+            groupBox22.PerformLayout();
+            groupBox24.ResumeLayout(false);
+            groupBox24.PerformLayout();
+            groupBox20.ResumeLayout(false);
+            groupBox20.PerformLayout();
+            groupBox18.ResumeLayout(false);
+            groupBox18.PerformLayout();
             pnlModbusSlave.ResumeLayout(false);
             pnlModbusSlave.PerformLayout();
             groupBox17.ResumeLayout(false);
@@ -5445,8 +8365,6 @@
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
             pnlMenu.ResumeLayout(false);
-            pnlModbusMaster.ResumeLayout(false);
-            pnlModbusMaster.PerformLayout();
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
             ResumeLayout(false);
@@ -5911,13 +8829,13 @@
         private Label lblPortType;
         private ComboBox cmbSelectDevice;
         private Label label189;
-        private TextBox textBox1;
+        private TextBox txtMasterTimeout;
         private Label label190;
         private TextBox txtModbusTimeout;
         private Label label194;
         private TextBox txtModbusPollingInterval;
         private Label label193;
-        private ComboBox comboBox4;
+        private ComboBox cmbMasterFunctionCode1;
         private Label label192;
         private ComboBox cmbModbusBaudRate;
         private Label label191;
@@ -5925,5 +8843,249 @@
         private Button btnModbusSlaveReadMemory;
         private TextBox txtModbusSlaveId;
         private ComboBox cmbModbusPortType;
+        private GroupBox groupBox18;
+        private ComboBox cmbMasterSlaveIndex;
+        private Label label195;
+        private Button btnMasterWriteAll;
+        private Button btnMasterReadAll;
+        private Button button3;
+        private Button button4;
+        private TextBox txtMasterSlaveId;
+        private Label label197;
+        private TextBox txtMasterPollingInterval;
+        private Label label198;
+        private ComboBox cmbMasterUartType;
+        private ComboBox cmbMasterBaudRate;
+        private Label label200;
+        private Label label199;
+        private GroupBox groupBox19;
+        private Label label196;
+        private Label label201;
+        private Label label202;
+        private Label label203;
+        private Label label204;
+        private Label label207;
+        private Label label206;
+        private Label label205;
+        private Panel pnlMasterScroll;
+        private GroupBox groupBox20;
+        private Button btnRegWriteMemory1;
+        private Button btnRegReadMemory1;
+        private TextBox txtMasterScaleFactor1;
+        private TextBox txtMasterName1;
+        private TextBox txtMasterRegStartAddress1;
+        private TextBox txtMasterRegIndex1;
+        private ComboBox cmbMasterByteOrder1;
+        private ComboBox cmbMasterDataType1;
+        private ComboBox cmbMasterActivation1;
+        private GroupBox groupBox28;
+        private ComboBox comboBox13;
+        private ComboBox comboBox14;
+        private ComboBox comboBox15;
+        private ComboBox comboBox16;
+        private Button button11;
+        private Button button12;
+        private TextBox textBox13;
+        private TextBox textBox14;
+        private TextBox txtMasterRegStartAddress8;
+        private TextBox txtMasterRegIndex8;
+        private GroupBox groupBox29;
+        private ComboBox comboBox17;
+        private ComboBox comboBox18;
+        private ComboBox comboBox19;
+        private ComboBox comboBox20;
+        private Button button13;
+        private Button button14;
+        private TextBox textBox17;
+        private TextBox textBox18;
+        private TextBox txtMasterRegStartAddress6;
+        private TextBox txtMasterRegIndex6;
+        private GroupBox groupBox30;
+        private ComboBox comboBox21;
+        private ComboBox comboBox22;
+        private ComboBox comboBox23;
+        private ComboBox comboBox24;
+        private Button button15;
+        private Button button16;
+        private TextBox textBox30;
+        private TextBox textBox31;
+        private TextBox txtMasterRegStartAddress7;
+        private TextBox txtMasterRegIndex7;
+        private GroupBox groupBox31;
+        private ComboBox comboBox25;
+        private ComboBox comboBox26;
+        private ComboBox comboBox27;
+        private ComboBox comboBox28;
+        private Button button17;
+        private Button button18;
+        private TextBox textBox34;
+        private TextBox textBox35;
+        private TextBox txtMasterRegStartAddress5;
+        private TextBox txtMasterRegIndex5;
+        private GroupBox groupBox22;
+        private ComboBox comboBox5;
+        private ComboBox comboBox6;
+        private ComboBox comboBox7;
+        private ComboBox comboBox8;
+        private Button button7;
+        private Button button8;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox txtMasterRegStartAddress4;
+        private TextBox txtMasterRegIndex4;
+        private GroupBox groupBox24;
+        private ComboBox comboBox9;
+        private ComboBox comboBox10;
+        private ComboBox comboBox11;
+        private ComboBox comboBox12;
+        private Button button9;
+        private Button button10;
+        private TextBox textBox9;
+        private TextBox textBox10;
+        private TextBox txtMasterRegStartAddress3;
+        private TextBox txtMasterRegIndex3;
+        private GroupBox groupBox21;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
+        private ComboBox comboBox4;
+        private Button button1;
+        private Button button2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox txtMasterRegStartAddress2;
+        private TextBox txtMasterRegIndex2;
+        private GroupBox groupBox32;
+        private ComboBox comboBox43;
+        private ComboBox comboBox44;
+        private ComboBox comboBox45;
+        private ComboBox comboBox46;
+        private Button button19;
+        private Button button20;
+        private TextBox textBox38;
+        private TextBox textBox39;
+        private TextBox txtMasterRegStartAddress10;
+        private TextBox txtMasterRegIndex10;
+        private GroupBox groupBox33;
+        private ComboBox comboBox47;
+        private ComboBox comboBox48;
+        private ComboBox comboBox49;
+        private ComboBox comboBox50;
+        private Button button21;
+        private Button button22;
+        private TextBox textBox42;
+        private TextBox textBox43;
+        private TextBox txtMasterRegStartAddress9;
+        private TextBox txtMasterRegIndex9;
+        private GroupBox groupBox34;
+        private ComboBox comboBox51;
+        private ComboBox comboBox52;
+        private ComboBox comboBox53;
+        private ComboBox comboBox54;
+        private Button button23;
+        private Button button24;
+        private TextBox textBox46;
+        private TextBox textBox47;
+        private TextBox txtMasterRegStartAddress12;
+        private TextBox txtMasterRegIndex12;
+        private GroupBox groupBox35;
+        private ComboBox comboBox55;
+        private ComboBox comboBox56;
+        private ComboBox comboBox57;
+        private ComboBox comboBox58;
+        private Button button25;
+        private Button button26;
+        private TextBox textBox50;
+        private TextBox textBox51;
+        private TextBox txtMasterRegStartAddress20;
+        private TextBox txtMasterRegIndex20;
+        private GroupBox groupBox36;
+        private ComboBox comboBox59;
+        private ComboBox comboBox60;
+        private ComboBox comboBox61;
+        private ComboBox comboBox62;
+        private Button button27;
+        private Button button28;
+        private TextBox textBox54;
+        private TextBox textBox55;
+        private TextBox txtMasterRegStartAddress19;
+        private TextBox txtMasterRegIndex19;
+        private GroupBox groupBox37;
+        private ComboBox comboBox63;
+        private ComboBox comboBox64;
+        private ComboBox comboBox65;
+        private ComboBox comboBox66;
+        private Button button29;
+        private Button button30;
+        private TextBox textBox58;
+        private TextBox textBox59;
+        private TextBox txtMasterRegStartAddress18;
+        private TextBox txtMasterRegIndex18;
+        private GroupBox groupBox38;
+        private ComboBox comboBox67;
+        private ComboBox comboBox68;
+        private ComboBox comboBox69;
+        private ComboBox comboBox70;
+        private Button button31;
+        private Button button32;
+        private TextBox textBox62;
+        private TextBox textBox63;
+        private TextBox txtMasterRegStartAddress16;
+        private TextBox txtMasterRegIndex16;
+        private GroupBox groupBox39;
+        private ComboBox comboBox71;
+        private ComboBox comboBox72;
+        private ComboBox comboBox73;
+        private ComboBox comboBox74;
+        private Button button33;
+        private Button button34;
+        private TextBox textBox66;
+        private TextBox textBox67;
+        private TextBox txtMasterRegStartAddress17;
+        private TextBox txtMasterRegIndex17;
+        private GroupBox groupBox40;
+        private ComboBox comboBox75;
+        private ComboBox comboBox76;
+        private ComboBox comboBox77;
+        private ComboBox comboBox78;
+        private Button button35;
+        private Button button36;
+        private TextBox textBox70;
+        private TextBox textBox71;
+        private TextBox txtMasterRegStartAddress15;
+        private TextBox txtMasterRegIndex15;
+        private GroupBox groupBox41;
+        private ComboBox comboBox79;
+        private ComboBox comboBox80;
+        private ComboBox comboBox81;
+        private ComboBox comboBox82;
+        private Button button37;
+        private Button button38;
+        private TextBox textBox74;
+        private TextBox textBox75;
+        private TextBox txtMasterRegStartAddress14;
+        private TextBox txtMasterRegIndex14;
+        private GroupBox groupBox42;
+        private ComboBox comboBox83;
+        private ComboBox comboBox84;
+        private ComboBox comboBox85;
+        private ComboBox comboBox86;
+        private Button button39;
+        private Button button40;
+        private TextBox textBox78;
+        private TextBox textBox79;
+        private TextBox txtMasterRegStartAddress13;
+        private TextBox txtMasterRegIndex13;
+        private GroupBox groupBox43;
+        private ComboBox comboBox87;
+        private ComboBox comboBox88;
+        private ComboBox comboBox89;
+        private ComboBox comboBox90;
+        private Button button41;
+        private Button button42;
+        private TextBox textBox82;
+        private TextBox textBox83;
+        private TextBox txtMasterRegStartAddress11;
+        private TextBox txtMasterRegIndex11;
     }
 }

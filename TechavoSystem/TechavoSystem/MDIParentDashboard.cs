@@ -1,4 +1,5 @@
-﻿using System.IO.Ports;
+﻿using System.Data;
+using System.IO.Ports;
 using System.Text;
 
 namespace TechavoSystem
@@ -1077,6 +1078,9 @@ namespace TechavoSystem
                 CloseConnection();
             }
         }
+        #endregion
+        #region Modbus Master
+        
         #endregion
     }
 }
