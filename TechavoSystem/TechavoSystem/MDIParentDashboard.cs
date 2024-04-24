@@ -19,6 +19,7 @@ namespace TechavoSystem
         private void Dashboard_Load(object sender, EventArgs e)
         {
             #region Events
+            assignEvents();
             this.menu.NodeMouseClick += menu_Click;
             this.FormClosing += Dashboard_FormClosing;
             cmbComPorts.DataSource = SerialPort.GetPortNames();
@@ -47,6 +48,9 @@ namespace TechavoSystem
             txtModbusPollingInterval.Leave += NumericCheck;
             txtModbusTimeout.Leave += NumericCheck;
             txtModbusSlaveId.Leave += TxtModbusSlaveId_Leave;
+            txtMasterSlaveId.Leave += TxtModbusSlaveId_Leave;
+            txtMasterPollingInterval.Leave += NumericCheck;
+            txtMasterTimeout.Leave += NumericCheck;
             #endregion
         }
 
@@ -55,7 +59,7 @@ namespace TechavoSystem
             NumericChecker((TextBox)sender);
             if (Int32.TryParse(((TextBox)sender).Text, out int value))
             {
-                if(value < 1 || value > 255)
+                if (value < 1 || value > 255)
                 {
                     MessageBox.Show("Please enter numeric value from 1 to 255");
                     ((TextBox)sender).Text = string.Empty;
@@ -302,6 +306,14 @@ namespace TechavoSystem
             else if (incomingDetails.ToUpper().Contains("STRANS"))
             {
                 setFieldsModbusSlave(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("SLVSET"))
+            {
+                setFieldsModbusMasterSlaveConnection(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("REGSET"))
+            {
+                setFieldsModbusRegisterConnection(incomingDetails);
             }
         }
         private void uploadSettings(string data)
@@ -1080,7 +1092,239 @@ namespace TechavoSystem
         }
         #endregion
         #region Modbus Master
-        
+        private void btnSlaveConnectionWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedMasterSlaveConnection();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+
+        }
+
+        private void btnSlaveConnectionReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceMasterSlaveConnection#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedMasterSlaveConnection()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*SLVSET, ,");
+            sb.Append(cmbMasterSlaveIndex.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtMasterSlaveId.Text.Trim());
+            sb.Append(",");
+            sb.Append(cmbMasterBaudRate.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(cmbMasterUartType.SelectedIndex.ToString());
+            sb.Append(",");
+            sb.Append(txtMasterPollingInterval.Text.Trim());
+            sb.Append(",");
+            sb.Append(txtMasterTimeout.Text.Trim());
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsModbusMasterSlaveConnection(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                cmbMasterSlaveIndex.SelectedIndex = Convert.ToInt32(fields[0]);
+                txtMasterSlaveId.Text = fields[1];
+                cmbMasterBaudRate.SelectedIndex = Convert.ToInt32(fields[2]);
+                cmbMasterUartType.SelectedIndex = Convert.ToInt32(fields[3]);
+                txtMasterPollingInterval.Text = fields[4];
+                txtMasterTimeout.Text = fields[5];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void assignEvents()
+        {
+            Control[] c;
+            for (int i = 1; i <= 20; i++)
+            {
+                c = groupBox19.Controls.Find("txtMasterRegIndex" + i.ToString(), true);
+                if (c != null && c.Length > 0)
+                {
+                    ((TextBox)c[0]).Leave += MasterSlaveId_Leave; ;
+                }
+                c = groupBox19.Controls.Find("txtMasterRegStartAddress" + i.ToString(), true);
+                if (c != null && c.Length > 0)
+                {
+                    ((TextBox)c[0]).Leave += NumericCheck; ;
+                }
+                c = groupBox19.Controls.Find("txtMasterScaleFactor" + i.ToString(), true);
+                if (c != null && c.Length > 0)
+                {
+                    ((TextBox)c[0]).Leave += DecimalCheck;
+                }
+                c = groupBox19.Controls.Find("btnRegReadMemory" + i.ToString(), true);
+                if (c != null && c.Length > 0)
+                {
+                    ((Button)c[0]).Click += btnModbusRegisterConnectionReadMemory_Click;
+                }
+                c = groupBox19.Controls.Find("btnRegWriteMemory" + i.ToString(), true);
+                if (c != null && c.Length > 0)
+                {
+                    ((Button)c[0]).Click += btnModbusRegisterConnectionWriteMemory_Click;
+                }
+            }
+        }
+
+        private void MasterSlaveId_Leave(object? sender, EventArgs e)
+        {
+            NumericChecker((TextBox)sender);
+            if (Int32.TryParse(((TextBox)sender).Text, out int value))
+            {
+                if (value < 1 || value > 19)
+                {
+                    MessageBox.Show("Please enter numeric value from 1 to 19");
+                    ((TextBox)sender).Text = string.Empty;
+                }
+            }
+        }
+        private void btnModbusRegisterConnectionWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = Convert.ToInt32(((Button)sender).Name.Substring(17));
+                string sendData = CreateCommaSeparatedRegisterConnection(index);
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+
+        }
+        private void btnModbusRegisterConnectionReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceMasterRegisterConnection#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedRegisterConnection(int index)
+        {
+            Control[] c;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("*REGSET, ,");
+            sb.Append(index.ToString());
+            sb.Append(",");
+            sb.Append(cmbMasterSlaveIndex.SelectedIndex.ToString());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("txtMasterRegIndex" + index.ToString(), true);
+            sb.Append(((TextBox)c[0]).Text.Trim());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("txtMasterRegStartAddress" + index.ToString(), true);
+            sb.Append(((TextBox)c[0]).Text.Trim());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("txtMasterName" + index.ToString(), true);
+            sb.Append(((TextBox)c[0]).Text.Trim());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("cmbMasterActivation" + index.ToString(), true);
+            sb.Append(((ComboBox)c[0]).SelectedIndex.ToString());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("cmbMasterDataType" + index.ToString(), true);
+            sb.Append(((ComboBox)c[0]).SelectedIndex.ToString());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("cmbMasterFunctionCode" + index.ToString(), true);
+            sb.Append(((ComboBox)c[0]).SelectedIndex.ToString());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("cmbMasterByteOrder" + index.ToString(), true);
+            sb.Append(((ComboBox)c[0]).SelectedIndex.ToString());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("txtMasterScaleFactor" + index.ToString(), true);
+            sb.Append(((TextBox)c[0]).Text.Trim());
+            sb.Append("#");
+            return sb.ToString();
+        }
+        private void setFieldsModbusRegisterConnection(object details)
+        {
+            try
+            {
+                Control[] c;
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                int index = Convert.ToInt32(fields[0]);
+                cmbMasterSlaveIndex.SelectedIndex = Convert.ToInt32(fields[1]);
+                c = groupBox19.Controls.Find("txtMasterRegIndex" + index.ToString(), true);
+                ((TextBox)c[0]).Text = fields[2];
+                c = groupBox19.Controls.Find("txtMasterRegStartAddress" + index.ToString(), true);
+                ((TextBox)c[0]).Text = fields[3];
+                c = groupBox19.Controls.Find("txtMasterName" + index.ToString(), true);
+                ((TextBox)c[0]).Text = fields[4];
+                c = groupBox19.Controls.Find("cmbMasterActivation" + index.ToString(), true);
+                ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[5]);
+                c = groupBox19.Controls.Find("cmbMasterDataType" + index.ToString(), true);
+                ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[6]);
+                c = groupBox19.Controls.Find("cmbMasterFunctionCode" + index.ToString(), true);
+                ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[7]);
+                c = groupBox19.Controls.Find("cmbMasterByteOrder" + index.ToString(), true);
+                ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[8]);
+                c = groupBox19.Controls.Find("txtMasterScaleFactor" + index.ToString(), true);
+                ((TextBox)c[0]).Text = fields[9];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
         #endregion
     }
 }

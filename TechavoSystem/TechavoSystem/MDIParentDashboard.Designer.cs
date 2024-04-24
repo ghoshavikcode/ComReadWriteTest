@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Button btnMasterReadAll;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             TreeNode treeNode1 = new TreeNode("General Settings");
             TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
@@ -42,11 +43,11 @@
             TreeNode treeNode10 = new TreeNode("GPRS Settings");
             TreeNode treeNode11 = new TreeNode("Status");
             TreeNode treeNode12 = new TreeNode("Console");
-            Button btnMasterReadAll;
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
             pnlModbusMaster = new Panel();
             groupBox19 = new GroupBox();
+            btnMasterWriteAll = new Button();
             pnlMasterScroll = new Panel();
             groupBox34 = new GroupBox();
             label216 = new Label();
@@ -307,8 +308,8 @@
             label189 = new Label();
             txtMasterSlaveId = new TextBox();
             label197 = new Label();
-            button3 = new Button();
-            button4 = new Button();
+            btnSlaveConnectionWriteMemory = new Button();
+            btnSlaveConnectionReadMemory = new Button();
             cmbMasterSlaveIndex = new ComboBox();
             label195 = new Label();
             label45 = new Label();
@@ -774,7 +775,6 @@
             label133 = new Label();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
-            btnMasterWriteAll = new Button();
             btnMasterReadAll = new Button();
             pnlDashboard.SuspendLayout();
             pnlModbusMaster.SuspendLayout();
@@ -842,6 +842,18 @@
             pnlConnect.SuspendLayout();
             SuspendLayout();
             // 
+            // btnMasterReadAll
+            // 
+            btnMasterReadAll.BackColor = Color.DarkKhaki;
+            btnMasterReadAll.Cursor = Cursors.Hand;
+            btnMasterReadAll.ForeColor = Color.White;
+            btnMasterReadAll.Location = new Point(329, 558);
+            btnMasterReadAll.Name = "btnMasterReadAll";
+            btnMasterReadAll.Size = new Size(190, 42);
+            btnMasterReadAll.TabIndex = 105;
+            btnMasterReadAll.Text = "Read All";
+            btnMasterReadAll.UseVisualStyleBackColor = false;
+            // 
             // lnkLogin
             // 
             lnkLogin.AutoSize = true;
@@ -907,6 +919,18 @@
             groupBox19.TabIndex = 89;
             groupBox19.TabStop = false;
             groupBox19.Text = "Register Connection Parameter";
+            // 
+            // btnMasterWriteAll
+            // 
+            btnMasterWriteAll.BackColor = Color.Red;
+            btnMasterWriteAll.Cursor = Cursors.Hand;
+            btnMasterWriteAll.ForeColor = Color.White;
+            btnMasterWriteAll.Location = new Point(601, 558);
+            btnMasterWriteAll.Name = "btnMasterWriteAll";
+            btnMasterWriteAll.Size = new Size(172, 42);
+            btnMasterWriteAll.TabIndex = 106;
+            btnMasterWriteAll.Text = "Write All";
+            btnMasterWriteAll.UseVisualStyleBackColor = false;
             // 
             // pnlMasterScroll
             // 
@@ -3501,8 +3525,8 @@
             groupBox18.Controls.Add(label189);
             groupBox18.Controls.Add(txtMasterSlaveId);
             groupBox18.Controls.Add(label197);
-            groupBox18.Controls.Add(button3);
-            groupBox18.Controls.Add(button4);
+            groupBox18.Controls.Add(btnSlaveConnectionWriteMemory);
+            groupBox18.Controls.Add(btnSlaveConnectionReadMemory);
             groupBox18.Location = new Point(8, 102);
             groupBox18.Name = "groupBox18";
             groupBox18.Size = new Size(1116, 93);
@@ -3600,29 +3624,31 @@
             label197.TabIndex = 86;
             label197.Text = "Slave Id";
             // 
-            // button3
+            // btnSlaveConnectionWriteMemory
             // 
-            button3.BackColor = Color.Red;
-            button3.Cursor = Cursors.Hand;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(968, 54);
-            button3.Name = "button3";
-            button3.Size = new Size(117, 30);
-            button3.TabIndex = 85;
-            button3.Text = "Write Memory";
-            button3.UseVisualStyleBackColor = false;
+            btnSlaveConnectionWriteMemory.BackColor = Color.Red;
+            btnSlaveConnectionWriteMemory.Cursor = Cursors.Hand;
+            btnSlaveConnectionWriteMemory.ForeColor = Color.White;
+            btnSlaveConnectionWriteMemory.Location = new Point(968, 54);
+            btnSlaveConnectionWriteMemory.Name = "btnSlaveConnectionWriteMemory";
+            btnSlaveConnectionWriteMemory.Size = new Size(117, 30);
+            btnSlaveConnectionWriteMemory.TabIndex = 85;
+            btnSlaveConnectionWriteMemory.Text = "Write Memory";
+            btnSlaveConnectionWriteMemory.UseVisualStyleBackColor = false;
+            btnSlaveConnectionWriteMemory.Click += btnSlaveConnectionWriteMemory_Click;
             // 
-            // button4
+            // btnSlaveConnectionReadMemory
             // 
-            button4.BackColor = Color.DarkKhaki;
-            button4.Cursor = Cursors.Hand;
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(834, 54);
-            button4.Name = "button4";
-            button4.Size = new Size(117, 30);
-            button4.TabIndex = 84;
-            button4.Text = "Read Memory";
-            button4.UseVisualStyleBackColor = false;
+            btnSlaveConnectionReadMemory.BackColor = Color.DarkKhaki;
+            btnSlaveConnectionReadMemory.Cursor = Cursors.Hand;
+            btnSlaveConnectionReadMemory.ForeColor = Color.White;
+            btnSlaveConnectionReadMemory.Location = new Point(834, 54);
+            btnSlaveConnectionReadMemory.Name = "btnSlaveConnectionReadMemory";
+            btnSlaveConnectionReadMemory.Size = new Size(117, 30);
+            btnSlaveConnectionReadMemory.TabIndex = 84;
+            btnSlaveConnectionReadMemory.Text = "Read Memory";
+            btnSlaveConnectionReadMemory.UseVisualStyleBackColor = false;
+            btnSlaveConnectionReadMemory.Click += btnSlaveConnectionReadMemory_Click;
             // 
             // cmbMasterSlaveIndex
             // 
@@ -8404,30 +8430,6 @@
             pbProcessing.Style = ProgressBarStyle.Continuous;
             pbProcessing.TabIndex = 37;
             // 
-            // btnMasterWriteAll
-            // 
-            btnMasterWriteAll.BackColor = Color.Red;
-            btnMasterWriteAll.Cursor = Cursors.Hand;
-            btnMasterWriteAll.ForeColor = Color.White;
-            btnMasterWriteAll.Location = new Point(601, 558);
-            btnMasterWriteAll.Name = "btnMasterWriteAll";
-            btnMasterWriteAll.Size = new Size(172, 42);
-            btnMasterWriteAll.TabIndex = 106;
-            btnMasterWriteAll.Text = "Write All";
-            btnMasterWriteAll.UseVisualStyleBackColor = false;
-            // 
-            // btnMasterReadAll
-            // 
-            btnMasterReadAll.BackColor = Color.DarkKhaki;
-            btnMasterReadAll.Cursor = Cursors.Hand;
-            btnMasterReadAll.ForeColor = Color.White;
-            btnMasterReadAll.Location = new Point(329, 558);
-            btnMasterReadAll.Name = "btnMasterReadAll";
-            btnMasterReadAll.Size = new Size(190, 42);
-            btnMasterReadAll.TabIndex = 105;
-            btnMasterReadAll.Text = "Read All";
-            btnMasterReadAll.UseVisualStyleBackColor = false;
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -9045,8 +9047,8 @@
         private GroupBox groupBox18;
         private ComboBox cmbMasterSlaveIndex;
         private Label label195;
-        private Button button3;
-        private Button button4;
+        private Button btnSlaveConnectionWriteMemory;
+        private Button btnSlaveConnectionReadMemory;
         private TextBox txtMasterSlaveId;
         private Label label197;
         private TextBox txtMasterPollingInterval;
