@@ -1081,11 +1081,13 @@
             // txtMasterRegIndex12
             // 
             txtMasterRegIndex12.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex12.Enabled = false;
             txtMasterRegIndex12.Location = new Point(27, 16);
             txtMasterRegIndex12.MaxLength = 2;
             txtMasterRegIndex12.Name = "txtMasterRegIndex12";
             txtMasterRegIndex12.Size = new Size(79, 27);
             txtMasterRegIndex12.TabIndex = 90;
+            txtMasterRegIndex12.Text = "11";
             // 
             // groupBox35
             // 
@@ -1205,11 +1207,13 @@
             // txtMasterRegIndex20
             // 
             txtMasterRegIndex20.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex20.Enabled = false;
             txtMasterRegIndex20.Location = new Point(23, 16);
             txtMasterRegIndex20.MaxLength = 2;
             txtMasterRegIndex20.Name = "txtMasterRegIndex20";
             txtMasterRegIndex20.Size = new Size(79, 27);
             txtMasterRegIndex20.TabIndex = 90;
+            txtMasterRegIndex20.Text = "19";
             // 
             // groupBox36
             // 
@@ -1329,11 +1333,13 @@
             // txtMasterRegIndex19
             // 
             txtMasterRegIndex19.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex19.Enabled = false;
             txtMasterRegIndex19.Location = new Point(24, 16);
             txtMasterRegIndex19.MaxLength = 2;
             txtMasterRegIndex19.Name = "txtMasterRegIndex19";
             txtMasterRegIndex19.Size = new Size(79, 27);
             txtMasterRegIndex19.TabIndex = 90;
+            txtMasterRegIndex19.Text = "18";
             // 
             // groupBox37
             // 
@@ -1453,11 +1459,13 @@
             // txtMasterRegIndex18
             // 
             txtMasterRegIndex18.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex18.Enabled = false;
             txtMasterRegIndex18.Location = new Point(25, 16);
             txtMasterRegIndex18.MaxLength = 2;
             txtMasterRegIndex18.Name = "txtMasterRegIndex18";
             txtMasterRegIndex18.Size = new Size(79, 27);
             txtMasterRegIndex18.TabIndex = 90;
+            txtMasterRegIndex18.Text = "17";
             // 
             // groupBox38
             // 
@@ -1577,11 +1585,13 @@
             // txtMasterRegIndex16
             // 
             txtMasterRegIndex16.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex16.Enabled = false;
             txtMasterRegIndex16.Location = new Point(28, 16);
             txtMasterRegIndex16.MaxLength = 2;
             txtMasterRegIndex16.Name = "txtMasterRegIndex16";
             txtMasterRegIndex16.Size = new Size(79, 27);
             txtMasterRegIndex16.TabIndex = 90;
+            txtMasterRegIndex16.Text = "15";
             // 
             // groupBox39
             // 
@@ -1701,11 +1711,13 @@
             // txtMasterRegIndex17
             // 
             txtMasterRegIndex17.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex17.Enabled = false;
             txtMasterRegIndex17.Location = new Point(29, 16);
             txtMasterRegIndex17.MaxLength = 2;
             txtMasterRegIndex17.Name = "txtMasterRegIndex17";
             txtMasterRegIndex17.Size = new Size(79, 27);
             txtMasterRegIndex17.TabIndex = 90;
+            txtMasterRegIndex17.Text = "16";
             // 
             // groupBox40
             // 
@@ -1825,11 +1837,13 @@
             // txtMasterRegIndex15
             // 
             txtMasterRegIndex15.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex15.Enabled = false;
             txtMasterRegIndex15.Location = new Point(28, 16);
             txtMasterRegIndex15.MaxLength = 2;
             txtMasterRegIndex15.Name = "txtMasterRegIndex15";
             txtMasterRegIndex15.Size = new Size(79, 27);
             txtMasterRegIndex15.TabIndex = 90;
+            txtMasterRegIndex15.Text = "14";
             // 
             // groupBox41
             // 
@@ -1949,11 +1963,13 @@
             // txtMasterRegIndex14
             // 
             txtMasterRegIndex14.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex14.Enabled = false;
             txtMasterRegIndex14.Location = new Point(29, 16);
             txtMasterRegIndex14.MaxLength = 2;
             txtMasterRegIndex14.Name = "txtMasterRegIndex14";
             txtMasterRegIndex14.Size = new Size(79, 27);
             txtMasterRegIndex14.TabIndex = 90;
+            txtMasterRegIndex14.Text = "13";
             // 
             // groupBox42
             // 
@@ -2073,11 +2089,13 @@
             // txtMasterRegIndex13
             // 
             txtMasterRegIndex13.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex13.Enabled = false;
             txtMasterRegIndex13.Location = new Point(27, 16);
             txtMasterRegIndex13.MaxLength = 2;
             txtMasterRegIndex13.Name = "txtMasterRegIndex13";
             txtMasterRegIndex13.Size = new Size(79, 27);
             txtMasterRegIndex13.TabIndex = 90;
+            txtMasterRegIndex13.Text = "12";
             // 
             // groupBox43
             // 
@@ -2197,11 +2215,13 @@
             // txtMasterRegIndex11
             // 
             txtMasterRegIndex11.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex11.Enabled = false;
             txtMasterRegIndex11.Location = new Point(29, 16);
             txtMasterRegIndex11.MaxLength = 2;
             txtMasterRegIndex11.Name = "txtMasterRegIndex11";
             txtMasterRegIndex11.Size = new Size(79, 27);
             txtMasterRegIndex11.TabIndex = 90;
+            txtMasterRegIndex11.Text = "10";
             // 
             // groupBox21
             // 
@@ -2321,11 +2341,13 @@
             // txtMasterRegIndex2
             // 
             txtMasterRegIndex2.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex2.Enabled = false;
             txtMasterRegIndex2.Location = new Point(29, 16);
             txtMasterRegIndex2.MaxLength = 2;
             txtMasterRegIndex2.Name = "txtMasterRegIndex2";
             txtMasterRegIndex2.Size = new Size(79, 27);
             txtMasterRegIndex2.TabIndex = 90;
+            txtMasterRegIndex2.Text = "1";
             // 
             // groupBox32
             // 
@@ -2445,11 +2467,13 @@
             // txtMasterRegIndex10
             // 
             txtMasterRegIndex10.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex10.Enabled = false;
             txtMasterRegIndex10.Location = new Point(28, 16);
             txtMasterRegIndex10.MaxLength = 2;
             txtMasterRegIndex10.Name = "txtMasterRegIndex10";
             txtMasterRegIndex10.Size = new Size(79, 27);
             txtMasterRegIndex10.TabIndex = 90;
+            txtMasterRegIndex10.Text = "9";
             // 
             // groupBox33
             // 
@@ -2569,11 +2593,13 @@
             // txtMasterRegIndex9
             // 
             txtMasterRegIndex9.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex9.Enabled = false;
             txtMasterRegIndex9.Location = new Point(28, 16);
             txtMasterRegIndex9.MaxLength = 2;
             txtMasterRegIndex9.Name = "txtMasterRegIndex9";
             txtMasterRegIndex9.Size = new Size(79, 27);
             txtMasterRegIndex9.TabIndex = 90;
+            txtMasterRegIndex9.Text = "8";
             // 
             // groupBox28
             // 
@@ -2693,11 +2719,13 @@
             // txtMasterRegIndex8
             // 
             txtMasterRegIndex8.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex8.Enabled = false;
             txtMasterRegIndex8.Location = new Point(29, 16);
             txtMasterRegIndex8.MaxLength = 2;
             txtMasterRegIndex8.Name = "txtMasterRegIndex8";
             txtMasterRegIndex8.Size = new Size(79, 27);
             txtMasterRegIndex8.TabIndex = 90;
+            txtMasterRegIndex8.Text = "7";
             // 
             // groupBox29
             // 
@@ -2817,11 +2845,13 @@
             // txtMasterRegIndex6
             // 
             txtMasterRegIndex6.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex6.Enabled = false;
             txtMasterRegIndex6.Location = new Point(31, 16);
             txtMasterRegIndex6.MaxLength = 2;
             txtMasterRegIndex6.Name = "txtMasterRegIndex6";
             txtMasterRegIndex6.Size = new Size(79, 27);
             txtMasterRegIndex6.TabIndex = 90;
+            txtMasterRegIndex6.Text = "5";
             // 
             // groupBox30
             // 
@@ -2941,11 +2971,13 @@
             // txtMasterRegIndex7
             // 
             txtMasterRegIndex7.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex7.Enabled = false;
             txtMasterRegIndex7.Location = new Point(29, 16);
             txtMasterRegIndex7.MaxLength = 2;
             txtMasterRegIndex7.Name = "txtMasterRegIndex7";
             txtMasterRegIndex7.Size = new Size(79, 27);
             txtMasterRegIndex7.TabIndex = 90;
+            txtMasterRegIndex7.Text = "6";
             // 
             // groupBox31
             // 
@@ -3065,11 +3097,13 @@
             // txtMasterRegIndex5
             // 
             txtMasterRegIndex5.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex5.Enabled = false;
             txtMasterRegIndex5.Location = new Point(29, 16);
             txtMasterRegIndex5.MaxLength = 2;
             txtMasterRegIndex5.Name = "txtMasterRegIndex5";
             txtMasterRegIndex5.Size = new Size(79, 27);
             txtMasterRegIndex5.TabIndex = 90;
+            txtMasterRegIndex5.Text = "4";
             // 
             // groupBox22
             // 
@@ -3189,11 +3223,13 @@
             // txtMasterRegIndex4
             // 
             txtMasterRegIndex4.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex4.Enabled = false;
             txtMasterRegIndex4.Location = new Point(30, 16);
             txtMasterRegIndex4.MaxLength = 2;
             txtMasterRegIndex4.Name = "txtMasterRegIndex4";
             txtMasterRegIndex4.Size = new Size(79, 27);
             txtMasterRegIndex4.TabIndex = 90;
+            txtMasterRegIndex4.Text = "3";
             // 
             // groupBox24
             // 
@@ -3313,11 +3349,13 @@
             // txtMasterRegIndex3
             // 
             txtMasterRegIndex3.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex3.Enabled = false;
             txtMasterRegIndex3.Location = new Point(29, 16);
             txtMasterRegIndex3.MaxLength = 2;
             txtMasterRegIndex3.Name = "txtMasterRegIndex3";
             txtMasterRegIndex3.Size = new Size(79, 27);
             txtMasterRegIndex3.TabIndex = 90;
+            txtMasterRegIndex3.Text = "2";
             // 
             // groupBox20
             // 
@@ -3437,11 +3475,13 @@
             // txtMasterRegIndex1
             // 
             txtMasterRegIndex1.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex1.Enabled = false;
             txtMasterRegIndex1.Location = new Point(29, 16);
             txtMasterRegIndex1.MaxLength = 2;
             txtMasterRegIndex1.Name = "txtMasterRegIndex1";
             txtMasterRegIndex1.Size = new Size(79, 27);
             txtMasterRegIndex1.TabIndex = 90;
+            txtMasterRegIndex1.Text = "0";
             // 
             // label207
             // 
