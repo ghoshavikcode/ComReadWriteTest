@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.IO.Ports;
+using System.Linq;
 using System.Text;
 
 namespace TechavoSystem
@@ -310,6 +311,10 @@ namespace TechavoSystem
             else if (incomingDetails.ToUpper().Contains("SLVSET"))
             {
                 setFieldsModbusMasterSlaveConnection(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("REGSET") && incomingDetails.ToUpper().Contains("|"))
+            {
+                setFieldsModbusRegisterConnectionAll(incomingDetails);
             }
             else if (incomingDetails.ToUpper().Contains("REGSET"))
             {
@@ -1237,7 +1242,6 @@ namespace TechavoSystem
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
                 CloseConnection();
             }
-
         }
         private void btnModbusRegisterConnectionReadMemory_Click(object sender, EventArgs e)
         {
@@ -1318,6 +1322,73 @@ namespace TechavoSystem
                 ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[8]);
                 c = groupBox19.Controls.Find("txtMasterScaleFactor" + index.ToString(), true);
                 ((TextBox)c[0]).Text = fields[9];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void btnMasterReadAll_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceMasterRegisterConnectionAll#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void btnMasterWriteAll_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                for (int i = 1; i < 21; i++)
+                {
+                    sb.Append(CreateCommaSeparatedRegisterConnection(i));
+                    if (i < 20)
+                        sb.Append("|");
+                    pbProcessing.Value = 4 * i;
+                    lblProgressPercent.Text = (4 * i).ToString();
+                }
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sb.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void setFieldsModbusRegisterConnectionAll(object details)
+        {
+            try
+            {
+                if (!details.ToString().Contains("|"))
+                    return;
+                string[] allDetails = details.ToString().Split("|");
+                for (int i = 0; i < allDetails.Length; i++)
+                {
+                    setFieldsModbusRegisterConnection(allDetails[i]);
+                }
+
             }
             catch (Exception ex)
             {
