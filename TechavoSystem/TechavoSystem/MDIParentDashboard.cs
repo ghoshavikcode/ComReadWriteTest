@@ -19,6 +19,8 @@ namespace TechavoSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            cmbConnectProtocol.SelectedIndex = 0;
+            EnableDisableGPRSControls(true);
             #region Events
             assignEvents();
             this.menu.NodeMouseClick += menu_Click;
@@ -319,6 +321,10 @@ namespace TechavoSystem
             else if (incomingDetails.ToUpper().Contains("REGSET"))
             {
                 setFieldsModbusRegisterConnection(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("IP") || incomingDetails.ToUpper().Contains("CREDMQTT"))
+            {
+                setFieldsGPRS(incomingDetails);
             }
         }
         private void uploadSettings(string data)
@@ -1011,10 +1017,182 @@ namespace TechavoSystem
         {
             gbGprsIPSett1.Enabled = !enableGPRSControls;
             gbGprsIPSett2.Enabled = !enableGPRSControls;
-            gbGprsModemSett.Enabled = !enableGPRSControls;
 
             gbGprsBrokerSett.Enabled = enableGPRSControls;
             gbGprsTopics.Enabled = enableGPRSControls;
+        }
+        private void btnIPSettPassView_Click(object sender, EventArgs e)
+        {
+            if (txtSimPassword.UseSystemPasswordChar)
+                txtSimPassword.UseSystemPasswordChar = false;
+            else
+                txtSimPassword.UseSystemPasswordChar = true;
+        }
+        private void btnMQTTShowPass_Click(object sender, EventArgs e)
+        {
+            if (txtMQTTPassword.UseSystemPasswordChar)
+                txtMQTTPassword.UseSystemPasswordChar = false;
+            else
+                txtMQTTPassword.UseSystemPasswordChar = true;
+        }
+        private void btnGPRSReadMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceGPRS#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+
+        private void btnGPRSWriteMemory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = CreateCommaSeparatedGPRS();
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private string CreateCommaSeparatedGPRS()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (cmbConnectProtocol.SelectedIndex != 0)
+            {
+                sb.Append("*IP, ,");
+                sb.Append(cmbConnectProtocol.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(txtServerIPURL.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtServerPort.Text.Trim());
+                sb.Append(",");
+                sb.Append(chkSSLSecurityEnable.Checked ? 1 : 0);
+                sb.Append(",");
+                sb.Append(cmbSSLSecurityEnabled.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(cmbEventTransmission.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(txtIP2ServerIP.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtIP2ServerPort.Text.Trim());
+                sb.Append(",");
+                sb.Append(chkIp2SSLSecurityEnable.Checked ? 1 : 0);
+                sb.Append(",");
+                sb.Append(cmbIp2SSLSecurityEnabled.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(cmbIp2EventTransmission.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(txtAPN.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtSimUserName.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtSimPassword.Text.Trim());
+                sb.Append("#");
+            }
+            else
+            {
+                sb.Append("*CREDMQTT, ,");
+                sb.Append(cmbConnectProtocol.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(txtBrokerIPDomain.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtBrokerPort.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtMQTTUserName.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtMQTTPassword.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtClientId.Text.Trim());
+                sb.Append(",");
+                sb.Append(chkAuthEnable.Checked ? 1 : 0);
+                sb.Append(",");
+                sb.Append(cmbQosLevel.SelectedIndex.ToString());
+                sb.Append(",");
+                sb.Append(txtPublishEvent.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtPublishCMDReply.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtSubscribeCmd.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtAPN.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtSimUserName.Text.Trim());
+                sb.Append(",");
+                sb.Append(txtSimPassword.Text.Trim());
+                sb.Append("#");
+            }
+
+            return sb.ToString();
+        }
+        private void setFieldsGPRS(object details)
+        {
+            try
+            {
+                bool isMQTT = details.ToString().Contains("*CREDMQTT");
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                if (isMQTT)
+                {
+                    cmbConnectProtocol.SelectedIndex = Convert.ToInt32(fields[0]);
+                    txtBrokerIPDomain.Text = fields[1];
+                    txtBrokerPort.Text = fields[2];
+                    txtMQTTUserName.Text = fields[3];
+                    txtMQTTPassword.Text = fields[4];
+                    txtClientId.Text = fields[5];
+                    chkAuthEnable.Checked = fields[6] == "0" ? false : true;
+                    cmbQosLevel.SelectedIndex = Convert.ToInt32(fields[7]);
+                    txtPublishEvent.Text = fields[8];
+                    txtPublishCMDReply.Text = fields[9];
+                    txtSubscribeCmd.Text = fields[10];
+                    txtAPN.Text = fields[11];
+                    txtSimUserName.Text = fields[12];
+                    txtSimPassword.Text = fields[13];
+                }
+                else
+                {
+                    cmbConnectProtocol.SelectedIndex = Convert.ToInt32(fields[0]);
+                    txtServerIPURL.Text = fields[1];
+                    txtServerPort.Text = fields[2];
+                    chkSSLSecurityEnable.Checked = fields[3] == "0" ? false : true;
+                    cmbSSLSecurityEnabled.SelectedIndex = Convert.ToInt32(fields[4]);
+                    cmbEventTransmission.SelectedIndex = Convert.ToInt32(fields[5]);
+                    txtIP2ServerIP.Text = fields[6];
+                    txtIP2ServerPort.Text = fields[7];
+                    chkIp2SSLSecurityEnable.Checked = fields[8] == "0" ? false : true;
+                    cmbIp2SSLSecurityEnabled.SelectedIndex = Convert.ToInt32(fields[9]);
+                    cmbIp2EventTransmission.SelectedIndex = Convert.ToInt32(fields[10]);
+                    txtAPN.Text = fields[11];
+                    txtSimUserName.Text = fields[12];
+                    txtSimPassword.Text = fields[13];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
         }
         #endregion
         #region Modbus Slave
