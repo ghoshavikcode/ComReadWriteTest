@@ -1687,8 +1687,15 @@ namespace TechavoSystem
                 lblTot6.Text = fields[16];
                 lblTot7.Text = fields[17];
                 lblTot8.Text = fields[18];
-                lblStatusPulseCounter.Text = fields[19];
-                lblStatusDatalogSec.Text = fields[20];
+                lblStatusPulseCounter1.Text = fields[19];
+                lblStatusPulseCounter2.Text = fields[20];
+                lblStatusPulseCounter3.Text = fields[21];
+                lblStatusPulseCounter4.Text = fields[22];
+                lblStatusPulseCounter5.Text = fields[23];
+                lblStatusPulseCounter6.Text = fields[24];
+                lblStatusPulseCounter7.Text = fields[25];
+                lblStatusPulseCounter8.Text = fields[26];
+                lblStatusDatalogSec.Text = fields[27];
             }
             catch (Exception ex)
             {
