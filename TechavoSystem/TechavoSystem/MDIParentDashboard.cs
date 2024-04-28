@@ -8,6 +8,7 @@ namespace TechavoSystem
     public partial class Dashboard : Form
     {
         #region CommonToAll
+        private static bool logMonitor = true;
         private static int IsConnected = 0;
         static SerialPort port;
         private static bool IsReadyToSend = false;
@@ -281,7 +282,10 @@ namespace TechavoSystem
         private void DoUpDate(object s, EventArgs e)
         {
             string incomingDetails = port.ReadExisting();
-
+            if (logMonitor)
+            {
+                txtSystemLog.Text += "\n" + incomingDetails;
+            }
             if (incomingDetails.ToUpper().Contains("DESKAI"))
             {
                 setFieldsAISett(incomingDetails);
@@ -1706,10 +1710,10 @@ namespace TechavoSystem
         private void setDigitalInput(string value)
         {
             Control[] c;
-            for (int i=1;i<=value.Length;i++)
+            for (int i = 1; i <= value.Length; i++)
             {
                 c = groupBox27.Controls.Find("pbDigiIn" + i.ToString(), true);
-                if (value.Substring(i-1,1) == "0")
+                if (value.Substring(i - 1, 1) == "0")
                 {
                     ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOff.png");
                 }
@@ -1725,7 +1729,7 @@ namespace TechavoSystem
             for (int i = 1; i <= value.Length; i++)
             {
                 c = groupBox27.Controls.Find("pbDigiOut" + i.ToString(), true);
-                if (value.Substring(i-1, 1) == "0")
+                if (value.Substring(i - 1, 1) == "0")
                 {
                     ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOff.png");
                 }
@@ -1733,6 +1737,47 @@ namespace TechavoSystem
                 {
                     ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOn.png");
                 }
+            }
+        }
+        #endregion
+        #region Console
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtConsoleInput.Text = string.Empty;
+            txtSystemLog.Text = string.Empty;
+        }
+        private void btnLogMonitorOff_Click(object sender, EventArgs e)
+        {
+            if (btnLogMonitorOff.Text == "Log Monitor Off")
+            {
+                btnLogMonitorOff.Text = "Log Monitor On";
+                logMonitor = false;
+            }
+            else
+            {
+                btnLogMonitorOff.Text = "Log Monitor Off";
+                logMonitor = true;
+            }
+        }
+        private void btnConsoleSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sendData = txtConsoleInput.Text;
+                pbProcessing.Value = 0;
+                lblProgressPercent.Text = "0%";
+                if (IsConnected == 0)
+                {
+                    MessageBox.Show("No port is connected.", "Warning");
+                    return;
+                }
+                IsReadyToSend = true;
+                uploadSettings(sendData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
             }
         }
         #endregion

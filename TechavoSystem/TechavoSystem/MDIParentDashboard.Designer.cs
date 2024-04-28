@@ -31,20 +31,29 @@
             components = new System.ComponentModel.Container();
             Button btnMasterReadAll;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode13 = new TreeNode("General Settings");
-            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
-            TreeNode treeNode18 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode19 = new TreeNode("User", 0, 0);
-            TreeNode treeNode20 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode21 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode22 = new TreeNode("GPRS Settings");
-            TreeNode treeNode23 = new TreeNode("Status");
-            TreeNode treeNode24 = new TreeNode("Console");
+            TreeNode treeNode1 = new TreeNode("General Settings");
+            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
+            TreeNode treeNode6 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode7 = new TreeNode("User", 0, 0);
+            TreeNode treeNode8 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode9 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode10 = new TreeNode("GPRS Settings");
+            TreeNode treeNode11 = new TreeNode("Status");
+            TreeNode treeNode12 = new TreeNode("Console");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlConsole = new Panel();
+            txtSystemLog = new TextBox();
+            txtConsoleInput = new TextBox();
+            btnConsoleSend = new Button();
+            groupBox23 = new GroupBox();
+            btnModbusRead = new Button();
+            btnLogMonitorOff = new Button();
+            btnClear = new Button();
+            label188 = new Label();
             pnlStatus = new Panel();
             groupBox27 = new GroupBox();
             lblStatusPulseCounter8 = new Label();
@@ -148,15 +157,6 @@
             txtAdjustPulseCount = new TextBox();
             label65 = new Label();
             label42 = new Label();
-            pnlConsole = new Panel();
-            txtSystemLog = new TextBox();
-            txtConsoleInput = new TextBox();
-            btnConsoleSend = new Button();
-            groupBox23 = new GroupBox();
-            btnModbusRead = new Button();
-            btnLogMonitorOff = new Button();
-            btnClear = new Button();
-            label188 = new Label();
             pnlGPRSSettings = new Panel();
             gbGprsIPSett2 = new GroupBox();
             cmbIp2EventTransmission = new ComboBox();
@@ -798,6 +798,8 @@
             pbProcessing = new ProgressBar();
             btnMasterReadAll = new Button();
             pnlDashboard.SuspendLayout();
+            pnlConsole.SuspendLayout();
+            groupBox23.SuspendLayout();
             pnlStatus.SuspendLayout();
             groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbDigiIn8).BeginInit();
@@ -820,8 +822,6 @@
             groupBox25.SuspendLayout();
             pnlPulseSettings.SuspendLayout();
             groupBox7.SuspendLayout();
-            pnlConsole.SuspendLayout();
-            groupBox23.SuspendLayout();
             pnlGPRSSettings.SuspendLayout();
             gbGprsIPSett2.SuspendLayout();
             gbGprsTopics.SuspendLayout();
@@ -905,9 +905,9 @@
             // 
             // pnlDashboard
             // 
+            pnlDashboard.Controls.Add(pnlConsole);
             pnlDashboard.Controls.Add(pnlStatus);
             pnlDashboard.Controls.Add(pnlPulseSettings);
-            pnlDashboard.Controls.Add(pnlConsole);
             pnlDashboard.Controls.Add(pnlGPRSSettings);
             pnlDashboard.Controls.Add(pnlModbusMaster);
             pnlDashboard.Controls.Add(pnlModbusSlave);
@@ -923,6 +923,100 @@
             pnlDashboard.Size = new Size(1460, 837);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlConsole
+            // 
+            pnlConsole.Controls.Add(txtSystemLog);
+            pnlConsole.Controls.Add(txtConsoleInput);
+            pnlConsole.Controls.Add(btnConsoleSend);
+            pnlConsole.Controls.Add(groupBox23);
+            pnlConsole.Controls.Add(label188);
+            pnlConsole.Location = new Point(321, 9);
+            pnlConsole.Name = "pnlConsole";
+            pnlConsole.Size = new Size(1133, 823);
+            pnlConsole.TabIndex = 10;
+            pnlConsole.Visible = false;
+            // 
+            // txtSystemLog
+            // 
+            txtSystemLog.BorderStyle = BorderStyle.FixedSingle;
+            txtSystemLog.Location = new Point(12, 325);
+            txtSystemLog.Multiline = true;
+            txtSystemLog.Name = "txtSystemLog";
+            txtSystemLog.ReadOnly = true;
+            txtSystemLog.ScrollBars = ScrollBars.Vertical;
+            txtSystemLog.Size = new Size(1119, 485);
+            txtSystemLog.TabIndex = 7;
+            // 
+            // txtConsoleInput
+            // 
+            txtConsoleInput.Location = new Point(12, 135);
+            txtConsoleInput.Multiline = true;
+            txtConsoleInput.Name = "txtConsoleInput";
+            txtConsoleInput.ScrollBars = ScrollBars.Vertical;
+            txtConsoleInput.Size = new Size(1010, 183);
+            txtConsoleInput.TabIndex = 5;
+            // 
+            // btnConsoleSend
+            // 
+            btnConsoleSend.Location = new Point(1032, 208);
+            btnConsoleSend.Name = "btnConsoleSend";
+            btnConsoleSend.Size = new Size(95, 39);
+            btnConsoleSend.TabIndex = 6;
+            btnConsoleSend.Text = "Send";
+            btnConsoleSend.UseVisualStyleBackColor = true;
+            btnConsoleSend.Click += btnConsoleSend_Click;
+            // 
+            // groupBox23
+            // 
+            groupBox23.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox23.Controls.Add(btnModbusRead);
+            groupBox23.Controls.Add(btnLogMonitorOff);
+            groupBox23.Controls.Add(btnClear);
+            groupBox23.Location = new Point(12, 51);
+            groupBox23.Name = "groupBox23";
+            groupBox23.Size = new Size(1118, 77);
+            groupBox23.TabIndex = 4;
+            groupBox23.TabStop = false;
+            // 
+            // btnModbusRead
+            // 
+            btnModbusRead.Location = new Point(1152, 26);
+            btnModbusRead.Name = "btnModbusRead";
+            btnModbusRead.Size = new Size(123, 29);
+            btnModbusRead.TabIndex = 2;
+            btnModbusRead.Text = "Modbus Read";
+            btnModbusRead.UseVisualStyleBackColor = true;
+            // 
+            // btnLogMonitorOff
+            // 
+            btnLogMonitorOff.Location = new Point(961, 26);
+            btnLogMonitorOff.Name = "btnLogMonitorOff";
+            btnLogMonitorOff.Size = new Size(141, 29);
+            btnLogMonitorOff.TabIndex = 1;
+            btnLogMonitorOff.Text = "Log Monitor Off";
+            btnLogMonitorOff.UseVisualStyleBackColor = true;
+            btnLogMonitorOff.Click += btnLogMonitorOff_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(805, 26);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 0;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // label188
+            // 
+            label188.AutoSize = true;
+            label188.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label188.Location = new Point(498, 4);
+            label188.Name = "label188";
+            label188.Size = new Size(107, 35);
+            label188.TabIndex = 2;
+            label188.Text = "Console";
             // 
             // pnlStatus
             // 
@@ -2004,97 +2098,6 @@
             label42.Size = new Size(165, 31);
             label42.TabIndex = 1;
             label42.Text = "Pulse Settings";
-            // 
-            // pnlConsole
-            // 
-            pnlConsole.Controls.Add(txtSystemLog);
-            pnlConsole.Controls.Add(txtConsoleInput);
-            pnlConsole.Controls.Add(btnConsoleSend);
-            pnlConsole.Controls.Add(groupBox23);
-            pnlConsole.Controls.Add(label188);
-            pnlConsole.Location = new Point(321, 9);
-            pnlConsole.Name = "pnlConsole";
-            pnlConsole.Size = new Size(1133, 823);
-            pnlConsole.TabIndex = 10;
-            pnlConsole.Visible = false;
-            // 
-            // txtSystemLog
-            // 
-            txtSystemLog.BorderStyle = BorderStyle.FixedSingle;
-            txtSystemLog.Enabled = false;
-            txtSystemLog.Location = new Point(12, 325);
-            txtSystemLog.Multiline = true;
-            txtSystemLog.Name = "txtSystemLog";
-            txtSystemLog.ScrollBars = ScrollBars.Vertical;
-            txtSystemLog.Size = new Size(1119, 485);
-            txtSystemLog.TabIndex = 7;
-            // 
-            // txtConsoleInput
-            // 
-            txtConsoleInput.Location = new Point(12, 135);
-            txtConsoleInput.Multiline = true;
-            txtConsoleInput.Name = "txtConsoleInput";
-            txtConsoleInput.ScrollBars = ScrollBars.Vertical;
-            txtConsoleInput.Size = new Size(1010, 183);
-            txtConsoleInput.TabIndex = 5;
-            // 
-            // btnConsoleSend
-            // 
-            btnConsoleSend.Location = new Point(1032, 208);
-            btnConsoleSend.Name = "btnConsoleSend";
-            btnConsoleSend.Size = new Size(95, 39);
-            btnConsoleSend.TabIndex = 6;
-            btnConsoleSend.Text = "Send";
-            btnConsoleSend.UseVisualStyleBackColor = true;
-            // 
-            // groupBox23
-            // 
-            groupBox23.BackColor = Color.FromArgb(255, 224, 192);
-            groupBox23.Controls.Add(btnModbusRead);
-            groupBox23.Controls.Add(btnLogMonitorOff);
-            groupBox23.Controls.Add(btnClear);
-            groupBox23.Location = new Point(12, 51);
-            groupBox23.Name = "groupBox23";
-            groupBox23.Size = new Size(1118, 77);
-            groupBox23.TabIndex = 4;
-            groupBox23.TabStop = false;
-            // 
-            // btnModbusRead
-            // 
-            btnModbusRead.Location = new Point(1152, 26);
-            btnModbusRead.Name = "btnModbusRead";
-            btnModbusRead.Size = new Size(123, 29);
-            btnModbusRead.TabIndex = 2;
-            btnModbusRead.Text = "Modbus Read";
-            btnModbusRead.UseVisualStyleBackColor = true;
-            // 
-            // btnLogMonitorOff
-            // 
-            btnLogMonitorOff.Location = new Point(961, 26);
-            btnLogMonitorOff.Name = "btnLogMonitorOff";
-            btnLogMonitorOff.Size = new Size(141, 29);
-            btnLogMonitorOff.TabIndex = 1;
-            btnLogMonitorOff.Text = "Log Monitor Off";
-            btnLogMonitorOff.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            btnClear.Location = new Point(805, 26);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(94, 29);
-            btnClear.TabIndex = 0;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
-            // 
-            // label188
-            // 
-            label188.AutoSize = true;
-            label188.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label188.Location = new Point(498, 4);
-            label188.Name = "label188";
-            label188.Size = new Size(107, 35);
-            label188.TabIndex = 2;
-            label188.Text = "Console";
             // 
             // pnlGPRSSettings
             // 
@@ -8628,45 +8631,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode13.Name = "GeneralSettings";
-            treeNode13.Text = "General Settings";
-            treeNode14.ImageIndex = 1;
-            treeNode14.Name = "DOSettings";
-            treeNode14.SelectedImageIndex = 1;
-            treeNode14.Text = "DO Settings";
-            treeNode15.ImageIndex = 1;
-            treeNode15.Name = "DISettings";
-            treeNode15.SelectedImageIndex = 1;
-            treeNode15.Text = "DI Settings";
-            treeNode16.ImageIndex = 1;
-            treeNode16.Name = "AISettings";
-            treeNode16.SelectedImageIndex = 1;
-            treeNode16.Text = "AI Settings";
-            treeNode17.Name = "IOSettings";
-            treeNode17.Text = "IO Settings";
-            treeNode18.ImageIndex = 0;
-            treeNode18.Name = "PulseSettings";
-            treeNode18.SelectedImageIndex = 0;
-            treeNode18.Text = "Pulse Settings";
-            treeNode19.ImageIndex = 0;
-            treeNode19.Name = "User";
-            treeNode19.SelectedImageIndex = 0;
-            treeNode19.Text = "User";
-            treeNode20.ImageIndex = 0;
-            treeNode20.Name = "ModbusMaster";
-            treeNode20.SelectedImageIndex = 0;
-            treeNode20.Text = "Modbus Master";
-            treeNode21.ImageIndex = 0;
-            treeNode21.Name = "ModbusSlave";
-            treeNode21.SelectedImageIndex = 0;
-            treeNode21.Text = "Modbus Slave";
-            treeNode22.Name = "GPRSSettings";
-            treeNode22.Text = "GPRS Settings";
-            treeNode23.Name = "status";
-            treeNode23.Text = "Status";
-            treeNode24.Name = "console";
-            treeNode24.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
+            treeNode1.Name = "GeneralSettings";
+            treeNode1.Text = "General Settings";
+            treeNode2.ImageIndex = 1;
+            treeNode2.Name = "DOSettings";
+            treeNode2.SelectedImageIndex = 1;
+            treeNode2.Text = "DO Settings";
+            treeNode3.ImageIndex = 1;
+            treeNode3.Name = "DISettings";
+            treeNode3.SelectedImageIndex = 1;
+            treeNode3.Text = "DI Settings";
+            treeNode4.ImageIndex = 1;
+            treeNode4.Name = "AISettings";
+            treeNode4.SelectedImageIndex = 1;
+            treeNode4.Text = "AI Settings";
+            treeNode5.Name = "IOSettings";
+            treeNode5.Text = "IO Settings";
+            treeNode6.ImageIndex = 0;
+            treeNode6.Name = "PulseSettings";
+            treeNode6.SelectedImageIndex = 0;
+            treeNode6.Text = "Pulse Settings";
+            treeNode7.ImageIndex = 0;
+            treeNode7.Name = "User";
+            treeNode7.SelectedImageIndex = 0;
+            treeNode7.Text = "User";
+            treeNode8.ImageIndex = 0;
+            treeNode8.Name = "ModbusMaster";
+            treeNode8.SelectedImageIndex = 0;
+            treeNode8.Text = "Modbus Master";
+            treeNode9.ImageIndex = 0;
+            treeNode9.Name = "ModbusSlave";
+            treeNode9.SelectedImageIndex = 0;
+            treeNode9.Text = "Modbus Slave";
+            treeNode10.Name = "GPRSSettings";
+            treeNode10.Text = "GPRS Settings";
+            treeNode11.Name = "status";
+            treeNode11.Text = "Status";
+            treeNode12.Name = "console";
+            treeNode12.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -8772,6 +8775,9 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlConsole.ResumeLayout(false);
+            pnlConsole.PerformLayout();
+            groupBox23.ResumeLayout(false);
             pnlStatus.ResumeLayout(false);
             pnlStatus.PerformLayout();
             groupBox27.ResumeLayout(false);
@@ -8800,9 +8806,6 @@
             pnlPulseSettings.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
-            pnlConsole.ResumeLayout(false);
-            pnlConsole.PerformLayout();
-            groupBox23.ResumeLayout(false);
             pnlGPRSSettings.ResumeLayout(false);
             pnlGPRSSettings.PerformLayout();
             gbGprsIPSett2.ResumeLayout(false);
