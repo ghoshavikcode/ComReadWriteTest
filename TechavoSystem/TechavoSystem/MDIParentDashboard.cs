@@ -326,6 +326,14 @@ namespace TechavoSystem
             {
                 setFieldsGPRS(incomingDetails);
             }
+            else if (incomingDetails.ToUpper().Contains("GSMST"))
+            {
+                setFieldsGsmStatus(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("INPUTPARA"))
+            {
+                setFieldsIOStatus(incomingDetails);
+            }
         }
         private void uploadSettings(string data)
         {
@@ -1572,6 +1580,152 @@ namespace TechavoSystem
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
                 CloseConnection();
+            }
+        }
+        #endregion
+        #region Status
+        private void btnStatusGSMRead_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceGSMStatus#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+
+        private void btnIOStatusRead_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!port.IsOpen)
+                {
+                    port.Open();
+                }
+                if (port.IsOpen)
+                {
+                    port.WriteLine("*readdeviceIOStatus#");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                CloseConnection();
+            }
+        }
+        private void setFieldsGsmStatus(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                int signalStrength = Convert.ToInt32(fields[0]);
+                int noOfBar = signalStrength / 6;
+                int remainder = signalStrength % 6;
+                if (remainder >= 3)
+                {
+                    noOfBar = noOfBar + 1;
+                }
+                lblSignal1.BackColor = Color.White;
+                lblSignal2.BackColor = Color.White;
+                lblSignal3.BackColor = Color.White;
+                lblSignal4.BackColor = Color.White;
+                lblSignal5.BackColor = Color.White;
+                Control[] c;
+                for (int i = 1; i <= noOfBar; i++)
+                {
+                    c = groupBox26.Controls.Find("lblSignal" + i.ToString(), true);
+                    ((Label)c[0]).BackColor = Color.Green;
+                }
+                lblStatusProvider.Text = fields[1];
+                lblStatusDate.Text = fields[2];
+                lblStatusTime.Text = fields[3];
+                lblStatusSim.Text = fields[4];
+                lblStatusGprs.Text = fields[5];
+                lblStatusProtocol.Text = fields[6];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void setFieldsIOStatus(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf(" ") + 2, details.ToString().Length - 1 - (details.ToString().IndexOf(" ") + 2));
+                string[] fields = details.ToString().Split(",");
+                lblStatusSystemVolt.Text = fields[0];
+                string digitalInput = fields[1];
+                setDigitalInput(digitalInput);
+                string digitalOutput = fields[2];
+                setDigitalOutput(digitalOutput);
+                lblAna1.Text = fields[3];
+                lblAna2.Text = fields[4];
+                lblAna3.Text = fields[5];
+                lblAna4.Text = fields[6];
+                lblAna5.Text = fields[7];
+                lblAna6.Text = fields[8];
+                lblAna7.Text = fields[9];
+                lblAna8.Text = fields[10];
+                lblTot1.Text = fields[11];
+                lblTot2.Text = fields[12];
+                lblTot3.Text = fields[13];
+                lblTot4.Text = fields[14];
+                lblTot5.Text = fields[15];
+                lblTot6.Text = fields[16];
+                lblTot7.Text = fields[17];
+                lblTot8.Text = fields[18];
+                lblStatusPulseCounter.Text = fields[19];
+                lblStatusDatalogSec.Text = fields[20];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void setDigitalInput(string value)
+        {
+            Control[] c;
+            for (int i=1;i<=value.Length;i++)
+            {
+                c = groupBox27.Controls.Find("pbDigiIn" + i.ToString(), true);
+                if (value.Substring(i-1,1) == "0")
+                {
+                    ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOff.png");
+                }
+                else
+                {
+                    ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOn.png");
+                }
+            }
+        }
+        private void setDigitalOutput(string value)
+        {
+            Control[] c;
+            for (int i = 1; i <= value.Length; i++)
+            {
+                c = groupBox27.Controls.Find("pbDigiOut" + i.ToString(), true);
+                if (value.Substring(i-1, 1) == "0")
+                {
+                    ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOff.png");
+                }
+                else
+                {
+                    ((PictureBox)c[0]).BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\BulbOn.png");
+                }
             }
         }
         #endregion

@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             Button btnMasterReadAll;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             TreeNode treeNode1 = new TreeNode("General Settings");
             TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
             TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
@@ -42,9 +43,89 @@
             TreeNode treeNode10 = new TreeNode("GPRS Settings");
             TreeNode treeNode11 = new TreeNode("Status");
             TreeNode treeNode12 = new TreeNode("Console");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
+            pnlStatus = new Panel();
+            groupBox27 = new GroupBox();
+            pbDigiIn8 = new PictureBox();
+            pbDigiIn7 = new PictureBox();
+            pbDigiIn6 = new PictureBox();
+            pbDigiIn5 = new PictureBox();
+            pbDigiIn4 = new PictureBox();
+            pbDigiIn3 = new PictureBox();
+            pbDigiIn2 = new PictureBox();
+            pbDigiIn1 = new PictureBox();
+            pbDigiOut8 = new PictureBox();
+            pbDigiOut7 = new PictureBox();
+            pbDigiOut6 = new PictureBox();
+            pbDigiOut5 = new PictureBox();
+            pbDigiOut4 = new PictureBox();
+            pbDigiOut3 = new PictureBox();
+            pbDigiOut2 = new PictureBox();
+            pbDigiOut1 = new PictureBox();
+            lblAna8 = new Label();
+            lblAna7 = new Label();
+            lblAna6 = new Label();
+            lblAna5 = new Label();
+            lblAna4 = new Label();
+            lblAna3 = new Label();
+            lblAna2 = new Label();
+            lblAna1 = new Label();
+            lblTot8 = new Label();
+            lblTot7 = new Label();
+            lblTot6 = new Label();
+            lblTot5 = new Label();
+            lblTot4 = new Label();
+            lblTot3 = new Label();
+            lblTot2 = new Label();
+            label171 = new Label();
+            lblStatusDatalogSec = new Label();
+            btnIOStatusRead = new Button();
+            label165 = new Label();
+            label166 = new Label();
+            label167 = new Label();
+            label168 = new Label();
+            label169 = new Label();
+            label170 = new Label();
+            lblTot1 = new Label();
+            lblStatusPulseCounter = new Label();
+            lblStatusSystemVolt = new Label();
+            groupBox26 = new GroupBox();
+            btnStatusGSMRead = new Button();
+            lblSignal2 = new Label();
+            lblSignal3 = new Label();
+            lblSignal4 = new Label();
+            lblSignal5 = new Label();
+            lblSignal1 = new Label();
+            lblStatusProvider = new Label();
+            lblStatusModule = new Label();
+            lblStatusDecimal = new Label();
+            label172 = new Label();
+            label173 = new Label();
+            label174 = new Label();
+            label175 = new Label();
+            label176 = new Label();
+            lblStatusTime = new Label();
+            lblStatusGprs = new Label();
+            lblStatusDate = new Label();
+            lblStatusIMEI = new Label();
+            lblStatusProtocol = new Label();
+            lblStatusSim = new Label();
+            label177 = new Label();
+            groupBox25 = new GroupBox();
+            lblDataFlash = new Label();
+            lblFirmwareVer = new Label();
+            lblClientID = new Label();
+            lblHardwareVer = new Label();
+            lblStatusDeviceID = new Label();
+            lblStatusDeviceModel = new Label();
+            label182 = new Label();
+            label183 = new Label();
+            label184 = new Label();
+            label185 = new Label();
+            label186 = new Label();
+            label187 = new Label();
+            label164 = new Label();
             pnlGPRSSettings = new Panel();
             gbGprsIPSett2 = new GroupBox();
             cmbIp2EventTransmission = new ComboBox();
@@ -115,54 +196,6 @@
             label147 = new Label();
             label67 = new Label();
             label148 = new Label();
-            pnlStatus = new Panel();
-            groupBox27 = new GroupBox();
-            btnIOStatusRead = new Button();
-            label165 = new Label();
-            label166 = new Label();
-            label167 = new Label();
-            label168 = new Label();
-            label169 = new Label();
-            label170 = new Label();
-            lblTot1 = new Label();
-            lblStatusPulseCounter = new Label();
-            lblStatusSystemVolt = new Label();
-            groupBox26 = new GroupBox();
-            btnStatusGSMRead = new Button();
-            lblSignal2 = new Label();
-            lblSignal3 = new Label();
-            lblSignal4 = new Label();
-            lblSignal5 = new Label();
-            lblSignal1 = new Label();
-            lblStatusProvider = new Label();
-            lblStatusModule = new Label();
-            lblStatusDecimal = new Label();
-            label172 = new Label();
-            label173 = new Label();
-            label174 = new Label();
-            label175 = new Label();
-            label176 = new Label();
-            lblStatusTime = new Label();
-            lblStatusGprs = new Label();
-            lblStatusDate = new Label();
-            lblStatusIMEI = new Label();
-            lblProtocol = new Label();
-            lblStatusSim = new Label();
-            label177 = new Label();
-            groupBox25 = new GroupBox();
-            lblDataFlash = new Label();
-            lblFirmwareVer = new Label();
-            lblClientID = new Label();
-            lblHardwareVer = new Label();
-            lblStatusDeviceID = new Label();
-            lblStatusDeviceModel = new Label();
-            label182 = new Label();
-            label183 = new Label();
-            label184 = new Label();
-            label185 = new Label();
-            label186 = new Label();
-            label187 = new Label();
-            label164 = new Label();
             pnlModbusMaster = new Panel();
             groupBox19 = new GroupBox();
             btnMasterWriteAll = new Button();
@@ -756,41 +789,28 @@
             label133 = new Label();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
-            label171 = new Label();
-            lblStatusDatalogSec = new Label();
-            lblTot2 = new Label();
-            lblTot4 = new Label();
-            lblTot3 = new Label();
-            lblTot8 = new Label();
-            lblTot7 = new Label();
-            lblTot6 = new Label();
-            lblTot5 = new Label();
-            lblAna8 = new Label();
-            lblAna7 = new Label();
-            lblAna6 = new Label();
-            lblAna5 = new Label();
-            lblAna4 = new Label();
-            lblAna3 = new Label();
-            lblAna2 = new Label();
-            lblAna1 = new Label();
-            pbDigiOut1 = new PictureBox();
-            pbDigiOut2 = new PictureBox();
-            pbDigiOut4 = new PictureBox();
-            pbDigiOut3 = new PictureBox();
-            pbDigiOut8 = new PictureBox();
-            pbDigiOut7 = new PictureBox();
-            pbDigiOut6 = new PictureBox();
-            pbDigiOut5 = new PictureBox();
-            pbDigiIn8 = new PictureBox();
-            pbDigiIn7 = new PictureBox();
-            pbDigiIn6 = new PictureBox();
-            pbDigiIn5 = new PictureBox();
-            pbDigiIn4 = new PictureBox();
-            pbDigiIn3 = new PictureBox();
-            pbDigiIn2 = new PictureBox();
-            pbDigiIn1 = new PictureBox();
             btnMasterReadAll = new Button();
             pnlDashboard.SuspendLayout();
+            pnlStatus.SuspendLayout();
+            groupBox27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut1).BeginInit();
+            groupBox26.SuspendLayout();
+            groupBox25.SuspendLayout();
             pnlGPRSSettings.SuspendLayout();
             gbGprsIPSett2.SuspendLayout();
             gbGprsTopics.SuspendLayout();
@@ -798,10 +818,6 @@
             groupBox16.SuspendLayout();
             gbGprsModemSett.SuspendLayout();
             gbGprsIPSett1.SuspendLayout();
-            pnlStatus.SuspendLayout();
-            groupBox27.SuspendLayout();
-            groupBox26.SuspendLayout();
-            groupBox25.SuspendLayout();
             pnlModbusMaster.SuspendLayout();
             groupBox19.SuspendLayout();
             pnlMasterScroll.SuspendLayout();
@@ -854,22 +870,6 @@
             groupBox12.SuspendLayout();
             pnlMenu.SuspendLayout();
             pnlConnect.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn1).BeginInit();
             SuspendLayout();
             // 
             // btnMasterReadAll
@@ -916,6 +916,855 @@
             pnlDashboard.Size = new Size(1460, 837);
             pnlDashboard.TabIndex = 1;
             pnlDashboard.Visible = false;
+            // 
+            // pnlStatus
+            // 
+            pnlStatus.Controls.Add(groupBox27);
+            pnlStatus.Controls.Add(groupBox26);
+            pnlStatus.Controls.Add(groupBox25);
+            pnlStatus.Controls.Add(label164);
+            pnlStatus.Location = new Point(321, 9);
+            pnlStatus.Name = "pnlStatus";
+            pnlStatus.Size = new Size(1133, 823);
+            pnlStatus.TabIndex = 9;
+            pnlStatus.Visible = false;
+            // 
+            // groupBox27
+            // 
+            groupBox27.Controls.Add(pbDigiIn8);
+            groupBox27.Controls.Add(pbDigiIn7);
+            groupBox27.Controls.Add(pbDigiIn6);
+            groupBox27.Controls.Add(pbDigiIn5);
+            groupBox27.Controls.Add(pbDigiIn4);
+            groupBox27.Controls.Add(pbDigiIn3);
+            groupBox27.Controls.Add(pbDigiIn2);
+            groupBox27.Controls.Add(pbDigiIn1);
+            groupBox27.Controls.Add(pbDigiOut8);
+            groupBox27.Controls.Add(pbDigiOut7);
+            groupBox27.Controls.Add(pbDigiOut6);
+            groupBox27.Controls.Add(pbDigiOut5);
+            groupBox27.Controls.Add(pbDigiOut4);
+            groupBox27.Controls.Add(pbDigiOut3);
+            groupBox27.Controls.Add(pbDigiOut2);
+            groupBox27.Controls.Add(pbDigiOut1);
+            groupBox27.Controls.Add(lblAna8);
+            groupBox27.Controls.Add(lblAna7);
+            groupBox27.Controls.Add(lblAna6);
+            groupBox27.Controls.Add(lblAna5);
+            groupBox27.Controls.Add(lblAna4);
+            groupBox27.Controls.Add(lblAna3);
+            groupBox27.Controls.Add(lblAna2);
+            groupBox27.Controls.Add(lblAna1);
+            groupBox27.Controls.Add(lblTot8);
+            groupBox27.Controls.Add(lblTot7);
+            groupBox27.Controls.Add(lblTot6);
+            groupBox27.Controls.Add(lblTot5);
+            groupBox27.Controls.Add(lblTot4);
+            groupBox27.Controls.Add(lblTot3);
+            groupBox27.Controls.Add(lblTot2);
+            groupBox27.Controls.Add(label171);
+            groupBox27.Controls.Add(lblStatusDatalogSec);
+            groupBox27.Controls.Add(btnIOStatusRead);
+            groupBox27.Controls.Add(label165);
+            groupBox27.Controls.Add(label166);
+            groupBox27.Controls.Add(label167);
+            groupBox27.Controls.Add(label168);
+            groupBox27.Controls.Add(label169);
+            groupBox27.Controls.Add(label170);
+            groupBox27.Controls.Add(lblTot1);
+            groupBox27.Controls.Add(lblStatusPulseCounter);
+            groupBox27.Controls.Add(lblStatusSystemVolt);
+            groupBox27.Location = new Point(652, 51);
+            groupBox27.Name = "groupBox27";
+            groupBox27.Size = new Size(471, 660);
+            groupBox27.TabIndex = 5;
+            groupBox27.TabStop = false;
+            groupBox27.Text = "IO Status";
+            // 
+            // pbDigiIn8
+            // 
+            pbDigiIn8.BackgroundImage = (Image)resources.GetObject("pbDigiIn8.BackgroundImage");
+            pbDigiIn8.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn8.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn8.Location = new Point(337, 74);
+            pbDigiIn8.Name = "pbDigiIn8";
+            pbDigiIn8.Size = new Size(24, 25);
+            pbDigiIn8.TabIndex = 59;
+            pbDigiIn8.TabStop = false;
+            // 
+            // pbDigiIn7
+            // 
+            pbDigiIn7.BackgroundImage = (Image)resources.GetObject("pbDigiIn7.BackgroundImage");
+            pbDigiIn7.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn7.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn7.Location = new Point(309, 74);
+            pbDigiIn7.Name = "pbDigiIn7";
+            pbDigiIn7.Size = new Size(24, 25);
+            pbDigiIn7.TabIndex = 58;
+            pbDigiIn7.TabStop = false;
+            // 
+            // pbDigiIn6
+            // 
+            pbDigiIn6.BackgroundImage = (Image)resources.GetObject("pbDigiIn6.BackgroundImage");
+            pbDigiIn6.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn6.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn6.Location = new Point(282, 74);
+            pbDigiIn6.Name = "pbDigiIn6";
+            pbDigiIn6.Size = new Size(24, 25);
+            pbDigiIn6.TabIndex = 57;
+            pbDigiIn6.TabStop = false;
+            // 
+            // pbDigiIn5
+            // 
+            pbDigiIn5.BackgroundImage = (Image)resources.GetObject("pbDigiIn5.BackgroundImage");
+            pbDigiIn5.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn5.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn5.Location = new Point(254, 74);
+            pbDigiIn5.Name = "pbDigiIn5";
+            pbDigiIn5.Size = new Size(24, 25);
+            pbDigiIn5.TabIndex = 56;
+            pbDigiIn5.TabStop = false;
+            // 
+            // pbDigiIn4
+            // 
+            pbDigiIn4.BackgroundImage = (Image)resources.GetObject("pbDigiIn4.BackgroundImage");
+            pbDigiIn4.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn4.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn4.Location = new Point(228, 74);
+            pbDigiIn4.Name = "pbDigiIn4";
+            pbDigiIn4.Size = new Size(24, 25);
+            pbDigiIn4.TabIndex = 55;
+            pbDigiIn4.TabStop = false;
+            // 
+            // pbDigiIn3
+            // 
+            pbDigiIn3.BackgroundImage = (Image)resources.GetObject("pbDigiIn3.BackgroundImage");
+            pbDigiIn3.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn3.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn3.Location = new Point(200, 74);
+            pbDigiIn3.Name = "pbDigiIn3";
+            pbDigiIn3.Size = new Size(24, 25);
+            pbDigiIn3.TabIndex = 54;
+            pbDigiIn3.TabStop = false;
+            // 
+            // pbDigiIn2
+            // 
+            pbDigiIn2.BackgroundImage = (Image)resources.GetObject("pbDigiIn2.BackgroundImage");
+            pbDigiIn2.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn2.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn2.Location = new Point(173, 74);
+            pbDigiIn2.Name = "pbDigiIn2";
+            pbDigiIn2.Size = new Size(24, 25);
+            pbDigiIn2.TabIndex = 53;
+            pbDigiIn2.TabStop = false;
+            // 
+            // pbDigiIn1
+            // 
+            pbDigiIn1.BackgroundImage = (Image)resources.GetObject("pbDigiIn1.BackgroundImage");
+            pbDigiIn1.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiIn1.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiIn1.Location = new Point(145, 74);
+            pbDigiIn1.Name = "pbDigiIn1";
+            pbDigiIn1.Size = new Size(24, 25);
+            pbDigiIn1.TabIndex = 52;
+            pbDigiIn1.TabStop = false;
+            // 
+            // pbDigiOut8
+            // 
+            pbDigiOut8.BackgroundImage = (Image)resources.GetObject("pbDigiOut8.BackgroundImage");
+            pbDigiOut8.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut8.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut8.Location = new Point(337, 127);
+            pbDigiOut8.Name = "pbDigiOut8";
+            pbDigiOut8.Size = new Size(24, 25);
+            pbDigiOut8.TabIndex = 51;
+            pbDigiOut8.TabStop = false;
+            // 
+            // pbDigiOut7
+            // 
+            pbDigiOut7.BackgroundImage = (Image)resources.GetObject("pbDigiOut7.BackgroundImage");
+            pbDigiOut7.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut7.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut7.Location = new Point(309, 127);
+            pbDigiOut7.Name = "pbDigiOut7";
+            pbDigiOut7.Size = new Size(24, 25);
+            pbDigiOut7.TabIndex = 50;
+            pbDigiOut7.TabStop = false;
+            // 
+            // pbDigiOut6
+            // 
+            pbDigiOut6.BackgroundImage = (Image)resources.GetObject("pbDigiOut6.BackgroundImage");
+            pbDigiOut6.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut6.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut6.Location = new Point(282, 127);
+            pbDigiOut6.Name = "pbDigiOut6";
+            pbDigiOut6.Size = new Size(24, 25);
+            pbDigiOut6.TabIndex = 49;
+            pbDigiOut6.TabStop = false;
+            // 
+            // pbDigiOut5
+            // 
+            pbDigiOut5.BackgroundImage = (Image)resources.GetObject("pbDigiOut5.BackgroundImage");
+            pbDigiOut5.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut5.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut5.Location = new Point(254, 127);
+            pbDigiOut5.Name = "pbDigiOut5";
+            pbDigiOut5.Size = new Size(24, 25);
+            pbDigiOut5.TabIndex = 48;
+            pbDigiOut5.TabStop = false;
+            // 
+            // pbDigiOut4
+            // 
+            pbDigiOut4.BackgroundImage = (Image)resources.GetObject("pbDigiOut4.BackgroundImage");
+            pbDigiOut4.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut4.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut4.Location = new Point(228, 127);
+            pbDigiOut4.Name = "pbDigiOut4";
+            pbDigiOut4.Size = new Size(24, 25);
+            pbDigiOut4.TabIndex = 47;
+            pbDigiOut4.TabStop = false;
+            // 
+            // pbDigiOut3
+            // 
+            pbDigiOut3.BackgroundImage = (Image)resources.GetObject("pbDigiOut3.BackgroundImage");
+            pbDigiOut3.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut3.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut3.Location = new Point(200, 127);
+            pbDigiOut3.Name = "pbDigiOut3";
+            pbDigiOut3.Size = new Size(24, 25);
+            pbDigiOut3.TabIndex = 46;
+            pbDigiOut3.TabStop = false;
+            // 
+            // pbDigiOut2
+            // 
+            pbDigiOut2.BackgroundImage = (Image)resources.GetObject("pbDigiOut2.BackgroundImage");
+            pbDigiOut2.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut2.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut2.Location = new Point(173, 127);
+            pbDigiOut2.Name = "pbDigiOut2";
+            pbDigiOut2.Size = new Size(24, 25);
+            pbDigiOut2.TabIndex = 45;
+            pbDigiOut2.TabStop = false;
+            // 
+            // pbDigiOut1
+            // 
+            pbDigiOut1.BackgroundImage = (Image)resources.GetObject("pbDigiOut1.BackgroundImage");
+            pbDigiOut1.BackgroundImageLayout = ImageLayout.Stretch;
+            pbDigiOut1.BorderStyle = BorderStyle.Fixed3D;
+            pbDigiOut1.Location = new Point(145, 127);
+            pbDigiOut1.Name = "pbDigiOut1";
+            pbDigiOut1.Size = new Size(24, 25);
+            pbDigiOut1.TabIndex = 44;
+            pbDigiOut1.TabStop = false;
+            // 
+            // lblAna8
+            // 
+            lblAna8.AutoSize = true;
+            lblAna8.Location = new Point(431, 178);
+            lblAna8.Name = "lblAna8";
+            lblAna8.Size = new Size(36, 20);
+            lblAna8.TabIndex = 43;
+            lblAna8.Text = "12.2";
+            // 
+            // lblAna7
+            // 
+            lblAna7.AutoSize = true;
+            lblAna7.Location = new Point(390, 178);
+            lblAna7.Name = "lblAna7";
+            lblAna7.Size = new Size(36, 20);
+            lblAna7.TabIndex = 42;
+            lblAna7.Text = "12.2";
+            // 
+            // lblAna6
+            // 
+            lblAna6.AutoSize = true;
+            lblAna6.Location = new Point(348, 178);
+            lblAna6.Name = "lblAna6";
+            lblAna6.Size = new Size(36, 20);
+            lblAna6.TabIndex = 41;
+            lblAna6.Text = "12.2";
+            // 
+            // lblAna5
+            // 
+            lblAna5.AutoSize = true;
+            lblAna5.Location = new Point(307, 178);
+            lblAna5.Name = "lblAna5";
+            lblAna5.Size = new Size(36, 20);
+            lblAna5.TabIndex = 40;
+            lblAna5.Text = "12.2";
+            // 
+            // lblAna4
+            // 
+            lblAna4.AutoSize = true;
+            lblAna4.Location = new Point(266, 178);
+            lblAna4.Name = "lblAna4";
+            lblAna4.Size = new Size(36, 20);
+            lblAna4.TabIndex = 39;
+            lblAna4.Text = "12.2";
+            // 
+            // lblAna3
+            // 
+            lblAna3.AutoSize = true;
+            lblAna3.Location = new Point(225, 178);
+            lblAna3.Name = "lblAna3";
+            lblAna3.Size = new Size(36, 20);
+            lblAna3.TabIndex = 38;
+            lblAna3.Text = "12.2";
+            // 
+            // lblAna2
+            // 
+            lblAna2.AutoSize = true;
+            lblAna2.Location = new Point(183, 178);
+            lblAna2.Name = "lblAna2";
+            lblAna2.Size = new Size(36, 20);
+            lblAna2.TabIndex = 37;
+            lblAna2.Text = "22.2";
+            // 
+            // lblAna1
+            // 
+            lblAna1.AutoSize = true;
+            lblAna1.Location = new Point(142, 178);
+            lblAna1.Name = "lblAna1";
+            lblAna1.Size = new Size(36, 20);
+            lblAna1.TabIndex = 36;
+            lblAna1.Text = "22.2";
+            // 
+            // lblTot8
+            // 
+            lblTot8.AutoSize = true;
+            lblTot8.Location = new Point(430, 228);
+            lblTot8.Name = "lblTot8";
+            lblTot8.Size = new Size(36, 20);
+            lblTot8.TabIndex = 35;
+            lblTot8.Text = "12.2";
+            // 
+            // lblTot7
+            // 
+            lblTot7.AutoSize = true;
+            lblTot7.Location = new Point(389, 228);
+            lblTot7.Name = "lblTot7";
+            lblTot7.Size = new Size(36, 20);
+            lblTot7.TabIndex = 34;
+            lblTot7.Text = "12.2";
+            // 
+            // lblTot6
+            // 
+            lblTot6.AutoSize = true;
+            lblTot6.Location = new Point(347, 228);
+            lblTot6.Name = "lblTot6";
+            lblTot6.Size = new Size(36, 20);
+            lblTot6.TabIndex = 33;
+            lblTot6.Text = "12.2";
+            // 
+            // lblTot5
+            // 
+            lblTot5.AutoSize = true;
+            lblTot5.Location = new Point(306, 228);
+            lblTot5.Name = "lblTot5";
+            lblTot5.Size = new Size(36, 20);
+            lblTot5.TabIndex = 32;
+            lblTot5.Text = "12.2";
+            // 
+            // lblTot4
+            // 
+            lblTot4.AutoSize = true;
+            lblTot4.Location = new Point(265, 228);
+            lblTot4.Name = "lblTot4";
+            lblTot4.Size = new Size(36, 20);
+            lblTot4.TabIndex = 31;
+            lblTot4.Text = "12.2";
+            // 
+            // lblTot3
+            // 
+            lblTot3.AutoSize = true;
+            lblTot3.Location = new Point(224, 228);
+            lblTot3.Name = "lblTot3";
+            lblTot3.Size = new Size(36, 20);
+            lblTot3.TabIndex = 30;
+            lblTot3.Text = "12.2";
+            // 
+            // lblTot2
+            // 
+            lblTot2.AutoSize = true;
+            lblTot2.Location = new Point(182, 228);
+            lblTot2.Name = "lblTot2";
+            lblTot2.Size = new Size(36, 20);
+            lblTot2.TabIndex = 29;
+            lblTot2.Text = "22.2";
+            // 
+            // label171
+            // 
+            label171.AutoSize = true;
+            label171.Location = new Point(19, 328);
+            label171.Name = "label171";
+            label171.Size = new Size(93, 20);
+            label171.TabIndex = 28;
+            label171.Text = "Datalog Sec:";
+            // 
+            // lblStatusDatalogSec
+            // 
+            lblStatusDatalogSec.AutoSize = true;
+            lblStatusDatalogSec.Location = new Point(141, 328);
+            lblStatusDatalogSec.Name = "lblStatusDatalogSec";
+            lblStatusDatalogSec.Size = new Size(66, 20);
+            lblStatusDatalogSec.TabIndex = 27;
+            lblStatusDatalogSec.Text = "label116";
+            // 
+            // btnIOStatusRead
+            // 
+            btnIOStatusRead.Location = new Point(188, 612);
+            btnIOStatusRead.Name = "btnIOStatusRead";
+            btnIOStatusRead.Size = new Size(94, 29);
+            btnIOStatusRead.TabIndex = 26;
+            btnIOStatusRead.Text = "Read";
+            btnIOStatusRead.UseVisualStyleBackColor = true;
+            btnIOStatusRead.Click += btnIOStatusRead_Click;
+            // 
+            // label165
+            // 
+            label165.AutoSize = true;
+            label165.Location = new Point(19, 78);
+            label165.Name = "label165";
+            label165.Size = new Size(95, 20);
+            label165.TabIndex = 22;
+            label165.Text = "Digital Input:";
+            // 
+            // label166
+            // 
+            label166.AutoSize = true;
+            label166.Location = new Point(19, 128);
+            label166.Name = "label166";
+            label166.Size = new Size(107, 20);
+            label166.TabIndex = 21;
+            label166.Text = "Digital Output:";
+            // 
+            // label167
+            // 
+            label167.AutoSize = true;
+            label167.Location = new Point(19, 178);
+            label167.Name = "label167";
+            label167.Size = new Size(98, 20);
+            label167.TabIndex = 20;
+            label167.Text = "Analog Input:";
+            // 
+            // label168
+            // 
+            label168.AutoSize = true;
+            label168.Location = new Point(19, 228);
+            label168.Name = "label168";
+            label168.Size = new Size(69, 20);
+            label168.TabIndex = 19;
+            label168.Text = "Totalizer:";
+            // 
+            // label169
+            // 
+            label169.AutoSize = true;
+            label169.Location = new Point(19, 278);
+            label169.Name = "label169";
+            label169.Size = new Size(102, 20);
+            label169.TabIndex = 18;
+            label169.Text = "Pulse Counter:";
+            // 
+            // label170
+            // 
+            label170.AutoSize = true;
+            label170.Location = new Point(19, 32);
+            label170.Name = "label170";
+            label170.Size = new Size(89, 20);
+            label170.TabIndex = 17;
+            label170.Text = "System Volt:";
+            // 
+            // lblTot1
+            // 
+            lblTot1.AutoSize = true;
+            lblTot1.Location = new Point(141, 228);
+            lblTot1.Name = "lblTot1";
+            lblTot1.Size = new Size(36, 20);
+            lblTot1.TabIndex = 12;
+            lblTot1.Text = "22.2";
+            // 
+            // lblStatusPulseCounter
+            // 
+            lblStatusPulseCounter.AutoSize = true;
+            lblStatusPulseCounter.Location = new Point(141, 278);
+            lblStatusPulseCounter.Name = "lblStatusPulseCounter";
+            lblStatusPulseCounter.Size = new Size(66, 20);
+            lblStatusPulseCounter.TabIndex = 9;
+            lblStatusPulseCounter.Text = "label116";
+            // 
+            // lblStatusSystemVolt
+            // 
+            lblStatusSystemVolt.AutoSize = true;
+            lblStatusSystemVolt.Location = new Point(141, 32);
+            lblStatusSystemVolt.Name = "lblStatusSystemVolt";
+            lblStatusSystemVolt.Size = new Size(66, 20);
+            lblStatusSystemVolt.TabIndex = 8;
+            lblStatusSystemVolt.Text = "label116";
+            // 
+            // groupBox26
+            // 
+            groupBox26.Controls.Add(btnStatusGSMRead);
+            groupBox26.Controls.Add(lblSignal2);
+            groupBox26.Controls.Add(lblSignal3);
+            groupBox26.Controls.Add(lblSignal4);
+            groupBox26.Controls.Add(lblSignal5);
+            groupBox26.Controls.Add(lblSignal1);
+            groupBox26.Controls.Add(lblStatusProvider);
+            groupBox26.Controls.Add(lblStatusModule);
+            groupBox26.Controls.Add(lblStatusDecimal);
+            groupBox26.Controls.Add(label172);
+            groupBox26.Controls.Add(label173);
+            groupBox26.Controls.Add(label174);
+            groupBox26.Controls.Add(label175);
+            groupBox26.Controls.Add(label176);
+            groupBox26.Controls.Add(lblStatusTime);
+            groupBox26.Controls.Add(lblStatusGprs);
+            groupBox26.Controls.Add(lblStatusDate);
+            groupBox26.Controls.Add(lblStatusIMEI);
+            groupBox26.Controls.Add(lblStatusProtocol);
+            groupBox26.Controls.Add(lblStatusSim);
+            groupBox26.Controls.Add(label177);
+            groupBox26.Location = new Point(313, 52);
+            groupBox26.Name = "groupBox26";
+            groupBox26.Size = new Size(333, 660);
+            groupBox26.TabIndex = 4;
+            groupBox26.TabStop = false;
+            groupBox26.Text = "GSM Status";
+            // 
+            // btnStatusGSMRead
+            // 
+            btnStatusGSMRead.Location = new Point(115, 614);
+            btnStatusGSMRead.Name = "btnStatusGSMRead";
+            btnStatusGSMRead.Size = new Size(94, 29);
+            btnStatusGSMRead.TabIndex = 22;
+            btnStatusGSMRead.Text = "Read";
+            btnStatusGSMRead.UseVisualStyleBackColor = true;
+            btnStatusGSMRead.Click += btnStatusGSMRead_Click;
+            // 
+            // lblSignal2
+            // 
+            lblSignal2.BackColor = Color.White;
+            lblSignal2.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal2.Location = new Point(41, 103);
+            lblSignal2.Name = "lblSignal2";
+            lblSignal2.Size = new Size(10, 20);
+            lblSignal2.TabIndex = 21;
+            // 
+            // lblSignal3
+            // 
+            lblSignal3.BackColor = Color.White;
+            lblSignal3.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal3.Location = new Point(57, 96);
+            lblSignal3.Name = "lblSignal3";
+            lblSignal3.Size = new Size(10, 27);
+            lblSignal3.TabIndex = 20;
+            // 
+            // lblSignal4
+            // 
+            lblSignal4.BackColor = Color.White;
+            lblSignal4.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal4.Location = new Point(73, 89);
+            lblSignal4.Name = "lblSignal4";
+            lblSignal4.Size = new Size(10, 34);
+            lblSignal4.TabIndex = 19;
+            // 
+            // lblSignal5
+            // 
+            lblSignal5.BackColor = Color.White;
+            lblSignal5.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal5.Location = new Point(89, 82);
+            lblSignal5.Name = "lblSignal5";
+            lblSignal5.Size = new Size(10, 41);
+            lblSignal5.TabIndex = 18;
+            // 
+            // lblSignal1
+            // 
+            lblSignal1.BackColor = Color.White;
+            lblSignal1.BorderStyle = BorderStyle.FixedSingle;
+            lblSignal1.Location = new Point(25, 110);
+            lblSignal1.Name = "lblSignal1";
+            lblSignal1.Size = new Size(10, 13);
+            lblSignal1.TabIndex = 17;
+            // 
+            // lblStatusProvider
+            // 
+            lblStatusProvider.AutoSize = true;
+            lblStatusProvider.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusProvider.ForeColor = Color.Blue;
+            lblStatusProvider.Location = new Point(253, 39);
+            lblStatusProvider.Name = "lblStatusProvider";
+            lblStatusProvider.Size = new Size(56, 28);
+            lblStatusProvider.TabIndex = 16;
+            lblStatusProvider.Text = "airtel";
+            // 
+            // lblStatusModule
+            // 
+            lblStatusModule.AutoSize = true;
+            lblStatusModule.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusModule.ForeColor = Color.Blue;
+            lblStatusModule.Location = new Point(253, 101);
+            lblStatusModule.Name = "lblStatusModule";
+            lblStatusModule.Size = new Size(65, 28);
+            lblStatusModule.TabIndex = 15;
+            lblStatusModule.Text = "Home";
+            // 
+            // lblStatusDecimal
+            // 
+            lblStatusDecimal.AutoSize = true;
+            lblStatusDecimal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatusDecimal.ForeColor = Color.Blue;
+            lblStatusDecimal.Location = new Point(146, 103);
+            lblStatusDecimal.Name = "lblStatusDecimal";
+            lblStatusDecimal.Size = new Size(58, 28);
+            lblStatusDecimal.TabIndex = 14;
+            lblStatusDecimal.Text = "15db";
+            // 
+            // label172
+            // 
+            label172.AutoSize = true;
+            label172.Location = new Point(16, 338);
+            label172.Name = "label172";
+            label172.Size = new Size(47, 20);
+            label172.TabIndex = 12;
+            label172.Text = "GPRS:";
+            // 
+            // label173
+            // 
+            label173.AutoSize = true;
+            label173.Location = new Point(15, 152);
+            label173.Name = "label173";
+            label173.Size = new Size(44, 20);
+            label173.TabIndex = 11;
+            label173.Text = "Date:";
+            // 
+            // label174
+            // 
+            label174.AutoSize = true;
+            label174.Location = new Point(16, 400);
+            label174.Name = "label174";
+            label174.Size = new Size(65, 20);
+            label174.TabIndex = 10;
+            label174.Text = "IMEI No:";
+            // 
+            // label175
+            // 
+            label175.AutoSize = true;
+            label175.Location = new Point(16, 462);
+            label175.Name = "label175";
+            label175.Size = new Size(68, 20);
+            label175.TabIndex = 9;
+            label175.Text = "Protocol:";
+            // 
+            // label176
+            // 
+            label176.AutoSize = true;
+            label176.Location = new Point(16, 276);
+            label176.Name = "label176";
+            label176.Size = new Size(37, 20);
+            label176.TabIndex = 8;
+            label176.Text = "SIM:";
+            // 
+            // lblStatusTime
+            // 
+            lblStatusTime.AutoSize = true;
+            lblStatusTime.Location = new Point(126, 214);
+            lblStatusTime.Name = "lblStatusTime";
+            lblStatusTime.Size = new Size(66, 20);
+            lblStatusTime.TabIndex = 7;
+            lblStatusTime.Text = "label116";
+            // 
+            // lblStatusGprs
+            // 
+            lblStatusGprs.AutoSize = true;
+            lblStatusGprs.Location = new Point(126, 340);
+            lblStatusGprs.Name = "lblStatusGprs";
+            lblStatusGprs.Size = new Size(66, 20);
+            lblStatusGprs.TabIndex = 5;
+            lblStatusGprs.Text = "label114";
+            // 
+            // lblStatusDate
+            // 
+            lblStatusDate.AutoSize = true;
+            lblStatusDate.Location = new Point(127, 152);
+            lblStatusDate.Name = "lblStatusDate";
+            lblStatusDate.Size = new Size(66, 20);
+            lblStatusDate.TabIndex = 4;
+            lblStatusDate.Text = "label113";
+            // 
+            // lblStatusIMEI
+            // 
+            lblStatusIMEI.AutoSize = true;
+            lblStatusIMEI.Location = new Point(126, 402);
+            lblStatusIMEI.Name = "lblStatusIMEI";
+            lblStatusIMEI.Size = new Size(66, 20);
+            lblStatusIMEI.TabIndex = 3;
+            lblStatusIMEI.Text = "label112";
+            // 
+            // lblStatusProtocol
+            // 
+            lblStatusProtocol.AutoSize = true;
+            lblStatusProtocol.Location = new Point(128, 459);
+            lblStatusProtocol.Name = "lblStatusProtocol";
+            lblStatusProtocol.Size = new Size(66, 20);
+            lblStatusProtocol.TabIndex = 2;
+            lblStatusProtocol.Text = "label111";
+            // 
+            // lblStatusSim
+            // 
+            lblStatusSim.AutoSize = true;
+            lblStatusSim.Location = new Point(126, 278);
+            lblStatusSim.Name = "lblStatusSim";
+            lblStatusSim.Size = new Size(66, 20);
+            lblStatusSim.TabIndex = 1;
+            lblStatusSim.Text = "label110";
+            // 
+            // label177
+            // 
+            label177.AutoSize = true;
+            label177.Location = new Point(16, 214);
+            label177.Name = "label177";
+            label177.Size = new Size(45, 20);
+            label177.TabIndex = 0;
+            label177.Text = "TIME:";
+            // 
+            // groupBox25
+            // 
+            groupBox25.Controls.Add(lblDataFlash);
+            groupBox25.Controls.Add(lblFirmwareVer);
+            groupBox25.Controls.Add(lblClientID);
+            groupBox25.Controls.Add(lblHardwareVer);
+            groupBox25.Controls.Add(lblStatusDeviceID);
+            groupBox25.Controls.Add(lblStatusDeviceModel);
+            groupBox25.Controls.Add(label182);
+            groupBox25.Controls.Add(label183);
+            groupBox25.Controls.Add(label184);
+            groupBox25.Controls.Add(label185);
+            groupBox25.Controls.Add(label186);
+            groupBox25.Controls.Add(label187);
+            groupBox25.Location = new Point(8, 52);
+            groupBox25.Name = "groupBox25";
+            groupBox25.Size = new Size(299, 660);
+            groupBox25.TabIndex = 3;
+            groupBox25.TabStop = false;
+            groupBox25.Text = "Device Info.";
+            // 
+            // lblDataFlash
+            // 
+            lblDataFlash.AutoSize = true;
+            lblDataFlash.Location = new Point(164, 266);
+            lblDataFlash.Name = "lblDataFlash";
+            lblDataFlash.Size = new Size(78, 20);
+            lblDataFlash.TabIndex = 16;
+            lblDataFlash.Text = "Data Flash";
+            // 
+            // lblFirmwareVer
+            // 
+            lblFirmwareVer.AutoSize = true;
+            lblFirmwareVer.Location = new Point(164, 175);
+            lblFirmwareVer.Name = "lblFirmwareVer";
+            lblFirmwareVer.Size = new Size(95, 20);
+            lblFirmwareVer.TabIndex = 14;
+            lblFirmwareVer.Text = "Firmware Ver";
+            // 
+            // lblClientID
+            // 
+            lblClientID.AutoSize = true;
+            lblClientID.Location = new Point(164, 221);
+            lblClientID.Name = "lblClientID";
+            lblClientID.Size = new Size(66, 20);
+            lblClientID.TabIndex = 13;
+            lblClientID.Text = "Client ID";
+            // 
+            // lblHardwareVer
+            // 
+            lblHardwareVer.AutoSize = true;
+            lblHardwareVer.Location = new Point(164, 131);
+            lblHardwareVer.Name = "lblHardwareVer";
+            lblHardwareVer.Size = new Size(99, 20);
+            lblHardwareVer.TabIndex = 12;
+            lblHardwareVer.Text = "Hardware Ver";
+            // 
+            // lblStatusDeviceID
+            // 
+            lblStatusDeviceID.AutoSize = true;
+            lblStatusDeviceID.Location = new Point(164, 85);
+            lblStatusDeviceID.Name = "lblStatusDeviceID";
+            lblStatusDeviceID.Size = new Size(56, 20);
+            lblStatusDeviceID.TabIndex = 11;
+            lblStatusDeviceID.Text = "App ID";
+            // 
+            // lblStatusDeviceModel
+            // 
+            lblStatusDeviceModel.AutoSize = true;
+            lblStatusDeviceModel.Location = new Point(164, 41);
+            lblStatusDeviceModel.Name = "lblStatusDeviceModel";
+            lblStatusDeviceModel.Size = new Size(101, 20);
+            lblStatusDeviceModel.TabIndex = 10;
+            lblStatusDeviceModel.Text = "Device Model";
+            // 
+            // label182
+            // 
+            label182.AutoSize = true;
+            label182.Location = new Point(19, 266);
+            label182.Name = "label182";
+            label182.Size = new Size(81, 20);
+            label182.TabIndex = 5;
+            label182.Text = "Data Flash:";
+            // 
+            // label183
+            // 
+            label183.AutoSize = true;
+            label183.Location = new Point(19, 175);
+            label183.Name = "label183";
+            label183.Size = new Size(98, 20);
+            label183.TabIndex = 4;
+            label183.Text = "Firmware Ver:";
+            // 
+            // label184
+            // 
+            label184.AutoSize = true;
+            label184.Location = new Point(19, 221);
+            label184.Name = "label184";
+            label184.Size = new Size(69, 20);
+            label184.TabIndex = 3;
+            label184.Text = "Client ID:";
+            // 
+            // label185
+            // 
+            label185.AutoSize = true;
+            label185.Location = new Point(19, 131);
+            label185.Name = "label185";
+            label185.Size = new Size(102, 20);
+            label185.TabIndex = 2;
+            label185.Text = "Hardware Ver:";
+            // 
+            // label186
+            // 
+            label186.AutoSize = true;
+            label186.Location = new Point(19, 85);
+            label186.Name = "label186";
+            label186.Size = new Size(76, 20);
+            label186.TabIndex = 1;
+            label186.Text = "Device ID:";
+            // 
+            // label187
+            // 
+            label187.AutoSize = true;
+            label187.Location = new Point(19, 41);
+            label187.Name = "label187";
+            label187.Size = new Size(104, 20);
+            label187.TabIndex = 0;
+            label187.Text = "Device Model:";
+            // 
+            // label164
+            // 
+            label164.AutoSize = true;
+            label164.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label164.Location = new Point(498, 4);
+            label164.Name = "label164";
+            label164.Size = new Size(88, 35);
+            label164.TabIndex = 1;
+            label164.Text = "Status";
             // 
             // pnlGPRSSettings
             // 
@@ -1622,524 +2471,6 @@
             label148.Size = new Size(123, 20);
             label148.TabIndex = 0;
             label148.Text = "Connect Protocol";
-            // 
-            // pnlStatus
-            // 
-            pnlStatus.Controls.Add(groupBox27);
-            pnlStatus.Controls.Add(groupBox26);
-            pnlStatus.Controls.Add(groupBox25);
-            pnlStatus.Controls.Add(label164);
-            pnlStatus.Location = new Point(321, 9);
-            pnlStatus.Name = "pnlStatus";
-            pnlStatus.Size = new Size(1133, 823);
-            pnlStatus.TabIndex = 9;
-            pnlStatus.Visible = false;
-            // 
-            // groupBox27
-            // 
-            groupBox27.Controls.Add(pbDigiIn8);
-            groupBox27.Controls.Add(pbDigiIn7);
-            groupBox27.Controls.Add(pbDigiIn6);
-            groupBox27.Controls.Add(pbDigiIn5);
-            groupBox27.Controls.Add(pbDigiIn4);
-            groupBox27.Controls.Add(pbDigiIn3);
-            groupBox27.Controls.Add(pbDigiIn2);
-            groupBox27.Controls.Add(pbDigiIn1);
-            groupBox27.Controls.Add(pbDigiOut8);
-            groupBox27.Controls.Add(pbDigiOut7);
-            groupBox27.Controls.Add(pbDigiOut6);
-            groupBox27.Controls.Add(pbDigiOut5);
-            groupBox27.Controls.Add(pbDigiOut4);
-            groupBox27.Controls.Add(pbDigiOut3);
-            groupBox27.Controls.Add(pbDigiOut2);
-            groupBox27.Controls.Add(pbDigiOut1);
-            groupBox27.Controls.Add(lblAna8);
-            groupBox27.Controls.Add(lblAna7);
-            groupBox27.Controls.Add(lblAna6);
-            groupBox27.Controls.Add(lblAna5);
-            groupBox27.Controls.Add(lblAna4);
-            groupBox27.Controls.Add(lblAna3);
-            groupBox27.Controls.Add(lblAna2);
-            groupBox27.Controls.Add(lblAna1);
-            groupBox27.Controls.Add(lblTot8);
-            groupBox27.Controls.Add(lblTot7);
-            groupBox27.Controls.Add(lblTot6);
-            groupBox27.Controls.Add(lblTot5);
-            groupBox27.Controls.Add(lblTot4);
-            groupBox27.Controls.Add(lblTot3);
-            groupBox27.Controls.Add(lblTot2);
-            groupBox27.Controls.Add(label171);
-            groupBox27.Controls.Add(lblStatusDatalogSec);
-            groupBox27.Controls.Add(btnIOStatusRead);
-            groupBox27.Controls.Add(label165);
-            groupBox27.Controls.Add(label166);
-            groupBox27.Controls.Add(label167);
-            groupBox27.Controls.Add(label168);
-            groupBox27.Controls.Add(label169);
-            groupBox27.Controls.Add(label170);
-            groupBox27.Controls.Add(lblTot1);
-            groupBox27.Controls.Add(lblStatusPulseCounter);
-            groupBox27.Controls.Add(lblStatusSystemVolt);
-            groupBox27.Location = new Point(652, 51);
-            groupBox27.Name = "groupBox27";
-            groupBox27.Size = new Size(471, 660);
-            groupBox27.TabIndex = 5;
-            groupBox27.TabStop = false;
-            groupBox27.Text = "IO Status";
-            // 
-            // btnIOStatusRead
-            // 
-            btnIOStatusRead.Location = new Point(188, 612);
-            btnIOStatusRead.Name = "btnIOStatusRead";
-            btnIOStatusRead.Size = new Size(94, 29);
-            btnIOStatusRead.TabIndex = 26;
-            btnIOStatusRead.Text = "Read";
-            btnIOStatusRead.UseVisualStyleBackColor = true;
-            // 
-            // label165
-            // 
-            label165.AutoSize = true;
-            label165.Location = new Point(19, 78);
-            label165.Name = "label165";
-            label165.Size = new Size(95, 20);
-            label165.TabIndex = 22;
-            label165.Text = "Digital Input:";
-            // 
-            // label166
-            // 
-            label166.AutoSize = true;
-            label166.Location = new Point(19, 128);
-            label166.Name = "label166";
-            label166.Size = new Size(107, 20);
-            label166.TabIndex = 21;
-            label166.Text = "Digital Output:";
-            // 
-            // label167
-            // 
-            label167.AutoSize = true;
-            label167.Location = new Point(19, 178);
-            label167.Name = "label167";
-            label167.Size = new Size(98, 20);
-            label167.TabIndex = 20;
-            label167.Text = "Analog Input:";
-            // 
-            // label168
-            // 
-            label168.AutoSize = true;
-            label168.Location = new Point(19, 228);
-            label168.Name = "label168";
-            label168.Size = new Size(69, 20);
-            label168.TabIndex = 19;
-            label168.Text = "Totalizer:";
-            // 
-            // label169
-            // 
-            label169.AutoSize = true;
-            label169.Location = new Point(19, 278);
-            label169.Name = "label169";
-            label169.Size = new Size(102, 20);
-            label169.TabIndex = 18;
-            label169.Text = "Pulse Counter:";
-            // 
-            // label170
-            // 
-            label170.AutoSize = true;
-            label170.Location = new Point(19, 32);
-            label170.Name = "label170";
-            label170.Size = new Size(89, 20);
-            label170.TabIndex = 17;
-            label170.Text = "System Volt:";
-            // 
-            // lblTot1
-            // 
-            lblTot1.AutoSize = true;
-            lblTot1.Location = new Point(141, 228);
-            lblTot1.Name = "lblTot1";
-            lblTot1.Size = new Size(36, 20);
-            lblTot1.TabIndex = 12;
-            lblTot1.Text = "22.2";
-            // 
-            // lblStatusPulseCounter
-            // 
-            lblStatusPulseCounter.AutoSize = true;
-            lblStatusPulseCounter.Location = new Point(141, 278);
-            lblStatusPulseCounter.Name = "lblStatusPulseCounter";
-            lblStatusPulseCounter.Size = new Size(66, 20);
-            lblStatusPulseCounter.TabIndex = 9;
-            lblStatusPulseCounter.Text = "label116";
-            // 
-            // lblStatusSystemVolt
-            // 
-            lblStatusSystemVolt.AutoSize = true;
-            lblStatusSystemVolt.Location = new Point(141, 32);
-            lblStatusSystemVolt.Name = "lblStatusSystemVolt";
-            lblStatusSystemVolt.Size = new Size(66, 20);
-            lblStatusSystemVolt.TabIndex = 8;
-            lblStatusSystemVolt.Text = "label116";
-            // 
-            // groupBox26
-            // 
-            groupBox26.Controls.Add(btnStatusGSMRead);
-            groupBox26.Controls.Add(lblSignal2);
-            groupBox26.Controls.Add(lblSignal3);
-            groupBox26.Controls.Add(lblSignal4);
-            groupBox26.Controls.Add(lblSignal5);
-            groupBox26.Controls.Add(lblSignal1);
-            groupBox26.Controls.Add(lblStatusProvider);
-            groupBox26.Controls.Add(lblStatusModule);
-            groupBox26.Controls.Add(lblStatusDecimal);
-            groupBox26.Controls.Add(label172);
-            groupBox26.Controls.Add(label173);
-            groupBox26.Controls.Add(label174);
-            groupBox26.Controls.Add(label175);
-            groupBox26.Controls.Add(label176);
-            groupBox26.Controls.Add(lblStatusTime);
-            groupBox26.Controls.Add(lblStatusGprs);
-            groupBox26.Controls.Add(lblStatusDate);
-            groupBox26.Controls.Add(lblStatusIMEI);
-            groupBox26.Controls.Add(lblProtocol);
-            groupBox26.Controls.Add(lblStatusSim);
-            groupBox26.Controls.Add(label177);
-            groupBox26.Location = new Point(313, 52);
-            groupBox26.Name = "groupBox26";
-            groupBox26.Size = new Size(333, 660);
-            groupBox26.TabIndex = 4;
-            groupBox26.TabStop = false;
-            groupBox26.Text = "GSM Status";
-            // 
-            // btnStatusGSMRead
-            // 
-            btnStatusGSMRead.Location = new Point(115, 614);
-            btnStatusGSMRead.Name = "btnStatusGSMRead";
-            btnStatusGSMRead.Size = new Size(94, 29);
-            btnStatusGSMRead.TabIndex = 22;
-            btnStatusGSMRead.Text = "Read";
-            btnStatusGSMRead.UseVisualStyleBackColor = true;
-            // 
-            // lblSignal2
-            // 
-            lblSignal2.BackColor = Color.White;
-            lblSignal2.BorderStyle = BorderStyle.FixedSingle;
-            lblSignal2.Location = new Point(41, 103);
-            lblSignal2.Name = "lblSignal2";
-            lblSignal2.Size = new Size(10, 20);
-            lblSignal2.TabIndex = 21;
-            // 
-            // lblSignal3
-            // 
-            lblSignal3.BackColor = Color.White;
-            lblSignal3.BorderStyle = BorderStyle.FixedSingle;
-            lblSignal3.Location = new Point(57, 96);
-            lblSignal3.Name = "lblSignal3";
-            lblSignal3.Size = new Size(10, 27);
-            lblSignal3.TabIndex = 20;
-            // 
-            // lblSignal4
-            // 
-            lblSignal4.BackColor = Color.White;
-            lblSignal4.BorderStyle = BorderStyle.FixedSingle;
-            lblSignal4.Location = new Point(73, 89);
-            lblSignal4.Name = "lblSignal4";
-            lblSignal4.Size = new Size(10, 34);
-            lblSignal4.TabIndex = 19;
-            // 
-            // lblSignal5
-            // 
-            lblSignal5.BackColor = Color.White;
-            lblSignal5.BorderStyle = BorderStyle.FixedSingle;
-            lblSignal5.Location = new Point(89, 82);
-            lblSignal5.Name = "lblSignal5";
-            lblSignal5.Size = new Size(10, 41);
-            lblSignal5.TabIndex = 18;
-            // 
-            // lblSignal1
-            // 
-            lblSignal1.BackColor = Color.White;
-            lblSignal1.BorderStyle = BorderStyle.FixedSingle;
-            lblSignal1.Location = new Point(25, 110);
-            lblSignal1.Name = "lblSignal1";
-            lblSignal1.Size = new Size(10, 13);
-            lblSignal1.TabIndex = 17;
-            // 
-            // lblStatusProvider
-            // 
-            lblStatusProvider.AutoSize = true;
-            lblStatusProvider.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblStatusProvider.ForeColor = Color.Blue;
-            lblStatusProvider.Location = new Point(253, 39);
-            lblStatusProvider.Name = "lblStatusProvider";
-            lblStatusProvider.Size = new Size(56, 28);
-            lblStatusProvider.TabIndex = 16;
-            lblStatusProvider.Text = "airtel";
-            // 
-            // lblStatusModule
-            // 
-            lblStatusModule.AutoSize = true;
-            lblStatusModule.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblStatusModule.ForeColor = Color.Blue;
-            lblStatusModule.Location = new Point(253, 101);
-            lblStatusModule.Name = "lblStatusModule";
-            lblStatusModule.Size = new Size(65, 28);
-            lblStatusModule.TabIndex = 15;
-            lblStatusModule.Text = "Home";
-            // 
-            // lblStatusDecimal
-            // 
-            lblStatusDecimal.AutoSize = true;
-            lblStatusDecimal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblStatusDecimal.ForeColor = Color.Blue;
-            lblStatusDecimal.Location = new Point(146, 103);
-            lblStatusDecimal.Name = "lblStatusDecimal";
-            lblStatusDecimal.Size = new Size(58, 28);
-            lblStatusDecimal.TabIndex = 14;
-            lblStatusDecimal.Text = "15db";
-            // 
-            // label172
-            // 
-            label172.AutoSize = true;
-            label172.Location = new Point(16, 338);
-            label172.Name = "label172";
-            label172.Size = new Size(47, 20);
-            label172.TabIndex = 12;
-            label172.Text = "GPRS:";
-            // 
-            // label173
-            // 
-            label173.AutoSize = true;
-            label173.Location = new Point(15, 152);
-            label173.Name = "label173";
-            label173.Size = new Size(44, 20);
-            label173.TabIndex = 11;
-            label173.Text = "Date:";
-            // 
-            // label174
-            // 
-            label174.AutoSize = true;
-            label174.Location = new Point(16, 400);
-            label174.Name = "label174";
-            label174.Size = new Size(65, 20);
-            label174.TabIndex = 10;
-            label174.Text = "IMEI No:";
-            // 
-            // label175
-            // 
-            label175.AutoSize = true;
-            label175.Location = new Point(16, 462);
-            label175.Name = "label175";
-            label175.Size = new Size(68, 20);
-            label175.TabIndex = 9;
-            label175.Text = "Protocol:";
-            // 
-            // label176
-            // 
-            label176.AutoSize = true;
-            label176.Location = new Point(16, 276);
-            label176.Name = "label176";
-            label176.Size = new Size(37, 20);
-            label176.TabIndex = 8;
-            label176.Text = "SIM:";
-            // 
-            // lblStatusTime
-            // 
-            lblStatusTime.AutoSize = true;
-            lblStatusTime.Location = new Point(154, 214);
-            lblStatusTime.Name = "lblStatusTime";
-            lblStatusTime.Size = new Size(66, 20);
-            lblStatusTime.TabIndex = 7;
-            lblStatusTime.Text = "label116";
-            // 
-            // lblStatusGprs
-            // 
-            lblStatusGprs.AutoSize = true;
-            lblStatusGprs.Location = new Point(154, 338);
-            lblStatusGprs.Name = "lblStatusGprs";
-            lblStatusGprs.Size = new Size(66, 20);
-            lblStatusGprs.TabIndex = 5;
-            lblStatusGprs.Text = "label114";
-            // 
-            // lblStatusDate
-            // 
-            lblStatusDate.AutoSize = true;
-            lblStatusDate.Location = new Point(155, 152);
-            lblStatusDate.Name = "lblStatusDate";
-            lblStatusDate.Size = new Size(66, 20);
-            lblStatusDate.TabIndex = 4;
-            lblStatusDate.Text = "label113";
-            // 
-            // lblStatusIMEI
-            // 
-            lblStatusIMEI.AutoSize = true;
-            lblStatusIMEI.Location = new Point(154, 404);
-            lblStatusIMEI.Name = "lblStatusIMEI";
-            lblStatusIMEI.Size = new Size(66, 20);
-            lblStatusIMEI.TabIndex = 3;
-            lblStatusIMEI.Text = "label112";
-            // 
-            // lblProtocol
-            // 
-            lblProtocol.AutoSize = true;
-            lblProtocol.Location = new Point(156, 457);
-            lblProtocol.Name = "lblProtocol";
-            lblProtocol.Size = new Size(66, 20);
-            lblProtocol.TabIndex = 2;
-            lblProtocol.Text = "label111";
-            // 
-            // lblStatusSim
-            // 
-            lblStatusSim.AutoSize = true;
-            lblStatusSim.Location = new Point(154, 276);
-            lblStatusSim.Name = "lblStatusSim";
-            lblStatusSim.Size = new Size(66, 20);
-            lblStatusSim.TabIndex = 1;
-            lblStatusSim.Text = "label110";
-            // 
-            // label177
-            // 
-            label177.AutoSize = true;
-            label177.Location = new Point(16, 214);
-            label177.Name = "label177";
-            label177.Size = new Size(45, 20);
-            label177.TabIndex = 0;
-            label177.Text = "TIME:";
-            // 
-            // groupBox25
-            // 
-            groupBox25.Controls.Add(lblDataFlash);
-            groupBox25.Controls.Add(lblFirmwareVer);
-            groupBox25.Controls.Add(lblClientID);
-            groupBox25.Controls.Add(lblHardwareVer);
-            groupBox25.Controls.Add(lblStatusDeviceID);
-            groupBox25.Controls.Add(lblStatusDeviceModel);
-            groupBox25.Controls.Add(label182);
-            groupBox25.Controls.Add(label183);
-            groupBox25.Controls.Add(label184);
-            groupBox25.Controls.Add(label185);
-            groupBox25.Controls.Add(label186);
-            groupBox25.Controls.Add(label187);
-            groupBox25.Location = new Point(8, 52);
-            groupBox25.Name = "groupBox25";
-            groupBox25.Size = new Size(299, 660);
-            groupBox25.TabIndex = 3;
-            groupBox25.TabStop = false;
-            groupBox25.Text = "Device Info.";
-            // 
-            // lblDataFlash
-            // 
-            lblDataFlash.AutoSize = true;
-            lblDataFlash.Location = new Point(164, 266);
-            lblDataFlash.Name = "lblDataFlash";
-            lblDataFlash.Size = new Size(78, 20);
-            lblDataFlash.TabIndex = 16;
-            lblDataFlash.Text = "Data Flash";
-            // 
-            // lblFirmwareVer
-            // 
-            lblFirmwareVer.AutoSize = true;
-            lblFirmwareVer.Location = new Point(164, 175);
-            lblFirmwareVer.Name = "lblFirmwareVer";
-            lblFirmwareVer.Size = new Size(95, 20);
-            lblFirmwareVer.TabIndex = 14;
-            lblFirmwareVer.Text = "Firmware Ver";
-            // 
-            // lblClientID
-            // 
-            lblClientID.AutoSize = true;
-            lblClientID.Location = new Point(164, 221);
-            lblClientID.Name = "lblClientID";
-            lblClientID.Size = new Size(66, 20);
-            lblClientID.TabIndex = 13;
-            lblClientID.Text = "Client ID";
-            // 
-            // lblHardwareVer
-            // 
-            lblHardwareVer.AutoSize = true;
-            lblHardwareVer.Location = new Point(164, 131);
-            lblHardwareVer.Name = "lblHardwareVer";
-            lblHardwareVer.Size = new Size(99, 20);
-            lblHardwareVer.TabIndex = 12;
-            lblHardwareVer.Text = "Hardware Ver";
-            // 
-            // lblStatusDeviceID
-            // 
-            lblStatusDeviceID.AutoSize = true;
-            lblStatusDeviceID.Location = new Point(164, 85);
-            lblStatusDeviceID.Name = "lblStatusDeviceID";
-            lblStatusDeviceID.Size = new Size(56, 20);
-            lblStatusDeviceID.TabIndex = 11;
-            lblStatusDeviceID.Text = "App ID";
-            // 
-            // lblStatusDeviceModel
-            // 
-            lblStatusDeviceModel.AutoSize = true;
-            lblStatusDeviceModel.Location = new Point(164, 41);
-            lblStatusDeviceModel.Name = "lblStatusDeviceModel";
-            lblStatusDeviceModel.Size = new Size(101, 20);
-            lblStatusDeviceModel.TabIndex = 10;
-            lblStatusDeviceModel.Text = "Device Model";
-            // 
-            // label182
-            // 
-            label182.AutoSize = true;
-            label182.Location = new Point(19, 266);
-            label182.Name = "label182";
-            label182.Size = new Size(81, 20);
-            label182.TabIndex = 5;
-            label182.Text = "Data Flash:";
-            // 
-            // label183
-            // 
-            label183.AutoSize = true;
-            label183.Location = new Point(19, 175);
-            label183.Name = "label183";
-            label183.Size = new Size(98, 20);
-            label183.TabIndex = 4;
-            label183.Text = "Firmware Ver:";
-            // 
-            // label184
-            // 
-            label184.AutoSize = true;
-            label184.Location = new Point(19, 221);
-            label184.Name = "label184";
-            label184.Size = new Size(69, 20);
-            label184.TabIndex = 3;
-            label184.Text = "Client ID:";
-            // 
-            // label185
-            // 
-            label185.AutoSize = true;
-            label185.Location = new Point(19, 131);
-            label185.Name = "label185";
-            label185.Size = new Size(102, 20);
-            label185.TabIndex = 2;
-            label185.Text = "Hardware Ver:";
-            // 
-            // label186
-            // 
-            label186.AutoSize = true;
-            label186.Location = new Point(19, 85);
-            label186.Name = "label186";
-            label186.Size = new Size(76, 20);
-            label186.TabIndex = 1;
-            label186.Text = "Device ID:";
-            // 
-            // label187
-            // 
-            label187.AutoSize = true;
-            label187.Location = new Point(19, 41);
-            label187.Name = "label187";
-            label187.Size = new Size(104, 20);
-            label187.TabIndex = 0;
-            label187.Text = "Device Model:";
-            // 
-            // label164
-            // 
-            label164.AutoSize = true;
-            label164.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label164.Location = new Point(498, 4);
-            label164.Name = "label164";
-            label164.Size = new Size(88, 35);
-            label164.TabIndex = 1;
-            label164.Text = "Status";
             // 
             // pnlModbusMaster
             // 
@@ -8349,335 +8680,6 @@
             pbProcessing.Style = ProgressBarStyle.Continuous;
             pbProcessing.TabIndex = 37;
             // 
-            // label171
-            // 
-            label171.AutoSize = true;
-            label171.Location = new Point(19, 328);
-            label171.Name = "label171";
-            label171.Size = new Size(93, 20);
-            label171.TabIndex = 28;
-            label171.Text = "Datalog Sec:";
-            // 
-            // lblStatusDatalogSec
-            // 
-            lblStatusDatalogSec.AutoSize = true;
-            lblStatusDatalogSec.Location = new Point(141, 328);
-            lblStatusDatalogSec.Name = "lblStatusDatalogSec";
-            lblStatusDatalogSec.Size = new Size(66, 20);
-            lblStatusDatalogSec.TabIndex = 27;
-            lblStatusDatalogSec.Text = "label116";
-            // 
-            // lblTot2
-            // 
-            lblTot2.AutoSize = true;
-            lblTot2.Location = new Point(182, 228);
-            lblTot2.Name = "lblTot2";
-            lblTot2.Size = new Size(36, 20);
-            lblTot2.TabIndex = 29;
-            lblTot2.Text = "22.2";
-            // 
-            // lblTot4
-            // 
-            lblTot4.AutoSize = true;
-            lblTot4.Location = new Point(265, 228);
-            lblTot4.Name = "lblTot4";
-            lblTot4.Size = new Size(36, 20);
-            lblTot4.TabIndex = 31;
-            lblTot4.Text = "12.2";
-            // 
-            // lblTot3
-            // 
-            lblTot3.AutoSize = true;
-            lblTot3.Location = new Point(224, 228);
-            lblTot3.Name = "lblTot3";
-            lblTot3.Size = new Size(36, 20);
-            lblTot3.TabIndex = 30;
-            lblTot3.Text = "12.2";
-            // 
-            // lblTot8
-            // 
-            lblTot8.AutoSize = true;
-            lblTot8.Location = new Point(430, 228);
-            lblTot8.Name = "lblTot8";
-            lblTot8.Size = new Size(36, 20);
-            lblTot8.TabIndex = 35;
-            lblTot8.Text = "12.2";
-            // 
-            // lblTot7
-            // 
-            lblTot7.AutoSize = true;
-            lblTot7.Location = new Point(389, 228);
-            lblTot7.Name = "lblTot7";
-            lblTot7.Size = new Size(36, 20);
-            lblTot7.TabIndex = 34;
-            lblTot7.Text = "12.2";
-            // 
-            // lblTot6
-            // 
-            lblTot6.AutoSize = true;
-            lblTot6.Location = new Point(347, 228);
-            lblTot6.Name = "lblTot6";
-            lblTot6.Size = new Size(36, 20);
-            lblTot6.TabIndex = 33;
-            lblTot6.Text = "12.2";
-            // 
-            // lblTot5
-            // 
-            lblTot5.AutoSize = true;
-            lblTot5.Location = new Point(306, 228);
-            lblTot5.Name = "lblTot5";
-            lblTot5.Size = new Size(36, 20);
-            lblTot5.TabIndex = 32;
-            lblTot5.Text = "12.2";
-            // 
-            // lblAna8
-            // 
-            lblAna8.AutoSize = true;
-            lblAna8.Location = new Point(431, 178);
-            lblAna8.Name = "lblAna8";
-            lblAna8.Size = new Size(36, 20);
-            lblAna8.TabIndex = 43;
-            lblAna8.Text = "12.2";
-            // 
-            // lblAna7
-            // 
-            lblAna7.AutoSize = true;
-            lblAna7.Location = new Point(390, 178);
-            lblAna7.Name = "lblAna7";
-            lblAna7.Size = new Size(36, 20);
-            lblAna7.TabIndex = 42;
-            lblAna7.Text = "12.2";
-            // 
-            // lblAna6
-            // 
-            lblAna6.AutoSize = true;
-            lblAna6.Location = new Point(348, 178);
-            lblAna6.Name = "lblAna6";
-            lblAna6.Size = new Size(36, 20);
-            lblAna6.TabIndex = 41;
-            lblAna6.Text = "12.2";
-            // 
-            // lblAna5
-            // 
-            lblAna5.AutoSize = true;
-            lblAna5.Location = new Point(307, 178);
-            lblAna5.Name = "lblAna5";
-            lblAna5.Size = new Size(36, 20);
-            lblAna5.TabIndex = 40;
-            lblAna5.Text = "12.2";
-            // 
-            // lblAna4
-            // 
-            lblAna4.AutoSize = true;
-            lblAna4.Location = new Point(266, 178);
-            lblAna4.Name = "lblAna4";
-            lblAna4.Size = new Size(36, 20);
-            lblAna4.TabIndex = 39;
-            lblAna4.Text = "12.2";
-            // 
-            // lblAna3
-            // 
-            lblAna3.AutoSize = true;
-            lblAna3.Location = new Point(225, 178);
-            lblAna3.Name = "lblAna3";
-            lblAna3.Size = new Size(36, 20);
-            lblAna3.TabIndex = 38;
-            lblAna3.Text = "12.2";
-            // 
-            // lblAna2
-            // 
-            lblAna2.AutoSize = true;
-            lblAna2.Location = new Point(183, 178);
-            lblAna2.Name = "lblAna2";
-            lblAna2.Size = new Size(36, 20);
-            lblAna2.TabIndex = 37;
-            lblAna2.Text = "22.2";
-            // 
-            // lblAna1
-            // 
-            lblAna1.AutoSize = true;
-            lblAna1.Location = new Point(142, 178);
-            lblAna1.Name = "lblAna1";
-            lblAna1.Size = new Size(36, 20);
-            lblAna1.TabIndex = 36;
-            lblAna1.Text = "22.2";
-            // 
-            // pbDigiOut1
-            // 
-            pbDigiOut1.BackgroundImage = (Image)resources.GetObject("pbDigiOut1.BackgroundImage");
-            pbDigiOut1.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut1.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut1.Location = new Point(145, 127);
-            pbDigiOut1.Name = "pbDigiOut1";
-            pbDigiOut1.Size = new Size(24, 25);
-            pbDigiOut1.TabIndex = 44;
-            pbDigiOut1.TabStop = false;
-            // 
-            // pbDigiOut2
-            // 
-            pbDigiOut2.BackgroundImage = (Image)resources.GetObject("pbDigiOut2.BackgroundImage");
-            pbDigiOut2.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut2.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut2.Location = new Point(173, 127);
-            pbDigiOut2.Name = "pbDigiOut2";
-            pbDigiOut2.Size = new Size(24, 25);
-            pbDigiOut2.TabIndex = 45;
-            pbDigiOut2.TabStop = false;
-            // 
-            // pbDigiOut4
-            // 
-            pbDigiOut4.BackgroundImage = (Image)resources.GetObject("pbDigiOut4.BackgroundImage");
-            pbDigiOut4.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut4.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut4.Location = new Point(228, 127);
-            pbDigiOut4.Name = "pbDigiOut4";
-            pbDigiOut4.Size = new Size(24, 25);
-            pbDigiOut4.TabIndex = 47;
-            pbDigiOut4.TabStop = false;
-            // 
-            // pbDigiOut3
-            // 
-            pbDigiOut3.BackgroundImage = (Image)resources.GetObject("pbDigiOut3.BackgroundImage");
-            pbDigiOut3.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut3.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut3.Location = new Point(200, 127);
-            pbDigiOut3.Name = "pbDigiOut3";
-            pbDigiOut3.Size = new Size(24, 25);
-            pbDigiOut3.TabIndex = 46;
-            pbDigiOut3.TabStop = false;
-            // 
-            // pbDigiOut8
-            // 
-            pbDigiOut8.BackgroundImage = (Image)resources.GetObject("pbDigiOut8.BackgroundImage");
-            pbDigiOut8.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut8.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut8.Location = new Point(337, 127);
-            pbDigiOut8.Name = "pbDigiOut8";
-            pbDigiOut8.Size = new Size(24, 25);
-            pbDigiOut8.TabIndex = 51;
-            pbDigiOut8.TabStop = false;
-            // 
-            // pbDigiOut7
-            // 
-            pbDigiOut7.BackgroundImage = (Image)resources.GetObject("pbDigiOut7.BackgroundImage");
-            pbDigiOut7.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut7.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut7.Location = new Point(309, 127);
-            pbDigiOut7.Name = "pbDigiOut7";
-            pbDigiOut7.Size = new Size(24, 25);
-            pbDigiOut7.TabIndex = 50;
-            pbDigiOut7.TabStop = false;
-            // 
-            // pbDigiOut6
-            // 
-            pbDigiOut6.BackgroundImage = (Image)resources.GetObject("pbDigiOut6.BackgroundImage");
-            pbDigiOut6.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut6.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut6.Location = new Point(282, 127);
-            pbDigiOut6.Name = "pbDigiOut6";
-            pbDigiOut6.Size = new Size(24, 25);
-            pbDigiOut6.TabIndex = 49;
-            pbDigiOut6.TabStop = false;
-            // 
-            // pbDigiOut5
-            // 
-            pbDigiOut5.BackgroundImage = (Image)resources.GetObject("pbDigiOut5.BackgroundImage");
-            pbDigiOut5.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiOut5.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiOut5.Location = new Point(254, 127);
-            pbDigiOut5.Name = "pbDigiOut5";
-            pbDigiOut5.Size = new Size(24, 25);
-            pbDigiOut5.TabIndex = 48;
-            pbDigiOut5.TabStop = false;
-            // 
-            // pbDigiIn8
-            // 
-            pbDigiIn8.BackgroundImage = (Image)resources.GetObject("pbDigiIn8.BackgroundImage");
-            pbDigiIn8.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn8.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn8.Location = new Point(337, 74);
-            pbDigiIn8.Name = "pbDigiIn8";
-            pbDigiIn8.Size = new Size(24, 25);
-            pbDigiIn8.TabIndex = 59;
-            pbDigiIn8.TabStop = false;
-            // 
-            // pbDigiIn7
-            // 
-            pbDigiIn7.BackgroundImage = (Image)resources.GetObject("pbDigiIn7.BackgroundImage");
-            pbDigiIn7.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn7.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn7.Location = new Point(309, 74);
-            pbDigiIn7.Name = "pbDigiIn7";
-            pbDigiIn7.Size = new Size(24, 25);
-            pbDigiIn7.TabIndex = 58;
-            pbDigiIn7.TabStop = false;
-            // 
-            // pbDigiIn6
-            // 
-            pbDigiIn6.BackgroundImage = (Image)resources.GetObject("pbDigiIn6.BackgroundImage");
-            pbDigiIn6.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn6.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn6.Location = new Point(282, 74);
-            pbDigiIn6.Name = "pbDigiIn6";
-            pbDigiIn6.Size = new Size(24, 25);
-            pbDigiIn6.TabIndex = 57;
-            pbDigiIn6.TabStop = false;
-            // 
-            // pbDigiIn5
-            // 
-            pbDigiIn5.BackgroundImage = (Image)resources.GetObject("pbDigiIn5.BackgroundImage");
-            pbDigiIn5.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn5.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn5.Location = new Point(254, 74);
-            pbDigiIn5.Name = "pbDigiIn5";
-            pbDigiIn5.Size = new Size(24, 25);
-            pbDigiIn5.TabIndex = 56;
-            pbDigiIn5.TabStop = false;
-            // 
-            // pbDigiIn4
-            // 
-            pbDigiIn4.BackgroundImage = (Image)resources.GetObject("pbDigiIn4.BackgroundImage");
-            pbDigiIn4.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn4.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn4.Location = new Point(228, 74);
-            pbDigiIn4.Name = "pbDigiIn4";
-            pbDigiIn4.Size = new Size(24, 25);
-            pbDigiIn4.TabIndex = 55;
-            pbDigiIn4.TabStop = false;
-            // 
-            // pbDigiIn3
-            // 
-            pbDigiIn3.BackgroundImage = (Image)resources.GetObject("pbDigiIn3.BackgroundImage");
-            pbDigiIn3.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn3.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn3.Location = new Point(200, 74);
-            pbDigiIn3.Name = "pbDigiIn3";
-            pbDigiIn3.Size = new Size(24, 25);
-            pbDigiIn3.TabIndex = 54;
-            pbDigiIn3.TabStop = false;
-            // 
-            // pbDigiIn2
-            // 
-            pbDigiIn2.BackgroundImage = (Image)resources.GetObject("pbDigiIn2.BackgroundImage");
-            pbDigiIn2.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn2.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn2.Location = new Point(173, 74);
-            pbDigiIn2.Name = "pbDigiIn2";
-            pbDigiIn2.Size = new Size(24, 25);
-            pbDigiIn2.TabIndex = 53;
-            pbDigiIn2.TabStop = false;
-            // 
-            // pbDigiIn1
-            // 
-            pbDigiIn1.BackgroundImage = (Image)resources.GetObject("pbDigiIn1.BackgroundImage");
-            pbDigiIn1.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDigiIn1.BorderStyle = BorderStyle.Fixed3D;
-            pbDigiIn1.Location = new Point(145, 74);
-            pbDigiIn1.Name = "pbDigiIn1";
-            pbDigiIn1.Size = new Size(24, 25);
-            pbDigiIn1.TabIndex = 52;
-            pbDigiIn1.TabStop = false;
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -8693,6 +8695,30 @@
             Text = "Dashboard";
             Load += Dashboard_Load;
             pnlDashboard.ResumeLayout(false);
+            pnlStatus.ResumeLayout(false);
+            pnlStatus.PerformLayout();
+            groupBox27.ResumeLayout(false);
+            groupBox27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiIn1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDigiOut1).EndInit();
+            groupBox26.ResumeLayout(false);
+            groupBox26.PerformLayout();
+            groupBox25.ResumeLayout(false);
+            groupBox25.PerformLayout();
             pnlGPRSSettings.ResumeLayout(false);
             pnlGPRSSettings.PerformLayout();
             gbGprsIPSett2.ResumeLayout(false);
@@ -8707,14 +8733,6 @@
             gbGprsModemSett.PerformLayout();
             gbGprsIPSett1.ResumeLayout(false);
             gbGprsIPSett1.PerformLayout();
-            pnlStatus.ResumeLayout(false);
-            pnlStatus.PerformLayout();
-            groupBox27.ResumeLayout(false);
-            groupBox27.PerformLayout();
-            groupBox26.ResumeLayout(false);
-            groupBox26.PerformLayout();
-            groupBox25.ResumeLayout(false);
-            groupBox25.PerformLayout();
             pnlModbusMaster.ResumeLayout(false);
             pnlModbusMaster.PerformLayout();
             groupBox19.ResumeLayout(false);
@@ -8816,22 +8834,6 @@
             pnlMenu.ResumeLayout(false);
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiOut5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDigiIn1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -9245,7 +9247,7 @@
         private Label lblStatusGprs;
         private Label lblStatusDate;
         private Label lblStatusIMEI;
-        private Label lblProtocol;
+        private Label lblStatusProtocol;
         private Label lblStatusSim;
         private Label label177;
         private GroupBox groupBox25;
