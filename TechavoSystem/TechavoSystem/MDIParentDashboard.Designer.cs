@@ -31,18 +31,18 @@
             components = new System.ComponentModel.Container();
             Button btnMasterReadAll;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode1 = new TreeNode("General Settings");
-            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode7 = new TreeNode("User", 0, 0);
-            TreeNode treeNode8 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode9 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode10 = new TreeNode("GPRS Settings");
-            TreeNode treeNode11 = new TreeNode("Status");
-            TreeNode treeNode12 = new TreeNode("Console");
+            TreeNode treeNode13 = new TreeNode("General Settings");
+            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
+            TreeNode treeNode18 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode19 = new TreeNode("User", 0, 0);
+            TreeNode treeNode20 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode21 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode22 = new TreeNode("GPRS Settings");
+            TreeNode treeNode23 = new TreeNode("Status");
+            TreeNode treeNode24 = new TreeNode("Console");
             lnkLogin = new LinkLabel();
             pnlDashboard = new Panel();
             pnlConsole = new Panel();
@@ -793,6 +793,7 @@
             cmbComPorts = new ComboBox();
             label14 = new Label();
             pnlConnect = new Panel();
+            btnPortRefresh = new Button();
             label133 = new Label();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
@@ -8631,45 +8632,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode1.Name = "GeneralSettings";
-            treeNode1.Text = "General Settings";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "DOSettings";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "DO Settings";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "DISettings";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "DI Settings";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "AISettings";
-            treeNode4.SelectedImageIndex = 1;
-            treeNode4.Text = "AI Settings";
-            treeNode5.Name = "IOSettings";
-            treeNode5.Text = "IO Settings";
-            treeNode6.ImageIndex = 0;
-            treeNode6.Name = "PulseSettings";
-            treeNode6.SelectedImageIndex = 0;
-            treeNode6.Text = "Pulse Settings";
-            treeNode7.ImageIndex = 0;
-            treeNode7.Name = "User";
-            treeNode7.SelectedImageIndex = 0;
-            treeNode7.Text = "User";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "ModbusMaster";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "Modbus Master";
-            treeNode9.ImageIndex = 0;
-            treeNode9.Name = "ModbusSlave";
-            treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Modbus Slave";
-            treeNode10.Name = "GPRSSettings";
-            treeNode10.Text = "GPRS Settings";
-            treeNode11.Name = "status";
-            treeNode11.Text = "Status";
-            treeNode12.Name = "console";
-            treeNode12.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
+            treeNode13.Name = "GeneralSettings";
+            treeNode13.Text = "General Settings";
+            treeNode14.ImageIndex = 1;
+            treeNode14.Name = "DOSettings";
+            treeNode14.SelectedImageIndex = 1;
+            treeNode14.Text = "DO Settings";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "DISettings";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "DI Settings";
+            treeNode16.ImageIndex = 1;
+            treeNode16.Name = "AISettings";
+            treeNode16.SelectedImageIndex = 1;
+            treeNode16.Text = "AI Settings";
+            treeNode17.Name = "IOSettings";
+            treeNode17.Text = "IO Settings";
+            treeNode18.ImageIndex = 0;
+            treeNode18.Name = "PulseSettings";
+            treeNode18.SelectedImageIndex = 0;
+            treeNode18.Text = "Pulse Settings";
+            treeNode19.ImageIndex = 0;
+            treeNode19.Name = "User";
+            treeNode19.SelectedImageIndex = 0;
+            treeNode19.Text = "User";
+            treeNode20.ImageIndex = 0;
+            treeNode20.Name = "ModbusMaster";
+            treeNode20.SelectedImageIndex = 0;
+            treeNode20.Text = "Modbus Master";
+            treeNode21.ImageIndex = 0;
+            treeNode21.Name = "ModbusSlave";
+            treeNode21.SelectedImageIndex = 0;
+            treeNode21.Text = "Modbus Slave";
+            treeNode22.Name = "GPRSSettings";
+            treeNode22.Text = "GPRS Settings";
+            treeNode23.Name = "status";
+            treeNode23.Text = "Status";
+            treeNode24.Name = "console";
+            treeNode24.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -8694,7 +8695,7 @@
             btnConnect.BackgroundImageLayout = ImageLayout.Stretch;
             btnConnect.FlatStyle = FlatStyle.Flat;
             btnConnect.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnConnect.Location = new Point(260, 4);
+            btnConnect.Location = new Point(272, 4);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(98, 56);
             btnConnect.TabIndex = 33;
@@ -8721,6 +8722,7 @@
             // 
             // pnlConnect
             // 
+            pnlConnect.Controls.Add(btnPortRefresh);
             pnlConnect.Controls.Add(label133);
             pnlConnect.Controls.Add(lblProgressPercent);
             pnlConnect.Controls.Add(pbProcessing);
@@ -8729,9 +8731,20 @@
             pnlConnect.Controls.Add(btnConnect);
             pnlConnect.Location = new Point(552, 12);
             pnlConnect.Name = "pnlConnect";
-            pnlConnect.Size = new Size(376, 63);
+            pnlConnect.Size = new Size(380, 63);
             pnlConnect.TabIndex = 35;
             pnlConnect.Visible = false;
+            // 
+            // btnPortRefresh
+            // 
+            btnPortRefresh.BackgroundImage = (Image)resources.GetObject("btnPortRefresh.BackgroundImage");
+            btnPortRefresh.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPortRefresh.Location = new Point(233, 6);
+            btnPortRefresh.Name = "btnPortRefresh";
+            btnPortRefresh.Size = new Size(28, 28);
+            btnPortRefresh.TabIndex = 40;
+            btnPortRefresh.UseVisualStyleBackColor = true;
+            btnPortRefresh.Click += btnPortRefresh_Click;
             // 
             // label133
             // 
@@ -8745,7 +8758,7 @@
             // lblProgressPercent
             // 
             lblProgressPercent.AutoSize = true;
-            lblProgressPercent.Location = new Point(198, 39);
+            lblProgressPercent.Location = new Point(238, 39);
             lblProgressPercent.Name = "lblProgressPercent";
             lblProgressPercent.Size = new Size(29, 20);
             lblProgressPercent.TabIndex = 38;
@@ -8756,7 +8769,7 @@
             pbProcessing.BackColor = SystemColors.Info;
             pbProcessing.Location = new Point(77, 41);
             pbProcessing.Name = "pbProcessing";
-            pbProcessing.Size = new Size(120, 19);
+            pbProcessing.Size = new Size(151, 22);
             pbProcessing.Style = ProgressBarStyle.Continuous;
             pbProcessing.TabIndex = 37;
             // 
@@ -9674,5 +9687,6 @@
         private Label lblStatusPulseCounter4;
         private Label lblStatusPulseCounter3;
         private Label lblStatusPulseCounter2;
+        private Button btnPortRefresh;
     }
 }
