@@ -13,10 +13,16 @@ namespace TechavoSystem
         private static int IsConnected = 0;
         private SerialPort port;
         private static bool IsReadyToSend = false;
+        private int errorCount = 0;
+        private int errorLimit = 10;
 
         public Dashboard()
         {
             InitializeComponent();
+        }
+        private void errorReset_Tick(object sender, EventArgs e)
+        {
+            errorCount = 0;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -209,7 +215,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit)
+                    CloseConnection();
             }
         }
 
@@ -267,7 +274,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                CloseConnection();
             }
         }
         private void CloseConnection()
@@ -289,7 +296,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit)
+                    CloseConnection();
             }
         }
         private void DoUpDate(object s, EventArgs e)
@@ -371,7 +379,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void CheckTime(TextBox textBox)
@@ -532,7 +541,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnReadMemory_Click(object sender, EventArgs e)
@@ -551,7 +561,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnWriteMemory_Click(object sender, EventArgs e)
@@ -572,7 +583,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -609,7 +621,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnDIReadMemory_Click(object sender, EventArgs e)
@@ -628,7 +641,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
 
@@ -650,7 +664,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedDI()
@@ -709,7 +724,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnDOWriteMemory_Click(object sender, EventArgs e)
@@ -730,7 +746,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedDO()
@@ -767,7 +784,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -788,7 +806,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnPulseWriteMemory_Click(object sender, EventArgs e)
@@ -809,7 +828,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedPulse()
@@ -843,7 +863,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -864,7 +885,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnUserWriteMemory_Click(object sender, EventArgs e)
@@ -885,7 +907,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedUser()
@@ -937,7 +960,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -958,7 +982,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnGeneralWriteMemory_Click(object sender, EventArgs e)
@@ -979,7 +1004,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedGeneral()
@@ -1022,7 +1048,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -1076,7 +1103,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
 
@@ -1098,7 +1126,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedGPRS()
@@ -1216,7 +1245,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -1237,7 +1267,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnModbusSlaveWriteMemory_Click(object sender, EventArgs e)
@@ -1258,7 +1289,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedSlave()
@@ -1295,7 +1327,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -1318,7 +1351,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
 
         }
@@ -1339,7 +1373,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedMasterSlaveConnection()
@@ -1376,7 +1411,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void assignEvents()
@@ -1443,7 +1479,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnModbusRegisterConnectionReadMemory_Click(object sender, EventArgs e)
@@ -1462,7 +1499,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private string CreateCommaSeparatedRegisterConnection(int index)
@@ -1529,7 +1567,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnMasterReadAll_Click(object sender, EventArgs e)
@@ -1548,7 +1587,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void btnMasterWriteAll_Click(object sender, EventArgs e)
@@ -1577,7 +1617,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void setFieldsModbusRegisterConnectionAll(object details)
@@ -1596,7 +1637,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion
@@ -1617,7 +1659,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
 
@@ -1637,7 +1680,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void setFieldsGsmStatus(object details)
@@ -1674,7 +1718,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void setFieldsIOStatus(object details)
@@ -1717,7 +1762,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         private void setDigitalInput(string value)
@@ -1790,7 +1836,8 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                //CloseConnection();
+                if (errorCount > errorLimit) 
+                    CloseConnection();
             }
         }
         #endregion

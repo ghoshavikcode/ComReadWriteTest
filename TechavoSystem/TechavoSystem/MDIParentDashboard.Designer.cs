@@ -797,6 +797,7 @@
             label133 = new Label();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
+            errorReset = new System.Windows.Forms.Timer(components);
             btnMasterReadAll = new Button();
             pnlDashboard.SuspendLayout();
             pnlConsole.SuspendLayout();
@@ -8773,6 +8774,12 @@
             pbProcessing.Style = ProgressBarStyle.Continuous;
             pbProcessing.TabIndex = 37;
             // 
+            // errorReset
+            // 
+            errorReset.Enabled = true;
+            errorReset.Interval = 300000;
+            errorReset.Tick += errorReset_Tick;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -9688,5 +9695,6 @@
         private Label lblStatusPulseCounter3;
         private Label lblStatusPulseCounter2;
         private Button btnPortRefresh;
+        private System.Windows.Forms.Timer errorReset;
     }
 }
