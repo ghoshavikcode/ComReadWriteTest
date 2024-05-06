@@ -307,55 +307,55 @@ namespace TechavoSystem
             {
                 txtSystemLog.Text += "\n" + incomingDetails;
             }
-            if (incomingDetails.ToUpper().Contains("DESKAI"))
+            if (incomingDetails.ToUpper().Contains("*DESKAI"))
             {
                 setFieldsAISett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("DESKDI"))
+            else if (incomingDetails.ToUpper().Contains("*DESKDI"))
             {
                 setFieldsDISett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("DESKDO"))
+            else if (incomingDetails.ToUpper().Contains("*DESKDO"))
             {
                 setFieldsDOSett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("DESKPULSE"))
+            else if (incomingDetails.ToUpper().Contains("*DESKPULSE"))
             {
                 setFieldsPulseSett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("USER"))
+            else if (incomingDetails.ToUpper().Contains("*USER"))
             {
                 setFieldsUserSett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("DESKGEN"))
+            else if (incomingDetails.ToUpper().Contains("*DESKGEN"))
             {
                 setFieldsGeneralSett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("STRANS"))
+            else if (incomingDetails.ToUpper().Contains("*STRANS"))
             {
                 setFieldsModbusSlave(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("SLVSET"))
+            else if (incomingDetails.ToUpper().Contains("*SLVSET"))
             {
                 setFieldsModbusMasterSlaveConnection(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("REGSET") && incomingDetails.ToUpper().Contains("|"))
+            else if (incomingDetails.ToUpper().Contains("*REGSET") && incomingDetails.ToUpper().Contains("|"))
             {
                 setFieldsModbusRegisterConnectionAll(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("REGSET"))
+            else if (incomingDetails.ToUpper().Contains("*REGSET"))
             {
                 setFieldsModbusRegisterConnection(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("CREDIP") || incomingDetails.ToUpper().Contains("CREDMQTT"))
+            else if (incomingDetails.ToUpper().Contains("*CREDIP") || incomingDetails.ToUpper().Contains("*CREDMQTT"))
             {
                 setFieldsGPRS(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("GSMST"))
+            else if (incomingDetails.ToUpper().Contains("*GSMST"))
             {
                 setFieldsGsmStatus(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("INPUTPARA"))
+            else if (incomingDetails.ToUpper().Contains("*INPUTPARA"))
             {
                 setFieldsIOStatus(incomingDetails);
             }
