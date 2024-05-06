@@ -15,7 +15,7 @@ namespace TechavoSystem
         private static bool IsReadyToSend = false;
         private int errorCount = 0;
         private int errorLimit = 10;
-
+        private string dataRead = string.Empty;
         public Dashboard()
         {
             InitializeComponent();
@@ -307,6 +307,9 @@ namespace TechavoSystem
             {
                 txtSystemLog.Text += "\n" + incomingDetails;
             }
+            if (string.IsNullOrEmpty(dataRead) || !incomingDetails.ToUpper().Contains(dataRead.ToUpper()))
+                return;
+            dataRead = string.Empty;
             if (incomingDetails.ToUpper().Contains("*DESKAI"))
             {
                 setFieldsAISett(incomingDetails);
@@ -555,6 +558,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*DESKAI";
                     port.WriteLine("*readdeviceAI#");
                 }
             }
@@ -635,6 +639,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*DESKDI";
                     port.WriteLine("*readdeviceDI#");
                 }
             }
@@ -718,6 +723,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*DESKDO";
                     port.WriteLine("*readdeviceDO#");
                 }
             }
@@ -800,6 +806,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*DESKPULSE";
                     port.WriteLine("*readdevicePulse#");
                 }
             }
@@ -879,6 +886,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*USER";
                     port.WriteLine("*readdeviceUser#");
                 }
             }
@@ -976,6 +984,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*DESKGEN";
                     port.WriteLine("*readdeviceGeneral#");
                 }
             }
@@ -1097,6 +1106,18 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    if(cmbConnectProtocol.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Please select protocol first");
+                    }
+                    if (cmbConnectProtocol.SelectedIndex != 0)
+                    {
+                        dataRead = "*CREDIP";
+                    }
+                    else
+                    {
+                        dataRead = "*CREDMQTT";
+                    }   
                     port.WriteLine("*readdeviceGPRS#");
                 }
             }
@@ -1261,6 +1282,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*STRANS";
                     port.WriteLine("*readdeviceSlave#");
                 }
             }
@@ -1367,6 +1389,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*SLVSET";
                     port.WriteLine("*readdeviceMasterSlaveConnection#");
                 }
             }
@@ -1493,6 +1516,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*REGSET";
                     port.WriteLine("*readdeviceMasterRegisterConnection#");
                 }
             }
@@ -1653,6 +1677,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*GSMST";
                     port.WriteLine("*readdeviceGSMStatus#");
                 }
             }
@@ -1674,6 +1699,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
+                    dataRead = "*INPUTPARA";
                     port.WriteLine("*readdeviceIOStatus#");
                 }
             }
