@@ -305,7 +305,7 @@ namespace TechavoSystem
             string incomingDetails = port.ReadExisting();
             if (logMonitor)
             {
-                txtSystemLog.Text += "\n" + incomingDetails;
+                txtSystemLog.AppendText("\n" + incomingDetails);
             }
             if (string.IsNullOrEmpty(dataRead) || !incomingDetails.ToUpper().Contains(dataRead.ToUpper()))
                 return;
