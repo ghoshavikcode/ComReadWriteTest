@@ -382,7 +382,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -544,7 +544,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -552,6 +552,8 @@ namespace TechavoSystem
         {
             try
             {
+                if (cmbSelectChannel.SelectedIndex == -1)
+                    MessageBox.Show("Please select channel first");
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -559,13 +561,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*DESKAI";
-                    port.WriteLine("*readdeviceAI#");
+                    port.WriteLine("*readdeviceAI," + cmbSelectChannel.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -587,7 +589,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -625,7 +627,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -633,6 +635,8 @@ namespace TechavoSystem
         {
             try
             {
+                if (cmbDISelectChannel.SelectedIndex == -1)
+                    MessageBox.Show("Please select channel first");
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -640,13 +644,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*DESKDI";
-                    port.WriteLine("*readdeviceDI#");
+                    port.WriteLine("*readdeviceDI," + cmbDISelectChannel.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -669,7 +673,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -717,6 +721,8 @@ namespace TechavoSystem
         {
             try
             {
+                if (cmbDOSelectChannel.SelectedIndex == -1)
+                    MessageBox.Show("Please select channel first");
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -724,13 +730,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*DESKDO";
-                    port.WriteLine("*readdeviceDO#");
+                    port.WriteLine("*readdeviceDO," + cmbDOSelectChannel.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -752,7 +758,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -790,7 +796,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -813,7 +819,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -835,7 +841,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -870,7 +876,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -880,6 +886,10 @@ namespace TechavoSystem
         {
             try
             {
+                if (cmbUserIndex.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select User Index first");
+                }
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -887,13 +897,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*USER";
-                    port.WriteLine("*readdeviceUser#");
+                    port.WriteLine("*readdeviceUser," + cmbUserIndex.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -915,7 +925,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -968,7 +978,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -991,7 +1001,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1013,7 +1023,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1057,7 +1067,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1106,7 +1116,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
-                    if(cmbConnectProtocol.SelectedIndex == -1)
+                    if (cmbConnectProtocol.SelectedIndex == -1)
                     {
                         MessageBox.Show("Please select protocol first");
                     }
@@ -1117,14 +1127,14 @@ namespace TechavoSystem
                     else
                     {
                         dataRead = "*CREDMQTT";
-                    }   
-                    port.WriteLine("*readdeviceGPRS#");
+                    }
+                    port.WriteLine("*readdeviceGPRS," + cmbConnectProtocol.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1147,7 +1157,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1266,7 +1276,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1289,7 +1299,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1311,7 +1321,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1349,7 +1359,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1373,7 +1383,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
 
@@ -1383,6 +1393,10 @@ namespace TechavoSystem
         {
             try
             {
+                if (cmbMasterSlaveIndex.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select slave index first");
+                }
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -1390,13 +1404,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*SLVSET";
-                    port.WriteLine("*readdeviceMasterSlaveConnection#");
+                    port.WriteLine("*readdeviceMasterSlaveConnection," + cmbMasterSlaveIndex.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1434,7 +1448,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1502,7 +1516,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1510,6 +1524,7 @@ namespace TechavoSystem
         {
             try
             {
+                int index = Convert.ToInt32(((Button)sender).Name.Substring(16)) - 1;
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -1517,13 +1532,13 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*REGSET";
-                    port.WriteLine("*readdeviceMasterRegisterConnection#");
+                    port.WriteLine("*readdeviceMasterRegisterConnection," + index + "#");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1591,7 +1606,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1611,7 +1626,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1641,7 +1656,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1661,7 +1676,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1684,7 +1699,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1706,7 +1721,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1744,7 +1759,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1788,7 +1803,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
@@ -1862,7 +1877,7 @@ namespace TechavoSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace.ToString(), "Error");
-                if (errorCount > errorLimit) 
+                if (errorCount > errorLimit)
                     CloseConnection();
             }
         }
