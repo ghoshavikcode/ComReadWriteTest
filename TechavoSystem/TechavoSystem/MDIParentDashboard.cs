@@ -227,7 +227,7 @@ namespace TechavoSystem
         private void TotalizerEnableDisable(bool isChecked)
         {
             txtKFactor.Enabled = isChecked;
-            txtTimebase.Enabled = isChecked;
+            cmbTimebase.Enabled = isChecked;
             chkVolatileFlag.Enabled = isChecked;
             txtDisplayDecimalPoint.Enabled = isChecked;
             chkDataReport.Enabled = isChecked;
@@ -302,10 +302,11 @@ namespace TechavoSystem
         }
         private void DoUpDate(object s, EventArgs e)
         {
-            string incomingDetails = port.ReadExisting();
+            string incomingDetails = port.ReadLine();
+            incomingDetails = incomingDetails.Substring(0, incomingDetails.Length - 1);
             if (logMonitor)
             {
-                txtSystemLog.AppendText("\n" + incomingDetails);
+                txtSystemLog.AppendText("\r\n" + incomingDetails);
             }
             if (string.IsNullOrEmpty(dataRead) || !incomingDetails.ToUpper().Contains(dataRead.ToUpper()))
                 return;
@@ -475,7 +476,7 @@ namespace TechavoSystem
             sb.Append(",");
             sb.Append(txtKFactor.Text.Trim());
             sb.Append(",");
-            sb.Append(txtTimebase.Text.Trim());
+            sb.Append(cmbTimebase.SelectedIndex.ToString());
             sb.Append(",");
             sb.Append(txtDisplayDecimalPoint.Text.Trim());
             sb.Append(",");
@@ -521,7 +522,7 @@ namespace TechavoSystem
                 chkTotalizer.Checked = fields[11] == "0" ? false : true;
                 chkVolatileFlag.Checked = fields[12] == "0" ? false : true;
                 txtKFactor.Text = fields[13].ToString();
-                txtTimebase.Text = fields[14];
+                cmbTimebase.SelectedIndex = Convert.ToInt32(fields[14]);
                 txtDisplayDecimalPoint.Text = fields[15];
                 chkDataReport.Checked = fields[16] == "0" ? false : true;
                 cmbReportDataType.SelectedIndex = Convert.ToInt32(fields[17]);
