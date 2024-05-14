@@ -41,10 +41,10 @@ namespace TechavoSystem
             txtGeneralDataLogSec.Leave += NumericCheck;
             txtGeneralSmsLogSec.Leave += NumericCheck;
             txtGeneralSetTime.Leave += TimeFormatCheck;
-            txtMinValue.Leave += NumericCheck;
-            txtMaxValue.Leave += NumericCheck;
-            txtThresoldHigh.Leave += NumericCheck;
-            txtThresoldLow.Leave += NumericCheck;
+            txtMinValue.Leave += DecimalCheck;
+            txtMaxValue.Leave += DecimalCheck;
+            txtThresoldHigh.Leave += DecimalCheck;
+            txtThresoldLow.Leave += DecimalCheck;
             txtAlarmConfirmationSec.Leave += NumericCheck;
             txtAlarmSmsInterval.Leave += NumericCheck;
             txtDisplayDecimalPoint.Leave += DecimalCheck;
@@ -53,7 +53,7 @@ namespace TechavoSystem
             txtDISMSRepeatSec.Leave += NumericCheck;
             txtAdjustPulseCount.Leave += NumericCheck;
             txtPulseKfactor.Leave += NumericCheck;
-            txtKFactor.Leave += NumericCheck;
+            txtKFactor.Leave += DecimalCheck;
             txtPulseDurationRef.Leave += NumericCheck;
             txtUserMobileNo.Leave += NumericCheck;
             txtModbusPollingInterval.Leave += NumericCheck;
@@ -1040,7 +1040,7 @@ namespace TechavoSystem
             sb.Append(",");
             sb.Append(txtGeneralSmsLogSec.Text.Trim());
             sb.Append(",");
-            sb.Append(dtGeneralSetDate.Text);
+            sb.Append(Convert.ToDateTime(dtGeneralSetDate.Text).ToString("dd/MM/yyyy"));
             sb.Append(",");
             sb.Append(txtGeneralSetTime.Text.Trim());
             sb.Append(",");
@@ -1753,9 +1753,9 @@ namespace TechavoSystem
                 lblStatusProvider.Text = fields[1];
                 lblStatusDate.Text = fields[2];
                 lblStatusTime.Text = fields[3];
-                lblStatusSim.Text = fields[4];
-                lblStatusGprs.Text = fields[5];
-                lblStatusProtocol.Text = fields[6];
+                lblStatusSim.Text = fields[4] == "0" ? "Error" : "Ok";
+                lblStatusGprs.Text = fields[5] == "0" ? "Error" : "Ok";
+                lblStatusProtocol.Text = fields[6] == "0" ? "Error" : "Ok";
             }
             catch (Exception ex)
             {
