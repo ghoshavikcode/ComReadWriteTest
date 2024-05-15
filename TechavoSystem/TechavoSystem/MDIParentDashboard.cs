@@ -27,7 +27,7 @@ namespace TechavoSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            cmbConnectProtocol.SelectedIndex = 0;
+            cmbConnectProtocol.SelectedIndex = 2;
             EnableDisableGPRSControls(true);
             #region Events
             assignEvents();
@@ -319,7 +319,7 @@ namespace TechavoSystem
             {
                 setFieldsDISett(incomingDetails);
             }
-            else if (incomingDetails.ToUpper().Contains("*DESKDO"))
+            else if (incomingDetails.ToUpper().Contains("*DODESK"))
             {
                 setFieldsDOSett(incomingDetails);
             }
@@ -730,7 +730,7 @@ namespace TechavoSystem
                 }
                 if (port.IsOpen)
                 {
-                    dataRead = "*DESKDO";
+                    dataRead = "*DODESK";
                     port.WriteLine("*readdeviceDO," + cmbDOSelectChannel.SelectedIndex + "#");
                 }
             }
@@ -766,7 +766,7 @@ namespace TechavoSystem
         private string CreateCommaSeparatedDO()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("*DESKDO, ,");
+            sb.Append("*DODESK, ,");
             sb.Append(cmbDOSelectChannel.SelectedIndex.ToString());
             sb.Append(",");
             sb.Append(cmbDOType.SelectedIndex.ToString());
@@ -1076,7 +1076,7 @@ namespace TechavoSystem
         #region GPRS
         private void cmbConnectProtocol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbConnectProtocol.SelectedIndex == 0)
+            if (cmbConnectProtocol.SelectedIndex == 2)
             {
                 EnableDisableGPRSControls(true);
             }
@@ -1121,7 +1121,7 @@ namespace TechavoSystem
                     {
                         MessageBox.Show("Please select protocol first");
                     }
-                    if (cmbConnectProtocol.SelectedIndex != 0)
+                    if (cmbConnectProtocol.SelectedIndex != 2)
                     {
                         dataRead = "*CREDIP";
                     }
@@ -1165,7 +1165,7 @@ namespace TechavoSystem
         private string CreateCommaSeparatedGPRS()
         {
             StringBuilder sb = new StringBuilder();
-            if (cmbConnectProtocol.SelectedIndex != 0)
+            if (cmbConnectProtocol.SelectedIndex != 2)
             {
                 sb.Append("*CREDIP, ,");
                 sb.Append(cmbConnectProtocol.SelectedIndex.ToString());
@@ -1287,6 +1287,11 @@ namespace TechavoSystem
         {
             try
             {
+                if(cmbModbusPortType.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select port type first.");
+                    return;
+                }
                 if (!port.IsOpen)
                 {
                     port.Open();
@@ -1294,7 +1299,7 @@ namespace TechavoSystem
                 if (port.IsOpen)
                 {
                     dataRead = "*STRANS";
-                    port.WriteLine("*readdeviceSlave#");
+                    port.WriteLine("*readdeviceSlave," + cmbModbusPortType.SelectedIndex + "#");
                 }
             }
             catch (Exception ex)
@@ -1755,7 +1760,15 @@ namespace TechavoSystem
                 lblStatusTime.Text = fields[3];
                 lblStatusSim.Text = fields[4] == "0" ? "Error" : "Ok";
                 lblStatusGprs.Text = fields[5] == "0" ? "Error" : "Ok";
-                lblStatusProtocol.Text = fields[6] == "0" ? "Error" : "Ok";
+                lblStatusIMEI.Text = fields[6];
+                if (fields[7] == "0")
+                    lblStatusProtocol.Text = "TCP-NONTRANSPARENT";
+                else if (fields[7] == "1")
+                    lblStatusProtocol.Text = "TCP-TRANSPARENT";
+                else if (fields[7] == "2")
+                    lblStatusProtocol.Text = "MQTT";
+                else if (fields[7] == "3")
+                    lblStatusProtocol.Text = "HTTP";
             }
             catch (Exception ex)
             {
