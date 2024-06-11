@@ -30,7 +30,6 @@ namespace TechavoSystem
             cmbDOSelectChannel.Items.Clear();
             cmbDISelectChannel.Items.Clear();
             cmbSelectChannel.Items.Clear();
-            cmbMasterSlaveIndex.Items.Clear();
             cmbConnectProtocol.SelectedIndex = 2;
             EnableDisableGPRSControls(true);
             enableDisableReadWrite(false);
@@ -363,7 +362,7 @@ namespace TechavoSystem
         }
         private void CloseConnection()
         {
-            if (port.IsOpen)
+            if (port != null && port.IsOpen)
             {
                 port.Close();
             }
@@ -483,11 +482,6 @@ namespace TechavoSystem
                 //{
                 //    cmbSelectChannel.Items.Add(i);
                 //}
-                channels = Convert.ToInt32(fields[7]);
-                for (int i = 0; i < channels; i++)
-                {
-                    cmbMasterSlaveIndex.Items.Add(i);
-                }
                 enableDisableReadWrite(true);
             }
             catch (Exception ex)
