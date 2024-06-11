@@ -27,8 +27,13 @@ namespace TechavoSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            cmbDOSelectChannel.Items.Clear();
+            cmbDISelectChannel.Items.Clear();
+            cmbSelectChannel.Items.Clear();
+            cmbMasterSlaveIndex.Items.Clear();
             cmbConnectProtocol.SelectedIndex = 2;
             EnableDisableGPRSControls(true);
+            enableDisableReadWrite(false);
             #region Events
             assignEvents();
             this.menu.NodeMouseClick += menu_Click;
@@ -261,6 +266,8 @@ namespace TechavoSystem
                         btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\greenconnect.jpg");
                         btnConnect.Text = "Connected";
                         IsConnected = 1;
+                        dataRead = "*MDL";
+                        port.WriteLine("*MDL#");
                     }
                 }
                 else if (IsConnected == 1)
@@ -268,8 +275,85 @@ namespace TechavoSystem
                     if (port.IsOpen)
                     {
                         CloseConnection();
+                        enableDisableReadWrite(false);
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                CloseConnection();
+            }
+        }
+        private void enableDisableReadWrite(bool enable)
+        {
+            try
+            {
+                btnReadMemoryAI.Enabled = enable;
+                btnDIReadMemory.Enabled = enable;
+                btnDOReadMemory.Enabled = enable;
+                btnGeneralReadMemory.Enabled = enable;
+                btnGPRSReadMemory.Enabled = enable;
+                btnModbusSlaveReadMemory.Enabled = enable;
+                btnPulseReadMemory.Enabled = enable;
+                btnUserReadMemory.Enabled = enable;
+                btnRegReadMemory1.Enabled = enable;
+                btnRegReadMemory2.Enabled = enable;
+                btnRegReadMemory3.Enabled = enable;
+                btnRegReadMemory4.Enabled = enable;
+                btnRegReadMemory5.Enabled = enable;
+                btnRegReadMemory6.Enabled = enable;
+                btnRegReadMemory7.Enabled = enable;
+                btnRegReadMemory8.Enabled = enable;
+                btnRegReadMemory9.Enabled = enable;
+                btnRegReadMemory10.Enabled = enable;
+                btnRegReadMemory11.Enabled = enable;
+                btnRegReadMemory12.Enabled = enable;
+                btnRegReadMemory13.Enabled = enable;
+                btnRegReadMemory14.Enabled = enable;
+                btnRegReadMemory15.Enabled = enable;
+                btnRegReadMemory16.Enabled = enable;
+                btnRegReadMemory17.Enabled = enable;
+                btnRegReadMemory18.Enabled = enable;
+                btnRegReadMemory19.Enabled = enable;
+                btnRegReadMemory20.Enabled = enable;
+                btnIOStatusRead.Enabled = enable;
+                btnModbusRead.Enabled = enable;
+                btnStatusGSMRead.Enabled = enable;
+                btnSlaveConnectionReadMemory.Enabled = enable;
+                btnMasterReadAll.Enabled = enable;
+
+                btnWriteMemoryAI.Enabled = enable;
+                btnDIWriteMemory.Enabled = enable;
+                btnDOWriteMemory.Enabled = enable;
+                btnGeneralWriteMemory.Enabled = enable;
+                btnGPRSWriteMemory.Enabled = enable;
+                btnModbusSlaveWriteMemory.Enabled = enable;
+                btnPulseWriteMemory.Enabled = enable;
+                btnUserWriteMemory.Enabled = enable;
+                btnRegWriteMemory1.Enabled = enable;
+                btnRegWriteMemory2.Enabled = enable;
+                btnRegWriteMemory3.Enabled = enable;
+                btnRegWriteMemory4.Enabled = enable;
+                btnRegWriteMemory5.Enabled = enable;
+                btnRegWriteMemory6.Enabled = enable;
+                btnRegWriteMemory7.Enabled = enable;
+                btnRegWriteMemory8.Enabled = enable;
+                btnRegWriteMemory9.Enabled = enable;
+                btnRegWriteMemory10.Enabled = enable;
+                btnRegWriteMemory11.Enabled = enable;
+                btnRegWriteMemory12.Enabled = enable;
+                btnRegWriteMemory13.Enabled = enable;
+                btnRegWriteMemory14.Enabled = enable;
+                btnRegWriteMemory15.Enabled = enable;
+                btnRegWriteMemory16.Enabled = enable;
+                btnRegWriteMemory17.Enabled = enable;
+                btnRegWriteMemory18.Enabled = enable;
+                btnRegWriteMemory19.Enabled = enable;
+                btnRegWriteMemory20.Enabled = enable;
+                btnConsoleSend.Enabled = enable;
+                btnSlaveConnectionWriteMemory.Enabled = enable;
+                btnMasterWriteAll.Enabled = enable;
             }
             catch (Exception ex)
             {
@@ -362,6 +446,55 @@ namespace TechavoSystem
             else if (incomingDetails.ToUpper().Contains("*INPUTPARA"))
             {
                 setFieldsIOStatus(incomingDetails);
+            }
+            else if (incomingDetails.ToUpper().Contains("*MDL,"))
+            {
+                setChannels(incomingDetails);
+            }
+        }
+        private void setChannels(object details)
+        {
+            try
+            {
+                details = details.ToString().Substring(details.ToString().IndexOf("*MDL,") + 5, details.ToString().Length - 1 - (details.ToString().IndexOf("*MDL,") + 5));
+                string[] fields = details.ToString().Split(",");
+                int channels = Convert.ToInt32(fields[2]);
+                for (int i = 0; i < channels; i++)
+                {
+                    cmbDOSelectChannel.Items.Add(i);
+                }
+                channels = Convert.ToInt32(fields[3]);
+                for (int i = 0; i < channels; i++)
+                {
+                    cmbDISelectChannel.Items.Add(i);
+                }
+                channels = Convert.ToInt32(fields[4]);
+                for (int i = 0; i < channels; i++)
+                {
+                    cmbSelectChannel.Items.Add(i);
+                }
+                //channels = Convert.ToInt32(fields[5]);
+                //for (int i = 0; i < channels; i++)
+                //{
+                //    cmbAOSelectChannel.Items.Add(i);
+                //}
+                //channels = Convert.ToInt32(fields[6]);
+                //for (int i = 0; i < channels; i++)
+                //{
+                //    cmbSelectChannel.Items.Add(i);
+                //}
+                channels = Convert.ToInt32(fields[7]);
+                for (int i = 0; i < channels; i++)
+                {
+                    cmbMasterSlaveIndex.Items.Add(i);
+                }
+                enableDisableReadWrite(true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace.ToString(), "Error");
+                if (errorCount > errorLimit)
+                    CloseConnection();
             }
         }
         private void uploadSettings(string data)
@@ -1287,7 +1420,7 @@ namespace TechavoSystem
         {
             try
             {
-                if(cmbModbusPortType.SelectedIndex == -1)
+                if (cmbModbusPortType.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please select port type first.");
                     return;
