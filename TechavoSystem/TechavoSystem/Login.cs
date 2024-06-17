@@ -9,8 +9,16 @@ namespace TechavoSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginDetails.IsLoggedIn = true;
-            this.Close();
+            if (txtLoginPassword.Text == "212121")
+            {
+                LoginDetails.IsLoggedIn = true;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Password");
+                txtLoginPassword.Text = string.Empty;
+            }
         }
     }
 }
