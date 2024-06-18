@@ -385,72 +385,79 @@ namespace TechavoSystem
         }
         private void DoUpDate(object s, EventArgs e)
         {
-            string incomingDetails = port.ReadLine();
-            if (string.IsNullOrEmpty(incomingDetails) || incomingDetails.Trim().Length <= 1)
-                return;
-            incomingDetails = incomingDetails.Substring(0, incomingDetails.Length - 1);
-            if (logMonitor)
+            try
             {
-                txtSystemLog.AppendText("\r\n" + incomingDetails);
+                string incomingDetails = port.ReadLine();
+                if (string.IsNullOrEmpty(incomingDetails) || incomingDetails.Trim().Length <= 1)
+                    return;
+                incomingDetails = incomingDetails.Substring(0, incomingDetails.Length - 1);
+                if (logMonitor)
+                {
+                    txtSystemLog.AppendText("\r\n" + incomingDetails);
+                }
+                if (string.IsNullOrEmpty(dataRead) || !incomingDetails.ToUpper().Contains(dataRead.ToUpper()))
+                    return;
+                dataRead = string.Empty;
+                if (incomingDetails.ToUpper().Contains("*DESKAI"))
+                {
+                    setFieldsAISett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*DESKDI"))
+                {
+                    setFieldsDISett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*DODESK"))
+                {
+                    setFieldsDOSett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*DESKPULSE"))
+                {
+                    setFieldsPulseSett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*USER"))
+                {
+                    setFieldsUserSett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*DESKGEN"))
+                {
+                    setFieldsGeneralSett(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*STRANS"))
+                {
+                    setFieldsModbusSlave(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*SLVSET"))
+                {
+                    setFieldsModbusMasterSlaveConnection(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*REGSET") && incomingDetails.ToUpper().Contains("|"))
+                {
+                    setFieldsModbusRegisterConnectionAll(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*REGSET"))
+                {
+                    setFieldsModbusRegisterConnection(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*CREDIP") || incomingDetails.ToUpper().Contains("*CREDMQTT"))
+                {
+                    setFieldsGPRS(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*GSMST"))
+                {
+                    setFieldsGsmStatus(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*INPUTPARA"))
+                {
+                    setFieldsIOStatus(incomingDetails);
+                }
+                else if (incomingDetails.ToUpper().Contains("*MDL,"))
+                {
+                    setChannels(incomingDetails);
+                }
             }
-            if (string.IsNullOrEmpty(dataRead) || !incomingDetails.ToUpper().Contains(dataRead.ToUpper()))
-                return;
-            dataRead = string.Empty;
-            if (incomingDetails.ToUpper().Contains("*DESKAI"))
+            catch(Exception ex)
             {
-                setFieldsAISett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*DESKDI"))
-            {
-                setFieldsDISett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*DODESK"))
-            {
-                setFieldsDOSett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*DESKPULSE"))
-            {
-                setFieldsPulseSett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*USER"))
-            {
-                setFieldsUserSett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*DESKGEN"))
-            {
-                setFieldsGeneralSett(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*STRANS"))
-            {
-                setFieldsModbusSlave(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*SLVSET"))
-            {
-                setFieldsModbusMasterSlaveConnection(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*REGSET") && incomingDetails.ToUpper().Contains("|"))
-            {
-                setFieldsModbusRegisterConnectionAll(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*REGSET"))
-            {
-                setFieldsModbusRegisterConnection(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*CREDIP") || incomingDetails.ToUpper().Contains("*CREDMQTT"))
-            {
-                setFieldsGPRS(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*GSMST"))
-            {
-                setFieldsGsmStatus(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*INPUTPARA"))
-            {
-                setFieldsIOStatus(incomingDetails);
-            }
-            else if (incomingDetails.ToUpper().Contains("*MDL,"))
-            {
-                setChannels(incomingDetails);
+                MessageBox.Show(ex.StackTrace, "Error");
             }
         }
         private void setChannels(object details)
