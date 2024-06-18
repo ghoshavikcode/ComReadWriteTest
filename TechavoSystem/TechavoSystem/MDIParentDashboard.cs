@@ -386,6 +386,8 @@ namespace TechavoSystem
         private void DoUpDate(object s, EventArgs e)
         {
             string incomingDetails = port.ReadLine();
+            if (string.IsNullOrEmpty(incomingDetails) || incomingDetails.Trim().Length <= 1)
+                return;
             incomingDetails = incomingDetails.Substring(0, incomingDetails.Length - 1);
             if (logMonitor)
             {
