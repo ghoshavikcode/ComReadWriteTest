@@ -387,7 +387,7 @@ namespace TechavoSystem
         {
             try
             {
-                if (port == null)
+                if (port == null || !port.IsOpen)
                 {
                     btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
                     btnConnect.Text = "Connect";
@@ -467,6 +467,9 @@ namespace TechavoSystem
             catch(Exception ex)
             {
                 MessageBox.Show(ex.StackTrace, "Error");
+                btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
+                btnConnect.Text = "Connect";
+                IsConnected = 0;
             }
         }
         private void setChannels(object details)
