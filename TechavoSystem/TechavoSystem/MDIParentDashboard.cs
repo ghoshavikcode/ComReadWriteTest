@@ -387,6 +387,14 @@ namespace TechavoSystem
         {
             try
             {
+                if (port == null)
+                {
+                    btnConnect.BackgroundImage = Image.FromFile(Application.StartupPath + "Icons\\reddisconnect.jpg");
+                    btnConnect.Text = "Connect";
+                    IsConnected = 0;
+                    return;
+                }
+                    
                 string incomingDetails = port.ReadLine();
                 if (string.IsNullOrEmpty(incomingDetails) || incomingDetails.Trim().Length <= 1)
                     return;
