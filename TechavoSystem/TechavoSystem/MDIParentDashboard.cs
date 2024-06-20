@@ -394,7 +394,8 @@ namespace TechavoSystem
                     IsConnected = 0;
                     return;
                 }
-                    
+                if (IsConnected == 0)
+                    return;
                 string incomingDetails = port.ReadLine();
                 if (string.IsNullOrEmpty(incomingDetails) || incomingDetails.Trim().Length <= 1)
                     return;
