@@ -114,11 +114,17 @@ namespace TechavoSystem
 
         private void lnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if(btnConnect.Text != "Connect")
+            {
+                MessageBox.Show("Please disconnect the port first");
+                return;
+            }    
             if (LoginDetails.IsLoggedIn)
             {
                 LoginDetails.IsLoggedIn = false;
                 lnkLogin.Text = "Login";
                 pnlDashboard.Visible = false;
+                pnlConnect.Visible = false;
             }
             else
             {
