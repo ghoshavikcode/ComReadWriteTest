@@ -30,19 +30,18 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode13 = new TreeNode("General Settings");
-            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
-            TreeNode treeNode18 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode19 = new TreeNode("User", 0, 0);
-            TreeNode treeNode20 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode21 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode22 = new TreeNode("GPRS Settings");
-            TreeNode treeNode23 = new TreeNode("Status");
-            TreeNode treeNode24 = new TreeNode("Console");
-            lnkLogin = new LinkLabel();
+            TreeNode treeNode1 = new TreeNode("General Settings");
+            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
+            TreeNode treeNode6 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode7 = new TreeNode("User", 0, 0);
+            TreeNode treeNode8 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode9 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode10 = new TreeNode("GPRS Settings");
+            TreeNode treeNode11 = new TreeNode("Status");
+            TreeNode treeNode12 = new TreeNode("Console");
             pnlDashboard = new Panel();
             pnlModbusMaster = new Panel();
             groupBox19 = new GroupBox();
@@ -793,13 +792,15 @@
             cmbComPorts = new ComboBox();
             label14 = new Label();
             pnlConnect = new Panel();
+            button2 = new Button();
+            button1 = new Button();
+            btnOpenConfigFile = new Button();
             btnPortRefresh = new Button();
             lblProgressPercent = new Label();
             pbProcessing = new ProgressBar();
             errorReset = new System.Windows.Forms.Timer(components);
-            btnOpenConfigFile = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            lnkLogin = new LinkLabel();
+            pictureBox1 = new PictureBox();
             pnlDashboard.SuspendLayout();
             pnlModbusMaster.SuspendLayout();
             groupBox19.SuspendLayout();
@@ -880,18 +881,8 @@
             groupBox12.SuspendLayout();
             pnlMenu.SuspendLayout();
             pnlConnect.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // lnkLogin
-            // 
-            lnkLogin.AutoSize = true;
-            lnkLogin.Location = new Point(1388, 9);
-            lnkLogin.Name = "lnkLogin";
-            lnkLogin.Size = new Size(46, 20);
-            lnkLogin.TabIndex = 0;
-            lnkLogin.TabStop = true;
-            lnkLogin.Text = "Login";
-            lnkLogin.LinkClicked += lnkLogin_LinkClicked;
             // 
             // pnlDashboard
             // 
@@ -8633,45 +8624,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode13.Name = "GeneralSettings";
-            treeNode13.Text = "General Settings";
-            treeNode14.ImageIndex = 1;
-            treeNode14.Name = "DOSettings";
-            treeNode14.SelectedImageIndex = 1;
-            treeNode14.Text = "DO Settings";
-            treeNode15.ImageIndex = 1;
-            treeNode15.Name = "DISettings";
-            treeNode15.SelectedImageIndex = 1;
-            treeNode15.Text = "DI Settings";
-            treeNode16.ImageIndex = 1;
-            treeNode16.Name = "AISettings";
-            treeNode16.SelectedImageIndex = 1;
-            treeNode16.Text = "AI Settings";
-            treeNode17.Name = "IOSettings";
-            treeNode17.Text = "IO Settings";
-            treeNode18.ImageIndex = 0;
-            treeNode18.Name = "PulseSettings";
-            treeNode18.SelectedImageIndex = 0;
-            treeNode18.Text = "Pulse Settings";
-            treeNode19.ImageIndex = 0;
-            treeNode19.Name = "User";
-            treeNode19.SelectedImageIndex = 0;
-            treeNode19.Text = "User";
-            treeNode20.ImageIndex = 0;
-            treeNode20.Name = "ModbusMaster";
-            treeNode20.SelectedImageIndex = 0;
-            treeNode20.Text = "Modbus Master";
-            treeNode21.ImageIndex = 0;
-            treeNode21.Name = "ModbusSlave";
-            treeNode21.SelectedImageIndex = 0;
-            treeNode21.Text = "Modbus Slave";
-            treeNode22.Name = "GPRSSettings";
-            treeNode22.Text = "GPRS Settings";
-            treeNode23.Name = "status";
-            treeNode23.Text = "Status";
-            treeNode24.Name = "console";
-            treeNode24.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
+            treeNode1.Name = "GeneralSettings";
+            treeNode1.Text = "General Settings";
+            treeNode2.ImageIndex = 1;
+            treeNode2.Name = "DOSettings";
+            treeNode2.SelectedImageIndex = 1;
+            treeNode2.Text = "DO Settings";
+            treeNode3.ImageIndex = 1;
+            treeNode3.Name = "DISettings";
+            treeNode3.SelectedImageIndex = 1;
+            treeNode3.Text = "DI Settings";
+            treeNode4.ImageIndex = 1;
+            treeNode4.Name = "AISettings";
+            treeNode4.SelectedImageIndex = 1;
+            treeNode4.Text = "AI Settings";
+            treeNode5.Name = "IOSettings";
+            treeNode5.Text = "IO Settings";
+            treeNode6.ImageIndex = 0;
+            treeNode6.Name = "PulseSettings";
+            treeNode6.SelectedImageIndex = 0;
+            treeNode6.Text = "Pulse Settings";
+            treeNode7.ImageIndex = 0;
+            treeNode7.Name = "User";
+            treeNode7.SelectedImageIndex = 0;
+            treeNode7.Text = "User";
+            treeNode8.ImageIndex = 0;
+            treeNode8.Name = "ModbusMaster";
+            treeNode8.SelectedImageIndex = 0;
+            treeNode8.Text = "Modbus Master";
+            treeNode9.ImageIndex = 0;
+            treeNode9.Name = "ModbusSlave";
+            treeNode9.SelectedImageIndex = 0;
+            treeNode9.Text = "Modbus Slave";
+            treeNode10.Name = "GPRSSettings";
+            treeNode10.Text = "GPRS Settings";
+            treeNode11.Name = "status";
+            treeNode11.Text = "Status";
+            treeNode12.Name = "console";
+            treeNode12.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -8696,7 +8687,7 @@
             btnConnect.BackgroundImageLayout = ImageLayout.Stretch;
             btnConnect.FlatStyle = FlatStyle.Flat;
             btnConnect.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnConnect.Location = new Point(309, 18);
+            btnConnect.Location = new Point(590, 18);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(98, 31);
             btnConnect.TabIndex = 33;
@@ -8707,7 +8698,7 @@
             // cmbComPorts
             // 
             cmbComPorts.FormattingEnabled = true;
-            cmbComPorts.Location = new Point(115, 21);
+            cmbComPorts.Location = new Point(396, 21);
             cmbComPorts.Name = "cmbComPorts";
             cmbComPorts.Size = new Size(151, 28);
             cmbComPorts.TabIndex = 32;
@@ -8715,7 +8706,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(68, 24);
+            label14.Location = new Point(349, 24);
             label14.Name = "label14";
             label14.Size = new Size(41, 20);
             label14.TabIndex = 34;
@@ -8732,17 +8723,50 @@
             pnlConnect.Controls.Add(cmbComPorts);
             pnlConnect.Controls.Add(label14);
             pnlConnect.Controls.Add(btnConnect);
-            pnlConnect.Location = new Point(227, 12);
+            pnlConnect.Location = new Point(12, 12);
             pnlConnect.Name = "pnlConnect";
-            pnlConnect.Size = new Size(1014, 65);
+            pnlConnect.Size = new Size(1455, 65);
             pnlConnect.TabIndex = 35;
             pnlConnect.Visible = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(192, 255, 192);
+            button2.Cursor = Cursors.Hand;
+            button2.Location = new Point(938, 19);
+            button2.Name = "button2";
+            button2.Size = new Size(105, 31);
+            button2.TabIndex = 43;
+            button2.Text = "Write Config";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(192, 255, 192);
+            button1.Cursor = Cursors.Hand;
+            button1.Location = new Point(828, 19);
+            button1.Name = "button1";
+            button1.Size = new Size(105, 31);
+            button1.TabIndex = 42;
+            button1.Text = "Read Config";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // btnOpenConfigFile
+            // 
+            btnOpenConfigFile.BackColor = Color.FromArgb(192, 255, 192);
+            btnOpenConfigFile.Cursor = Cursors.Hand;
+            btnOpenConfigFile.Location = new Point(694, 19);
+            btnOpenConfigFile.Name = "btnOpenConfigFile";
+            btnOpenConfigFile.Size = new Size(129, 31);
+            btnOpenConfigFile.TabIndex = 41;
+            btnOpenConfigFile.Text = "Open Config File";
+            btnOpenConfigFile.UseVisualStyleBackColor = false;
             // 
             // btnPortRefresh
             // 
             btnPortRefresh.BackgroundImage = (Image)resources.GetObject("btnPortRefresh.BackgroundImage");
             btnPortRefresh.BackgroundImageLayout = ImageLayout.Stretch;
-            btnPortRefresh.Location = new Point(271, 20);
+            btnPortRefresh.Location = new Point(552, 20);
             btnPortRefresh.Name = "btnPortRefresh";
             btnPortRefresh.Size = new Size(28, 28);
             btnPortRefresh.TabIndex = 40;
@@ -8752,7 +8776,7 @@
             // lblProgressPercent
             // 
             lblProgressPercent.AutoSize = true;
-            lblProgressPercent.Location = new Point(929, 23);
+            lblProgressPercent.Location = new Point(1210, 23);
             lblProgressPercent.Name = "lblProgressPercent";
             lblProgressPercent.Size = new Size(29, 20);
             lblProgressPercent.TabIndex = 38;
@@ -8761,7 +8785,7 @@
             // pbProcessing
             // 
             pbProcessing.BackColor = SystemColors.Info;
-            pbProcessing.Location = new Point(768, 23);
+            pbProcessing.Location = new Point(1049, 23);
             pbProcessing.Name = "pbProcessing";
             pbProcessing.Size = new Size(151, 22);
             pbProcessing.Style = ProgressBarStyle.Continuous;
@@ -8773,47 +8797,38 @@
             errorReset.Interval = 300000;
             errorReset.Tick += errorReset_Tick;
             // 
-            // btnOpenConfigFile
+            // lnkLogin
             // 
-            btnOpenConfigFile.BackColor = Color.FromArgb(192, 255, 192);
-            btnOpenConfigFile.Cursor = Cursors.Hand;
-            btnOpenConfigFile.Location = new Point(413, 19);
-            btnOpenConfigFile.Name = "btnOpenConfigFile";
-            btnOpenConfigFile.Size = new Size(129, 31);
-            btnOpenConfigFile.TabIndex = 41;
-            btnOpenConfigFile.Text = "Open Config File";
-            btnOpenConfigFile.UseVisualStyleBackColor = false;
+            lnkLogin.AutoSize = true;
+            lnkLogin.Location = new Point(1416, 30);
+            lnkLogin.Name = "lnkLogin";
+            lnkLogin.Size = new Size(46, 20);
+            lnkLogin.TabIndex = 47;
+            lnkLogin.TabStop = true;
+            lnkLogin.Text = "Login";
+            lnkLogin.LinkClicked += lnkLogin_LinkClicked;
             // 
-            // button1
+            // pictureBox1
             // 
-            button1.BackColor = Color.FromArgb(192, 255, 192);
-            button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(547, 19);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 31);
-            button1.TabIndex = 42;
-            button1.Text = "Read Config";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(192, 255, 192);
-            button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(657, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(105, 31);
-            button2.TabIndex = 43;
-            button2.Text = "Write Config";
-            button2.UseVisualStyleBackColor = false;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(7, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(306, 65);
+            pictureBox1.TabIndex = 46;
+            pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1471, 931);
+            Controls.Add(pictureBox1);
+            Controls.Add(lnkLogin);
             Controls.Add(pnlConnect);
             Controls.Add(pnlDashboard);
-            Controls.Add(lnkLogin);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(1519, 1018);
             Name = "Dashboard";
@@ -8960,13 +8975,12 @@
             pnlMenu.ResumeLayout(false);
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private LinkLabel lnkLogin;
         private Panel pnlDashboard;
         private System.Windows.Forms.Timer LoginTimer;
         private Panel pnlMenu;
@@ -9725,5 +9739,7 @@
         private Button button2;
         private Button button1;
         private Button btnOpenConfigFile;
+        private LinkLabel lnkLogin;
+        private PictureBox pictureBox1;
     }
 }

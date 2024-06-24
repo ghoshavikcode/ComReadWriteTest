@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <Content Include="bin\Debug\net7.0-windows\Icons\gui-refresh.256x254.png" />
+    <Content Include="bin\Debug\net7.0-windows\Icons\Logo1.ico" />
+    <Content Include="bin\Debug\net7.0-windows\Icons\Logo2.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
