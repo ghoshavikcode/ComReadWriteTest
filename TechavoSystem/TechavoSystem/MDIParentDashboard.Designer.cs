@@ -30,18 +30,18 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode1 = new TreeNode("General Settings");
-            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode7 = new TreeNode("User", 0, 0);
-            TreeNode treeNode8 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode9 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode10 = new TreeNode("GPRS Settings");
-            TreeNode treeNode11 = new TreeNode("Status");
-            TreeNode treeNode12 = new TreeNode("Console");
+            TreeNode treeNode13 = new TreeNode("General Settings");
+            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
+            TreeNode treeNode18 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode19 = new TreeNode("User", 0, 0);
+            TreeNode treeNode20 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode21 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode22 = new TreeNode("GPRS Settings");
+            TreeNode treeNode23 = new TreeNode("Status");
+            TreeNode treeNode24 = new TreeNode("Console");
             pnlDashboard = new Panel();
             pnlModbusMaster = new Panel();
             groupBox19 = new GroupBox();
@@ -1043,7 +1043,7 @@
             // cmbMasterDataType12
             // 
             cmbMasterDataType12.FormattingEnabled = true;
-            cmbMasterDataType12.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType12.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType12.Location = new Point(411, 16);
             cmbMasterDataType12.Name = "cmbMasterDataType12";
             cmbMasterDataType12.Size = new Size(130, 28);
@@ -1169,7 +1169,7 @@
             // cmbMasterDataType20
             // 
             cmbMasterDataType20.FormattingEnabled = true;
-            cmbMasterDataType20.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType20.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType20.Location = new Point(407, 16);
             cmbMasterDataType20.Name = "cmbMasterDataType20";
             cmbMasterDataType20.Size = new Size(130, 28);
@@ -1295,7 +1295,7 @@
             // cmbMasterDataType19
             // 
             cmbMasterDataType19.FormattingEnabled = true;
-            cmbMasterDataType19.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType19.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType19.Location = new Point(408, 16);
             cmbMasterDataType19.Name = "cmbMasterDataType19";
             cmbMasterDataType19.Size = new Size(130, 28);
@@ -1421,7 +1421,7 @@
             // cmbMasterDataType18
             // 
             cmbMasterDataType18.FormattingEnabled = true;
-            cmbMasterDataType18.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType18.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType18.Location = new Point(409, 16);
             cmbMasterDataType18.Name = "cmbMasterDataType18";
             cmbMasterDataType18.Size = new Size(130, 28);
@@ -1547,7 +1547,7 @@
             // cmbMasterDataType16
             // 
             cmbMasterDataType16.FormattingEnabled = true;
-            cmbMasterDataType16.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType16.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType16.Location = new Point(412, 16);
             cmbMasterDataType16.Name = "cmbMasterDataType16";
             cmbMasterDataType16.Size = new Size(130, 28);
@@ -1673,7 +1673,7 @@
             // cmbMasterDataType17
             // 
             cmbMasterDataType17.FormattingEnabled = true;
-            cmbMasterDataType17.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType17.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType17.Location = new Point(413, 16);
             cmbMasterDataType17.Name = "cmbMasterDataType17";
             cmbMasterDataType17.Size = new Size(130, 28);
@@ -1799,7 +1799,7 @@
             // cmbMasterDataType15
             // 
             cmbMasterDataType15.FormattingEnabled = true;
-            cmbMasterDataType15.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType15.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType15.Location = new Point(412, 16);
             cmbMasterDataType15.Name = "cmbMasterDataType15";
             cmbMasterDataType15.Size = new Size(130, 28);
@@ -1925,7 +1925,7 @@
             // cmbMasterDataType14
             // 
             cmbMasterDataType14.FormattingEnabled = true;
-            cmbMasterDataType14.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType14.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType14.Location = new Point(413, 16);
             cmbMasterDataType14.Name = "cmbMasterDataType14";
             cmbMasterDataType14.Size = new Size(130, 28);
@@ -2051,7 +2051,7 @@
             // cmbMasterDataType13
             // 
             cmbMasterDataType13.FormattingEnabled = true;
-            cmbMasterDataType13.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType13.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType13.Location = new Point(411, 16);
             cmbMasterDataType13.Name = "cmbMasterDataType13";
             cmbMasterDataType13.Size = new Size(130, 28);
@@ -2177,7 +2177,7 @@
             // cmbMasterDataType11
             // 
             cmbMasterDataType11.FormattingEnabled = true;
-            cmbMasterDataType11.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType11.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType11.Location = new Point(413, 16);
             cmbMasterDataType11.Name = "cmbMasterDataType11";
             cmbMasterDataType11.Size = new Size(130, 28);
@@ -2303,7 +2303,7 @@
             // cmbMasterDataType2
             // 
             cmbMasterDataType2.FormattingEnabled = true;
-            cmbMasterDataType2.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType2.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType2.Location = new Point(413, 16);
             cmbMasterDataType2.Name = "cmbMasterDataType2";
             cmbMasterDataType2.Size = new Size(130, 28);
@@ -2429,7 +2429,7 @@
             // cmbMasterDataType10
             // 
             cmbMasterDataType10.FormattingEnabled = true;
-            cmbMasterDataType10.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType10.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType10.Location = new Point(412, 16);
             cmbMasterDataType10.Name = "cmbMasterDataType10";
             cmbMasterDataType10.Size = new Size(130, 28);
@@ -2555,7 +2555,7 @@
             // cmbMasterDataType9
             // 
             cmbMasterDataType9.FormattingEnabled = true;
-            cmbMasterDataType9.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType9.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType9.Location = new Point(412, 16);
             cmbMasterDataType9.Name = "cmbMasterDataType9";
             cmbMasterDataType9.Size = new Size(130, 28);
@@ -2681,7 +2681,7 @@
             // cmbMasterDataType8
             // 
             cmbMasterDataType8.FormattingEnabled = true;
-            cmbMasterDataType8.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType8.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType8.Location = new Point(413, 16);
             cmbMasterDataType8.Name = "cmbMasterDataType8";
             cmbMasterDataType8.Size = new Size(130, 28);
@@ -2807,7 +2807,7 @@
             // cmbMasterDataType6
             // 
             cmbMasterDataType6.FormattingEnabled = true;
-            cmbMasterDataType6.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType6.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType6.Location = new Point(415, 16);
             cmbMasterDataType6.Name = "cmbMasterDataType6";
             cmbMasterDataType6.Size = new Size(130, 28);
@@ -2933,7 +2933,7 @@
             // cmbMasterDataType7
             // 
             cmbMasterDataType7.FormattingEnabled = true;
-            cmbMasterDataType7.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType7.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType7.Location = new Point(413, 16);
             cmbMasterDataType7.Name = "cmbMasterDataType7";
             cmbMasterDataType7.Size = new Size(130, 28);
@@ -3059,7 +3059,7 @@
             // cmbMasterDataType5
             // 
             cmbMasterDataType5.FormattingEnabled = true;
-            cmbMasterDataType5.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType5.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType5.Location = new Point(413, 16);
             cmbMasterDataType5.Name = "cmbMasterDataType5";
             cmbMasterDataType5.Size = new Size(130, 28);
@@ -3185,7 +3185,7 @@
             // cmbMasterDataType4
             // 
             cmbMasterDataType4.FormattingEnabled = true;
-            cmbMasterDataType4.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType4.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType4.Location = new Point(414, 16);
             cmbMasterDataType4.Name = "cmbMasterDataType4";
             cmbMasterDataType4.Size = new Size(130, 28);
@@ -3311,7 +3311,7 @@
             // cmbMasterDataType3
             // 
             cmbMasterDataType3.FormattingEnabled = true;
-            cmbMasterDataType3.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType3.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType3.Location = new Point(413, 16);
             cmbMasterDataType3.Name = "cmbMasterDataType3";
             cmbMasterDataType3.Size = new Size(130, 28);
@@ -3437,7 +3437,7 @@
             // cmbMasterDataType1
             // 
             cmbMasterDataType1.FormattingEnabled = true;
-            cmbMasterDataType1.Items.AddRange(new object[] { "Interger", "Unsigned Interger", "Long", "Unsigned Long", "Float", "Hex", "Binary" });
+            cmbMasterDataType1.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
             cmbMasterDataType1.Location = new Point(413, 16);
             cmbMasterDataType1.Name = "cmbMasterDataType1";
             cmbMasterDataType1.Size = new Size(130, 28);
@@ -8624,45 +8624,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode1.Name = "GeneralSettings";
-            treeNode1.Text = "General Settings";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "DOSettings";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "DO Settings";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "DISettings";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "DI Settings";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "AISettings";
-            treeNode4.SelectedImageIndex = 1;
-            treeNode4.Text = "AI Settings";
-            treeNode5.Name = "IOSettings";
-            treeNode5.Text = "IO Settings";
-            treeNode6.ImageIndex = 0;
-            treeNode6.Name = "PulseSettings";
-            treeNode6.SelectedImageIndex = 0;
-            treeNode6.Text = "Pulse Settings";
-            treeNode7.ImageIndex = 0;
-            treeNode7.Name = "User";
-            treeNode7.SelectedImageIndex = 0;
-            treeNode7.Text = "User";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "ModbusMaster";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "Modbus Master";
-            treeNode9.ImageIndex = 0;
-            treeNode9.Name = "ModbusSlave";
-            treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Modbus Slave";
-            treeNode10.Name = "GPRSSettings";
-            treeNode10.Text = "GPRS Settings";
-            treeNode11.Name = "status";
-            treeNode11.Text = "Status";
-            treeNode12.Name = "console";
-            treeNode12.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
+            treeNode13.Name = "GeneralSettings";
+            treeNode13.Text = "General Settings";
+            treeNode14.ImageIndex = 1;
+            treeNode14.Name = "DOSettings";
+            treeNode14.SelectedImageIndex = 1;
+            treeNode14.Text = "DO Settings";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "DISettings";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "DI Settings";
+            treeNode16.ImageIndex = 1;
+            treeNode16.Name = "AISettings";
+            treeNode16.SelectedImageIndex = 1;
+            treeNode16.Text = "AI Settings";
+            treeNode17.Name = "IOSettings";
+            treeNode17.Text = "IO Settings";
+            treeNode18.ImageIndex = 0;
+            treeNode18.Name = "PulseSettings";
+            treeNode18.SelectedImageIndex = 0;
+            treeNode18.Text = "Pulse Settings";
+            treeNode19.ImageIndex = 0;
+            treeNode19.Name = "User";
+            treeNode19.SelectedImageIndex = 0;
+            treeNode19.Text = "User";
+            treeNode20.ImageIndex = 0;
+            treeNode20.Name = "ModbusMaster";
+            treeNode20.SelectedImageIndex = 0;
+            treeNode20.Text = "Modbus Master";
+            treeNode21.ImageIndex = 0;
+            treeNode21.Name = "ModbusSlave";
+            treeNode21.SelectedImageIndex = 0;
+            treeNode21.Text = "Modbus Slave";
+            treeNode22.Name = "GPRSSettings";
+            treeNode22.Text = "GPRS Settings";
+            treeNode23.Name = "status";
+            treeNode23.Text = "Status";
+            treeNode24.Name = "console";
+            treeNode24.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
