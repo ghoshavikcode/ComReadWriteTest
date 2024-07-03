@@ -30,25 +30,287 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            TreeNode treeNode1 = new TreeNode("General Settings");
-            TreeNode treeNode2 = new TreeNode("DO Settings", 1, 1);
-            TreeNode treeNode3 = new TreeNode("DI Settings", 1, 1);
-            TreeNode treeNode4 = new TreeNode("AI Settings", 1, 1);
-            TreeNode treeNode5 = new TreeNode("IO Settings", new TreeNode[] { treeNode2, treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Pulse Settings", 0, 0);
-            TreeNode treeNode7 = new TreeNode("User", 0, 0);
-            TreeNode treeNode8 = new TreeNode("Modbus Master", 0, 0);
-            TreeNode treeNode9 = new TreeNode("Modbus Slave", 0, 0);
-            TreeNode treeNode10 = new TreeNode("GPRS Settings");
-            TreeNode treeNode11 = new TreeNode("Status");
-            TreeNode treeNode12 = new TreeNode("Console");
+            TreeNode treeNode13 = new TreeNode("General Settings");
+            TreeNode treeNode14 = new TreeNode("DO Settings", 1, 1);
+            TreeNode treeNode15 = new TreeNode("DI Settings", 1, 1);
+            TreeNode treeNode16 = new TreeNode("AI Settings", 1, 1);
+            TreeNode treeNode17 = new TreeNode("IO Settings", new TreeNode[] { treeNode14, treeNode15, treeNode16 });
+            TreeNode treeNode18 = new TreeNode("Pulse Settings", 0, 0);
+            TreeNode treeNode19 = new TreeNode("User", 0, 0);
+            TreeNode treeNode20 = new TreeNode("Modbus Master", 0, 0);
+            TreeNode treeNode21 = new TreeNode("Modbus Slave", 0, 0);
+            TreeNode treeNode22 = new TreeNode("GPRS Settings");
+            TreeNode treeNode23 = new TreeNode("Status");
+            TreeNode treeNode24 = new TreeNode("Console");
             pnlDashboard = new Panel();
             pnlModbusMaster = new Panel();
             groupBox19 = new GroupBox();
+            label133 = new Label();
             btnMasterReadAll = new Button();
             btnMasterWriteAll = new Button();
             pnlMasterScroll = new Panel();
+            groupBox44 = new GroupBox();
+            cmbDecimalPoint32 = new ComboBox();
+            label178 = new Label();
+            cmbMasterFunctionCode32 = new ComboBox();
+            cmbMasterByteOrder32 = new ComboBox();
+            cmbMasterDataType32 = new ComboBox();
+            cmbMasterActivation32 = new ComboBox();
+            btnRegWriteMemory32 = new Button();
+            btnRegReadMemory32 = new Button();
+            txtMasterScaleFactor32 = new TextBox();
+            txtMasterName32 = new TextBox();
+            txtMasterRegStartAddress32 = new TextBox();
+            txtMasterRegIndex32 = new TextBox();
+            groupBox45 = new GroupBox();
+            cmbDecimalPoint40 = new ComboBox();
+            label179 = new Label();
+            cmbMasterFunctionCode40 = new ComboBox();
+            cmbMasterByteOrder40 = new ComboBox();
+            cmbMasterDataType40 = new ComboBox();
+            cmbMasterActivation40 = new ComboBox();
+            btnRegWriteMemory40 = new Button();
+            btnRegReadMemory40 = new Button();
+            txtMasterScaleFactor40 = new TextBox();
+            txtMasterName40 = new TextBox();
+            txtMasterRegStartAddress40 = new TextBox();
+            txtMasterRegIndex40 = new TextBox();
+            groupBox46 = new GroupBox();
+            cmbDecimalPoint39 = new ComboBox();
+            label180 = new Label();
+            cmbMasterFunctionCode39 = new ComboBox();
+            cmbMasterByteOrder39 = new ComboBox();
+            cmbMasterDataType39 = new ComboBox();
+            cmbMasterActivation39 = new ComboBox();
+            btnRegWriteMemory39 = new Button();
+            btnRegReadMemory39 = new Button();
+            txtMasterScaleFactor39 = new TextBox();
+            txtMasterName39 = new TextBox();
+            txtMasterRegStartAddress39 = new TextBox();
+            txtMasterRegIndex39 = new TextBox();
+            groupBox47 = new GroupBox();
+            cmbDecimalPoint38 = new ComboBox();
+            label181 = new Label();
+            cmbMasterFunctionCode38 = new ComboBox();
+            cmbMasterByteOrder38 = new ComboBox();
+            cmbMasterDataType38 = new ComboBox();
+            cmbMasterActivation38 = new ComboBox();
+            btnRegWriteMemory38 = new Button();
+            btnRegReadMemory38 = new Button();
+            txtMasterScaleFactor38 = new TextBox();
+            txtMasterName38 = new TextBox();
+            txtMasterRegStartAddress38 = new TextBox();
+            txtMasterRegIndex38 = new TextBox();
+            groupBox48 = new GroupBox();
+            cmbDecimalPoint36 = new ComboBox();
+            label228 = new Label();
+            cmbMasterFunctionCode36 = new ComboBox();
+            cmbMasterByteOrder36 = new ComboBox();
+            cmbMasterDataType36 = new ComboBox();
+            cmbMasterActivation36 = new ComboBox();
+            btnRegWriteMemory36 = new Button();
+            btnRegReadMemory36 = new Button();
+            txtMasterScaleFactor36 = new TextBox();
+            txtMasterName36 = new TextBox();
+            txtMasterRegStartAddress36 = new TextBox();
+            txtMasterRegIndex36 = new TextBox();
+            groupBox49 = new GroupBox();
+            cmbDecimalPoint37 = new ComboBox();
+            label229 = new Label();
+            cmbMasterFunctionCode37 = new ComboBox();
+            cmbMasterByteOrder37 = new ComboBox();
+            cmbMasterDataType37 = new ComboBox();
+            cmbMasterActivation37 = new ComboBox();
+            btnRegWriteMemory37 = new Button();
+            btnRegReadMemory37 = new Button();
+            txtMasterScaleFactor37 = new TextBox();
+            txtMasterName37 = new TextBox();
+            txtMasterRegStartAddress37 = new TextBox();
+            txtMasterRegIndex37 = new TextBox();
+            groupBox50 = new GroupBox();
+            cmbDecimalPoint35 = new ComboBox();
+            label230 = new Label();
+            cmbMasterFunctionCode35 = new ComboBox();
+            cmbMasterByteOrder35 = new ComboBox();
+            cmbMasterDataType35 = new ComboBox();
+            cmbMasterActivation35 = new ComboBox();
+            btnRegWriteMemory35 = new Button();
+            btnRegReadMemory35 = new Button();
+            txtMasterScaleFactor35 = new TextBox();
+            txtMasterName35 = new TextBox();
+            txtMasterRegStartAddress35 = new TextBox();
+            txtMasterRegIndex35 = new TextBox();
+            groupBox51 = new GroupBox();
+            cmbDecimalPoint34 = new ComboBox();
+            label231 = new Label();
+            cmbMasterFunctionCode34 = new ComboBox();
+            cmbMasterByteOrder34 = new ComboBox();
+            cmbMasterDataType34 = new ComboBox();
+            cmbMasterActivation34 = new ComboBox();
+            btnRegWriteMemory34 = new Button();
+            btnRegReadMemory34 = new Button();
+            txtMasterScaleFactor34 = new TextBox();
+            txtMasterName34 = new TextBox();
+            txtMasterRegStartAddress34 = new TextBox();
+            txtMasterRegIndex34 = new TextBox();
+            groupBox52 = new GroupBox();
+            cmbDecimalPoint33 = new ComboBox();
+            label232 = new Label();
+            cmbMasterFunctionCode33 = new ComboBox();
+            cmbMasterByteOrder33 = new ComboBox();
+            cmbMasterDataType33 = new ComboBox();
+            cmbMasterActivation33 = new ComboBox();
+            btnRegWriteMemory33 = new Button();
+            btnRegReadMemory33 = new Button();
+            txtMasterScaleFactor33 = new TextBox();
+            txtMasterName33 = new TextBox();
+            txtMasterRegStartAddress33 = new TextBox();
+            txtMasterRegIndex33 = new TextBox();
+            groupBox53 = new GroupBox();
+            cmbDecimalPoint31 = new ComboBox();
+            label233 = new Label();
+            cmbMasterFunctionCode31 = new ComboBox();
+            cmbMasterByteOrder31 = new ComboBox();
+            cmbMasterDataType31 = new ComboBox();
+            cmbMasterActivation31 = new ComboBox();
+            btnRegWriteMemory31 = new Button();
+            btnRegReadMemory31 = new Button();
+            txtMasterScaleFactor31 = new TextBox();
+            txtMasterName31 = new TextBox();
+            txtMasterRegStartAddress31 = new TextBox();
+            txtMasterRegIndex31 = new TextBox();
+            groupBox54 = new GroupBox();
+            cmbDecimalPoint22 = new ComboBox();
+            label234 = new Label();
+            cmbMasterFunctionCode22 = new ComboBox();
+            cmbMasterByteOrder22 = new ComboBox();
+            cmbMasterDataType22 = new ComboBox();
+            cmbMasterActivation22 = new ComboBox();
+            btnRegWriteMemory22 = new Button();
+            btnRegReadMemory22 = new Button();
+            txtMasterScaleFactor22 = new TextBox();
+            txtMasterName22 = new TextBox();
+            txtMasterRegStartAddress22 = new TextBox();
+            txtMasterRegIndex22 = new TextBox();
+            groupBox55 = new GroupBox();
+            cmbDecimalPoint30 = new ComboBox();
+            label235 = new Label();
+            cmbMasterFunctionCode30 = new ComboBox();
+            cmbMasterByteOrder30 = new ComboBox();
+            cmbMasterDataType30 = new ComboBox();
+            cmbMasterActivation30 = new ComboBox();
+            btnRegWriteMemory30 = new Button();
+            btnRegReadMemory30 = new Button();
+            txtMasterScaleFactor30 = new TextBox();
+            txtMasterName30 = new TextBox();
+            txtMasterRegStartAddress30 = new TextBox();
+            txtMasterRegIndex30 = new TextBox();
+            groupBox56 = new GroupBox();
+            cmbDecimalPoint29 = new ComboBox();
+            label236 = new Label();
+            cmbMasterFunctionCode29 = new ComboBox();
+            cmbMasterByteOrder29 = new ComboBox();
+            cmbMasterDataType29 = new ComboBox();
+            cmbMasterActivation29 = new ComboBox();
+            btnRegWriteMemory29 = new Button();
+            btnRegReadMemory29 = new Button();
+            txtMasterScaleFactor29 = new TextBox();
+            txtMasterName29 = new TextBox();
+            txtMasterRegStartAddress29 = new TextBox();
+            txtMasterRegIndex29 = new TextBox();
+            groupBox57 = new GroupBox();
+            cmbDecimalPoint28 = new ComboBox();
+            label237 = new Label();
+            cmbMasterFunctionCode28 = new ComboBox();
+            cmbMasterByteOrder28 = new ComboBox();
+            cmbMasterDataType28 = new ComboBox();
+            cmbMasterActivation28 = new ComboBox();
+            btnRegWriteMemory28 = new Button();
+            btnRegReadMemory28 = new Button();
+            txtMasterScaleFactor28 = new TextBox();
+            txtMasterName28 = new TextBox();
+            txtMasterRegStartAddress28 = new TextBox();
+            txtMasterRegIndex28 = new TextBox();
+            groupBox58 = new GroupBox();
+            cmbDecimalPoint26 = new ComboBox();
+            label238 = new Label();
+            cmbMasterFunctionCode26 = new ComboBox();
+            cmbMasterByteOrder26 = new ComboBox();
+            cmbMasterDataType26 = new ComboBox();
+            cmbMasterActivation26 = new ComboBox();
+            btnRegWriteMemory26 = new Button();
+            btnRegReadMemory26 = new Button();
+            txtMasterScaleFactor26 = new TextBox();
+            txtMasterName26 = new TextBox();
+            txtMasterRegStartAddress26 = new TextBox();
+            txtMasterRegIndex26 = new TextBox();
+            groupBox59 = new GroupBox();
+            cmbDecimalPoint27 = new ComboBox();
+            label239 = new Label();
+            cmbMasterFunctionCode27 = new ComboBox();
+            cmbMasterByteOrder27 = new ComboBox();
+            cmbMasterDataType27 = new ComboBox();
+            cmbMasterActivation27 = new ComboBox();
+            btnRegWriteMemory27 = new Button();
+            btnRegReadMemory27 = new Button();
+            txtMasterScaleFactor27 = new TextBox();
+            txtMasterName27 = new TextBox();
+            txtMasterRegStartAddress27 = new TextBox();
+            txtMasterRegIndex27 = new TextBox();
+            groupBox60 = new GroupBox();
+            cmbDecimalPoint25 = new ComboBox();
+            label240 = new Label();
+            cmbMasterFunctionCode25 = new ComboBox();
+            cmbMasterByteOrder25 = new ComboBox();
+            cmbMasterDataType25 = new ComboBox();
+            cmbMasterActivation25 = new ComboBox();
+            btnRegWriteMemory25 = new Button();
+            btnRegReadMemory25 = new Button();
+            txtMasterScaleFactor25 = new TextBox();
+            txtMasterName25 = new TextBox();
+            txtMasterRegStartAddress25 = new TextBox();
+            txtMasterRegIndex25 = new TextBox();
+            groupBox61 = new GroupBox();
+            cmbDecimalPoint24 = new ComboBox();
+            label241 = new Label();
+            cmbMasterFunctionCode24 = new ComboBox();
+            cmbMasterByteOrder24 = new ComboBox();
+            cmbMasterDataType24 = new ComboBox();
+            cmbMasterActivation24 = new ComboBox();
+            btnRegWriteMemory24 = new Button();
+            btnRegReadMemory24 = new Button();
+            txtMasterScaleFactor24 = new TextBox();
+            txtMasterName24 = new TextBox();
+            txtMasterRegStartAddress24 = new TextBox();
+            txtMasterRegIndex24 = new TextBox();
+            groupBox62 = new GroupBox();
+            cmbDecimalPoint23 = new ComboBox();
+            label242 = new Label();
+            cmbMasterFunctionCode23 = new ComboBox();
+            cmbMasterByteOrder23 = new ComboBox();
+            cmbMasterDataType23 = new ComboBox();
+            cmbMasterActivation23 = new ComboBox();
+            btnRegWriteMemory23 = new Button();
+            btnRegReadMemory23 = new Button();
+            txtMasterScaleFactor23 = new TextBox();
+            txtMasterName23 = new TextBox();
+            txtMasterRegStartAddress23 = new TextBox();
+            txtMasterRegIndex23 = new TextBox();
+            groupBox63 = new GroupBox();
+            cmbDecimalPoint21 = new ComboBox();
+            label243 = new Label();
+            cmbMasterFunctionCode21 = new ComboBox();
+            cmbMasterByteOrder21 = new ComboBox();
+            cmbMasterDataType21 = new ComboBox();
+            cmbMasterActivation21 = new ComboBox();
+            btnRegWriteMemory21 = new Button();
+            btnRegReadMemory21 = new Button();
+            txtMasterScaleFactor21 = new TextBox();
+            txtMasterName21 = new TextBox();
+            txtMasterRegStartAddress21 = new TextBox();
+            txtMasterRegIndex21 = new TextBox();
             groupBox34 = new GroupBox();
+            cmbDecimalPoint12 = new ComboBox();
             label216 = new Label();
             cmbMasterFunctionCode12 = new ComboBox();
             cmbMasterByteOrder12 = new ComboBox();
@@ -61,6 +323,7 @@
             txtMasterRegStartAddress12 = new TextBox();
             txtMasterRegIndex12 = new TextBox();
             groupBox35 = new GroupBox();
+            cmbDecimalPoint20 = new ComboBox();
             label208 = new Label();
             cmbMasterFunctionCode20 = new ComboBox();
             cmbMasterByteOrder20 = new ComboBox();
@@ -73,6 +336,7 @@
             txtMasterRegStartAddress20 = new TextBox();
             txtMasterRegIndex20 = new TextBox();
             groupBox36 = new GroupBox();
+            cmbDecimalPoint19 = new ComboBox();
             label209 = new Label();
             cmbMasterFunctionCode19 = new ComboBox();
             cmbMasterByteOrder19 = new ComboBox();
@@ -85,6 +349,7 @@
             txtMasterRegStartAddress19 = new TextBox();
             txtMasterRegIndex19 = new TextBox();
             groupBox37 = new GroupBox();
+            cmbDecimalPoint18 = new ComboBox();
             label210 = new Label();
             cmbMasterFunctionCode18 = new ComboBox();
             cmbMasterByteOrder18 = new ComboBox();
@@ -97,6 +362,7 @@
             txtMasterRegStartAddress18 = new TextBox();
             txtMasterRegIndex18 = new TextBox();
             groupBox38 = new GroupBox();
+            cmbDecimalPoint16 = new ComboBox();
             label212 = new Label();
             cmbMasterFunctionCode16 = new ComboBox();
             cmbMasterByteOrder16 = new ComboBox();
@@ -109,6 +375,7 @@
             txtMasterRegStartAddress16 = new TextBox();
             txtMasterRegIndex16 = new TextBox();
             groupBox39 = new GroupBox();
+            cmbDecimalPoint17 = new ComboBox();
             label211 = new Label();
             cmbMasterFunctionCode17 = new ComboBox();
             cmbMasterByteOrder17 = new ComboBox();
@@ -121,6 +388,7 @@
             txtMasterRegStartAddress17 = new TextBox();
             txtMasterRegIndex17 = new TextBox();
             groupBox40 = new GroupBox();
+            cmbDecimalPoint15 = new ComboBox();
             label213 = new Label();
             cmbMasterFunctionCode15 = new ComboBox();
             cmbMasterByteOrder15 = new ComboBox();
@@ -133,6 +401,7 @@
             txtMasterRegStartAddress15 = new TextBox();
             txtMasterRegIndex15 = new TextBox();
             groupBox41 = new GroupBox();
+            cmbDecimalPoint14 = new ComboBox();
             label214 = new Label();
             cmbMasterFunctionCode14 = new ComboBox();
             cmbMasterByteOrder14 = new ComboBox();
@@ -145,6 +414,7 @@
             txtMasterRegStartAddress14 = new TextBox();
             txtMasterRegIndex14 = new TextBox();
             groupBox42 = new GroupBox();
+            cmbDecimalPoint13 = new ComboBox();
             label215 = new Label();
             cmbMasterFunctionCode13 = new ComboBox();
             cmbMasterByteOrder13 = new ComboBox();
@@ -157,6 +427,7 @@
             txtMasterRegStartAddress13 = new TextBox();
             txtMasterRegIndex13 = new TextBox();
             groupBox43 = new GroupBox();
+            cmbDecimalPoint11 = new ComboBox();
             label217 = new Label();
             cmbMasterFunctionCode11 = new ComboBox();
             cmbMasterByteOrder11 = new ComboBox();
@@ -169,6 +440,7 @@
             txtMasterRegStartAddress11 = new TextBox();
             txtMasterRegIndex11 = new TextBox();
             groupBox21 = new GroupBox();
+            cmbDecimalPoint2 = new ComboBox();
             label226 = new Label();
             cmbMasterFunctionCode2 = new ComboBox();
             cmbMasterByteOrder2 = new ComboBox();
@@ -181,6 +453,7 @@
             txtMasterRegStartAddress2 = new TextBox();
             txtMasterRegIndex2 = new TextBox();
             groupBox32 = new GroupBox();
+            cmbDecimalPoint10 = new ComboBox();
             label218 = new Label();
             cmbMasterFunctionCode10 = new ComboBox();
             cmbMasterByteOrder10 = new ComboBox();
@@ -193,6 +466,7 @@
             txtMasterRegStartAddress10 = new TextBox();
             txtMasterRegIndex10 = new TextBox();
             groupBox33 = new GroupBox();
+            cmbDecimalPoint9 = new ComboBox();
             label219 = new Label();
             cmbMasterFunctionCode9 = new ComboBox();
             cmbMasterByteOrder9 = new ComboBox();
@@ -205,6 +479,7 @@
             txtMasterRegStartAddress9 = new TextBox();
             txtMasterRegIndex9 = new TextBox();
             groupBox28 = new GroupBox();
+            cmbDecimalPoint8 = new ComboBox();
             label220 = new Label();
             cmbMasterFunctionCode8 = new ComboBox();
             cmbMasterByteOrder8 = new ComboBox();
@@ -217,6 +492,7 @@
             txtMasterRegStartAddress8 = new TextBox();
             txtMasterRegIndex8 = new TextBox();
             groupBox29 = new GroupBox();
+            cmbDecimalPoint6 = new ComboBox();
             label222 = new Label();
             cmbMasterFunctionCode6 = new ComboBox();
             cmbMasterByteOrder6 = new ComboBox();
@@ -229,6 +505,7 @@
             txtMasterRegStartAddress6 = new TextBox();
             txtMasterRegIndex6 = new TextBox();
             groupBox30 = new GroupBox();
+            cmbDecimalPoint7 = new ComboBox();
             label221 = new Label();
             cmbMasterFunctionCode7 = new ComboBox();
             cmbMasterByteOrder7 = new ComboBox();
@@ -241,6 +518,7 @@
             txtMasterRegStartAddress7 = new TextBox();
             txtMasterRegIndex7 = new TextBox();
             groupBox31 = new GroupBox();
+            cmbDecimalPoint5 = new ComboBox();
             label223 = new Label();
             cmbMasterFunctionCode5 = new ComboBox();
             cmbMasterByteOrder5 = new ComboBox();
@@ -253,6 +531,7 @@
             txtMasterRegStartAddress5 = new TextBox();
             txtMasterRegIndex5 = new TextBox();
             groupBox22 = new GroupBox();
+            cmbDecimalPoint4 = new ComboBox();
             label224 = new Label();
             cmbMasterFunctionCode4 = new ComboBox();
             cmbMasterByteOrder4 = new ComboBox();
@@ -265,6 +544,7 @@
             txtMasterRegStartAddress4 = new TextBox();
             txtMasterRegIndex4 = new TextBox();
             groupBox24 = new GroupBox();
+            cmbDecimalPoint3 = new ComboBox();
             label225 = new Label();
             cmbMasterFunctionCode3 = new ComboBox();
             cmbMasterByteOrder3 = new ComboBox();
@@ -277,6 +557,7 @@
             txtMasterRegStartAddress3 = new TextBox();
             txtMasterRegIndex3 = new TextBox();
             groupBox20 = new GroupBox();
+            cmbDecimalPoint1 = new ComboBox();
             label227 = new Label();
             cmbMasterFunctionCode1 = new ComboBox();
             cmbMasterByteOrder1 = new ComboBox();
@@ -663,28 +944,6 @@
             label9 = new Label();
             label10 = new Label();
             label4 = new Label();
-            pnlGeneralSettings = new Panel();
-            btnGeneralWriteMemory = new Button();
-            btnGeneralReadMemory = new Button();
-            groupBox13 = new GroupBox();
-            txtIemiNo = new TextBox();
-            chkGeneralRtcDebug = new CheckBox();
-            label136 = new Label();
-            chkGeneralModbusDebug = new CheckBox();
-            label135 = new Label();
-            label111 = new Label();
-            txtGeneralSetTime = new TextBox();
-            dtGeneralSetDate = new DateTimePicker();
-            label61 = new Label();
-            label60 = new Label();
-            txtGeneralUserId = new TextBox();
-            txtGeneralDataLogSec = new TextBox();
-            label63 = new Label();
-            txtGeneralSmsLogSec = new TextBox();
-            label66 = new Label();
-            label109 = new Label();
-            label110 = new Label();
-            label2 = new Label();
             pnlUser = new Panel();
             cmbUserIndex = new ComboBox();
             label128 = new Label();
@@ -787,6 +1046,28 @@
             pnlMenu = new Panel();
             menu = new TreeView();
             menuImgList = new ImageList(components);
+            pnlGeneralSettings = new Panel();
+            btnGeneralWriteMemory = new Button();
+            btnGeneralReadMemory = new Button();
+            groupBox13 = new GroupBox();
+            txtIemiNo = new TextBox();
+            chkGeneralRtcDebug = new CheckBox();
+            label136 = new Label();
+            chkGeneralModbusDebug = new CheckBox();
+            label135 = new Label();
+            label111 = new Label();
+            txtGeneralSetTime = new TextBox();
+            dtGeneralSetDate = new DateTimePicker();
+            label61 = new Label();
+            label60 = new Label();
+            txtGeneralUserId = new TextBox();
+            txtGeneralDataLogSec = new TextBox();
+            label63 = new Label();
+            txtGeneralSmsLogSec = new TextBox();
+            label66 = new Label();
+            label109 = new Label();
+            label110 = new Label();
+            label2 = new Label();
             LoginTimer = new System.Windows.Forms.Timer(components);
             btnConnect = new Button();
             cmbComPorts = new ComboBox();
@@ -805,6 +1086,26 @@
             pnlModbusMaster.SuspendLayout();
             groupBox19.SuspendLayout();
             pnlMasterScroll.SuspendLayout();
+            groupBox44.SuspendLayout();
+            groupBox45.SuspendLayout();
+            groupBox46.SuspendLayout();
+            groupBox47.SuspendLayout();
+            groupBox48.SuspendLayout();
+            groupBox49.SuspendLayout();
+            groupBox50.SuspendLayout();
+            groupBox51.SuspendLayout();
+            groupBox52.SuspendLayout();
+            groupBox53.SuspendLayout();
+            groupBox54.SuspendLayout();
+            groupBox55.SuspendLayout();
+            groupBox56.SuspendLayout();
+            groupBox57.SuspendLayout();
+            groupBox58.SuspendLayout();
+            groupBox59.SuspendLayout();
+            groupBox60.SuspendLayout();
+            groupBox61.SuspendLayout();
+            groupBox62.SuspendLayout();
+            groupBox63.SuspendLayout();
             groupBox34.SuspendLayout();
             groupBox35.SuspendLayout();
             groupBox36.SuspendLayout();
@@ -870,8 +1171,6 @@
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            pnlGeneralSettings.SuspendLayout();
-            groupBox13.SuspendLayout();
             pnlUser.SuspendLayout();
             groupBox15.SuspendLayout();
             pnlModbusSettings.SuspendLayout();
@@ -880,9 +1179,11 @@
             groupBox11.SuspendLayout();
             groupBox12.SuspendLayout();
             pnlMenu.SuspendLayout();
+            pnlGeneralSettings.SuspendLayout();
+            groupBox13.SuspendLayout();
             pnlConnect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // pnlDashboard
             // 
@@ -921,6 +1222,7 @@
             // 
             // groupBox19
             // 
+            groupBox19.Controls.Add(label133);
             groupBox19.Controls.Add(btnMasterReadAll);
             groupBox19.Controls.Add(btnMasterWriteAll);
             groupBox19.Controls.Add(pnlMasterScroll);
@@ -939,6 +1241,16 @@
             groupBox19.TabStop = false;
             groupBox19.Text = "Register Connection Parameter";
             // 
+            // label133
+            // 
+            label133.AutoSize = true;
+            label133.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label133.Location = new Point(820, 34);
+            label133.Name = "label133";
+            label133.Size = new Size(87, 17);
+            label133.TabIndex = 108;
+            label133.Text = "Decimal Point";
+            // 
             // btnMasterReadAll
             // 
             btnMasterReadAll.BackColor = Color.DarkKhaki;
@@ -950,7 +1262,7 @@
             btnMasterReadAll.TabIndex = 107;
             btnMasterReadAll.Text = "Read All";
             btnMasterReadAll.UseVisualStyleBackColor = false;
-            btnMasterReadAll.Click += btnMasterReadAll_Click;
+            btnMasterReadAll.Click += (this.btnMasterReadAll_Click);
             // 
             // btnMasterWriteAll
             // 
@@ -963,12 +1275,32 @@
             btnMasterWriteAll.TabIndex = 106;
             btnMasterWriteAll.Text = "Write All";
             btnMasterWriteAll.UseVisualStyleBackColor = false;
-            btnMasterWriteAll.Click += btnMasterWriteAll_Click;
+            btnMasterWriteAll.Click += (this.btnMasterWriteAll_Click);
             // 
             // pnlMasterScroll
             // 
             pnlMasterScroll.AutoScroll = true;
             pnlMasterScroll.AutoScrollMinSize = new Size(1072, 1087);
+            pnlMasterScroll.Controls.Add(groupBox44);
+            pnlMasterScroll.Controls.Add(groupBox45);
+            pnlMasterScroll.Controls.Add(groupBox46);
+            pnlMasterScroll.Controls.Add(groupBox47);
+            pnlMasterScroll.Controls.Add(groupBox48);
+            pnlMasterScroll.Controls.Add(groupBox49);
+            pnlMasterScroll.Controls.Add(groupBox50);
+            pnlMasterScroll.Controls.Add(groupBox51);
+            pnlMasterScroll.Controls.Add(groupBox52);
+            pnlMasterScroll.Controls.Add(groupBox53);
+            pnlMasterScroll.Controls.Add(groupBox54);
+            pnlMasterScroll.Controls.Add(groupBox55);
+            pnlMasterScroll.Controls.Add(groupBox56);
+            pnlMasterScroll.Controls.Add(groupBox57);
+            pnlMasterScroll.Controls.Add(groupBox58);
+            pnlMasterScroll.Controls.Add(groupBox59);
+            pnlMasterScroll.Controls.Add(groupBox60);
+            pnlMasterScroll.Controls.Add(groupBox61);
+            pnlMasterScroll.Controls.Add(groupBox62);
+            pnlMasterScroll.Controls.Add(groupBox63);
             pnlMasterScroll.Controls.Add(groupBox34);
             pnlMasterScroll.Controls.Add(groupBox35);
             pnlMasterScroll.Controls.Add(groupBox36);
@@ -994,8 +1326,2729 @@
             pnlMasterScroll.Size = new Size(1120, 483);
             pnlMasterScroll.TabIndex = 104;
             // 
+            // groupBox44
+            // 
+            groupBox44.Controls.Add(cmbDecimalPoint32);
+            groupBox44.Controls.Add(label178);
+            groupBox44.Controls.Add(cmbMasterFunctionCode32);
+            groupBox44.Controls.Add(cmbMasterByteOrder32);
+            groupBox44.Controls.Add(cmbMasterDataType32);
+            groupBox44.Controls.Add(cmbMasterActivation32);
+            groupBox44.Controls.Add(btnRegWriteMemory32);
+            groupBox44.Controls.Add(btnRegReadMemory32);
+            groupBox44.Controls.Add(txtMasterScaleFactor32);
+            groupBox44.Controls.Add(txtMasterName32);
+            groupBox44.Controls.Add(txtMasterRegStartAddress32);
+            groupBox44.Controls.Add(txtMasterRegIndex32);
+            groupBox44.Location = new Point(-5, 1639);
+            groupBox44.Name = "groupBox44";
+            groupBox44.Size = new Size(1097, 51);
+            groupBox44.TabIndex = 140;
+            groupBox44.TabStop = false;
+            // 
+            // cmbDecimalPoint32
+            // 
+            cmbDecimalPoint32.FormattingEnabled = true;
+            cmbDecimalPoint32.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint32.Location = new Point(816, 16);
+            cmbDecimalPoint32.Name = "cmbDecimalPoint32";
+            cmbDecimalPoint32.Size = new Size(55, 28);
+            cmbDecimalPoint32.TabIndex = 134;
+            // 
+            // label178
+            // 
+            label178.AutoSize = true;
+            label178.Location = new Point(0, 19);
+            label178.Name = "label178";
+            label178.Size = new Size(25, 20);
+            label178.TabIndex = 129;
+            label178.Text = "32";
+            // 
+            // cmbMasterFunctionCode32
+            // 
+            cmbMasterFunctionCode32.FormattingEnabled = true;
+            cmbMasterFunctionCode32.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode32.Location = new Point(583, 16);
+            cmbMasterFunctionCode32.Name = "cmbMasterFunctionCode32";
+            cmbMasterFunctionCode32.Size = new Size(155, 28);
+            cmbMasterFunctionCode32.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder32
+            // 
+            cmbMasterByteOrder32.FormattingEnabled = true;
+            cmbMasterByteOrder32.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder32.Location = new Point(486, 16);
+            cmbMasterByteOrder32.Name = "cmbMasterByteOrder32";
+            cmbMasterByteOrder32.Size = new Size(92, 28);
+            cmbMasterByteOrder32.TabIndex = 99;
+            // 
+            // cmbMasterDataType32
+            // 
+            cmbMasterDataType32.FormattingEnabled = true;
+            cmbMasterDataType32.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType32.Location = new Point(351, 16);
+            cmbMasterDataType32.Name = "cmbMasterDataType32";
+            cmbMasterDataType32.Size = new Size(130, 28);
+            cmbMasterDataType32.TabIndex = 98;
+            // 
+            // cmbMasterActivation32
+            // 
+            cmbMasterActivation32.FormattingEnabled = true;
+            cmbMasterActivation32.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation32.Location = new Point(279, 16);
+            cmbMasterActivation32.Name = "cmbMasterActivation32";
+            cmbMasterActivation32.Size = new Size(68, 28);
+            cmbMasterActivation32.TabIndex = 97;
+            // 
+            // btnRegWriteMemory32
+            // 
+            btnRegWriteMemory32.BackColor = Color.Red;
+            btnRegWriteMemory32.Cursor = Cursors.Hand;
+            btnRegWriteMemory32.ForeColor = Color.White;
+            btnRegWriteMemory32.Location = new Point(984, 15);
+            btnRegWriteMemory32.Name = "btnRegWriteMemory32";
+            btnRegWriteMemory32.Size = new Size(112, 30);
+            btnRegWriteMemory32.TabIndex = 95;
+            btnRegWriteMemory32.Text = "Write Memory";
+            btnRegWriteMemory32.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory32
+            // 
+            btnRegReadMemory32.BackColor = Color.DarkKhaki;
+            btnRegReadMemory32.Cursor = Cursors.Hand;
+            btnRegReadMemory32.ForeColor = Color.White;
+            btnRegReadMemory32.Location = new Point(872, 15);
+            btnRegReadMemory32.Name = "btnRegReadMemory32";
+            btnRegReadMemory32.Size = new Size(112, 30);
+            btnRegReadMemory32.TabIndex = 94;
+            btnRegReadMemory32.Text = "Read Memory";
+            btnRegReadMemory32.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor32
+            // 
+            txtMasterScaleFactor32.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor32.Location = new Point(742, 16);
+            txtMasterScaleFactor32.MaxLength = 10;
+            txtMasterScaleFactor32.Name = "txtMasterScaleFactor32";
+            txtMasterScaleFactor32.Size = new Size(69, 27);
+            txtMasterScaleFactor32.TabIndex = 93;
+            // 
+            // txtMasterName32
+            // 
+            txtMasterName32.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName32.Location = new Point(221, 16);
+            txtMasterName32.MaxLength = 5;
+            txtMasterName32.Name = "txtMasterName32";
+            txtMasterName32.Size = new Size(53, 27);
+            txtMasterName32.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress32
+            // 
+            txtMasterRegStartAddress32.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress32.Location = new Point(108, 16);
+            txtMasterRegStartAddress32.MaxLength = 10;
+            txtMasterRegStartAddress32.Name = "txtMasterRegStartAddress32";
+            txtMasterRegStartAddress32.Size = new Size(110, 27);
+            txtMasterRegStartAddress32.TabIndex = 91;
+            // 
+            // txtMasterRegIndex32
+            // 
+            txtMasterRegIndex32.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex32.Enabled = false;
+            txtMasterRegIndex32.Location = new Point(27, 16);
+            txtMasterRegIndex32.MaxLength = 2;
+            txtMasterRegIndex32.Name = "txtMasterRegIndex32";
+            txtMasterRegIndex32.Size = new Size(79, 27);
+            txtMasterRegIndex32.TabIndex = 90;
+            txtMasterRegIndex32.Text = "31";
+            // 
+            // groupBox45
+            // 
+            groupBox45.Controls.Add(cmbDecimalPoint40);
+            groupBox45.Controls.Add(label179);
+            groupBox45.Controls.Add(cmbMasterFunctionCode40);
+            groupBox45.Controls.Add(cmbMasterByteOrder40);
+            groupBox45.Controls.Add(cmbMasterDataType40);
+            groupBox45.Controls.Add(cmbMasterActivation40);
+            groupBox45.Controls.Add(btnRegWriteMemory40);
+            groupBox45.Controls.Add(btnRegReadMemory40);
+            groupBox45.Controls.Add(txtMasterScaleFactor40);
+            groupBox45.Controls.Add(txtMasterName40);
+            groupBox45.Controls.Add(txtMasterRegStartAddress40);
+            groupBox45.Controls.Add(txtMasterRegIndex40);
+            groupBox45.Location = new Point(-3, 2059);
+            groupBox45.Name = "groupBox45";
+            groupBox45.Size = new Size(1094, 51);
+            groupBox45.TabIndex = 139;
+            groupBox45.TabStop = false;
+            // 
+            // cmbDecimalPoint40
+            // 
+            cmbDecimalPoint40.FormattingEnabled = true;
+            cmbDecimalPoint40.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint40.Location = new Point(810, 15);
+            cmbDecimalPoint40.Name = "cmbDecimalPoint40";
+            cmbDecimalPoint40.Size = new Size(55, 28);
+            cmbDecimalPoint40.TabIndex = 136;
+            // 
+            // label179
+            // 
+            label179.AutoSize = true;
+            label179.Location = new Point(-2, 18);
+            label179.Name = "label179";
+            label179.Size = new Size(25, 20);
+            label179.TabIndex = 121;
+            label179.Text = "40";
+            // 
+            // cmbMasterFunctionCode40
+            // 
+            cmbMasterFunctionCode40.FormattingEnabled = true;
+            cmbMasterFunctionCode40.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode40.Location = new Point(577, 16);
+            cmbMasterFunctionCode40.Name = "cmbMasterFunctionCode40";
+            cmbMasterFunctionCode40.Size = new Size(155, 28);
+            cmbMasterFunctionCode40.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder40
+            // 
+            cmbMasterByteOrder40.FormattingEnabled = true;
+            cmbMasterByteOrder40.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder40.Location = new Point(480, 16);
+            cmbMasterByteOrder40.Name = "cmbMasterByteOrder40";
+            cmbMasterByteOrder40.Size = new Size(92, 28);
+            cmbMasterByteOrder40.TabIndex = 99;
+            // 
+            // cmbMasterDataType40
+            // 
+            cmbMasterDataType40.FormattingEnabled = true;
+            cmbMasterDataType40.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType40.Location = new Point(345, 16);
+            cmbMasterDataType40.Name = "cmbMasterDataType40";
+            cmbMasterDataType40.Size = new Size(130, 28);
+            cmbMasterDataType40.TabIndex = 98;
+            // 
+            // cmbMasterActivation40
+            // 
+            cmbMasterActivation40.FormattingEnabled = true;
+            cmbMasterActivation40.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation40.Location = new Point(273, 16);
+            cmbMasterActivation40.Name = "cmbMasterActivation40";
+            cmbMasterActivation40.Size = new Size(68, 28);
+            cmbMasterActivation40.TabIndex = 97;
+            // 
+            // btnRegWriteMemory40
+            // 
+            btnRegWriteMemory40.BackColor = Color.Red;
+            btnRegWriteMemory40.Cursor = Cursors.Hand;
+            btnRegWriteMemory40.ForeColor = Color.White;
+            btnRegWriteMemory40.Location = new Point(980, 15);
+            btnRegWriteMemory40.Name = "btnRegWriteMemory40";
+            btnRegWriteMemory40.Size = new Size(112, 30);
+            btnRegWriteMemory40.TabIndex = 95;
+            btnRegWriteMemory40.Text = "Write Memory";
+            btnRegWriteMemory40.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory40
+            // 
+            btnRegReadMemory40.BackColor = Color.DarkKhaki;
+            btnRegReadMemory40.Cursor = Cursors.Hand;
+            btnRegReadMemory40.ForeColor = Color.White;
+            btnRegReadMemory40.Location = new Point(868, 15);
+            btnRegReadMemory40.Name = "btnRegReadMemory40";
+            btnRegReadMemory40.Size = new Size(112, 30);
+            btnRegReadMemory40.TabIndex = 94;
+            btnRegReadMemory40.Text = "Read Memory";
+            btnRegReadMemory40.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor40
+            // 
+            txtMasterScaleFactor40.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor40.Location = new Point(736, 16);
+            txtMasterScaleFactor40.MaxLength = 10;
+            txtMasterScaleFactor40.Name = "txtMasterScaleFactor40";
+            txtMasterScaleFactor40.Size = new Size(69, 27);
+            txtMasterScaleFactor40.TabIndex = 93;
+            // 
+            // txtMasterName40
+            // 
+            txtMasterName40.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName40.Location = new Point(217, 16);
+            txtMasterName40.MaxLength = 5;
+            txtMasterName40.Name = "txtMasterName40";
+            txtMasterName40.Size = new Size(50, 27);
+            txtMasterName40.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress40
+            // 
+            txtMasterRegStartAddress40.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress40.Location = new Point(104, 16);
+            txtMasterRegStartAddress40.MaxLength = 10;
+            txtMasterRegStartAddress40.Name = "txtMasterRegStartAddress40";
+            txtMasterRegStartAddress40.Size = new Size(110, 27);
+            txtMasterRegStartAddress40.TabIndex = 91;
+            // 
+            // txtMasterRegIndex40
+            // 
+            txtMasterRegIndex40.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex40.Enabled = false;
+            txtMasterRegIndex40.Location = new Point(23, 16);
+            txtMasterRegIndex40.MaxLength = 2;
+            txtMasterRegIndex40.Name = "txtMasterRegIndex40";
+            txtMasterRegIndex40.Size = new Size(79, 27);
+            txtMasterRegIndex40.TabIndex = 90;
+            txtMasterRegIndex40.Text = "39";
+            // 
+            // groupBox46
+            // 
+            groupBox46.Controls.Add(cmbDecimalPoint39);
+            groupBox46.Controls.Add(label180);
+            groupBox46.Controls.Add(cmbMasterFunctionCode39);
+            groupBox46.Controls.Add(cmbMasterByteOrder39);
+            groupBox46.Controls.Add(cmbMasterDataType39);
+            groupBox46.Controls.Add(cmbMasterActivation39);
+            groupBox46.Controls.Add(btnRegWriteMemory39);
+            groupBox46.Controls.Add(btnRegReadMemory39);
+            groupBox46.Controls.Add(txtMasterScaleFactor39);
+            groupBox46.Controls.Add(txtMasterName39);
+            groupBox46.Controls.Add(txtMasterRegStartAddress39);
+            groupBox46.Controls.Add(txtMasterRegIndex39);
+            groupBox46.Location = new Point(-4, 2007);
+            groupBox46.Name = "groupBox46";
+            groupBox46.Size = new Size(1094, 51);
+            groupBox46.TabIndex = 138;
+            groupBox46.TabStop = false;
+            // 
+            // cmbDecimalPoint39
+            // 
+            cmbDecimalPoint39.FormattingEnabled = true;
+            cmbDecimalPoint39.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint39.Location = new Point(811, 16);
+            cmbDecimalPoint39.Name = "cmbDecimalPoint39";
+            cmbDecimalPoint39.Size = new Size(55, 28);
+            cmbDecimalPoint39.TabIndex = 136;
+            // 
+            // label180
+            // 
+            label180.AutoSize = true;
+            label180.Location = new Point(-1, 19);
+            label180.Name = "label180";
+            label180.Size = new Size(25, 20);
+            label180.TabIndex = 122;
+            label180.Text = "39";
+            // 
+            // cmbMasterFunctionCode39
+            // 
+            cmbMasterFunctionCode39.FormattingEnabled = true;
+            cmbMasterFunctionCode39.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode39.Location = new Point(577, 16);
+            cmbMasterFunctionCode39.Name = "cmbMasterFunctionCode39";
+            cmbMasterFunctionCode39.Size = new Size(155, 28);
+            cmbMasterFunctionCode39.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder39
+            // 
+            cmbMasterByteOrder39.FormattingEnabled = true;
+            cmbMasterByteOrder39.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder39.Location = new Point(480, 16);
+            cmbMasterByteOrder39.Name = "cmbMasterByteOrder39";
+            cmbMasterByteOrder39.Size = new Size(92, 28);
+            cmbMasterByteOrder39.TabIndex = 99;
+            // 
+            // cmbMasterDataType39
+            // 
+            cmbMasterDataType39.FormattingEnabled = true;
+            cmbMasterDataType39.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType39.Location = new Point(345, 16);
+            cmbMasterDataType39.Name = "cmbMasterDataType39";
+            cmbMasterDataType39.Size = new Size(130, 28);
+            cmbMasterDataType39.TabIndex = 98;
+            // 
+            // cmbMasterActivation39
+            // 
+            cmbMasterActivation39.FormattingEnabled = true;
+            cmbMasterActivation39.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation39.Location = new Point(273, 16);
+            cmbMasterActivation39.Name = "cmbMasterActivation39";
+            cmbMasterActivation39.Size = new Size(68, 28);
+            cmbMasterActivation39.TabIndex = 97;
+            // 
+            // btnRegWriteMemory39
+            // 
+            btnRegWriteMemory39.BackColor = Color.Red;
+            btnRegWriteMemory39.Cursor = Cursors.Hand;
+            btnRegWriteMemory39.ForeColor = Color.White;
+            btnRegWriteMemory39.Location = new Point(981, 15);
+            btnRegWriteMemory39.Name = "btnRegWriteMemory39";
+            btnRegWriteMemory39.Size = new Size(112, 30);
+            btnRegWriteMemory39.TabIndex = 95;
+            btnRegWriteMemory39.Text = "Write Memory";
+            btnRegWriteMemory39.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory39
+            // 
+            btnRegReadMemory39.BackColor = Color.DarkKhaki;
+            btnRegReadMemory39.Cursor = Cursors.Hand;
+            btnRegReadMemory39.ForeColor = Color.White;
+            btnRegReadMemory39.Location = new Point(869, 15);
+            btnRegReadMemory39.Name = "btnRegReadMemory39";
+            btnRegReadMemory39.Size = new Size(112, 30);
+            btnRegReadMemory39.TabIndex = 94;
+            btnRegReadMemory39.Text = "Read Memory";
+            btnRegReadMemory39.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor39
+            // 
+            txtMasterScaleFactor39.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor39.Location = new Point(736, 16);
+            txtMasterScaleFactor39.MaxLength = 10;
+            txtMasterScaleFactor39.Name = "txtMasterScaleFactor39";
+            txtMasterScaleFactor39.Size = new Size(69, 27);
+            txtMasterScaleFactor39.TabIndex = 93;
+            // 
+            // txtMasterName39
+            // 
+            txtMasterName39.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName39.Location = new Point(218, 16);
+            txtMasterName39.MaxLength = 5;
+            txtMasterName39.Name = "txtMasterName39";
+            txtMasterName39.Size = new Size(50, 27);
+            txtMasterName39.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress39
+            // 
+            txtMasterRegStartAddress39.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress39.Location = new Point(105, 16);
+            txtMasterRegStartAddress39.MaxLength = 10;
+            txtMasterRegStartAddress39.Name = "txtMasterRegStartAddress39";
+            txtMasterRegStartAddress39.Size = new Size(110, 27);
+            txtMasterRegStartAddress39.TabIndex = 91;
+            // 
+            // txtMasterRegIndex39
+            // 
+            txtMasterRegIndex39.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex39.Enabled = false;
+            txtMasterRegIndex39.Location = new Point(24, 16);
+            txtMasterRegIndex39.MaxLength = 2;
+            txtMasterRegIndex39.Name = "txtMasterRegIndex39";
+            txtMasterRegIndex39.Size = new Size(79, 27);
+            txtMasterRegIndex39.TabIndex = 90;
+            txtMasterRegIndex39.Text = "38";
+            // 
+            // groupBox47
+            // 
+            groupBox47.Controls.Add(cmbDecimalPoint38);
+            groupBox47.Controls.Add(label181);
+            groupBox47.Controls.Add(cmbMasterFunctionCode38);
+            groupBox47.Controls.Add(cmbMasterByteOrder38);
+            groupBox47.Controls.Add(cmbMasterDataType38);
+            groupBox47.Controls.Add(cmbMasterActivation38);
+            groupBox47.Controls.Add(btnRegWriteMemory38);
+            groupBox47.Controls.Add(btnRegReadMemory38);
+            groupBox47.Controls.Add(txtMasterScaleFactor38);
+            groupBox47.Controls.Add(txtMasterName38);
+            groupBox47.Controls.Add(txtMasterRegStartAddress38);
+            groupBox47.Controls.Add(txtMasterRegIndex38);
+            groupBox47.Location = new Point(-5, 1955);
+            groupBox47.Name = "groupBox47";
+            groupBox47.Size = new Size(1094, 51);
+            groupBox47.TabIndex = 137;
+            groupBox47.TabStop = false;
+            // 
+            // cmbDecimalPoint38
+            // 
+            cmbDecimalPoint38.FormattingEnabled = true;
+            cmbDecimalPoint38.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint38.Location = new Point(814, 16);
+            cmbDecimalPoint38.Name = "cmbDecimalPoint38";
+            cmbDecimalPoint38.Size = new Size(55, 28);
+            cmbDecimalPoint38.TabIndex = 135;
+            // 
+            // label181
+            // 
+            label181.AutoSize = true;
+            label181.Location = new Point(0, 19);
+            label181.Name = "label181";
+            label181.Size = new Size(25, 20);
+            label181.TabIndex = 123;
+            label181.Text = "38";
+            // 
+            // cmbMasterFunctionCode38
+            // 
+            cmbMasterFunctionCode38.FormattingEnabled = true;
+            cmbMasterFunctionCode38.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode38.Location = new Point(581, 16);
+            cmbMasterFunctionCode38.Name = "cmbMasterFunctionCode38";
+            cmbMasterFunctionCode38.Size = new Size(155, 28);
+            cmbMasterFunctionCode38.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder38
+            // 
+            cmbMasterByteOrder38.FormattingEnabled = true;
+            cmbMasterByteOrder38.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder38.Location = new Point(484, 16);
+            cmbMasterByteOrder38.Name = "cmbMasterByteOrder38";
+            cmbMasterByteOrder38.Size = new Size(92, 28);
+            cmbMasterByteOrder38.TabIndex = 99;
+            // 
+            // cmbMasterDataType38
+            // 
+            cmbMasterDataType38.FormattingEnabled = true;
+            cmbMasterDataType38.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType38.Location = new Point(349, 16);
+            cmbMasterDataType38.Name = "cmbMasterDataType38";
+            cmbMasterDataType38.Size = new Size(130, 28);
+            cmbMasterDataType38.TabIndex = 98;
+            // 
+            // cmbMasterActivation38
+            // 
+            cmbMasterActivation38.FormattingEnabled = true;
+            cmbMasterActivation38.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation38.Location = new Point(277, 16);
+            cmbMasterActivation38.Name = "cmbMasterActivation38";
+            cmbMasterActivation38.Size = new Size(68, 28);
+            cmbMasterActivation38.TabIndex = 97;
+            // 
+            // btnRegWriteMemory38
+            // 
+            btnRegWriteMemory38.BackColor = Color.Red;
+            btnRegWriteMemory38.Cursor = Cursors.Hand;
+            btnRegWriteMemory38.ForeColor = Color.White;
+            btnRegWriteMemory38.Location = new Point(982, 15);
+            btnRegWriteMemory38.Name = "btnRegWriteMemory38";
+            btnRegWriteMemory38.Size = new Size(112, 30);
+            btnRegWriteMemory38.TabIndex = 95;
+            btnRegWriteMemory38.Text = "Write Memory";
+            btnRegWriteMemory38.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory38
+            // 
+            btnRegReadMemory38.BackColor = Color.DarkKhaki;
+            btnRegReadMemory38.Cursor = Cursors.Hand;
+            btnRegReadMemory38.ForeColor = Color.White;
+            btnRegReadMemory38.Location = new Point(870, 15);
+            btnRegReadMemory38.Name = "btnRegReadMemory38";
+            btnRegReadMemory38.Size = new Size(112, 30);
+            btnRegReadMemory38.TabIndex = 94;
+            btnRegReadMemory38.Text = "Read Memory";
+            btnRegReadMemory38.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor38
+            // 
+            txtMasterScaleFactor38.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor38.Location = new Point(740, 16);
+            txtMasterScaleFactor38.MaxLength = 10;
+            txtMasterScaleFactor38.Name = "txtMasterScaleFactor38";
+            txtMasterScaleFactor38.Size = new Size(69, 27);
+            txtMasterScaleFactor38.TabIndex = 93;
+            // 
+            // txtMasterName38
+            // 
+            txtMasterName38.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName38.Location = new Point(219, 16);
+            txtMasterName38.MaxLength = 5;
+            txtMasterName38.Name = "txtMasterName38";
+            txtMasterName38.Size = new Size(53, 27);
+            txtMasterName38.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress38
+            // 
+            txtMasterRegStartAddress38.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress38.Location = new Point(106, 16);
+            txtMasterRegStartAddress38.MaxLength = 10;
+            txtMasterRegStartAddress38.Name = "txtMasterRegStartAddress38";
+            txtMasterRegStartAddress38.Size = new Size(110, 27);
+            txtMasterRegStartAddress38.TabIndex = 91;
+            // 
+            // txtMasterRegIndex38
+            // 
+            txtMasterRegIndex38.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex38.Enabled = false;
+            txtMasterRegIndex38.Location = new Point(25, 16);
+            txtMasterRegIndex38.MaxLength = 2;
+            txtMasterRegIndex38.Name = "txtMasterRegIndex38";
+            txtMasterRegIndex38.Size = new Size(79, 27);
+            txtMasterRegIndex38.TabIndex = 90;
+            txtMasterRegIndex38.Text = "37";
+            // 
+            // groupBox48
+            // 
+            groupBox48.Controls.Add(cmbDecimalPoint36);
+            groupBox48.Controls.Add(label228);
+            groupBox48.Controls.Add(cmbMasterFunctionCode36);
+            groupBox48.Controls.Add(cmbMasterByteOrder36);
+            groupBox48.Controls.Add(cmbMasterDataType36);
+            groupBox48.Controls.Add(cmbMasterActivation36);
+            groupBox48.Controls.Add(btnRegWriteMemory36);
+            groupBox48.Controls.Add(btnRegReadMemory36);
+            groupBox48.Controls.Add(txtMasterScaleFactor36);
+            groupBox48.Controls.Add(txtMasterName36);
+            groupBox48.Controls.Add(txtMasterRegStartAddress36);
+            groupBox48.Controls.Add(txtMasterRegIndex36);
+            groupBox48.Location = new Point(-6, 1850);
+            groupBox48.Name = "groupBox48";
+            groupBox48.Size = new Size(1099, 51);
+            groupBox48.TabIndex = 136;
+            groupBox48.TabStop = false;
+            // 
+            // cmbDecimalPoint36
+            // 
+            cmbDecimalPoint36.FormattingEnabled = true;
+            cmbDecimalPoint36.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint36.Location = new Point(815, 16);
+            cmbDecimalPoint36.Name = "cmbDecimalPoint36";
+            cmbDecimalPoint36.Size = new Size(55, 28);
+            cmbDecimalPoint36.TabIndex = 135;
+            // 
+            // label228
+            // 
+            label228.AutoSize = true;
+            label228.Location = new Point(0, 19);
+            label228.Name = "label228";
+            label228.Size = new Size(25, 20);
+            label228.TabIndex = 125;
+            label228.Text = "36";
+            // 
+            // cmbMasterFunctionCode36
+            // 
+            cmbMasterFunctionCode36.FormattingEnabled = true;
+            cmbMasterFunctionCode36.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode36.Location = new Point(585, 16);
+            cmbMasterFunctionCode36.Name = "cmbMasterFunctionCode36";
+            cmbMasterFunctionCode36.Size = new Size(155, 28);
+            cmbMasterFunctionCode36.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder36
+            // 
+            cmbMasterByteOrder36.FormattingEnabled = true;
+            cmbMasterByteOrder36.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder36.Location = new Point(488, 16);
+            cmbMasterByteOrder36.Name = "cmbMasterByteOrder36";
+            cmbMasterByteOrder36.Size = new Size(92, 28);
+            cmbMasterByteOrder36.TabIndex = 99;
+            // 
+            // cmbMasterDataType36
+            // 
+            cmbMasterDataType36.FormattingEnabled = true;
+            cmbMasterDataType36.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType36.Location = new Point(353, 16);
+            cmbMasterDataType36.Name = "cmbMasterDataType36";
+            cmbMasterDataType36.Size = new Size(130, 28);
+            cmbMasterDataType36.TabIndex = 98;
+            // 
+            // cmbMasterActivation36
+            // 
+            cmbMasterActivation36.FormattingEnabled = true;
+            cmbMasterActivation36.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation36.Location = new Point(281, 16);
+            cmbMasterActivation36.Name = "cmbMasterActivation36";
+            cmbMasterActivation36.Size = new Size(68, 28);
+            cmbMasterActivation36.TabIndex = 97;
+            // 
+            // btnRegWriteMemory36
+            // 
+            btnRegWriteMemory36.BackColor = Color.Red;
+            btnRegWriteMemory36.Cursor = Cursors.Hand;
+            btnRegWriteMemory36.ForeColor = Color.White;
+            btnRegWriteMemory36.Location = new Point(985, 15);
+            btnRegWriteMemory36.Name = "btnRegWriteMemory36";
+            btnRegWriteMemory36.Size = new Size(112, 30);
+            btnRegWriteMemory36.TabIndex = 95;
+            btnRegWriteMemory36.Text = "Write Memory";
+            btnRegWriteMemory36.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory36
+            // 
+            btnRegReadMemory36.BackColor = Color.DarkKhaki;
+            btnRegReadMemory36.Cursor = Cursors.Hand;
+            btnRegReadMemory36.ForeColor = Color.White;
+            btnRegReadMemory36.Location = new Point(873, 15);
+            btnRegReadMemory36.Name = "btnRegReadMemory36";
+            btnRegReadMemory36.Size = new Size(112, 30);
+            btnRegReadMemory36.TabIndex = 94;
+            btnRegReadMemory36.Text = "Read Memory";
+            btnRegReadMemory36.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor36
+            // 
+            txtMasterScaleFactor36.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor36.Location = new Point(744, 16);
+            txtMasterScaleFactor36.MaxLength = 10;
+            txtMasterScaleFactor36.Name = "txtMasterScaleFactor36";
+            txtMasterScaleFactor36.Size = new Size(69, 27);
+            txtMasterScaleFactor36.TabIndex = 93;
+            // 
+            // txtMasterName36
+            // 
+            txtMasterName36.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName36.Location = new Point(222, 16);
+            txtMasterName36.MaxLength = 5;
+            txtMasterName36.Name = "txtMasterName36";
+            txtMasterName36.Size = new Size(53, 27);
+            txtMasterName36.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress36
+            // 
+            txtMasterRegStartAddress36.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress36.Location = new Point(109, 16);
+            txtMasterRegStartAddress36.MaxLength = 10;
+            txtMasterRegStartAddress36.Name = "txtMasterRegStartAddress36";
+            txtMasterRegStartAddress36.Size = new Size(110, 27);
+            txtMasterRegStartAddress36.TabIndex = 91;
+            // 
+            // txtMasterRegIndex36
+            // 
+            txtMasterRegIndex36.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex36.Enabled = false;
+            txtMasterRegIndex36.Location = new Point(28, 16);
+            txtMasterRegIndex36.MaxLength = 2;
+            txtMasterRegIndex36.Name = "txtMasterRegIndex36";
+            txtMasterRegIndex36.Size = new Size(79, 27);
+            txtMasterRegIndex36.TabIndex = 90;
+            txtMasterRegIndex36.Text = "35";
+            // 
+            // groupBox49
+            // 
+            groupBox49.Controls.Add(cmbDecimalPoint37);
+            groupBox49.Controls.Add(label229);
+            groupBox49.Controls.Add(cmbMasterFunctionCode37);
+            groupBox49.Controls.Add(cmbMasterByteOrder37);
+            groupBox49.Controls.Add(cmbMasterDataType37);
+            groupBox49.Controls.Add(cmbMasterActivation37);
+            groupBox49.Controls.Add(btnRegWriteMemory37);
+            groupBox49.Controls.Add(btnRegReadMemory37);
+            groupBox49.Controls.Add(txtMasterScaleFactor37);
+            groupBox49.Controls.Add(txtMasterName37);
+            groupBox49.Controls.Add(txtMasterRegStartAddress37);
+            groupBox49.Controls.Add(txtMasterRegIndex37);
+            groupBox49.Location = new Point(-9, 1903);
+            groupBox49.Name = "groupBox49";
+            groupBox49.Size = new Size(1101, 51);
+            groupBox49.TabIndex = 135;
+            groupBox49.TabStop = false;
+            // 
+            // cmbDecimalPoint37
+            // 
+            cmbDecimalPoint37.FormattingEnabled = true;
+            cmbDecimalPoint37.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint37.Location = new Point(818, 16);
+            cmbDecimalPoint37.Name = "cmbDecimalPoint37";
+            cmbDecimalPoint37.Size = new Size(55, 28);
+            cmbDecimalPoint37.TabIndex = 135;
+            // 
+            // label229
+            // 
+            label229.AutoSize = true;
+            label229.Location = new Point(3, 19);
+            label229.Name = "label229";
+            label229.Size = new Size(25, 20);
+            label229.TabIndex = 124;
+            label229.Text = "37";
+            // 
+            // cmbMasterFunctionCode37
+            // 
+            cmbMasterFunctionCode37.FormattingEnabled = true;
+            cmbMasterFunctionCode37.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode37.Location = new Point(586, 16);
+            cmbMasterFunctionCode37.Name = "cmbMasterFunctionCode37";
+            cmbMasterFunctionCode37.Size = new Size(155, 28);
+            cmbMasterFunctionCode37.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder37
+            // 
+            cmbMasterByteOrder37.FormattingEnabled = true;
+            cmbMasterByteOrder37.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder37.Location = new Point(489, 16);
+            cmbMasterByteOrder37.Name = "cmbMasterByteOrder37";
+            cmbMasterByteOrder37.Size = new Size(92, 28);
+            cmbMasterByteOrder37.TabIndex = 99;
+            // 
+            // cmbMasterDataType37
+            // 
+            cmbMasterDataType37.FormattingEnabled = true;
+            cmbMasterDataType37.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType37.Location = new Point(354, 16);
+            cmbMasterDataType37.Name = "cmbMasterDataType37";
+            cmbMasterDataType37.Size = new Size(130, 28);
+            cmbMasterDataType37.TabIndex = 98;
+            // 
+            // cmbMasterActivation37
+            // 
+            cmbMasterActivation37.FormattingEnabled = true;
+            cmbMasterActivation37.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation37.Location = new Point(282, 16);
+            cmbMasterActivation37.Name = "cmbMasterActivation37";
+            cmbMasterActivation37.Size = new Size(68, 28);
+            cmbMasterActivation37.TabIndex = 97;
+            // 
+            // btnRegWriteMemory37
+            // 
+            btnRegWriteMemory37.BackColor = Color.Red;
+            btnRegWriteMemory37.Cursor = Cursors.Hand;
+            btnRegWriteMemory37.ForeColor = Color.White;
+            btnRegWriteMemory37.Location = new Point(986, 15);
+            btnRegWriteMemory37.Name = "btnRegWriteMemory37";
+            btnRegWriteMemory37.Size = new Size(112, 30);
+            btnRegWriteMemory37.TabIndex = 95;
+            btnRegWriteMemory37.Text = "Write Memory";
+            btnRegWriteMemory37.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory37
+            // 
+            btnRegReadMemory37.BackColor = Color.DarkKhaki;
+            btnRegReadMemory37.Cursor = Cursors.Hand;
+            btnRegReadMemory37.ForeColor = Color.White;
+            btnRegReadMemory37.Location = new Point(874, 15);
+            btnRegReadMemory37.Name = "btnRegReadMemory37";
+            btnRegReadMemory37.Size = new Size(112, 30);
+            btnRegReadMemory37.TabIndex = 94;
+            btnRegReadMemory37.Text = "Read Memory";
+            btnRegReadMemory37.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor37
+            // 
+            txtMasterScaleFactor37.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor37.Location = new Point(745, 16);
+            txtMasterScaleFactor37.MaxLength = 10;
+            txtMasterScaleFactor37.Name = "txtMasterScaleFactor37";
+            txtMasterScaleFactor37.Size = new Size(69, 27);
+            txtMasterScaleFactor37.TabIndex = 93;
+            // 
+            // txtMasterName37
+            // 
+            txtMasterName37.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName37.Location = new Point(223, 16);
+            txtMasterName37.MaxLength = 5;
+            txtMasterName37.Name = "txtMasterName37";
+            txtMasterName37.Size = new Size(53, 27);
+            txtMasterName37.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress37
+            // 
+            txtMasterRegStartAddress37.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress37.Location = new Point(110, 16);
+            txtMasterRegStartAddress37.MaxLength = 10;
+            txtMasterRegStartAddress37.Name = "txtMasterRegStartAddress37";
+            txtMasterRegStartAddress37.Size = new Size(110, 27);
+            txtMasterRegStartAddress37.TabIndex = 91;
+            // 
+            // txtMasterRegIndex37
+            // 
+            txtMasterRegIndex37.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex37.Enabled = false;
+            txtMasterRegIndex37.Location = new Point(29, 16);
+            txtMasterRegIndex37.MaxLength = 2;
+            txtMasterRegIndex37.Name = "txtMasterRegIndex37";
+            txtMasterRegIndex37.Size = new Size(79, 27);
+            txtMasterRegIndex37.TabIndex = 90;
+            txtMasterRegIndex37.Text = "36";
+            // 
+            // groupBox50
+            // 
+            groupBox50.Controls.Add(cmbDecimalPoint35);
+            groupBox50.Controls.Add(label230);
+            groupBox50.Controls.Add(cmbMasterFunctionCode35);
+            groupBox50.Controls.Add(cmbMasterByteOrder35);
+            groupBox50.Controls.Add(cmbMasterDataType35);
+            groupBox50.Controls.Add(cmbMasterActivation35);
+            groupBox50.Controls.Add(btnRegWriteMemory35);
+            groupBox50.Controls.Add(btnRegReadMemory35);
+            groupBox50.Controls.Add(txtMasterScaleFactor35);
+            groupBox50.Controls.Add(txtMasterName35);
+            groupBox50.Controls.Add(txtMasterRegStartAddress35);
+            groupBox50.Controls.Add(txtMasterRegIndex35);
+            groupBox50.Location = new Point(-5, 1797);
+            groupBox50.Name = "groupBox50";
+            groupBox50.Size = new Size(1098, 51);
+            groupBox50.TabIndex = 134;
+            groupBox50.TabStop = false;
+            // 
+            // cmbDecimalPoint35
+            // 
+            cmbDecimalPoint35.FormattingEnabled = true;
+            cmbDecimalPoint35.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint35.Location = new Point(816, 16);
+            cmbDecimalPoint35.Name = "cmbDecimalPoint35";
+            cmbDecimalPoint35.Size = new Size(55, 28);
+            cmbDecimalPoint35.TabIndex = 135;
+            // 
+            // label230
+            // 
+            label230.AutoSize = true;
+            label230.Location = new Point(-1, 19);
+            label230.Name = "label230";
+            label230.Size = new Size(25, 20);
+            label230.TabIndex = 126;
+            label230.Text = "35";
+            // 
+            // cmbMasterFunctionCode35
+            // 
+            cmbMasterFunctionCode35.FormattingEnabled = true;
+            cmbMasterFunctionCode35.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode35.Location = new Point(586, 16);
+            cmbMasterFunctionCode35.Name = "cmbMasterFunctionCode35";
+            cmbMasterFunctionCode35.Size = new Size(155, 28);
+            cmbMasterFunctionCode35.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder35
+            // 
+            cmbMasterByteOrder35.FormattingEnabled = true;
+            cmbMasterByteOrder35.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder35.Location = new Point(489, 16);
+            cmbMasterByteOrder35.Name = "cmbMasterByteOrder35";
+            cmbMasterByteOrder35.Size = new Size(92, 28);
+            cmbMasterByteOrder35.TabIndex = 99;
+            // 
+            // cmbMasterDataType35
+            // 
+            cmbMasterDataType35.FormattingEnabled = true;
+            cmbMasterDataType35.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType35.Location = new Point(354, 16);
+            cmbMasterDataType35.Name = "cmbMasterDataType35";
+            cmbMasterDataType35.Size = new Size(130, 28);
+            cmbMasterDataType35.TabIndex = 98;
+            // 
+            // cmbMasterActivation35
+            // 
+            cmbMasterActivation35.FormattingEnabled = true;
+            cmbMasterActivation35.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation35.Location = new Point(282, 16);
+            cmbMasterActivation35.Name = "cmbMasterActivation35";
+            cmbMasterActivation35.Size = new Size(68, 28);
+            cmbMasterActivation35.TabIndex = 97;
+            // 
+            // btnRegWriteMemory35
+            // 
+            btnRegWriteMemory35.BackColor = Color.Red;
+            btnRegWriteMemory35.Cursor = Cursors.Hand;
+            btnRegWriteMemory35.ForeColor = Color.White;
+            btnRegWriteMemory35.Location = new Point(985, 15);
+            btnRegWriteMemory35.Name = "btnRegWriteMemory35";
+            btnRegWriteMemory35.Size = new Size(112, 30);
+            btnRegWriteMemory35.TabIndex = 95;
+            btnRegWriteMemory35.Text = "Write Memory";
+            btnRegWriteMemory35.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory35
+            // 
+            btnRegReadMemory35.BackColor = Color.DarkKhaki;
+            btnRegReadMemory35.Cursor = Cursors.Hand;
+            btnRegReadMemory35.ForeColor = Color.White;
+            btnRegReadMemory35.Location = new Point(873, 15);
+            btnRegReadMemory35.Name = "btnRegReadMemory35";
+            btnRegReadMemory35.Size = new Size(112, 30);
+            btnRegReadMemory35.TabIndex = 94;
+            btnRegReadMemory35.Text = "Read Memory";
+            btnRegReadMemory35.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor35
+            // 
+            txtMasterScaleFactor35.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor35.Location = new Point(745, 16);
+            txtMasterScaleFactor35.MaxLength = 10;
+            txtMasterScaleFactor35.Name = "txtMasterScaleFactor35";
+            txtMasterScaleFactor35.Size = new Size(69, 27);
+            txtMasterScaleFactor35.TabIndex = 93;
+            // 
+            // txtMasterName35
+            // 
+            txtMasterName35.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName35.Location = new Point(222, 16);
+            txtMasterName35.MaxLength = 5;
+            txtMasterName35.Name = "txtMasterName35";
+            txtMasterName35.Size = new Size(53, 27);
+            txtMasterName35.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress35
+            // 
+            txtMasterRegStartAddress35.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress35.Location = new Point(109, 16);
+            txtMasterRegStartAddress35.MaxLength = 10;
+            txtMasterRegStartAddress35.Name = "txtMasterRegStartAddress35";
+            txtMasterRegStartAddress35.Size = new Size(110, 27);
+            txtMasterRegStartAddress35.TabIndex = 91;
+            // 
+            // txtMasterRegIndex35
+            // 
+            txtMasterRegIndex35.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex35.Enabled = false;
+            txtMasterRegIndex35.Location = new Point(28, 16);
+            txtMasterRegIndex35.MaxLength = 2;
+            txtMasterRegIndex35.Name = "txtMasterRegIndex35";
+            txtMasterRegIndex35.Size = new Size(79, 27);
+            txtMasterRegIndex35.TabIndex = 90;
+            txtMasterRegIndex35.Text = "34";
+            // 
+            // groupBox51
+            // 
+            groupBox51.Controls.Add(cmbDecimalPoint34);
+            groupBox51.Controls.Add(label231);
+            groupBox51.Controls.Add(cmbMasterFunctionCode34);
+            groupBox51.Controls.Add(cmbMasterByteOrder34);
+            groupBox51.Controls.Add(cmbMasterDataType34);
+            groupBox51.Controls.Add(cmbMasterActivation34);
+            groupBox51.Controls.Add(btnRegWriteMemory34);
+            groupBox51.Controls.Add(btnRegReadMemory34);
+            groupBox51.Controls.Add(txtMasterScaleFactor34);
+            groupBox51.Controls.Add(txtMasterName34);
+            groupBox51.Controls.Add(txtMasterRegStartAddress34);
+            groupBox51.Controls.Add(txtMasterRegIndex34);
+            groupBox51.Location = new Point(-5, 1745);
+            groupBox51.Name = "groupBox51";
+            groupBox51.Size = new Size(1097, 51);
+            groupBox51.TabIndex = 133;
+            groupBox51.TabStop = false;
+            // 
+            // cmbDecimalPoint34
+            // 
+            cmbDecimalPoint34.FormattingEnabled = true;
+            cmbDecimalPoint34.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint34.Location = new Point(817, 15);
+            cmbDecimalPoint34.Name = "cmbDecimalPoint34";
+            cmbDecimalPoint34.Size = new Size(55, 28);
+            cmbDecimalPoint34.TabIndex = 135;
+            // 
+            // label231
+            // 
+            label231.AutoSize = true;
+            label231.Location = new Point(0, 20);
+            label231.Name = "label231";
+            label231.Size = new Size(25, 20);
+            label231.TabIndex = 127;
+            label231.Text = "34";
+            // 
+            // cmbMasterFunctionCode34
+            // 
+            cmbMasterFunctionCode34.FormattingEnabled = true;
+            cmbMasterFunctionCode34.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode34.Location = new Point(586, 16);
+            cmbMasterFunctionCode34.Name = "cmbMasterFunctionCode34";
+            cmbMasterFunctionCode34.Size = new Size(155, 28);
+            cmbMasterFunctionCode34.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder34
+            // 
+            cmbMasterByteOrder34.FormattingEnabled = true;
+            cmbMasterByteOrder34.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder34.Location = new Point(489, 16);
+            cmbMasterByteOrder34.Name = "cmbMasterByteOrder34";
+            cmbMasterByteOrder34.Size = new Size(92, 28);
+            cmbMasterByteOrder34.TabIndex = 99;
+            // 
+            // cmbMasterDataType34
+            // 
+            cmbMasterDataType34.FormattingEnabled = true;
+            cmbMasterDataType34.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType34.Location = new Point(354, 16);
+            cmbMasterDataType34.Name = "cmbMasterDataType34";
+            cmbMasterDataType34.Size = new Size(130, 28);
+            cmbMasterDataType34.TabIndex = 98;
+            // 
+            // cmbMasterActivation34
+            // 
+            cmbMasterActivation34.FormattingEnabled = true;
+            cmbMasterActivation34.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation34.Location = new Point(282, 16);
+            cmbMasterActivation34.Name = "cmbMasterActivation34";
+            cmbMasterActivation34.Size = new Size(68, 28);
+            cmbMasterActivation34.TabIndex = 97;
+            // 
+            // btnRegWriteMemory34
+            // 
+            btnRegWriteMemory34.BackColor = Color.Red;
+            btnRegWriteMemory34.Cursor = Cursors.Hand;
+            btnRegWriteMemory34.ForeColor = Color.White;
+            btnRegWriteMemory34.Location = new Point(986, 15);
+            btnRegWriteMemory34.Name = "btnRegWriteMemory34";
+            btnRegWriteMemory34.Size = new Size(112, 30);
+            btnRegWriteMemory34.TabIndex = 95;
+            btnRegWriteMemory34.Text = "Write Memory";
+            btnRegWriteMemory34.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory34
+            // 
+            btnRegReadMemory34.BackColor = Color.DarkKhaki;
+            btnRegReadMemory34.Cursor = Cursors.Hand;
+            btnRegReadMemory34.ForeColor = Color.White;
+            btnRegReadMemory34.Location = new Point(874, 15);
+            btnRegReadMemory34.Name = "btnRegReadMemory34";
+            btnRegReadMemory34.Size = new Size(112, 30);
+            btnRegReadMemory34.TabIndex = 94;
+            btnRegReadMemory34.Text = "Read Memory";
+            btnRegReadMemory34.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor34
+            // 
+            txtMasterScaleFactor34.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor34.Location = new Point(745, 16);
+            txtMasterScaleFactor34.MaxLength = 10;
+            txtMasterScaleFactor34.Name = "txtMasterScaleFactor34";
+            txtMasterScaleFactor34.Size = new Size(69, 27);
+            txtMasterScaleFactor34.TabIndex = 93;
+            // 
+            // txtMasterName34
+            // 
+            txtMasterName34.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName34.Location = new Point(223, 16);
+            txtMasterName34.MaxLength = 5;
+            txtMasterName34.Name = "txtMasterName34";
+            txtMasterName34.Size = new Size(53, 27);
+            txtMasterName34.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress34
+            // 
+            txtMasterRegStartAddress34.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress34.Location = new Point(110, 16);
+            txtMasterRegStartAddress34.MaxLength = 10;
+            txtMasterRegStartAddress34.Name = "txtMasterRegStartAddress34";
+            txtMasterRegStartAddress34.Size = new Size(110, 27);
+            txtMasterRegStartAddress34.TabIndex = 91;
+            // 
+            // txtMasterRegIndex34
+            // 
+            txtMasterRegIndex34.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex34.Enabled = false;
+            txtMasterRegIndex34.Location = new Point(29, 16);
+            txtMasterRegIndex34.MaxLength = 2;
+            txtMasterRegIndex34.Name = "txtMasterRegIndex34";
+            txtMasterRegIndex34.Size = new Size(79, 27);
+            txtMasterRegIndex34.TabIndex = 90;
+            txtMasterRegIndex34.Text = "33";
+            // 
+            // groupBox52
+            // 
+            groupBox52.Controls.Add(cmbDecimalPoint33);
+            groupBox52.Controls.Add(label232);
+            groupBox52.Controls.Add(cmbMasterFunctionCode33);
+            groupBox52.Controls.Add(cmbMasterByteOrder33);
+            groupBox52.Controls.Add(cmbMasterDataType33);
+            groupBox52.Controls.Add(cmbMasterActivation33);
+            groupBox52.Controls.Add(btnRegWriteMemory33);
+            groupBox52.Controls.Add(btnRegReadMemory33);
+            groupBox52.Controls.Add(txtMasterScaleFactor33);
+            groupBox52.Controls.Add(txtMasterName33);
+            groupBox52.Controls.Add(txtMasterRegStartAddress33);
+            groupBox52.Controls.Add(txtMasterRegIndex33);
+            groupBox52.Location = new Point(-5, 1692);
+            groupBox52.Name = "groupBox52";
+            groupBox52.Size = new Size(1097, 51);
+            groupBox52.TabIndex = 132;
+            groupBox52.TabStop = false;
+            // 
+            // cmbDecimalPoint33
+            // 
+            cmbDecimalPoint33.FormattingEnabled = true;
+            cmbDecimalPoint33.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint33.Location = new Point(816, 16);
+            cmbDecimalPoint33.Name = "cmbDecimalPoint33";
+            cmbDecimalPoint33.Size = new Size(55, 28);
+            cmbDecimalPoint33.TabIndex = 135;
+            // 
+            // label232
+            // 
+            label232.AutoSize = true;
+            label232.Location = new Point(0, 19);
+            label232.Name = "label232";
+            label232.Size = new Size(25, 20);
+            label232.TabIndex = 128;
+            label232.Text = "33";
+            // 
+            // cmbMasterFunctionCode33
+            // 
+            cmbMasterFunctionCode33.FormattingEnabled = true;
+            cmbMasterFunctionCode33.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode33.Location = new Point(584, 16);
+            cmbMasterFunctionCode33.Name = "cmbMasterFunctionCode33";
+            cmbMasterFunctionCode33.Size = new Size(155, 28);
+            cmbMasterFunctionCode33.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder33
+            // 
+            cmbMasterByteOrder33.FormattingEnabled = true;
+            cmbMasterByteOrder33.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder33.Location = new Point(487, 16);
+            cmbMasterByteOrder33.Name = "cmbMasterByteOrder33";
+            cmbMasterByteOrder33.Size = new Size(92, 28);
+            cmbMasterByteOrder33.TabIndex = 99;
+            // 
+            // cmbMasterDataType33
+            // 
+            cmbMasterDataType33.FormattingEnabled = true;
+            cmbMasterDataType33.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType33.Location = new Point(352, 16);
+            cmbMasterDataType33.Name = "cmbMasterDataType33";
+            cmbMasterDataType33.Size = new Size(130, 28);
+            cmbMasterDataType33.TabIndex = 98;
+            // 
+            // cmbMasterActivation33
+            // 
+            cmbMasterActivation33.FormattingEnabled = true;
+            cmbMasterActivation33.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation33.Location = new Point(280, 16);
+            cmbMasterActivation33.Name = "cmbMasterActivation33";
+            cmbMasterActivation33.Size = new Size(68, 28);
+            cmbMasterActivation33.TabIndex = 97;
+            // 
+            // btnRegWriteMemory33
+            // 
+            btnRegWriteMemory33.BackColor = Color.Red;
+            btnRegWriteMemory33.Cursor = Cursors.Hand;
+            btnRegWriteMemory33.ForeColor = Color.White;
+            btnRegWriteMemory33.Location = new Point(984, 15);
+            btnRegWriteMemory33.Name = "btnRegWriteMemory33";
+            btnRegWriteMemory33.Size = new Size(112, 30);
+            btnRegWriteMemory33.TabIndex = 95;
+            btnRegWriteMemory33.Text = "Write Memory";
+            btnRegWriteMemory33.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory33
+            // 
+            btnRegReadMemory33.BackColor = Color.DarkKhaki;
+            btnRegReadMemory33.Cursor = Cursors.Hand;
+            btnRegReadMemory33.ForeColor = Color.White;
+            btnRegReadMemory33.Location = new Point(872, 15);
+            btnRegReadMemory33.Name = "btnRegReadMemory33";
+            btnRegReadMemory33.Size = new Size(112, 30);
+            btnRegReadMemory33.TabIndex = 94;
+            btnRegReadMemory33.Text = "Read Memory";
+            btnRegReadMemory33.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor33
+            // 
+            txtMasterScaleFactor33.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor33.Location = new Point(743, 16);
+            txtMasterScaleFactor33.MaxLength = 10;
+            txtMasterScaleFactor33.Name = "txtMasterScaleFactor33";
+            txtMasterScaleFactor33.Size = new Size(69, 27);
+            txtMasterScaleFactor33.TabIndex = 93;
+            // 
+            // txtMasterName33
+            // 
+            txtMasterName33.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName33.Location = new Point(221, 16);
+            txtMasterName33.MaxLength = 5;
+            txtMasterName33.Name = "txtMasterName33";
+            txtMasterName33.Size = new Size(53, 27);
+            txtMasterName33.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress33
+            // 
+            txtMasterRegStartAddress33.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress33.Location = new Point(108, 16);
+            txtMasterRegStartAddress33.MaxLength = 10;
+            txtMasterRegStartAddress33.Name = "txtMasterRegStartAddress33";
+            txtMasterRegStartAddress33.Size = new Size(110, 27);
+            txtMasterRegStartAddress33.TabIndex = 91;
+            // 
+            // txtMasterRegIndex33
+            // 
+            txtMasterRegIndex33.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex33.Enabled = false;
+            txtMasterRegIndex33.Location = new Point(27, 16);
+            txtMasterRegIndex33.MaxLength = 2;
+            txtMasterRegIndex33.Name = "txtMasterRegIndex33";
+            txtMasterRegIndex33.Size = new Size(79, 27);
+            txtMasterRegIndex33.TabIndex = 90;
+            txtMasterRegIndex33.Text = "32";
+            // 
+            // groupBox53
+            // 
+            groupBox53.Controls.Add(cmbDecimalPoint31);
+            groupBox53.Controls.Add(label233);
+            groupBox53.Controls.Add(cmbMasterFunctionCode31);
+            groupBox53.Controls.Add(cmbMasterByteOrder31);
+            groupBox53.Controls.Add(cmbMasterDataType31);
+            groupBox53.Controls.Add(cmbMasterActivation31);
+            groupBox53.Controls.Add(btnRegWriteMemory31);
+            groupBox53.Controls.Add(btnRegReadMemory31);
+            groupBox53.Controls.Add(txtMasterScaleFactor31);
+            groupBox53.Controls.Add(txtMasterName31);
+            groupBox53.Controls.Add(txtMasterRegStartAddress31);
+            groupBox53.Controls.Add(txtMasterRegIndex31);
+            groupBox53.Location = new Point(-7, 1586);
+            groupBox53.Name = "groupBox53";
+            groupBox53.Size = new Size(1100, 51);
+            groupBox53.TabIndex = 131;
+            groupBox53.TabStop = false;
+            // 
+            // cmbDecimalPoint31
+            // 
+            cmbDecimalPoint31.FormattingEnabled = true;
+            cmbDecimalPoint31.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint31.Location = new Point(817, 17);
+            cmbDecimalPoint31.Name = "cmbDecimalPoint31";
+            cmbDecimalPoint31.Size = new Size(55, 28);
+            cmbDecimalPoint31.TabIndex = 133;
+            // 
+            // label233
+            // 
+            label233.AutoSize = true;
+            label233.Location = new Point(2, 20);
+            label233.Name = "label233";
+            label233.Size = new Size(25, 20);
+            label233.TabIndex = 130;
+            label233.Text = "31";
+            // 
+            // cmbMasterFunctionCode31
+            // 
+            cmbMasterFunctionCode31.FormattingEnabled = true;
+            cmbMasterFunctionCode31.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode31.Location = new Point(584, 16);
+            cmbMasterFunctionCode31.Name = "cmbMasterFunctionCode31";
+            cmbMasterFunctionCode31.Size = new Size(155, 28);
+            cmbMasterFunctionCode31.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder31
+            // 
+            cmbMasterByteOrder31.FormattingEnabled = true;
+            cmbMasterByteOrder31.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder31.Location = new Point(487, 16);
+            cmbMasterByteOrder31.Name = "cmbMasterByteOrder31";
+            cmbMasterByteOrder31.Size = new Size(92, 28);
+            cmbMasterByteOrder31.TabIndex = 99;
+            // 
+            // cmbMasterDataType31
+            // 
+            cmbMasterDataType31.FormattingEnabled = true;
+            cmbMasterDataType31.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType31.Location = new Point(352, 16);
+            cmbMasterDataType31.Name = "cmbMasterDataType31";
+            cmbMasterDataType31.Size = new Size(130, 28);
+            cmbMasterDataType31.TabIndex = 98;
+            // 
+            // cmbMasterActivation31
+            // 
+            cmbMasterActivation31.FormattingEnabled = true;
+            cmbMasterActivation31.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation31.Location = new Point(280, 16);
+            cmbMasterActivation31.Name = "cmbMasterActivation31";
+            cmbMasterActivation31.Size = new Size(68, 28);
+            cmbMasterActivation31.TabIndex = 97;
+            // 
+            // btnRegWriteMemory31
+            // 
+            btnRegWriteMemory31.BackColor = Color.Red;
+            btnRegWriteMemory31.Cursor = Cursors.Hand;
+            btnRegWriteMemory31.ForeColor = Color.White;
+            btnRegWriteMemory31.Location = new Point(986, 15);
+            btnRegWriteMemory31.Name = "btnRegWriteMemory31";
+            btnRegWriteMemory31.Size = new Size(112, 30);
+            btnRegWriteMemory31.TabIndex = 95;
+            btnRegWriteMemory31.Text = "Write Memory";
+            btnRegWriteMemory31.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory31
+            // 
+            btnRegReadMemory31.BackColor = Color.DarkKhaki;
+            btnRegReadMemory31.Cursor = Cursors.Hand;
+            btnRegReadMemory31.ForeColor = Color.White;
+            btnRegReadMemory31.Location = new Point(874, 15);
+            btnRegReadMemory31.Name = "btnRegReadMemory31";
+            btnRegReadMemory31.Size = new Size(112, 30);
+            btnRegReadMemory31.TabIndex = 94;
+            btnRegReadMemory31.Text = "Read Memory";
+            btnRegReadMemory31.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor31
+            // 
+            txtMasterScaleFactor31.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor31.Location = new Point(743, 16);
+            txtMasterScaleFactor31.MaxLength = 10;
+            txtMasterScaleFactor31.Name = "txtMasterScaleFactor31";
+            txtMasterScaleFactor31.Size = new Size(69, 27);
+            txtMasterScaleFactor31.TabIndex = 93;
+            // 
+            // txtMasterName31
+            // 
+            txtMasterName31.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName31.Location = new Point(223, 16);
+            txtMasterName31.MaxLength = 5;
+            txtMasterName31.Name = "txtMasterName31";
+            txtMasterName31.Size = new Size(53, 27);
+            txtMasterName31.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress31
+            // 
+            txtMasterRegStartAddress31.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress31.Location = new Point(110, 16);
+            txtMasterRegStartAddress31.MaxLength = 10;
+            txtMasterRegStartAddress31.Name = "txtMasterRegStartAddress31";
+            txtMasterRegStartAddress31.Size = new Size(110, 27);
+            txtMasterRegStartAddress31.TabIndex = 91;
+            // 
+            // txtMasterRegIndex31
+            // 
+            txtMasterRegIndex31.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex31.Enabled = false;
+            txtMasterRegIndex31.Location = new Point(29, 16);
+            txtMasterRegIndex31.MaxLength = 2;
+            txtMasterRegIndex31.Name = "txtMasterRegIndex31";
+            txtMasterRegIndex31.Size = new Size(79, 27);
+            txtMasterRegIndex31.TabIndex = 90;
+            txtMasterRegIndex31.Text = "30";
+            // 
+            // groupBox54
+            // 
+            groupBox54.Controls.Add(cmbDecimalPoint22);
+            groupBox54.Controls.Add(label234);
+            groupBox54.Controls.Add(cmbMasterFunctionCode22);
+            groupBox54.Controls.Add(cmbMasterByteOrder22);
+            groupBox54.Controls.Add(cmbMasterDataType22);
+            groupBox54.Controls.Add(cmbMasterActivation22);
+            groupBox54.Controls.Add(btnRegWriteMemory22);
+            groupBox54.Controls.Add(btnRegReadMemory22);
+            groupBox54.Controls.Add(txtMasterScaleFactor22);
+            groupBox54.Controls.Add(txtMasterName22);
+            groupBox54.Controls.Add(txtMasterRegStartAddress22);
+            groupBox54.Controls.Add(txtMasterRegIndex22);
+            groupBox54.Location = new Point(-5, 1113);
+            groupBox54.Name = "groupBox54";
+            groupBox54.Size = new Size(1098, 51);
+            groupBox54.TabIndex = 130;
+            groupBox54.TabStop = false;
+            // 
+            // cmbDecimalPoint22
+            // 
+            cmbDecimalPoint22.FormattingEnabled = true;
+            cmbDecimalPoint22.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint22.Location = new Point(816, 15);
+            cmbDecimalPoint22.Name = "cmbDecimalPoint22";
+            cmbDecimalPoint22.Size = new Size(55, 28);
+            cmbDecimalPoint22.TabIndex = 140;
+            // 
+            // label234
+            // 
+            label234.AutoSize = true;
+            label234.Location = new Point(3, 19);
+            label234.Name = "label234";
+            label234.Size = new Size(25, 20);
+            label234.TabIndex = 139;
+            label234.Text = "22";
+            // 
+            // cmbMasterFunctionCode22
+            // 
+            cmbMasterFunctionCode22.FormattingEnabled = true;
+            cmbMasterFunctionCode22.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode22.Location = new Point(585, 16);
+            cmbMasterFunctionCode22.Name = "cmbMasterFunctionCode22";
+            cmbMasterFunctionCode22.Size = new Size(155, 28);
+            cmbMasterFunctionCode22.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder22
+            // 
+            cmbMasterByteOrder22.FormattingEnabled = true;
+            cmbMasterByteOrder22.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder22.Location = new Point(488, 16);
+            cmbMasterByteOrder22.Name = "cmbMasterByteOrder22";
+            cmbMasterByteOrder22.Size = new Size(92, 28);
+            cmbMasterByteOrder22.TabIndex = 99;
+            // 
+            // cmbMasterDataType22
+            // 
+            cmbMasterDataType22.FormattingEnabled = true;
+            cmbMasterDataType22.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType22.Location = new Point(353, 16);
+            cmbMasterDataType22.Name = "cmbMasterDataType22";
+            cmbMasterDataType22.Size = new Size(130, 28);
+            cmbMasterDataType22.TabIndex = 98;
+            // 
+            // cmbMasterActivation22
+            // 
+            cmbMasterActivation22.FormattingEnabled = true;
+            cmbMasterActivation22.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation22.Location = new Point(281, 16);
+            cmbMasterActivation22.Name = "cmbMasterActivation22";
+            cmbMasterActivation22.Size = new Size(68, 28);
+            cmbMasterActivation22.TabIndex = 97;
+            // 
+            // btnRegWriteMemory22
+            // 
+            btnRegWriteMemory22.BackColor = Color.Red;
+            btnRegWriteMemory22.Cursor = Cursors.Hand;
+            btnRegWriteMemory22.ForeColor = Color.White;
+            btnRegWriteMemory22.Location = new Point(986, 15);
+            btnRegWriteMemory22.Name = "btnRegWriteMemory22";
+            btnRegWriteMemory22.Size = new Size(112, 30);
+            btnRegWriteMemory22.TabIndex = 95;
+            btnRegWriteMemory22.Text = "Write Memory";
+            btnRegWriteMemory22.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory22
+            // 
+            btnRegReadMemory22.BackColor = Color.DarkKhaki;
+            btnRegReadMemory22.Cursor = Cursors.Hand;
+            btnRegReadMemory22.ForeColor = Color.White;
+            btnRegReadMemory22.Location = new Point(874, 15);
+            btnRegReadMemory22.Name = "btnRegReadMemory22";
+            btnRegReadMemory22.Size = new Size(112, 30);
+            btnRegReadMemory22.TabIndex = 94;
+            btnRegReadMemory22.Text = "Read Memory";
+            btnRegReadMemory22.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor22
+            // 
+            txtMasterScaleFactor22.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor22.Location = new Point(744, 16);
+            txtMasterScaleFactor22.MaxLength = 10;
+            txtMasterScaleFactor22.Name = "txtMasterScaleFactor22";
+            txtMasterScaleFactor22.Size = new Size(69, 27);
+            txtMasterScaleFactor22.TabIndex = 93;
+            // 
+            // txtMasterName22
+            // 
+            txtMasterName22.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName22.Location = new Point(223, 16);
+            txtMasterName22.MaxLength = 5;
+            txtMasterName22.Name = "txtMasterName22";
+            txtMasterName22.Size = new Size(53, 27);
+            txtMasterName22.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress22
+            // 
+            txtMasterRegStartAddress22.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress22.Location = new Point(110, 16);
+            txtMasterRegStartAddress22.MaxLength = 10;
+            txtMasterRegStartAddress22.Name = "txtMasterRegStartAddress22";
+            txtMasterRegStartAddress22.Size = new Size(110, 27);
+            txtMasterRegStartAddress22.TabIndex = 91;
+            // 
+            // txtMasterRegIndex22
+            // 
+            txtMasterRegIndex22.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex22.Enabled = false;
+            txtMasterRegIndex22.Location = new Point(29, 16);
+            txtMasterRegIndex22.MaxLength = 2;
+            txtMasterRegIndex22.Name = "txtMasterRegIndex22";
+            txtMasterRegIndex22.Size = new Size(79, 27);
+            txtMasterRegIndex22.TabIndex = 90;
+            txtMasterRegIndex22.Text = "21";
+            // 
+            // groupBox55
+            // 
+            groupBox55.Controls.Add(cmbDecimalPoint30);
+            groupBox55.Controls.Add(label235);
+            groupBox55.Controls.Add(cmbMasterFunctionCode30);
+            groupBox55.Controls.Add(cmbMasterByteOrder30);
+            groupBox55.Controls.Add(cmbMasterDataType30);
+            groupBox55.Controls.Add(cmbMasterActivation30);
+            groupBox55.Controls.Add(btnRegWriteMemory30);
+            groupBox55.Controls.Add(btnRegReadMemory30);
+            groupBox55.Controls.Add(txtMasterScaleFactor30);
+            groupBox55.Controls.Add(txtMasterName30);
+            groupBox55.Controls.Add(txtMasterRegStartAddress30);
+            groupBox55.Controls.Add(txtMasterRegIndex30);
+            groupBox55.Location = new Point(-6, 1533);
+            groupBox55.Name = "groupBox55";
+            groupBox55.Size = new Size(1097, 51);
+            groupBox55.TabIndex = 129;
+            groupBox55.TabStop = false;
+            // 
+            // cmbDecimalPoint30
+            // 
+            cmbDecimalPoint30.FormattingEnabled = true;
+            cmbDecimalPoint30.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint30.Location = new Point(816, 15);
+            cmbDecimalPoint30.Name = "cmbDecimalPoint30";
+            cmbDecimalPoint30.Size = new Size(55, 28);
+            cmbDecimalPoint30.TabIndex = 132;
+            // 
+            // label235
+            // 
+            label235.AutoSize = true;
+            label235.Location = new Point(2, 19);
+            label235.Name = "label235";
+            label235.Size = new Size(25, 20);
+            label235.TabIndex = 131;
+            label235.Text = "30";
+            // 
+            // cmbMasterFunctionCode30
+            // 
+            cmbMasterFunctionCode30.FormattingEnabled = true;
+            cmbMasterFunctionCode30.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode30.Location = new Point(584, 16);
+            cmbMasterFunctionCode30.Name = "cmbMasterFunctionCode30";
+            cmbMasterFunctionCode30.Size = new Size(155, 28);
+            cmbMasterFunctionCode30.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder30
+            // 
+            cmbMasterByteOrder30.FormattingEnabled = true;
+            cmbMasterByteOrder30.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder30.Location = new Point(487, 16);
+            cmbMasterByteOrder30.Name = "cmbMasterByteOrder30";
+            cmbMasterByteOrder30.Size = new Size(92, 28);
+            cmbMasterByteOrder30.TabIndex = 99;
+            // 
+            // cmbMasterDataType30
+            // 
+            cmbMasterDataType30.FormattingEnabled = true;
+            cmbMasterDataType30.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType30.Location = new Point(352, 16);
+            cmbMasterDataType30.Name = "cmbMasterDataType30";
+            cmbMasterDataType30.Size = new Size(130, 28);
+            cmbMasterDataType30.TabIndex = 98;
+            // 
+            // cmbMasterActivation30
+            // 
+            cmbMasterActivation30.FormattingEnabled = true;
+            cmbMasterActivation30.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation30.Location = new Point(280, 16);
+            cmbMasterActivation30.Name = "cmbMasterActivation30";
+            cmbMasterActivation30.Size = new Size(68, 28);
+            cmbMasterActivation30.TabIndex = 97;
+            // 
+            // btnRegWriteMemory30
+            // 
+            btnRegWriteMemory30.BackColor = Color.Red;
+            btnRegWriteMemory30.Cursor = Cursors.Hand;
+            btnRegWriteMemory30.ForeColor = Color.White;
+            btnRegWriteMemory30.Location = new Point(985, 15);
+            btnRegWriteMemory30.Name = "btnRegWriteMemory30";
+            btnRegWriteMemory30.Size = new Size(112, 30);
+            btnRegWriteMemory30.TabIndex = 95;
+            btnRegWriteMemory30.Text = "Write Memory";
+            btnRegWriteMemory30.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory30
+            // 
+            btnRegReadMemory30.BackColor = Color.DarkKhaki;
+            btnRegReadMemory30.Cursor = Cursors.Hand;
+            btnRegReadMemory30.ForeColor = Color.White;
+            btnRegReadMemory30.Location = new Point(873, 15);
+            btnRegReadMemory30.Name = "btnRegReadMemory30";
+            btnRegReadMemory30.Size = new Size(112, 30);
+            btnRegReadMemory30.TabIndex = 94;
+            btnRegReadMemory30.Text = "Read Memory";
+            btnRegReadMemory30.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor30
+            // 
+            txtMasterScaleFactor30.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor30.Location = new Point(743, 16);
+            txtMasterScaleFactor30.MaxLength = 10;
+            txtMasterScaleFactor30.Name = "txtMasterScaleFactor30";
+            txtMasterScaleFactor30.Size = new Size(69, 27);
+            txtMasterScaleFactor30.TabIndex = 93;
+            // 
+            // txtMasterName30
+            // 
+            txtMasterName30.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName30.Location = new Point(222, 16);
+            txtMasterName30.MaxLength = 5;
+            txtMasterName30.Name = "txtMasterName30";
+            txtMasterName30.Size = new Size(53, 27);
+            txtMasterName30.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress30
+            // 
+            txtMasterRegStartAddress30.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress30.Location = new Point(109, 16);
+            txtMasterRegStartAddress30.MaxLength = 10;
+            txtMasterRegStartAddress30.Name = "txtMasterRegStartAddress30";
+            txtMasterRegStartAddress30.Size = new Size(110, 27);
+            txtMasterRegStartAddress30.TabIndex = 91;
+            // 
+            // txtMasterRegIndex30
+            // 
+            txtMasterRegIndex30.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex30.Enabled = false;
+            txtMasterRegIndex30.Location = new Point(28, 16);
+            txtMasterRegIndex30.MaxLength = 2;
+            txtMasterRegIndex30.Name = "txtMasterRegIndex30";
+            txtMasterRegIndex30.Size = new Size(79, 27);
+            txtMasterRegIndex30.TabIndex = 90;
+            txtMasterRegIndex30.Text = "29";
+            // 
+            // groupBox56
+            // 
+            groupBox56.Controls.Add(cmbDecimalPoint29);
+            groupBox56.Controls.Add(label236);
+            groupBox56.Controls.Add(cmbMasterFunctionCode29);
+            groupBox56.Controls.Add(cmbMasterByteOrder29);
+            groupBox56.Controls.Add(cmbMasterDataType29);
+            groupBox56.Controls.Add(cmbMasterActivation29);
+            groupBox56.Controls.Add(btnRegWriteMemory29);
+            groupBox56.Controls.Add(btnRegReadMemory29);
+            groupBox56.Controls.Add(txtMasterScaleFactor29);
+            groupBox56.Controls.Add(txtMasterName29);
+            groupBox56.Controls.Add(txtMasterRegStartAddress29);
+            groupBox56.Controls.Add(txtMasterRegIndex29);
+            groupBox56.Location = new Point(-6, 1481);
+            groupBox56.Name = "groupBox56";
+            groupBox56.Size = new Size(1097, 51);
+            groupBox56.TabIndex = 128;
+            groupBox56.TabStop = false;
+            // 
+            // cmbDecimalPoint29
+            // 
+            cmbDecimalPoint29.FormattingEnabled = true;
+            cmbDecimalPoint29.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint29.Location = new Point(816, 15);
+            cmbDecimalPoint29.Name = "cmbDecimalPoint29";
+            cmbDecimalPoint29.Size = new Size(55, 28);
+            cmbDecimalPoint29.TabIndex = 141;
+            // 
+            // label236
+            // 
+            label236.AutoSize = true;
+            label236.Location = new Point(2, 19);
+            label236.Name = "label236";
+            label236.Size = new Size(25, 20);
+            label236.TabIndex = 132;
+            label236.Text = "29";
+            // 
+            // cmbMasterFunctionCode29
+            // 
+            cmbMasterFunctionCode29.FormattingEnabled = true;
+            cmbMasterFunctionCode29.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode29.Location = new Point(584, 16);
+            cmbMasterFunctionCode29.Name = "cmbMasterFunctionCode29";
+            cmbMasterFunctionCode29.Size = new Size(155, 28);
+            cmbMasterFunctionCode29.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder29
+            // 
+            cmbMasterByteOrder29.FormattingEnabled = true;
+            cmbMasterByteOrder29.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder29.Location = new Point(487, 16);
+            cmbMasterByteOrder29.Name = "cmbMasterByteOrder29";
+            cmbMasterByteOrder29.Size = new Size(92, 28);
+            cmbMasterByteOrder29.TabIndex = 99;
+            // 
+            // cmbMasterDataType29
+            // 
+            cmbMasterDataType29.FormattingEnabled = true;
+            cmbMasterDataType29.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType29.Location = new Point(352, 16);
+            cmbMasterDataType29.Name = "cmbMasterDataType29";
+            cmbMasterDataType29.Size = new Size(130, 28);
+            cmbMasterDataType29.TabIndex = 98;
+            // 
+            // cmbMasterActivation29
+            // 
+            cmbMasterActivation29.FormattingEnabled = true;
+            cmbMasterActivation29.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation29.Location = new Point(280, 16);
+            cmbMasterActivation29.Name = "cmbMasterActivation29";
+            cmbMasterActivation29.Size = new Size(68, 28);
+            cmbMasterActivation29.TabIndex = 97;
+            // 
+            // btnRegWriteMemory29
+            // 
+            btnRegWriteMemory29.BackColor = Color.Red;
+            btnRegWriteMemory29.Cursor = Cursors.Hand;
+            btnRegWriteMemory29.ForeColor = Color.White;
+            btnRegWriteMemory29.Location = new Point(985, 15);
+            btnRegWriteMemory29.Name = "btnRegWriteMemory29";
+            btnRegWriteMemory29.Size = new Size(112, 30);
+            btnRegWriteMemory29.TabIndex = 95;
+            btnRegWriteMemory29.Text = "Write Memory";
+            btnRegWriteMemory29.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory29
+            // 
+            btnRegReadMemory29.BackColor = Color.DarkKhaki;
+            btnRegReadMemory29.Cursor = Cursors.Hand;
+            btnRegReadMemory29.ForeColor = Color.White;
+            btnRegReadMemory29.Location = new Point(873, 15);
+            btnRegReadMemory29.Name = "btnRegReadMemory29";
+            btnRegReadMemory29.Size = new Size(112, 30);
+            btnRegReadMemory29.TabIndex = 94;
+            btnRegReadMemory29.Text = "Read Memory";
+            btnRegReadMemory29.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor29
+            // 
+            txtMasterScaleFactor29.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor29.Location = new Point(743, 16);
+            txtMasterScaleFactor29.MaxLength = 10;
+            txtMasterScaleFactor29.Name = "txtMasterScaleFactor29";
+            txtMasterScaleFactor29.Size = new Size(69, 27);
+            txtMasterScaleFactor29.TabIndex = 93;
+            // 
+            // txtMasterName29
+            // 
+            txtMasterName29.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName29.Location = new Point(222, 16);
+            txtMasterName29.MaxLength = 5;
+            txtMasterName29.Name = "txtMasterName29";
+            txtMasterName29.Size = new Size(53, 27);
+            txtMasterName29.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress29
+            // 
+            txtMasterRegStartAddress29.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress29.Location = new Point(109, 16);
+            txtMasterRegStartAddress29.MaxLength = 10;
+            txtMasterRegStartAddress29.Name = "txtMasterRegStartAddress29";
+            txtMasterRegStartAddress29.Size = new Size(110, 27);
+            txtMasterRegStartAddress29.TabIndex = 91;
+            // 
+            // txtMasterRegIndex29
+            // 
+            txtMasterRegIndex29.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex29.Enabled = false;
+            txtMasterRegIndex29.Location = new Point(28, 16);
+            txtMasterRegIndex29.MaxLength = 2;
+            txtMasterRegIndex29.Name = "txtMasterRegIndex29";
+            txtMasterRegIndex29.Size = new Size(79, 27);
+            txtMasterRegIndex29.TabIndex = 90;
+            txtMasterRegIndex29.Text = "28";
+            // 
+            // groupBox57
+            // 
+            groupBox57.Controls.Add(cmbDecimalPoint28);
+            groupBox57.Controls.Add(label237);
+            groupBox57.Controls.Add(cmbMasterFunctionCode28);
+            groupBox57.Controls.Add(cmbMasterByteOrder28);
+            groupBox57.Controls.Add(cmbMasterDataType28);
+            groupBox57.Controls.Add(cmbMasterActivation28);
+            groupBox57.Controls.Add(btnRegWriteMemory28);
+            groupBox57.Controls.Add(btnRegReadMemory28);
+            groupBox57.Controls.Add(txtMasterScaleFactor28);
+            groupBox57.Controls.Add(txtMasterName28);
+            groupBox57.Controls.Add(txtMasterRegStartAddress28);
+            groupBox57.Controls.Add(txtMasterRegIndex28);
+            groupBox57.Location = new Point(-6, 1429);
+            groupBox57.Name = "groupBox57";
+            groupBox57.Size = new Size(1097, 51);
+            groupBox57.TabIndex = 127;
+            groupBox57.TabStop = false;
+            // 
+            // cmbDecimalPoint28
+            // 
+            cmbDecimalPoint28.FormattingEnabled = true;
+            cmbDecimalPoint28.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint28.Location = new Point(816, 16);
+            cmbDecimalPoint28.Name = "cmbDecimalPoint28";
+            cmbDecimalPoint28.Size = new Size(55, 28);
+            cmbDecimalPoint28.TabIndex = 141;
+            // 
+            // label237
+            // 
+            label237.AutoSize = true;
+            label237.Location = new Point(2, 19);
+            label237.Name = "label237";
+            label237.Size = new Size(25, 20);
+            label237.TabIndex = 133;
+            label237.Text = "28";
+            // 
+            // cmbMasterFunctionCode28
+            // 
+            cmbMasterFunctionCode28.FormattingEnabled = true;
+            cmbMasterFunctionCode28.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode28.Location = new Point(585, 16);
+            cmbMasterFunctionCode28.Name = "cmbMasterFunctionCode28";
+            cmbMasterFunctionCode28.Size = new Size(155, 28);
+            cmbMasterFunctionCode28.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder28
+            // 
+            cmbMasterByteOrder28.FormattingEnabled = true;
+            cmbMasterByteOrder28.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder28.Location = new Point(488, 16);
+            cmbMasterByteOrder28.Name = "cmbMasterByteOrder28";
+            cmbMasterByteOrder28.Size = new Size(92, 28);
+            cmbMasterByteOrder28.TabIndex = 99;
+            // 
+            // cmbMasterDataType28
+            // 
+            cmbMasterDataType28.FormattingEnabled = true;
+            cmbMasterDataType28.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType28.Location = new Point(353, 16);
+            cmbMasterDataType28.Name = "cmbMasterDataType28";
+            cmbMasterDataType28.Size = new Size(130, 28);
+            cmbMasterDataType28.TabIndex = 98;
+            // 
+            // cmbMasterActivation28
+            // 
+            cmbMasterActivation28.FormattingEnabled = true;
+            cmbMasterActivation28.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation28.Location = new Point(281, 16);
+            cmbMasterActivation28.Name = "cmbMasterActivation28";
+            cmbMasterActivation28.Size = new Size(68, 28);
+            cmbMasterActivation28.TabIndex = 97;
+            // 
+            // btnRegWriteMemory28
+            // 
+            btnRegWriteMemory28.BackColor = Color.Red;
+            btnRegWriteMemory28.Cursor = Cursors.Hand;
+            btnRegWriteMemory28.ForeColor = Color.White;
+            btnRegWriteMemory28.Location = new Point(986, 15);
+            btnRegWriteMemory28.Name = "btnRegWriteMemory28";
+            btnRegWriteMemory28.Size = new Size(112, 30);
+            btnRegWriteMemory28.TabIndex = 95;
+            btnRegWriteMemory28.Text = "Write Memory";
+            btnRegWriteMemory28.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory28
+            // 
+            btnRegReadMemory28.BackColor = Color.DarkKhaki;
+            btnRegReadMemory28.Cursor = Cursors.Hand;
+            btnRegReadMemory28.ForeColor = Color.White;
+            btnRegReadMemory28.Location = new Point(874, 15);
+            btnRegReadMemory28.Name = "btnRegReadMemory28";
+            btnRegReadMemory28.Size = new Size(112, 30);
+            btnRegReadMemory28.TabIndex = 94;
+            btnRegReadMemory28.Text = "Read Memory";
+            btnRegReadMemory28.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor28
+            // 
+            txtMasterScaleFactor28.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor28.Location = new Point(744, 16);
+            txtMasterScaleFactor28.MaxLength = 10;
+            txtMasterScaleFactor28.Name = "txtMasterScaleFactor28";
+            txtMasterScaleFactor28.Size = new Size(69, 27);
+            txtMasterScaleFactor28.TabIndex = 93;
+            // 
+            // txtMasterName28
+            // 
+            txtMasterName28.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName28.Location = new Point(223, 16);
+            txtMasterName28.MaxLength = 5;
+            txtMasterName28.Name = "txtMasterName28";
+            txtMasterName28.Size = new Size(53, 27);
+            txtMasterName28.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress28
+            // 
+            txtMasterRegStartAddress28.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress28.Location = new Point(110, 16);
+            txtMasterRegStartAddress28.MaxLength = 10;
+            txtMasterRegStartAddress28.Name = "txtMasterRegStartAddress28";
+            txtMasterRegStartAddress28.Size = new Size(110, 27);
+            txtMasterRegStartAddress28.TabIndex = 91;
+            // 
+            // txtMasterRegIndex28
+            // 
+            txtMasterRegIndex28.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex28.Enabled = false;
+            txtMasterRegIndex28.Location = new Point(29, 16);
+            txtMasterRegIndex28.MaxLength = 2;
+            txtMasterRegIndex28.Name = "txtMasterRegIndex28";
+            txtMasterRegIndex28.Size = new Size(79, 27);
+            txtMasterRegIndex28.TabIndex = 90;
+            txtMasterRegIndex28.Text = "27";
+            // 
+            // groupBox58
+            // 
+            groupBox58.Controls.Add(cmbDecimalPoint26);
+            groupBox58.Controls.Add(label238);
+            groupBox58.Controls.Add(cmbMasterFunctionCode26);
+            groupBox58.Controls.Add(cmbMasterByteOrder26);
+            groupBox58.Controls.Add(cmbMasterDataType26);
+            groupBox58.Controls.Add(cmbMasterActivation26);
+            groupBox58.Controls.Add(btnRegWriteMemory26);
+            groupBox58.Controls.Add(btnRegReadMemory26);
+            groupBox58.Controls.Add(txtMasterScaleFactor26);
+            groupBox58.Controls.Add(txtMasterName26);
+            groupBox58.Controls.Add(txtMasterRegStartAddress26);
+            groupBox58.Controls.Add(txtMasterRegIndex26);
+            groupBox58.Location = new Point(-7, 1324);
+            groupBox58.Name = "groupBox58";
+            groupBox58.Size = new Size(1100, 51);
+            groupBox58.TabIndex = 126;
+            groupBox58.TabStop = false;
+            // 
+            // cmbDecimalPoint26
+            // 
+            cmbDecimalPoint26.FormattingEnabled = true;
+            cmbDecimalPoint26.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint26.Location = new Point(819, 16);
+            cmbDecimalPoint26.Name = "cmbDecimalPoint26";
+            cmbDecimalPoint26.Size = new Size(55, 28);
+            cmbDecimalPoint26.TabIndex = 139;
+            // 
+            // label238
+            // 
+            label238.AutoSize = true;
+            label238.Location = new Point(3, 19);
+            label238.Name = "label238";
+            label238.Size = new Size(25, 20);
+            label238.TabIndex = 135;
+            label238.Text = "26";
+            // 
+            // cmbMasterFunctionCode26
+            // 
+            cmbMasterFunctionCode26.FormattingEnabled = true;
+            cmbMasterFunctionCode26.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode26.Location = new Point(588, 16);
+            cmbMasterFunctionCode26.Name = "cmbMasterFunctionCode26";
+            cmbMasterFunctionCode26.Size = new Size(155, 28);
+            cmbMasterFunctionCode26.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder26
+            // 
+            cmbMasterByteOrder26.FormattingEnabled = true;
+            cmbMasterByteOrder26.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder26.Location = new Point(491, 16);
+            cmbMasterByteOrder26.Name = "cmbMasterByteOrder26";
+            cmbMasterByteOrder26.Size = new Size(92, 28);
+            cmbMasterByteOrder26.TabIndex = 99;
+            // 
+            // cmbMasterDataType26
+            // 
+            cmbMasterDataType26.FormattingEnabled = true;
+            cmbMasterDataType26.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType26.Location = new Point(356, 16);
+            cmbMasterDataType26.Name = "cmbMasterDataType26";
+            cmbMasterDataType26.Size = new Size(130, 28);
+            cmbMasterDataType26.TabIndex = 98;
+            // 
+            // cmbMasterActivation26
+            // 
+            cmbMasterActivation26.FormattingEnabled = true;
+            cmbMasterActivation26.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation26.Location = new Point(284, 16);
+            cmbMasterActivation26.Name = "cmbMasterActivation26";
+            cmbMasterActivation26.Size = new Size(68, 28);
+            cmbMasterActivation26.TabIndex = 97;
+            // 
+            // btnRegWriteMemory26
+            // 
+            btnRegWriteMemory26.BackColor = Color.Red;
+            btnRegWriteMemory26.Cursor = Cursors.Hand;
+            btnRegWriteMemory26.ForeColor = Color.White;
+            btnRegWriteMemory26.Location = new Point(988, 15);
+            btnRegWriteMemory26.Name = "btnRegWriteMemory26";
+            btnRegWriteMemory26.Size = new Size(112, 30);
+            btnRegWriteMemory26.TabIndex = 95;
+            btnRegWriteMemory26.Text = "Write Memory";
+            btnRegWriteMemory26.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory26
+            // 
+            btnRegReadMemory26.BackColor = Color.DarkKhaki;
+            btnRegReadMemory26.Cursor = Cursors.Hand;
+            btnRegReadMemory26.ForeColor = Color.White;
+            btnRegReadMemory26.Location = new Point(876, 15);
+            btnRegReadMemory26.Name = "btnRegReadMemory26";
+            btnRegReadMemory26.Size = new Size(112, 30);
+            btnRegReadMemory26.TabIndex = 94;
+            btnRegReadMemory26.Text = "Read Memory";
+            btnRegReadMemory26.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor26
+            // 
+            txtMasterScaleFactor26.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor26.Location = new Point(747, 16);
+            txtMasterScaleFactor26.MaxLength = 10;
+            txtMasterScaleFactor26.Name = "txtMasterScaleFactor26";
+            txtMasterScaleFactor26.Size = new Size(69, 27);
+            txtMasterScaleFactor26.TabIndex = 93;
+            // 
+            // txtMasterName26
+            // 
+            txtMasterName26.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName26.Location = new Point(225, 16);
+            txtMasterName26.MaxLength = 5;
+            txtMasterName26.Name = "txtMasterName26";
+            txtMasterName26.Size = new Size(53, 27);
+            txtMasterName26.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress26
+            // 
+            txtMasterRegStartAddress26.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress26.Location = new Point(112, 16);
+            txtMasterRegStartAddress26.MaxLength = 10;
+            txtMasterRegStartAddress26.Name = "txtMasterRegStartAddress26";
+            txtMasterRegStartAddress26.Size = new Size(110, 27);
+            txtMasterRegStartAddress26.TabIndex = 91;
+            // 
+            // txtMasterRegIndex26
+            // 
+            txtMasterRegIndex26.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex26.Enabled = false;
+            txtMasterRegIndex26.Location = new Point(31, 16);
+            txtMasterRegIndex26.MaxLength = 2;
+            txtMasterRegIndex26.Name = "txtMasterRegIndex26";
+            txtMasterRegIndex26.Size = new Size(79, 27);
+            txtMasterRegIndex26.TabIndex = 90;
+            txtMasterRegIndex26.Text = "25";
+            // 
+            // groupBox59
+            // 
+            groupBox59.Controls.Add(cmbDecimalPoint27);
+            groupBox59.Controls.Add(label239);
+            groupBox59.Controls.Add(cmbMasterFunctionCode27);
+            groupBox59.Controls.Add(cmbMasterByteOrder27);
+            groupBox59.Controls.Add(cmbMasterDataType27);
+            groupBox59.Controls.Add(cmbMasterActivation27);
+            groupBox59.Controls.Add(btnRegWriteMemory27);
+            groupBox59.Controls.Add(btnRegReadMemory27);
+            groupBox59.Controls.Add(txtMasterScaleFactor27);
+            groupBox59.Controls.Add(txtMasterName27);
+            groupBox59.Controls.Add(txtMasterRegStartAddress27);
+            groupBox59.Controls.Add(txtMasterRegIndex27);
+            groupBox59.Location = new Point(-6, 1377);
+            groupBox59.Name = "groupBox59";
+            groupBox59.Size = new Size(1099, 51);
+            groupBox59.TabIndex = 125;
+            groupBox59.TabStop = false;
+            // 
+            // cmbDecimalPoint27
+            // 
+            cmbDecimalPoint27.FormattingEnabled = true;
+            cmbDecimalPoint27.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint27.Location = new Point(817, 16);
+            cmbDecimalPoint27.Name = "cmbDecimalPoint27";
+            cmbDecimalPoint27.Size = new Size(55, 28);
+            cmbDecimalPoint27.TabIndex = 140;
+            // 
+            // label239
+            // 
+            label239.AutoSize = true;
+            label239.Location = new Point(2, 19);
+            label239.Name = "label239";
+            label239.Size = new Size(25, 20);
+            label239.TabIndex = 134;
+            label239.Text = "27";
+            // 
+            // cmbMasterFunctionCode27
+            // 
+            cmbMasterFunctionCode27.FormattingEnabled = true;
+            cmbMasterFunctionCode27.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode27.Location = new Point(585, 16);
+            cmbMasterFunctionCode27.Name = "cmbMasterFunctionCode27";
+            cmbMasterFunctionCode27.Size = new Size(155, 28);
+            cmbMasterFunctionCode27.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder27
+            // 
+            cmbMasterByteOrder27.FormattingEnabled = true;
+            cmbMasterByteOrder27.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder27.Location = new Point(488, 16);
+            cmbMasterByteOrder27.Name = "cmbMasterByteOrder27";
+            cmbMasterByteOrder27.Size = new Size(92, 28);
+            cmbMasterByteOrder27.TabIndex = 99;
+            // 
+            // cmbMasterDataType27
+            // 
+            cmbMasterDataType27.FormattingEnabled = true;
+            cmbMasterDataType27.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType27.Location = new Point(353, 16);
+            cmbMasterDataType27.Name = "cmbMasterDataType27";
+            cmbMasterDataType27.Size = new Size(130, 28);
+            cmbMasterDataType27.TabIndex = 98;
+            // 
+            // cmbMasterActivation27
+            // 
+            cmbMasterActivation27.FormattingEnabled = true;
+            cmbMasterActivation27.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation27.Location = new Point(281, 16);
+            cmbMasterActivation27.Name = "cmbMasterActivation27";
+            cmbMasterActivation27.Size = new Size(68, 28);
+            cmbMasterActivation27.TabIndex = 97;
+            // 
+            // btnRegWriteMemory27
+            // 
+            btnRegWriteMemory27.BackColor = Color.Red;
+            btnRegWriteMemory27.Cursor = Cursors.Hand;
+            btnRegWriteMemory27.ForeColor = Color.White;
+            btnRegWriteMemory27.Location = new Point(986, 15);
+            btnRegWriteMemory27.Name = "btnRegWriteMemory27";
+            btnRegWriteMemory27.Size = new Size(112, 30);
+            btnRegWriteMemory27.TabIndex = 95;
+            btnRegWriteMemory27.Text = "Write Memory";
+            btnRegWriteMemory27.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory27
+            // 
+            btnRegReadMemory27.BackColor = Color.DarkKhaki;
+            btnRegReadMemory27.Cursor = Cursors.Hand;
+            btnRegReadMemory27.ForeColor = Color.White;
+            btnRegReadMemory27.Location = new Point(874, 15);
+            btnRegReadMemory27.Name = "btnRegReadMemory27";
+            btnRegReadMemory27.Size = new Size(112, 30);
+            btnRegReadMemory27.TabIndex = 94;
+            btnRegReadMemory27.Text = "Read Memory";
+            btnRegReadMemory27.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor27
+            // 
+            txtMasterScaleFactor27.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor27.Location = new Point(744, 16);
+            txtMasterScaleFactor27.MaxLength = 10;
+            txtMasterScaleFactor27.Name = "txtMasterScaleFactor27";
+            txtMasterScaleFactor27.Size = new Size(69, 27);
+            txtMasterScaleFactor27.TabIndex = 93;
+            // 
+            // txtMasterName27
+            // 
+            txtMasterName27.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName27.Location = new Point(223, 16);
+            txtMasterName27.MaxLength = 5;
+            txtMasterName27.Name = "txtMasterName27";
+            txtMasterName27.Size = new Size(53, 27);
+            txtMasterName27.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress27
+            // 
+            txtMasterRegStartAddress27.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress27.Location = new Point(110, 16);
+            txtMasterRegStartAddress27.MaxLength = 10;
+            txtMasterRegStartAddress27.Name = "txtMasterRegStartAddress27";
+            txtMasterRegStartAddress27.Size = new Size(110, 27);
+            txtMasterRegStartAddress27.TabIndex = 91;
+            // 
+            // txtMasterRegIndex27
+            // 
+            txtMasterRegIndex27.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex27.Enabled = false;
+            txtMasterRegIndex27.Location = new Point(29, 16);
+            txtMasterRegIndex27.MaxLength = 2;
+            txtMasterRegIndex27.Name = "txtMasterRegIndex27";
+            txtMasterRegIndex27.Size = new Size(79, 27);
+            txtMasterRegIndex27.TabIndex = 90;
+            txtMasterRegIndex27.Text = "26";
+            // 
+            // groupBox60
+            // 
+            groupBox60.Controls.Add(cmbDecimalPoint25);
+            groupBox60.Controls.Add(label240);
+            groupBox60.Controls.Add(cmbMasterFunctionCode25);
+            groupBox60.Controls.Add(cmbMasterByteOrder25);
+            groupBox60.Controls.Add(cmbMasterDataType25);
+            groupBox60.Controls.Add(cmbMasterActivation25);
+            groupBox60.Controls.Add(btnRegWriteMemory25);
+            groupBox60.Controls.Add(btnRegReadMemory25);
+            groupBox60.Controls.Add(txtMasterScaleFactor25);
+            groupBox60.Controls.Add(txtMasterName25);
+            groupBox60.Controls.Add(txtMasterRegStartAddress25);
+            groupBox60.Controls.Add(txtMasterRegIndex25);
+            groupBox60.Location = new Point(-5, 1271);
+            groupBox60.Name = "groupBox60";
+            groupBox60.Size = new Size(1098, 51);
+            groupBox60.TabIndex = 124;
+            groupBox60.TabStop = false;
+            // 
+            // cmbDecimalPoint25
+            // 
+            cmbDecimalPoint25.FormattingEnabled = true;
+            cmbDecimalPoint25.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint25.Location = new Point(817, 16);
+            cmbDecimalPoint25.Name = "cmbDecimalPoint25";
+            cmbDecimalPoint25.Size = new Size(55, 28);
+            cmbDecimalPoint25.TabIndex = 139;
+            // 
+            // label240
+            // 
+            label240.AutoSize = true;
+            label240.Location = new Point(0, 19);
+            label240.Name = "label240";
+            label240.Size = new Size(25, 20);
+            label240.TabIndex = 136;
+            label240.Text = "25";
+            // 
+            // cmbMasterFunctionCode25
+            // 
+            cmbMasterFunctionCode25.FormattingEnabled = true;
+            cmbMasterFunctionCode25.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode25.Location = new Point(585, 16);
+            cmbMasterFunctionCode25.Name = "cmbMasterFunctionCode25";
+            cmbMasterFunctionCode25.Size = new Size(155, 28);
+            cmbMasterFunctionCode25.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder25
+            // 
+            cmbMasterByteOrder25.FormattingEnabled = true;
+            cmbMasterByteOrder25.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder25.Location = new Point(488, 16);
+            cmbMasterByteOrder25.Name = "cmbMasterByteOrder25";
+            cmbMasterByteOrder25.Size = new Size(92, 28);
+            cmbMasterByteOrder25.TabIndex = 99;
+            // 
+            // cmbMasterDataType25
+            // 
+            cmbMasterDataType25.FormattingEnabled = true;
+            cmbMasterDataType25.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType25.Location = new Point(353, 16);
+            cmbMasterDataType25.Name = "cmbMasterDataType25";
+            cmbMasterDataType25.Size = new Size(130, 28);
+            cmbMasterDataType25.TabIndex = 98;
+            // 
+            // cmbMasterActivation25
+            // 
+            cmbMasterActivation25.FormattingEnabled = true;
+            cmbMasterActivation25.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation25.Location = new Point(281, 16);
+            cmbMasterActivation25.Name = "cmbMasterActivation25";
+            cmbMasterActivation25.Size = new Size(68, 28);
+            cmbMasterActivation25.TabIndex = 97;
+            // 
+            // btnRegWriteMemory25
+            // 
+            btnRegWriteMemory25.BackColor = Color.Red;
+            btnRegWriteMemory25.Cursor = Cursors.Hand;
+            btnRegWriteMemory25.ForeColor = Color.White;
+            btnRegWriteMemory25.Location = new Point(986, 15);
+            btnRegWriteMemory25.Name = "btnRegWriteMemory25";
+            btnRegWriteMemory25.Size = new Size(112, 30);
+            btnRegWriteMemory25.TabIndex = 95;
+            btnRegWriteMemory25.Text = "Write Memory";
+            btnRegWriteMemory25.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory25
+            // 
+            btnRegReadMemory25.BackColor = Color.DarkKhaki;
+            btnRegReadMemory25.Cursor = Cursors.Hand;
+            btnRegReadMemory25.ForeColor = Color.White;
+            btnRegReadMemory25.Location = new Point(874, 15);
+            btnRegReadMemory25.Name = "btnRegReadMemory25";
+            btnRegReadMemory25.Size = new Size(112, 30);
+            btnRegReadMemory25.TabIndex = 94;
+            btnRegReadMemory25.Text = "Read Memory";
+            btnRegReadMemory25.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor25
+            // 
+            txtMasterScaleFactor25.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor25.Location = new Point(744, 16);
+            txtMasterScaleFactor25.MaxLength = 10;
+            txtMasterScaleFactor25.Name = "txtMasterScaleFactor25";
+            txtMasterScaleFactor25.Size = new Size(69, 27);
+            txtMasterScaleFactor25.TabIndex = 93;
+            // 
+            // txtMasterName25
+            // 
+            txtMasterName25.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName25.Location = new Point(223, 16);
+            txtMasterName25.MaxLength = 5;
+            txtMasterName25.Name = "txtMasterName25";
+            txtMasterName25.Size = new Size(53, 27);
+            txtMasterName25.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress25
+            // 
+            txtMasterRegStartAddress25.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress25.Location = new Point(110, 16);
+            txtMasterRegStartAddress25.MaxLength = 10;
+            txtMasterRegStartAddress25.Name = "txtMasterRegStartAddress25";
+            txtMasterRegStartAddress25.Size = new Size(110, 27);
+            txtMasterRegStartAddress25.TabIndex = 91;
+            // 
+            // txtMasterRegIndex25
+            // 
+            txtMasterRegIndex25.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex25.Enabled = false;
+            txtMasterRegIndex25.Location = new Point(29, 16);
+            txtMasterRegIndex25.MaxLength = 2;
+            txtMasterRegIndex25.Name = "txtMasterRegIndex25";
+            txtMasterRegIndex25.Size = new Size(79, 27);
+            txtMasterRegIndex25.TabIndex = 90;
+            txtMasterRegIndex25.Text = "24";
+            // 
+            // groupBox61
+            // 
+            groupBox61.Controls.Add(cmbDecimalPoint24);
+            groupBox61.Controls.Add(label241);
+            groupBox61.Controls.Add(cmbMasterFunctionCode24);
+            groupBox61.Controls.Add(cmbMasterByteOrder24);
+            groupBox61.Controls.Add(cmbMasterDataType24);
+            groupBox61.Controls.Add(cmbMasterActivation24);
+            groupBox61.Controls.Add(btnRegWriteMemory24);
+            groupBox61.Controls.Add(btnRegReadMemory24);
+            groupBox61.Controls.Add(txtMasterScaleFactor24);
+            groupBox61.Controls.Add(txtMasterName24);
+            groupBox61.Controls.Add(txtMasterRegStartAddress24);
+            groupBox61.Controls.Add(txtMasterRegIndex24);
+            groupBox61.Location = new Point(-6, 1219);
+            groupBox61.Name = "groupBox61";
+            groupBox61.Size = new Size(1098, 51);
+            groupBox61.TabIndex = 123;
+            groupBox61.TabStop = false;
+            // 
+            // cmbDecimalPoint24
+            // 
+            cmbDecimalPoint24.FormattingEnabled = true;
+            cmbDecimalPoint24.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint24.Location = new Point(818, 15);
+            cmbDecimalPoint24.Name = "cmbDecimalPoint24";
+            cmbDecimalPoint24.Size = new Size(55, 28);
+            cmbDecimalPoint24.TabIndex = 138;
+            // 
+            // label241
+            // 
+            label241.AutoSize = true;
+            label241.Location = new Point(1, 19);
+            label241.Name = "label241";
+            label241.Size = new Size(25, 20);
+            label241.TabIndex = 137;
+            label241.Text = "24";
+            // 
+            // cmbMasterFunctionCode24
+            // 
+            cmbMasterFunctionCode24.FormattingEnabled = true;
+            cmbMasterFunctionCode24.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode24.Location = new Point(586, 16);
+            cmbMasterFunctionCode24.Name = "cmbMasterFunctionCode24";
+            cmbMasterFunctionCode24.Size = new Size(155, 28);
+            cmbMasterFunctionCode24.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder24
+            // 
+            cmbMasterByteOrder24.FormattingEnabled = true;
+            cmbMasterByteOrder24.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder24.Location = new Point(489, 16);
+            cmbMasterByteOrder24.Name = "cmbMasterByteOrder24";
+            cmbMasterByteOrder24.Size = new Size(92, 28);
+            cmbMasterByteOrder24.TabIndex = 99;
+            // 
+            // cmbMasterDataType24
+            // 
+            cmbMasterDataType24.FormattingEnabled = true;
+            cmbMasterDataType24.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType24.Location = new Point(354, 16);
+            cmbMasterDataType24.Name = "cmbMasterDataType24";
+            cmbMasterDataType24.Size = new Size(130, 28);
+            cmbMasterDataType24.TabIndex = 98;
+            // 
+            // cmbMasterActivation24
+            // 
+            cmbMasterActivation24.FormattingEnabled = true;
+            cmbMasterActivation24.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation24.Location = new Point(282, 16);
+            cmbMasterActivation24.Name = "cmbMasterActivation24";
+            cmbMasterActivation24.Size = new Size(68, 28);
+            cmbMasterActivation24.TabIndex = 97;
+            // 
+            // btnRegWriteMemory24
+            // 
+            btnRegWriteMemory24.BackColor = Color.Red;
+            btnRegWriteMemory24.Cursor = Cursors.Hand;
+            btnRegWriteMemory24.ForeColor = Color.White;
+            btnRegWriteMemory24.Location = new Point(987, 15);
+            btnRegWriteMemory24.Name = "btnRegWriteMemory24";
+            btnRegWriteMemory24.Size = new Size(112, 30);
+            btnRegWriteMemory24.TabIndex = 95;
+            btnRegWriteMemory24.Text = "Write Memory";
+            btnRegWriteMemory24.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory24
+            // 
+            btnRegReadMemory24.BackColor = Color.DarkKhaki;
+            btnRegReadMemory24.Cursor = Cursors.Hand;
+            btnRegReadMemory24.ForeColor = Color.White;
+            btnRegReadMemory24.Location = new Point(875, 15);
+            btnRegReadMemory24.Name = "btnRegReadMemory24";
+            btnRegReadMemory24.Size = new Size(112, 30);
+            btnRegReadMemory24.TabIndex = 94;
+            btnRegReadMemory24.Text = "Read Memory";
+            btnRegReadMemory24.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor24
+            // 
+            txtMasterScaleFactor24.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor24.Location = new Point(745, 16);
+            txtMasterScaleFactor24.MaxLength = 10;
+            txtMasterScaleFactor24.Name = "txtMasterScaleFactor24";
+            txtMasterScaleFactor24.Size = new Size(69, 27);
+            txtMasterScaleFactor24.TabIndex = 93;
+            // 
+            // txtMasterName24
+            // 
+            txtMasterName24.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName24.Location = new Point(224, 16);
+            txtMasterName24.MaxLength = 5;
+            txtMasterName24.Name = "txtMasterName24";
+            txtMasterName24.Size = new Size(53, 27);
+            txtMasterName24.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress24
+            // 
+            txtMasterRegStartAddress24.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress24.Location = new Point(111, 16);
+            txtMasterRegStartAddress24.MaxLength = 10;
+            txtMasterRegStartAddress24.Name = "txtMasterRegStartAddress24";
+            txtMasterRegStartAddress24.Size = new Size(110, 27);
+            txtMasterRegStartAddress24.TabIndex = 91;
+            // 
+            // txtMasterRegIndex24
+            // 
+            txtMasterRegIndex24.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex24.Enabled = false;
+            txtMasterRegIndex24.Location = new Point(30, 16);
+            txtMasterRegIndex24.MaxLength = 2;
+            txtMasterRegIndex24.Name = "txtMasterRegIndex24";
+            txtMasterRegIndex24.Size = new Size(79, 27);
+            txtMasterRegIndex24.TabIndex = 90;
+            txtMasterRegIndex24.Text = "23";
+            // 
+            // groupBox62
+            // 
+            groupBox62.Controls.Add(cmbDecimalPoint23);
+            groupBox62.Controls.Add(label242);
+            groupBox62.Controls.Add(cmbMasterFunctionCode23);
+            groupBox62.Controls.Add(cmbMasterByteOrder23);
+            groupBox62.Controls.Add(cmbMasterDataType23);
+            groupBox62.Controls.Add(cmbMasterActivation23);
+            groupBox62.Controls.Add(btnRegWriteMemory23);
+            groupBox62.Controls.Add(btnRegReadMemory23);
+            groupBox62.Controls.Add(txtMasterScaleFactor23);
+            groupBox62.Controls.Add(txtMasterName23);
+            groupBox62.Controls.Add(txtMasterRegStartAddress23);
+            groupBox62.Controls.Add(txtMasterRegIndex23);
+            groupBox62.Location = new Point(-5, 1166);
+            groupBox62.Name = "groupBox62";
+            groupBox62.Size = new Size(1097, 51);
+            groupBox62.TabIndex = 122;
+            groupBox62.TabStop = false;
+            // 
+            // cmbDecimalPoint23
+            // 
+            cmbDecimalPoint23.FormattingEnabled = true;
+            cmbDecimalPoint23.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint23.Location = new Point(817, 16);
+            cmbDecimalPoint23.Name = "cmbDecimalPoint23";
+            cmbDecimalPoint23.Size = new Size(55, 28);
+            cmbDecimalPoint23.TabIndex = 139;
+            // 
+            // label242
+            // 
+            label242.AutoSize = true;
+            label242.Location = new Point(0, 19);
+            label242.Name = "label242";
+            label242.Size = new Size(25, 20);
+            label242.TabIndex = 138;
+            label242.Text = "23";
+            // 
+            // cmbMasterFunctionCode23
+            // 
+            cmbMasterFunctionCode23.FormattingEnabled = true;
+            cmbMasterFunctionCode23.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode23.Location = new Point(585, 16);
+            cmbMasterFunctionCode23.Name = "cmbMasterFunctionCode23";
+            cmbMasterFunctionCode23.Size = new Size(155, 28);
+            cmbMasterFunctionCode23.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder23
+            // 
+            cmbMasterByteOrder23.FormattingEnabled = true;
+            cmbMasterByteOrder23.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder23.Location = new Point(488, 16);
+            cmbMasterByteOrder23.Name = "cmbMasterByteOrder23";
+            cmbMasterByteOrder23.Size = new Size(92, 28);
+            cmbMasterByteOrder23.TabIndex = 99;
+            // 
+            // cmbMasterDataType23
+            // 
+            cmbMasterDataType23.FormattingEnabled = true;
+            cmbMasterDataType23.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType23.Location = new Point(353, 16);
+            cmbMasterDataType23.Name = "cmbMasterDataType23";
+            cmbMasterDataType23.Size = new Size(130, 28);
+            cmbMasterDataType23.TabIndex = 98;
+            // 
+            // cmbMasterActivation23
+            // 
+            cmbMasterActivation23.FormattingEnabled = true;
+            cmbMasterActivation23.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation23.Location = new Point(281, 16);
+            cmbMasterActivation23.Name = "cmbMasterActivation23";
+            cmbMasterActivation23.Size = new Size(68, 28);
+            cmbMasterActivation23.TabIndex = 97;
+            // 
+            // btnRegWriteMemory23
+            // 
+            btnRegWriteMemory23.BackColor = Color.Red;
+            btnRegWriteMemory23.Cursor = Cursors.Hand;
+            btnRegWriteMemory23.ForeColor = Color.White;
+            btnRegWriteMemory23.Location = new Point(986, 15);
+            btnRegWriteMemory23.Name = "btnRegWriteMemory23";
+            btnRegWriteMemory23.Size = new Size(112, 30);
+            btnRegWriteMemory23.TabIndex = 95;
+            btnRegWriteMemory23.Text = "Write Memory";
+            btnRegWriteMemory23.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory23
+            // 
+            btnRegReadMemory23.BackColor = Color.DarkKhaki;
+            btnRegReadMemory23.Cursor = Cursors.Hand;
+            btnRegReadMemory23.ForeColor = Color.White;
+            btnRegReadMemory23.Location = new Point(874, 15);
+            btnRegReadMemory23.Name = "btnRegReadMemory23";
+            btnRegReadMemory23.Size = new Size(112, 30);
+            btnRegReadMemory23.TabIndex = 94;
+            btnRegReadMemory23.Text = "Read Memory";
+            btnRegReadMemory23.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor23
+            // 
+            txtMasterScaleFactor23.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor23.Location = new Point(744, 16);
+            txtMasterScaleFactor23.MaxLength = 10;
+            txtMasterScaleFactor23.Name = "txtMasterScaleFactor23";
+            txtMasterScaleFactor23.Size = new Size(69, 27);
+            txtMasterScaleFactor23.TabIndex = 93;
+            // 
+            // txtMasterName23
+            // 
+            txtMasterName23.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName23.Location = new Point(223, 16);
+            txtMasterName23.MaxLength = 5;
+            txtMasterName23.Name = "txtMasterName23";
+            txtMasterName23.Size = new Size(53, 27);
+            txtMasterName23.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress23
+            // 
+            txtMasterRegStartAddress23.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress23.Location = new Point(110, 16);
+            txtMasterRegStartAddress23.MaxLength = 10;
+            txtMasterRegStartAddress23.Name = "txtMasterRegStartAddress23";
+            txtMasterRegStartAddress23.Size = new Size(110, 27);
+            txtMasterRegStartAddress23.TabIndex = 91;
+            // 
+            // txtMasterRegIndex23
+            // 
+            txtMasterRegIndex23.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex23.Enabled = false;
+            txtMasterRegIndex23.Location = new Point(29, 16);
+            txtMasterRegIndex23.MaxLength = 2;
+            txtMasterRegIndex23.Name = "txtMasterRegIndex23";
+            txtMasterRegIndex23.Size = new Size(79, 27);
+            txtMasterRegIndex23.TabIndex = 90;
+            txtMasterRegIndex23.Text = "22";
+            // 
+            // groupBox63
+            // 
+            groupBox63.Controls.Add(cmbDecimalPoint21);
+            groupBox63.Controls.Add(label243);
+            groupBox63.Controls.Add(cmbMasterFunctionCode21);
+            groupBox63.Controls.Add(cmbMasterByteOrder21);
+            groupBox63.Controls.Add(cmbMasterDataType21);
+            groupBox63.Controls.Add(cmbMasterActivation21);
+            groupBox63.Controls.Add(btnRegWriteMemory21);
+            groupBox63.Controls.Add(btnRegReadMemory21);
+            groupBox63.Controls.Add(txtMasterScaleFactor21);
+            groupBox63.Controls.Add(txtMasterName21);
+            groupBox63.Controls.Add(txtMasterRegStartAddress21);
+            groupBox63.Controls.Add(txtMasterRegIndex21);
+            groupBox63.Location = new Point(-5, 1060);
+            groupBox63.Name = "groupBox63";
+            groupBox63.Size = new Size(1098, 51);
+            groupBox63.TabIndex = 121;
+            groupBox63.TabStop = false;
+            // 
+            // cmbDecimalPoint21
+            // 
+            cmbDecimalPoint21.FormattingEnabled = true;
+            cmbDecimalPoint21.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint21.Location = new Point(816, 15);
+            cmbDecimalPoint21.Name = "cmbDecimalPoint21";
+            cmbDecimalPoint21.Size = new Size(55, 28);
+            cmbDecimalPoint21.TabIndex = 141;
+            // 
+            // label243
+            // 
+            label243.AutoSize = true;
+            label243.Location = new Point(3, 19);
+            label243.Name = "label243";
+            label243.Size = new Size(25, 20);
+            label243.TabIndex = 140;
+            label243.Text = "21";
+            // 
+            // cmbMasterFunctionCode21
+            // 
+            cmbMasterFunctionCode21.FormattingEnabled = true;
+            cmbMasterFunctionCode21.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
+            cmbMasterFunctionCode21.Location = new Point(585, 16);
+            cmbMasterFunctionCode21.Name = "cmbMasterFunctionCode21";
+            cmbMasterFunctionCode21.Size = new Size(155, 28);
+            cmbMasterFunctionCode21.TabIndex = 100;
+            // 
+            // cmbMasterByteOrder21
+            // 
+            cmbMasterByteOrder21.FormattingEnabled = true;
+            cmbMasterByteOrder21.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
+            cmbMasterByteOrder21.Location = new Point(488, 16);
+            cmbMasterByteOrder21.Name = "cmbMasterByteOrder21";
+            cmbMasterByteOrder21.Size = new Size(92, 28);
+            cmbMasterByteOrder21.TabIndex = 99;
+            // 
+            // cmbMasterDataType21
+            // 
+            cmbMasterDataType21.FormattingEnabled = true;
+            cmbMasterDataType21.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
+            cmbMasterDataType21.Location = new Point(353, 16);
+            cmbMasterDataType21.Name = "cmbMasterDataType21";
+            cmbMasterDataType21.Size = new Size(130, 28);
+            cmbMasterDataType21.TabIndex = 98;
+            // 
+            // cmbMasterActivation21
+            // 
+            cmbMasterActivation21.FormattingEnabled = true;
+            cmbMasterActivation21.Items.AddRange(new object[] { "Yes", "No" });
+            cmbMasterActivation21.Location = new Point(281, 16);
+            cmbMasterActivation21.Name = "cmbMasterActivation21";
+            cmbMasterActivation21.Size = new Size(68, 28);
+            cmbMasterActivation21.TabIndex = 97;
+            // 
+            // btnRegWriteMemory21
+            // 
+            btnRegWriteMemory21.BackColor = Color.Red;
+            btnRegWriteMemory21.Cursor = Cursors.Hand;
+            btnRegWriteMemory21.ForeColor = Color.White;
+            btnRegWriteMemory21.Location = new Point(986, 15);
+            btnRegWriteMemory21.Name = "btnRegWriteMemory21";
+            btnRegWriteMemory21.Size = new Size(112, 30);
+            btnRegWriteMemory21.TabIndex = 95;
+            btnRegWriteMemory21.Text = "Write Memory";
+            btnRegWriteMemory21.UseVisualStyleBackColor = false;
+            // 
+            // btnRegReadMemory21
+            // 
+            btnRegReadMemory21.BackColor = Color.DarkKhaki;
+            btnRegReadMemory21.Cursor = Cursors.Hand;
+            btnRegReadMemory21.ForeColor = Color.White;
+            btnRegReadMemory21.Location = new Point(874, 15);
+            btnRegReadMemory21.Name = "btnRegReadMemory21";
+            btnRegReadMemory21.Size = new Size(112, 30);
+            btnRegReadMemory21.TabIndex = 94;
+            btnRegReadMemory21.Text = "Read Memory";
+            btnRegReadMemory21.UseVisualStyleBackColor = false;
+            // 
+            // txtMasterScaleFactor21
+            // 
+            txtMasterScaleFactor21.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterScaleFactor21.Location = new Point(744, 16);
+            txtMasterScaleFactor21.MaxLength = 10;
+            txtMasterScaleFactor21.Name = "txtMasterScaleFactor21";
+            txtMasterScaleFactor21.Size = new Size(69, 27);
+            txtMasterScaleFactor21.TabIndex = 93;
+            // 
+            // txtMasterName21
+            // 
+            txtMasterName21.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterName21.Location = new Point(223, 16);
+            txtMasterName21.MaxLength = 5;
+            txtMasterName21.Name = "txtMasterName21";
+            txtMasterName21.Size = new Size(53, 27);
+            txtMasterName21.TabIndex = 92;
+            // 
+            // txtMasterRegStartAddress21
+            // 
+            txtMasterRegStartAddress21.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegStartAddress21.Location = new Point(110, 16);
+            txtMasterRegStartAddress21.MaxLength = 10;
+            txtMasterRegStartAddress21.Name = "txtMasterRegStartAddress21";
+            txtMasterRegStartAddress21.Size = new Size(110, 27);
+            txtMasterRegStartAddress21.TabIndex = 91;
+            // 
+            // txtMasterRegIndex21
+            // 
+            txtMasterRegIndex21.BorderStyle = BorderStyle.FixedSingle;
+            txtMasterRegIndex21.Enabled = false;
+            txtMasterRegIndex21.Location = new Point(29, 16);
+            txtMasterRegIndex21.MaxLength = 2;
+            txtMasterRegIndex21.Name = "txtMasterRegIndex21";
+            txtMasterRegIndex21.Size = new Size(79, 27);
+            txtMasterRegIndex21.TabIndex = 90;
+            txtMasterRegIndex21.Text = "20";
+            // 
             // groupBox34
             // 
+            groupBox34.Controls.Add(cmbDecimalPoint12);
             groupBox34.Controls.Add(label216);
             groupBox34.Controls.Add(cmbMasterFunctionCode12);
             groupBox34.Controls.Add(cmbMasterByteOrder12);
@@ -1013,6 +4066,15 @@
             groupBox34.TabIndex = 120;
             groupBox34.TabStop = false;
             // 
+            // cmbDecimalPoint12
+            // 
+            cmbDecimalPoint12.FormattingEnabled = true;
+            cmbDecimalPoint12.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint12.Location = new Point(816, 16);
+            cmbDecimalPoint12.Name = "cmbDecimalPoint12";
+            cmbDecimalPoint12.Size = new Size(55, 28);
+            cmbDecimalPoint12.TabIndex = 134;
+            // 
             // label216
             // 
             label216.AutoSize = true;
@@ -1026,7 +4088,7 @@
             // 
             cmbMasterFunctionCode12.FormattingEnabled = true;
             cmbMasterFunctionCode12.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode12.Location = new Point(643, 16);
+            cmbMasterFunctionCode12.Location = new Point(583, 16);
             cmbMasterFunctionCode12.Name = "cmbMasterFunctionCode12";
             cmbMasterFunctionCode12.Size = new Size(155, 28);
             cmbMasterFunctionCode12.TabIndex = 100;
@@ -1035,7 +4097,7 @@
             // 
             cmbMasterByteOrder12.FormattingEnabled = true;
             cmbMasterByteOrder12.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder12.Location = new Point(546, 16);
+            cmbMasterByteOrder12.Location = new Point(486, 16);
             cmbMasterByteOrder12.Name = "cmbMasterByteOrder12";
             cmbMasterByteOrder12.Size = new Size(92, 28);
             cmbMasterByteOrder12.TabIndex = 99;
@@ -1044,7 +4106,7 @@
             // 
             cmbMasterDataType12.FormattingEnabled = true;
             cmbMasterDataType12.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType12.Location = new Point(411, 16);
+            cmbMasterDataType12.Location = new Point(351, 16);
             cmbMasterDataType12.Name = "cmbMasterDataType12";
             cmbMasterDataType12.Size = new Size(130, 28);
             cmbMasterDataType12.TabIndex = 98;
@@ -1053,7 +4115,7 @@
             // 
             cmbMasterActivation12.FormattingEnabled = true;
             cmbMasterActivation12.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation12.Location = new Point(339, 16);
+            cmbMasterActivation12.Location = new Point(279, 16);
             cmbMasterActivation12.Name = "cmbMasterActivation12";
             cmbMasterActivation12.Size = new Size(68, 28);
             cmbMasterActivation12.TabIndex = 97;
@@ -1085,7 +4147,7 @@
             // txtMasterScaleFactor12
             // 
             txtMasterScaleFactor12.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor12.Location = new Point(802, 16);
+            txtMasterScaleFactor12.Location = new Point(742, 16);
             txtMasterScaleFactor12.MaxLength = 10;
             txtMasterScaleFactor12.Name = "txtMasterScaleFactor12";
             txtMasterScaleFactor12.Size = new Size(69, 27);
@@ -1095,9 +4157,9 @@
             // 
             txtMasterName12.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName12.Location = new Point(221, 16);
-            txtMasterName12.MaxLength = 50;
+            txtMasterName12.MaxLength = 5;
             txtMasterName12.Name = "txtMasterName12";
-            txtMasterName12.Size = new Size(114, 27);
+            txtMasterName12.Size = new Size(53, 27);
             txtMasterName12.TabIndex = 92;
             // 
             // txtMasterRegStartAddress12
@@ -1122,6 +4184,7 @@
             // 
             // groupBox35
             // 
+            groupBox35.Controls.Add(cmbDecimalPoint20);
             groupBox35.Controls.Add(label208);
             groupBox35.Controls.Add(cmbMasterFunctionCode20);
             groupBox35.Controls.Add(cmbMasterByteOrder20);
@@ -1139,6 +4202,15 @@
             groupBox35.TabIndex = 119;
             groupBox35.TabStop = false;
             // 
+            // cmbDecimalPoint20
+            // 
+            cmbDecimalPoint20.FormattingEnabled = true;
+            cmbDecimalPoint20.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint20.Location = new Point(810, 15);
+            cmbDecimalPoint20.Name = "cmbDecimalPoint20";
+            cmbDecimalPoint20.Size = new Size(55, 28);
+            cmbDecimalPoint20.TabIndex = 136;
+            // 
             // label208
             // 
             label208.AutoSize = true;
@@ -1152,7 +4224,7 @@
             // 
             cmbMasterFunctionCode20.FormattingEnabled = true;
             cmbMasterFunctionCode20.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode20.Location = new Point(639, 16);
+            cmbMasterFunctionCode20.Location = new Point(577, 16);
             cmbMasterFunctionCode20.Name = "cmbMasterFunctionCode20";
             cmbMasterFunctionCode20.Size = new Size(155, 28);
             cmbMasterFunctionCode20.TabIndex = 100;
@@ -1161,7 +4233,7 @@
             // 
             cmbMasterByteOrder20.FormattingEnabled = true;
             cmbMasterByteOrder20.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder20.Location = new Point(542, 16);
+            cmbMasterByteOrder20.Location = new Point(480, 16);
             cmbMasterByteOrder20.Name = "cmbMasterByteOrder20";
             cmbMasterByteOrder20.Size = new Size(92, 28);
             cmbMasterByteOrder20.TabIndex = 99;
@@ -1170,7 +4242,7 @@
             // 
             cmbMasterDataType20.FormattingEnabled = true;
             cmbMasterDataType20.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType20.Location = new Point(407, 16);
+            cmbMasterDataType20.Location = new Point(345, 16);
             cmbMasterDataType20.Name = "cmbMasterDataType20";
             cmbMasterDataType20.Size = new Size(130, 28);
             cmbMasterDataType20.TabIndex = 98;
@@ -1179,7 +4251,7 @@
             // 
             cmbMasterActivation20.FormattingEnabled = true;
             cmbMasterActivation20.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation20.Location = new Point(335, 16);
+            cmbMasterActivation20.Location = new Point(273, 16);
             cmbMasterActivation20.Name = "cmbMasterActivation20";
             cmbMasterActivation20.Size = new Size(68, 28);
             cmbMasterActivation20.TabIndex = 97;
@@ -1211,7 +4283,7 @@
             // txtMasterScaleFactor20
             // 
             txtMasterScaleFactor20.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor20.Location = new Point(798, 16);
+            txtMasterScaleFactor20.Location = new Point(736, 16);
             txtMasterScaleFactor20.MaxLength = 10;
             txtMasterScaleFactor20.Name = "txtMasterScaleFactor20";
             txtMasterScaleFactor20.Size = new Size(69, 27);
@@ -1221,9 +4293,9 @@
             // 
             txtMasterName20.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName20.Location = new Point(217, 16);
-            txtMasterName20.MaxLength = 50;
+            txtMasterName20.MaxLength = 5;
             txtMasterName20.Name = "txtMasterName20";
-            txtMasterName20.Size = new Size(114, 27);
+            txtMasterName20.Size = new Size(50, 27);
             txtMasterName20.TabIndex = 92;
             // 
             // txtMasterRegStartAddress20
@@ -1248,6 +4320,7 @@
             // 
             // groupBox36
             // 
+            groupBox36.Controls.Add(cmbDecimalPoint19);
             groupBox36.Controls.Add(label209);
             groupBox36.Controls.Add(cmbMasterFunctionCode19);
             groupBox36.Controls.Add(cmbMasterByteOrder19);
@@ -1265,6 +4338,15 @@
             groupBox36.TabIndex = 118;
             groupBox36.TabStop = false;
             // 
+            // cmbDecimalPoint19
+            // 
+            cmbDecimalPoint19.FormattingEnabled = true;
+            cmbDecimalPoint19.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint19.Location = new Point(811, 16);
+            cmbDecimalPoint19.Name = "cmbDecimalPoint19";
+            cmbDecimalPoint19.Size = new Size(55, 28);
+            cmbDecimalPoint19.TabIndex = 136;
+            // 
             // label209
             // 
             label209.AutoSize = true;
@@ -1278,7 +4360,7 @@
             // 
             cmbMasterFunctionCode19.FormattingEnabled = true;
             cmbMasterFunctionCode19.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode19.Location = new Point(640, 16);
+            cmbMasterFunctionCode19.Location = new Point(577, 16);
             cmbMasterFunctionCode19.Name = "cmbMasterFunctionCode19";
             cmbMasterFunctionCode19.Size = new Size(155, 28);
             cmbMasterFunctionCode19.TabIndex = 100;
@@ -1287,7 +4369,7 @@
             // 
             cmbMasterByteOrder19.FormattingEnabled = true;
             cmbMasterByteOrder19.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder19.Location = new Point(543, 16);
+            cmbMasterByteOrder19.Location = new Point(480, 16);
             cmbMasterByteOrder19.Name = "cmbMasterByteOrder19";
             cmbMasterByteOrder19.Size = new Size(92, 28);
             cmbMasterByteOrder19.TabIndex = 99;
@@ -1296,7 +4378,7 @@
             // 
             cmbMasterDataType19.FormattingEnabled = true;
             cmbMasterDataType19.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType19.Location = new Point(408, 16);
+            cmbMasterDataType19.Location = new Point(345, 16);
             cmbMasterDataType19.Name = "cmbMasterDataType19";
             cmbMasterDataType19.Size = new Size(130, 28);
             cmbMasterDataType19.TabIndex = 98;
@@ -1305,7 +4387,7 @@
             // 
             cmbMasterActivation19.FormattingEnabled = true;
             cmbMasterActivation19.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation19.Location = new Point(336, 16);
+            cmbMasterActivation19.Location = new Point(273, 16);
             cmbMasterActivation19.Name = "cmbMasterActivation19";
             cmbMasterActivation19.Size = new Size(68, 28);
             cmbMasterActivation19.TabIndex = 97;
@@ -1337,7 +4419,7 @@
             // txtMasterScaleFactor19
             // 
             txtMasterScaleFactor19.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor19.Location = new Point(799, 16);
+            txtMasterScaleFactor19.Location = new Point(736, 16);
             txtMasterScaleFactor19.MaxLength = 10;
             txtMasterScaleFactor19.Name = "txtMasterScaleFactor19";
             txtMasterScaleFactor19.Size = new Size(69, 27);
@@ -1347,9 +4429,9 @@
             // 
             txtMasterName19.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName19.Location = new Point(218, 16);
-            txtMasterName19.MaxLength = 50;
+            txtMasterName19.MaxLength = 5;
             txtMasterName19.Name = "txtMasterName19";
-            txtMasterName19.Size = new Size(114, 27);
+            txtMasterName19.Size = new Size(50, 27);
             txtMasterName19.TabIndex = 92;
             // 
             // txtMasterRegStartAddress19
@@ -1374,6 +4456,7 @@
             // 
             // groupBox37
             // 
+            groupBox37.Controls.Add(cmbDecimalPoint18);
             groupBox37.Controls.Add(label210);
             groupBox37.Controls.Add(cmbMasterFunctionCode18);
             groupBox37.Controls.Add(cmbMasterByteOrder18);
@@ -1391,6 +4474,15 @@
             groupBox37.TabIndex = 117;
             groupBox37.TabStop = false;
             // 
+            // cmbDecimalPoint18
+            // 
+            cmbDecimalPoint18.FormattingEnabled = true;
+            cmbDecimalPoint18.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint18.Location = new Point(814, 16);
+            cmbDecimalPoint18.Name = "cmbDecimalPoint18";
+            cmbDecimalPoint18.Size = new Size(55, 28);
+            cmbDecimalPoint18.TabIndex = 135;
+            // 
             // label210
             // 
             label210.AutoSize = true;
@@ -1404,7 +4496,7 @@
             // 
             cmbMasterFunctionCode18.FormattingEnabled = true;
             cmbMasterFunctionCode18.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode18.Location = new Point(641, 16);
+            cmbMasterFunctionCode18.Location = new Point(581, 16);
             cmbMasterFunctionCode18.Name = "cmbMasterFunctionCode18";
             cmbMasterFunctionCode18.Size = new Size(155, 28);
             cmbMasterFunctionCode18.TabIndex = 100;
@@ -1413,7 +4505,7 @@
             // 
             cmbMasterByteOrder18.FormattingEnabled = true;
             cmbMasterByteOrder18.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder18.Location = new Point(544, 16);
+            cmbMasterByteOrder18.Location = new Point(484, 16);
             cmbMasterByteOrder18.Name = "cmbMasterByteOrder18";
             cmbMasterByteOrder18.Size = new Size(92, 28);
             cmbMasterByteOrder18.TabIndex = 99;
@@ -1422,7 +4514,7 @@
             // 
             cmbMasterDataType18.FormattingEnabled = true;
             cmbMasterDataType18.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType18.Location = new Point(409, 16);
+            cmbMasterDataType18.Location = new Point(349, 16);
             cmbMasterDataType18.Name = "cmbMasterDataType18";
             cmbMasterDataType18.Size = new Size(130, 28);
             cmbMasterDataType18.TabIndex = 98;
@@ -1431,7 +4523,7 @@
             // 
             cmbMasterActivation18.FormattingEnabled = true;
             cmbMasterActivation18.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation18.Location = new Point(337, 16);
+            cmbMasterActivation18.Location = new Point(277, 16);
             cmbMasterActivation18.Name = "cmbMasterActivation18";
             cmbMasterActivation18.Size = new Size(68, 28);
             cmbMasterActivation18.TabIndex = 97;
@@ -1463,7 +4555,7 @@
             // txtMasterScaleFactor18
             // 
             txtMasterScaleFactor18.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor18.Location = new Point(800, 16);
+            txtMasterScaleFactor18.Location = new Point(740, 16);
             txtMasterScaleFactor18.MaxLength = 10;
             txtMasterScaleFactor18.Name = "txtMasterScaleFactor18";
             txtMasterScaleFactor18.Size = new Size(69, 27);
@@ -1473,9 +4565,9 @@
             // 
             txtMasterName18.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName18.Location = new Point(219, 16);
-            txtMasterName18.MaxLength = 50;
+            txtMasterName18.MaxLength = 5;
             txtMasterName18.Name = "txtMasterName18";
-            txtMasterName18.Size = new Size(114, 27);
+            txtMasterName18.Size = new Size(53, 27);
             txtMasterName18.TabIndex = 92;
             // 
             // txtMasterRegStartAddress18
@@ -1500,6 +4592,7 @@
             // 
             // groupBox38
             // 
+            groupBox38.Controls.Add(cmbDecimalPoint16);
             groupBox38.Controls.Add(label212);
             groupBox38.Controls.Add(cmbMasterFunctionCode16);
             groupBox38.Controls.Add(cmbMasterByteOrder16);
@@ -1517,6 +4610,15 @@
             groupBox38.TabIndex = 116;
             groupBox38.TabStop = false;
             // 
+            // cmbDecimalPoint16
+            // 
+            cmbDecimalPoint16.FormattingEnabled = true;
+            cmbDecimalPoint16.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint16.Location = new Point(815, 16);
+            cmbDecimalPoint16.Name = "cmbDecimalPoint16";
+            cmbDecimalPoint16.Size = new Size(55, 28);
+            cmbDecimalPoint16.TabIndex = 135;
+            // 
             // label212
             // 
             label212.AutoSize = true;
@@ -1530,7 +4632,7 @@
             // 
             cmbMasterFunctionCode16.FormattingEnabled = true;
             cmbMasterFunctionCode16.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode16.Location = new Point(644, 16);
+            cmbMasterFunctionCode16.Location = new Point(585, 16);
             cmbMasterFunctionCode16.Name = "cmbMasterFunctionCode16";
             cmbMasterFunctionCode16.Size = new Size(155, 28);
             cmbMasterFunctionCode16.TabIndex = 100;
@@ -1539,7 +4641,7 @@
             // 
             cmbMasterByteOrder16.FormattingEnabled = true;
             cmbMasterByteOrder16.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder16.Location = new Point(547, 16);
+            cmbMasterByteOrder16.Location = new Point(488, 16);
             cmbMasterByteOrder16.Name = "cmbMasterByteOrder16";
             cmbMasterByteOrder16.Size = new Size(92, 28);
             cmbMasterByteOrder16.TabIndex = 99;
@@ -1548,7 +4650,7 @@
             // 
             cmbMasterDataType16.FormattingEnabled = true;
             cmbMasterDataType16.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType16.Location = new Point(412, 16);
+            cmbMasterDataType16.Location = new Point(353, 16);
             cmbMasterDataType16.Name = "cmbMasterDataType16";
             cmbMasterDataType16.Size = new Size(130, 28);
             cmbMasterDataType16.TabIndex = 98;
@@ -1557,7 +4659,7 @@
             // 
             cmbMasterActivation16.FormattingEnabled = true;
             cmbMasterActivation16.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation16.Location = new Point(340, 16);
+            cmbMasterActivation16.Location = new Point(281, 16);
             cmbMasterActivation16.Name = "cmbMasterActivation16";
             cmbMasterActivation16.Size = new Size(68, 28);
             cmbMasterActivation16.TabIndex = 97;
@@ -1589,7 +4691,7 @@
             // txtMasterScaleFactor16
             // 
             txtMasterScaleFactor16.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor16.Location = new Point(803, 16);
+            txtMasterScaleFactor16.Location = new Point(744, 16);
             txtMasterScaleFactor16.MaxLength = 10;
             txtMasterScaleFactor16.Name = "txtMasterScaleFactor16";
             txtMasterScaleFactor16.Size = new Size(69, 27);
@@ -1599,9 +4701,9 @@
             // 
             txtMasterName16.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName16.Location = new Point(222, 16);
-            txtMasterName16.MaxLength = 50;
+            txtMasterName16.MaxLength = 5;
             txtMasterName16.Name = "txtMasterName16";
-            txtMasterName16.Size = new Size(114, 27);
+            txtMasterName16.Size = new Size(53, 27);
             txtMasterName16.TabIndex = 92;
             // 
             // txtMasterRegStartAddress16
@@ -1626,6 +4728,7 @@
             // 
             // groupBox39
             // 
+            groupBox39.Controls.Add(cmbDecimalPoint17);
             groupBox39.Controls.Add(label211);
             groupBox39.Controls.Add(cmbMasterFunctionCode17);
             groupBox39.Controls.Add(cmbMasterByteOrder17);
@@ -1643,6 +4746,15 @@
             groupBox39.TabIndex = 115;
             groupBox39.TabStop = false;
             // 
+            // cmbDecimalPoint17
+            // 
+            cmbDecimalPoint17.FormattingEnabled = true;
+            cmbDecimalPoint17.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint17.Location = new Point(818, 16);
+            cmbDecimalPoint17.Name = "cmbDecimalPoint17";
+            cmbDecimalPoint17.Size = new Size(55, 28);
+            cmbDecimalPoint17.TabIndex = 135;
+            // 
             // label211
             // 
             label211.AutoSize = true;
@@ -1656,7 +4768,7 @@
             // 
             cmbMasterFunctionCode17.FormattingEnabled = true;
             cmbMasterFunctionCode17.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode17.Location = new Point(645, 16);
+            cmbMasterFunctionCode17.Location = new Point(586, 16);
             cmbMasterFunctionCode17.Name = "cmbMasterFunctionCode17";
             cmbMasterFunctionCode17.Size = new Size(155, 28);
             cmbMasterFunctionCode17.TabIndex = 100;
@@ -1665,7 +4777,7 @@
             // 
             cmbMasterByteOrder17.FormattingEnabled = true;
             cmbMasterByteOrder17.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder17.Location = new Point(548, 16);
+            cmbMasterByteOrder17.Location = new Point(489, 16);
             cmbMasterByteOrder17.Name = "cmbMasterByteOrder17";
             cmbMasterByteOrder17.Size = new Size(92, 28);
             cmbMasterByteOrder17.TabIndex = 99;
@@ -1674,7 +4786,7 @@
             // 
             cmbMasterDataType17.FormattingEnabled = true;
             cmbMasterDataType17.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType17.Location = new Point(413, 16);
+            cmbMasterDataType17.Location = new Point(354, 16);
             cmbMasterDataType17.Name = "cmbMasterDataType17";
             cmbMasterDataType17.Size = new Size(130, 28);
             cmbMasterDataType17.TabIndex = 98;
@@ -1683,7 +4795,7 @@
             // 
             cmbMasterActivation17.FormattingEnabled = true;
             cmbMasterActivation17.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation17.Location = new Point(341, 16);
+            cmbMasterActivation17.Location = new Point(282, 16);
             cmbMasterActivation17.Name = "cmbMasterActivation17";
             cmbMasterActivation17.Size = new Size(68, 28);
             cmbMasterActivation17.TabIndex = 97;
@@ -1715,7 +4827,7 @@
             // txtMasterScaleFactor17
             // 
             txtMasterScaleFactor17.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor17.Location = new Point(804, 16);
+            txtMasterScaleFactor17.Location = new Point(745, 16);
             txtMasterScaleFactor17.MaxLength = 10;
             txtMasterScaleFactor17.Name = "txtMasterScaleFactor17";
             txtMasterScaleFactor17.Size = new Size(69, 27);
@@ -1725,9 +4837,9 @@
             // 
             txtMasterName17.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName17.Location = new Point(223, 16);
-            txtMasterName17.MaxLength = 50;
+            txtMasterName17.MaxLength = 5;
             txtMasterName17.Name = "txtMasterName17";
-            txtMasterName17.Size = new Size(114, 27);
+            txtMasterName17.Size = new Size(53, 27);
             txtMasterName17.TabIndex = 92;
             // 
             // txtMasterRegStartAddress17
@@ -1752,6 +4864,7 @@
             // 
             // groupBox40
             // 
+            groupBox40.Controls.Add(cmbDecimalPoint15);
             groupBox40.Controls.Add(label213);
             groupBox40.Controls.Add(cmbMasterFunctionCode15);
             groupBox40.Controls.Add(cmbMasterByteOrder15);
@@ -1769,6 +4882,15 @@
             groupBox40.TabIndex = 114;
             groupBox40.TabStop = false;
             // 
+            // cmbDecimalPoint15
+            // 
+            cmbDecimalPoint15.FormattingEnabled = true;
+            cmbDecimalPoint15.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint15.Location = new Point(816, 16);
+            cmbDecimalPoint15.Name = "cmbDecimalPoint15";
+            cmbDecimalPoint15.Size = new Size(55, 28);
+            cmbDecimalPoint15.TabIndex = 135;
+            // 
             // label213
             // 
             label213.AutoSize = true;
@@ -1782,7 +4904,7 @@
             // 
             cmbMasterFunctionCode15.FormattingEnabled = true;
             cmbMasterFunctionCode15.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode15.Location = new Point(644, 16);
+            cmbMasterFunctionCode15.Location = new Point(586, 16);
             cmbMasterFunctionCode15.Name = "cmbMasterFunctionCode15";
             cmbMasterFunctionCode15.Size = new Size(155, 28);
             cmbMasterFunctionCode15.TabIndex = 100;
@@ -1791,7 +4913,7 @@
             // 
             cmbMasterByteOrder15.FormattingEnabled = true;
             cmbMasterByteOrder15.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder15.Location = new Point(547, 16);
+            cmbMasterByteOrder15.Location = new Point(489, 16);
             cmbMasterByteOrder15.Name = "cmbMasterByteOrder15";
             cmbMasterByteOrder15.Size = new Size(92, 28);
             cmbMasterByteOrder15.TabIndex = 99;
@@ -1800,7 +4922,7 @@
             // 
             cmbMasterDataType15.FormattingEnabled = true;
             cmbMasterDataType15.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType15.Location = new Point(412, 16);
+            cmbMasterDataType15.Location = new Point(354, 16);
             cmbMasterDataType15.Name = "cmbMasterDataType15";
             cmbMasterDataType15.Size = new Size(130, 28);
             cmbMasterDataType15.TabIndex = 98;
@@ -1809,7 +4931,7 @@
             // 
             cmbMasterActivation15.FormattingEnabled = true;
             cmbMasterActivation15.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation15.Location = new Point(340, 16);
+            cmbMasterActivation15.Location = new Point(282, 16);
             cmbMasterActivation15.Name = "cmbMasterActivation15";
             cmbMasterActivation15.Size = new Size(68, 28);
             cmbMasterActivation15.TabIndex = 97;
@@ -1841,7 +4963,7 @@
             // txtMasterScaleFactor15
             // 
             txtMasterScaleFactor15.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor15.Location = new Point(803, 16);
+            txtMasterScaleFactor15.Location = new Point(745, 16);
             txtMasterScaleFactor15.MaxLength = 10;
             txtMasterScaleFactor15.Name = "txtMasterScaleFactor15";
             txtMasterScaleFactor15.Size = new Size(69, 27);
@@ -1851,9 +4973,9 @@
             // 
             txtMasterName15.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName15.Location = new Point(222, 16);
-            txtMasterName15.MaxLength = 50;
+            txtMasterName15.MaxLength = 5;
             txtMasterName15.Name = "txtMasterName15";
-            txtMasterName15.Size = new Size(114, 27);
+            txtMasterName15.Size = new Size(53, 27);
             txtMasterName15.TabIndex = 92;
             // 
             // txtMasterRegStartAddress15
@@ -1878,6 +5000,7 @@
             // 
             // groupBox41
             // 
+            groupBox41.Controls.Add(cmbDecimalPoint14);
             groupBox41.Controls.Add(label214);
             groupBox41.Controls.Add(cmbMasterFunctionCode14);
             groupBox41.Controls.Add(cmbMasterByteOrder14);
@@ -1895,6 +5018,15 @@
             groupBox41.TabIndex = 113;
             groupBox41.TabStop = false;
             // 
+            // cmbDecimalPoint14
+            // 
+            cmbDecimalPoint14.FormattingEnabled = true;
+            cmbDecimalPoint14.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint14.Location = new Point(817, 15);
+            cmbDecimalPoint14.Name = "cmbDecimalPoint14";
+            cmbDecimalPoint14.Size = new Size(55, 28);
+            cmbDecimalPoint14.TabIndex = 135;
+            // 
             // label214
             // 
             label214.AutoSize = true;
@@ -1908,7 +5040,7 @@
             // 
             cmbMasterFunctionCode14.FormattingEnabled = true;
             cmbMasterFunctionCode14.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode14.Location = new Point(645, 16);
+            cmbMasterFunctionCode14.Location = new Point(586, 16);
             cmbMasterFunctionCode14.Name = "cmbMasterFunctionCode14";
             cmbMasterFunctionCode14.Size = new Size(155, 28);
             cmbMasterFunctionCode14.TabIndex = 100;
@@ -1917,7 +5049,7 @@
             // 
             cmbMasterByteOrder14.FormattingEnabled = true;
             cmbMasterByteOrder14.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder14.Location = new Point(548, 16);
+            cmbMasterByteOrder14.Location = new Point(489, 16);
             cmbMasterByteOrder14.Name = "cmbMasterByteOrder14";
             cmbMasterByteOrder14.Size = new Size(92, 28);
             cmbMasterByteOrder14.TabIndex = 99;
@@ -1926,7 +5058,7 @@
             // 
             cmbMasterDataType14.FormattingEnabled = true;
             cmbMasterDataType14.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType14.Location = new Point(413, 16);
+            cmbMasterDataType14.Location = new Point(354, 16);
             cmbMasterDataType14.Name = "cmbMasterDataType14";
             cmbMasterDataType14.Size = new Size(130, 28);
             cmbMasterDataType14.TabIndex = 98;
@@ -1935,7 +5067,7 @@
             // 
             cmbMasterActivation14.FormattingEnabled = true;
             cmbMasterActivation14.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation14.Location = new Point(341, 16);
+            cmbMasterActivation14.Location = new Point(282, 16);
             cmbMasterActivation14.Name = "cmbMasterActivation14";
             cmbMasterActivation14.Size = new Size(68, 28);
             cmbMasterActivation14.TabIndex = 97;
@@ -1967,7 +5099,7 @@
             // txtMasterScaleFactor14
             // 
             txtMasterScaleFactor14.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor14.Location = new Point(804, 16);
+            txtMasterScaleFactor14.Location = new Point(745, 16);
             txtMasterScaleFactor14.MaxLength = 10;
             txtMasterScaleFactor14.Name = "txtMasterScaleFactor14";
             txtMasterScaleFactor14.Size = new Size(69, 27);
@@ -1977,9 +5109,9 @@
             // 
             txtMasterName14.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName14.Location = new Point(223, 16);
-            txtMasterName14.MaxLength = 50;
+            txtMasterName14.MaxLength = 5;
             txtMasterName14.Name = "txtMasterName14";
-            txtMasterName14.Size = new Size(114, 27);
+            txtMasterName14.Size = new Size(53, 27);
             txtMasterName14.TabIndex = 92;
             // 
             // txtMasterRegStartAddress14
@@ -2004,6 +5136,7 @@
             // 
             // groupBox42
             // 
+            groupBox42.Controls.Add(cmbDecimalPoint13);
             groupBox42.Controls.Add(label215);
             groupBox42.Controls.Add(cmbMasterFunctionCode13);
             groupBox42.Controls.Add(cmbMasterByteOrder13);
@@ -2021,6 +5154,15 @@
             groupBox42.TabIndex = 112;
             groupBox42.TabStop = false;
             // 
+            // cmbDecimalPoint13
+            // 
+            cmbDecimalPoint13.FormattingEnabled = true;
+            cmbDecimalPoint13.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint13.Location = new Point(816, 16);
+            cmbDecimalPoint13.Name = "cmbDecimalPoint13";
+            cmbDecimalPoint13.Size = new Size(55, 28);
+            cmbDecimalPoint13.TabIndex = 135;
+            // 
             // label215
             // 
             label215.AutoSize = true;
@@ -2034,7 +5176,7 @@
             // 
             cmbMasterFunctionCode13.FormattingEnabled = true;
             cmbMasterFunctionCode13.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode13.Location = new Point(643, 16);
+            cmbMasterFunctionCode13.Location = new Point(584, 16);
             cmbMasterFunctionCode13.Name = "cmbMasterFunctionCode13";
             cmbMasterFunctionCode13.Size = new Size(155, 28);
             cmbMasterFunctionCode13.TabIndex = 100;
@@ -2043,7 +5185,7 @@
             // 
             cmbMasterByteOrder13.FormattingEnabled = true;
             cmbMasterByteOrder13.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder13.Location = new Point(546, 16);
+            cmbMasterByteOrder13.Location = new Point(487, 16);
             cmbMasterByteOrder13.Name = "cmbMasterByteOrder13";
             cmbMasterByteOrder13.Size = new Size(92, 28);
             cmbMasterByteOrder13.TabIndex = 99;
@@ -2052,7 +5194,7 @@
             // 
             cmbMasterDataType13.FormattingEnabled = true;
             cmbMasterDataType13.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType13.Location = new Point(411, 16);
+            cmbMasterDataType13.Location = new Point(352, 16);
             cmbMasterDataType13.Name = "cmbMasterDataType13";
             cmbMasterDataType13.Size = new Size(130, 28);
             cmbMasterDataType13.TabIndex = 98;
@@ -2061,7 +5203,7 @@
             // 
             cmbMasterActivation13.FormattingEnabled = true;
             cmbMasterActivation13.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation13.Location = new Point(339, 16);
+            cmbMasterActivation13.Location = new Point(280, 16);
             cmbMasterActivation13.Name = "cmbMasterActivation13";
             cmbMasterActivation13.Size = new Size(68, 28);
             cmbMasterActivation13.TabIndex = 97;
@@ -2093,7 +5235,7 @@
             // txtMasterScaleFactor13
             // 
             txtMasterScaleFactor13.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor13.Location = new Point(802, 16);
+            txtMasterScaleFactor13.Location = new Point(743, 16);
             txtMasterScaleFactor13.MaxLength = 10;
             txtMasterScaleFactor13.Name = "txtMasterScaleFactor13";
             txtMasterScaleFactor13.Size = new Size(69, 27);
@@ -2103,9 +5245,9 @@
             // 
             txtMasterName13.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName13.Location = new Point(221, 16);
-            txtMasterName13.MaxLength = 50;
+            txtMasterName13.MaxLength = 5;
             txtMasterName13.Name = "txtMasterName13";
-            txtMasterName13.Size = new Size(114, 27);
+            txtMasterName13.Size = new Size(53, 27);
             txtMasterName13.TabIndex = 92;
             // 
             // txtMasterRegStartAddress13
@@ -2130,6 +5272,7 @@
             // 
             // groupBox43
             // 
+            groupBox43.Controls.Add(cmbDecimalPoint11);
             groupBox43.Controls.Add(label217);
             groupBox43.Controls.Add(cmbMasterFunctionCode11);
             groupBox43.Controls.Add(cmbMasterByteOrder11);
@@ -2147,6 +5290,15 @@
             groupBox43.TabIndex = 111;
             groupBox43.TabStop = false;
             // 
+            // cmbDecimalPoint11
+            // 
+            cmbDecimalPoint11.FormattingEnabled = true;
+            cmbDecimalPoint11.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint11.Location = new Point(817, 17);
+            cmbDecimalPoint11.Name = "cmbDecimalPoint11";
+            cmbDecimalPoint11.Size = new Size(55, 28);
+            cmbDecimalPoint11.TabIndex = 133;
+            // 
             // label217
             // 
             label217.AutoSize = true;
@@ -2160,7 +5312,7 @@
             // 
             cmbMasterFunctionCode11.FormattingEnabled = true;
             cmbMasterFunctionCode11.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode11.Location = new Point(645, 16);
+            cmbMasterFunctionCode11.Location = new Point(584, 16);
             cmbMasterFunctionCode11.Name = "cmbMasterFunctionCode11";
             cmbMasterFunctionCode11.Size = new Size(155, 28);
             cmbMasterFunctionCode11.TabIndex = 100;
@@ -2169,7 +5321,7 @@
             // 
             cmbMasterByteOrder11.FormattingEnabled = true;
             cmbMasterByteOrder11.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder11.Location = new Point(548, 16);
+            cmbMasterByteOrder11.Location = new Point(487, 16);
             cmbMasterByteOrder11.Name = "cmbMasterByteOrder11";
             cmbMasterByteOrder11.Size = new Size(92, 28);
             cmbMasterByteOrder11.TabIndex = 99;
@@ -2178,7 +5330,7 @@
             // 
             cmbMasterDataType11.FormattingEnabled = true;
             cmbMasterDataType11.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType11.Location = new Point(413, 16);
+            cmbMasterDataType11.Location = new Point(352, 16);
             cmbMasterDataType11.Name = "cmbMasterDataType11";
             cmbMasterDataType11.Size = new Size(130, 28);
             cmbMasterDataType11.TabIndex = 98;
@@ -2187,7 +5339,7 @@
             // 
             cmbMasterActivation11.FormattingEnabled = true;
             cmbMasterActivation11.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation11.Location = new Point(341, 16);
+            cmbMasterActivation11.Location = new Point(280, 16);
             cmbMasterActivation11.Name = "cmbMasterActivation11";
             cmbMasterActivation11.Size = new Size(68, 28);
             cmbMasterActivation11.TabIndex = 97;
@@ -2219,7 +5371,7 @@
             // txtMasterScaleFactor11
             // 
             txtMasterScaleFactor11.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor11.Location = new Point(804, 16);
+            txtMasterScaleFactor11.Location = new Point(743, 16);
             txtMasterScaleFactor11.MaxLength = 10;
             txtMasterScaleFactor11.Name = "txtMasterScaleFactor11";
             txtMasterScaleFactor11.Size = new Size(69, 27);
@@ -2229,9 +5381,9 @@
             // 
             txtMasterName11.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName11.Location = new Point(223, 16);
-            txtMasterName11.MaxLength = 50;
+            txtMasterName11.MaxLength = 5;
             txtMasterName11.Name = "txtMasterName11";
-            txtMasterName11.Size = new Size(114, 27);
+            txtMasterName11.Size = new Size(53, 27);
             txtMasterName11.TabIndex = 92;
             // 
             // txtMasterRegStartAddress11
@@ -2256,6 +5408,7 @@
             // 
             // groupBox21
             // 
+            groupBox21.Controls.Add(cmbDecimalPoint2);
             groupBox21.Controls.Add(label226);
             groupBox21.Controls.Add(cmbMasterFunctionCode2);
             groupBox21.Controls.Add(cmbMasterByteOrder2);
@@ -2273,6 +5426,15 @@
             groupBox21.TabIndex = 110;
             groupBox21.TabStop = false;
             // 
+            // cmbDecimalPoint2
+            // 
+            cmbDecimalPoint2.FormattingEnabled = true;
+            cmbDecimalPoint2.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint2.Location = new Point(816, 15);
+            cmbDecimalPoint2.Name = "cmbDecimalPoint2";
+            cmbDecimalPoint2.Size = new Size(55, 28);
+            cmbDecimalPoint2.TabIndex = 140;
+            // 
             // label226
             // 
             label226.AutoSize = true;
@@ -2286,7 +5448,7 @@
             // 
             cmbMasterFunctionCode2.FormattingEnabled = true;
             cmbMasterFunctionCode2.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode2.Location = new Point(645, 16);
+            cmbMasterFunctionCode2.Location = new Point(585, 16);
             cmbMasterFunctionCode2.Name = "cmbMasterFunctionCode2";
             cmbMasterFunctionCode2.Size = new Size(155, 28);
             cmbMasterFunctionCode2.TabIndex = 100;
@@ -2295,7 +5457,7 @@
             // 
             cmbMasterByteOrder2.FormattingEnabled = true;
             cmbMasterByteOrder2.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder2.Location = new Point(548, 16);
+            cmbMasterByteOrder2.Location = new Point(488, 16);
             cmbMasterByteOrder2.Name = "cmbMasterByteOrder2";
             cmbMasterByteOrder2.Size = new Size(92, 28);
             cmbMasterByteOrder2.TabIndex = 99;
@@ -2304,7 +5466,7 @@
             // 
             cmbMasterDataType2.FormattingEnabled = true;
             cmbMasterDataType2.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType2.Location = new Point(413, 16);
+            cmbMasterDataType2.Location = new Point(353, 16);
             cmbMasterDataType2.Name = "cmbMasterDataType2";
             cmbMasterDataType2.Size = new Size(130, 28);
             cmbMasterDataType2.TabIndex = 98;
@@ -2313,7 +5475,7 @@
             // 
             cmbMasterActivation2.FormattingEnabled = true;
             cmbMasterActivation2.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation2.Location = new Point(341, 16);
+            cmbMasterActivation2.Location = new Point(281, 16);
             cmbMasterActivation2.Name = "cmbMasterActivation2";
             cmbMasterActivation2.Size = new Size(68, 28);
             cmbMasterActivation2.TabIndex = 97;
@@ -2345,7 +5507,7 @@
             // txtMasterScaleFactor2
             // 
             txtMasterScaleFactor2.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor2.Location = new Point(804, 16);
+            txtMasterScaleFactor2.Location = new Point(744, 16);
             txtMasterScaleFactor2.MaxLength = 10;
             txtMasterScaleFactor2.Name = "txtMasterScaleFactor2";
             txtMasterScaleFactor2.Size = new Size(69, 27);
@@ -2355,9 +5517,9 @@
             // 
             txtMasterName2.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName2.Location = new Point(223, 16);
-            txtMasterName2.MaxLength = 50;
+            txtMasterName2.MaxLength = 5;
             txtMasterName2.Name = "txtMasterName2";
-            txtMasterName2.Size = new Size(114, 27);
+            txtMasterName2.Size = new Size(53, 27);
             txtMasterName2.TabIndex = 92;
             // 
             // txtMasterRegStartAddress2
@@ -2382,6 +5544,7 @@
             // 
             // groupBox32
             // 
+            groupBox32.Controls.Add(cmbDecimalPoint10);
             groupBox32.Controls.Add(label218);
             groupBox32.Controls.Add(cmbMasterFunctionCode10);
             groupBox32.Controls.Add(cmbMasterByteOrder10);
@@ -2399,6 +5562,15 @@
             groupBox32.TabIndex = 109;
             groupBox32.TabStop = false;
             // 
+            // cmbDecimalPoint10
+            // 
+            cmbDecimalPoint10.FormattingEnabled = true;
+            cmbDecimalPoint10.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint10.Location = new Point(816, 15);
+            cmbDecimalPoint10.Name = "cmbDecimalPoint10";
+            cmbDecimalPoint10.Size = new Size(55, 28);
+            cmbDecimalPoint10.TabIndex = 132;
+            // 
             // label218
             // 
             label218.AutoSize = true;
@@ -2412,7 +5584,7 @@
             // 
             cmbMasterFunctionCode10.FormattingEnabled = true;
             cmbMasterFunctionCode10.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode10.Location = new Point(644, 16);
+            cmbMasterFunctionCode10.Location = new Point(584, 16);
             cmbMasterFunctionCode10.Name = "cmbMasterFunctionCode10";
             cmbMasterFunctionCode10.Size = new Size(155, 28);
             cmbMasterFunctionCode10.TabIndex = 100;
@@ -2421,7 +5593,7 @@
             // 
             cmbMasterByteOrder10.FormattingEnabled = true;
             cmbMasterByteOrder10.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder10.Location = new Point(547, 16);
+            cmbMasterByteOrder10.Location = new Point(487, 16);
             cmbMasterByteOrder10.Name = "cmbMasterByteOrder10";
             cmbMasterByteOrder10.Size = new Size(92, 28);
             cmbMasterByteOrder10.TabIndex = 99;
@@ -2430,7 +5602,7 @@
             // 
             cmbMasterDataType10.FormattingEnabled = true;
             cmbMasterDataType10.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType10.Location = new Point(412, 16);
+            cmbMasterDataType10.Location = new Point(352, 16);
             cmbMasterDataType10.Name = "cmbMasterDataType10";
             cmbMasterDataType10.Size = new Size(130, 28);
             cmbMasterDataType10.TabIndex = 98;
@@ -2439,7 +5611,7 @@
             // 
             cmbMasterActivation10.FormattingEnabled = true;
             cmbMasterActivation10.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation10.Location = new Point(340, 16);
+            cmbMasterActivation10.Location = new Point(280, 16);
             cmbMasterActivation10.Name = "cmbMasterActivation10";
             cmbMasterActivation10.Size = new Size(68, 28);
             cmbMasterActivation10.TabIndex = 97;
@@ -2471,7 +5643,7 @@
             // txtMasterScaleFactor10
             // 
             txtMasterScaleFactor10.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor10.Location = new Point(803, 16);
+            txtMasterScaleFactor10.Location = new Point(743, 16);
             txtMasterScaleFactor10.MaxLength = 10;
             txtMasterScaleFactor10.Name = "txtMasterScaleFactor10";
             txtMasterScaleFactor10.Size = new Size(69, 27);
@@ -2481,9 +5653,9 @@
             // 
             txtMasterName10.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName10.Location = new Point(222, 16);
-            txtMasterName10.MaxLength = 50;
+            txtMasterName10.MaxLength = 5;
             txtMasterName10.Name = "txtMasterName10";
-            txtMasterName10.Size = new Size(114, 27);
+            txtMasterName10.Size = new Size(53, 27);
             txtMasterName10.TabIndex = 92;
             // 
             // txtMasterRegStartAddress10
@@ -2508,6 +5680,7 @@
             // 
             // groupBox33
             // 
+            groupBox33.Controls.Add(cmbDecimalPoint9);
             groupBox33.Controls.Add(label219);
             groupBox33.Controls.Add(cmbMasterFunctionCode9);
             groupBox33.Controls.Add(cmbMasterByteOrder9);
@@ -2525,6 +5698,15 @@
             groupBox33.TabIndex = 108;
             groupBox33.TabStop = false;
             // 
+            // cmbDecimalPoint9
+            // 
+            cmbDecimalPoint9.FormattingEnabled = true;
+            cmbDecimalPoint9.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint9.Location = new Point(816, 15);
+            cmbDecimalPoint9.Name = "cmbDecimalPoint9";
+            cmbDecimalPoint9.Size = new Size(55, 28);
+            cmbDecimalPoint9.TabIndex = 141;
+            // 
             // label219
             // 
             label219.AutoSize = true;
@@ -2538,7 +5720,7 @@
             // 
             cmbMasterFunctionCode9.FormattingEnabled = true;
             cmbMasterFunctionCode9.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode9.Location = new Point(644, 16);
+            cmbMasterFunctionCode9.Location = new Point(584, 16);
             cmbMasterFunctionCode9.Name = "cmbMasterFunctionCode9";
             cmbMasterFunctionCode9.Size = new Size(155, 28);
             cmbMasterFunctionCode9.TabIndex = 100;
@@ -2547,7 +5729,7 @@
             // 
             cmbMasterByteOrder9.FormattingEnabled = true;
             cmbMasterByteOrder9.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder9.Location = new Point(547, 16);
+            cmbMasterByteOrder9.Location = new Point(487, 16);
             cmbMasterByteOrder9.Name = "cmbMasterByteOrder9";
             cmbMasterByteOrder9.Size = new Size(92, 28);
             cmbMasterByteOrder9.TabIndex = 99;
@@ -2556,7 +5738,7 @@
             // 
             cmbMasterDataType9.FormattingEnabled = true;
             cmbMasterDataType9.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType9.Location = new Point(412, 16);
+            cmbMasterDataType9.Location = new Point(352, 16);
             cmbMasterDataType9.Name = "cmbMasterDataType9";
             cmbMasterDataType9.Size = new Size(130, 28);
             cmbMasterDataType9.TabIndex = 98;
@@ -2565,7 +5747,7 @@
             // 
             cmbMasterActivation9.FormattingEnabled = true;
             cmbMasterActivation9.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation9.Location = new Point(340, 16);
+            cmbMasterActivation9.Location = new Point(280, 16);
             cmbMasterActivation9.Name = "cmbMasterActivation9";
             cmbMasterActivation9.Size = new Size(68, 28);
             cmbMasterActivation9.TabIndex = 97;
@@ -2597,7 +5779,7 @@
             // txtMasterScaleFactor9
             // 
             txtMasterScaleFactor9.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor9.Location = new Point(803, 16);
+            txtMasterScaleFactor9.Location = new Point(743, 16);
             txtMasterScaleFactor9.MaxLength = 10;
             txtMasterScaleFactor9.Name = "txtMasterScaleFactor9";
             txtMasterScaleFactor9.Size = new Size(69, 27);
@@ -2607,9 +5789,9 @@
             // 
             txtMasterName9.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName9.Location = new Point(222, 16);
-            txtMasterName9.MaxLength = 50;
+            txtMasterName9.MaxLength = 5;
             txtMasterName9.Name = "txtMasterName9";
-            txtMasterName9.Size = new Size(114, 27);
+            txtMasterName9.Size = new Size(53, 27);
             txtMasterName9.TabIndex = 92;
             // 
             // txtMasterRegStartAddress9
@@ -2634,6 +5816,7 @@
             // 
             // groupBox28
             // 
+            groupBox28.Controls.Add(cmbDecimalPoint8);
             groupBox28.Controls.Add(label220);
             groupBox28.Controls.Add(cmbMasterFunctionCode8);
             groupBox28.Controls.Add(cmbMasterByteOrder8);
@@ -2651,6 +5834,15 @@
             groupBox28.TabIndex = 107;
             groupBox28.TabStop = false;
             // 
+            // cmbDecimalPoint8
+            // 
+            cmbDecimalPoint8.FormattingEnabled = true;
+            cmbDecimalPoint8.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint8.Location = new Point(816, 16);
+            cmbDecimalPoint8.Name = "cmbDecimalPoint8";
+            cmbDecimalPoint8.Size = new Size(55, 28);
+            cmbDecimalPoint8.TabIndex = 141;
+            // 
             // label220
             // 
             label220.AutoSize = true;
@@ -2664,7 +5856,7 @@
             // 
             cmbMasterFunctionCode8.FormattingEnabled = true;
             cmbMasterFunctionCode8.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode8.Location = new Point(645, 16);
+            cmbMasterFunctionCode8.Location = new Point(585, 16);
             cmbMasterFunctionCode8.Name = "cmbMasterFunctionCode8";
             cmbMasterFunctionCode8.Size = new Size(155, 28);
             cmbMasterFunctionCode8.TabIndex = 100;
@@ -2673,7 +5865,7 @@
             // 
             cmbMasterByteOrder8.FormattingEnabled = true;
             cmbMasterByteOrder8.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder8.Location = new Point(548, 16);
+            cmbMasterByteOrder8.Location = new Point(488, 16);
             cmbMasterByteOrder8.Name = "cmbMasterByteOrder8";
             cmbMasterByteOrder8.Size = new Size(92, 28);
             cmbMasterByteOrder8.TabIndex = 99;
@@ -2682,7 +5874,7 @@
             // 
             cmbMasterDataType8.FormattingEnabled = true;
             cmbMasterDataType8.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType8.Location = new Point(413, 16);
+            cmbMasterDataType8.Location = new Point(353, 16);
             cmbMasterDataType8.Name = "cmbMasterDataType8";
             cmbMasterDataType8.Size = new Size(130, 28);
             cmbMasterDataType8.TabIndex = 98;
@@ -2691,7 +5883,7 @@
             // 
             cmbMasterActivation8.FormattingEnabled = true;
             cmbMasterActivation8.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation8.Location = new Point(341, 16);
+            cmbMasterActivation8.Location = new Point(281, 16);
             cmbMasterActivation8.Name = "cmbMasterActivation8";
             cmbMasterActivation8.Size = new Size(68, 28);
             cmbMasterActivation8.TabIndex = 97;
@@ -2723,7 +5915,7 @@
             // txtMasterScaleFactor8
             // 
             txtMasterScaleFactor8.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor8.Location = new Point(804, 16);
+            txtMasterScaleFactor8.Location = new Point(744, 16);
             txtMasterScaleFactor8.MaxLength = 10;
             txtMasterScaleFactor8.Name = "txtMasterScaleFactor8";
             txtMasterScaleFactor8.Size = new Size(69, 27);
@@ -2733,9 +5925,9 @@
             // 
             txtMasterName8.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName8.Location = new Point(223, 16);
-            txtMasterName8.MaxLength = 50;
+            txtMasterName8.MaxLength = 5;
             txtMasterName8.Name = "txtMasterName8";
-            txtMasterName8.Size = new Size(114, 27);
+            txtMasterName8.Size = new Size(53, 27);
             txtMasterName8.TabIndex = 92;
             // 
             // txtMasterRegStartAddress8
@@ -2760,6 +5952,7 @@
             // 
             // groupBox29
             // 
+            groupBox29.Controls.Add(cmbDecimalPoint6);
             groupBox29.Controls.Add(label222);
             groupBox29.Controls.Add(cmbMasterFunctionCode6);
             groupBox29.Controls.Add(cmbMasterByteOrder6);
@@ -2777,6 +5970,15 @@
             groupBox29.TabIndex = 106;
             groupBox29.TabStop = false;
             // 
+            // cmbDecimalPoint6
+            // 
+            cmbDecimalPoint6.FormattingEnabled = true;
+            cmbDecimalPoint6.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint6.Location = new Point(819, 16);
+            cmbDecimalPoint6.Name = "cmbDecimalPoint6";
+            cmbDecimalPoint6.Size = new Size(55, 28);
+            cmbDecimalPoint6.TabIndex = 139;
+            // 
             // label222
             // 
             label222.AutoSize = true;
@@ -2790,7 +5992,7 @@
             // 
             cmbMasterFunctionCode6.FormattingEnabled = true;
             cmbMasterFunctionCode6.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode6.Location = new Point(647, 16);
+            cmbMasterFunctionCode6.Location = new Point(588, 16);
             cmbMasterFunctionCode6.Name = "cmbMasterFunctionCode6";
             cmbMasterFunctionCode6.Size = new Size(155, 28);
             cmbMasterFunctionCode6.TabIndex = 100;
@@ -2799,7 +6001,7 @@
             // 
             cmbMasterByteOrder6.FormattingEnabled = true;
             cmbMasterByteOrder6.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder6.Location = new Point(550, 16);
+            cmbMasterByteOrder6.Location = new Point(491, 16);
             cmbMasterByteOrder6.Name = "cmbMasterByteOrder6";
             cmbMasterByteOrder6.Size = new Size(92, 28);
             cmbMasterByteOrder6.TabIndex = 99;
@@ -2808,7 +6010,7 @@
             // 
             cmbMasterDataType6.FormattingEnabled = true;
             cmbMasterDataType6.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType6.Location = new Point(415, 16);
+            cmbMasterDataType6.Location = new Point(356, 16);
             cmbMasterDataType6.Name = "cmbMasterDataType6";
             cmbMasterDataType6.Size = new Size(130, 28);
             cmbMasterDataType6.TabIndex = 98;
@@ -2817,7 +6019,7 @@
             // 
             cmbMasterActivation6.FormattingEnabled = true;
             cmbMasterActivation6.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation6.Location = new Point(343, 16);
+            cmbMasterActivation6.Location = new Point(284, 16);
             cmbMasterActivation6.Name = "cmbMasterActivation6";
             cmbMasterActivation6.Size = new Size(68, 28);
             cmbMasterActivation6.TabIndex = 97;
@@ -2849,7 +6051,7 @@
             // txtMasterScaleFactor6
             // 
             txtMasterScaleFactor6.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor6.Location = new Point(806, 16);
+            txtMasterScaleFactor6.Location = new Point(747, 16);
             txtMasterScaleFactor6.MaxLength = 10;
             txtMasterScaleFactor6.Name = "txtMasterScaleFactor6";
             txtMasterScaleFactor6.Size = new Size(69, 27);
@@ -2859,9 +6061,9 @@
             // 
             txtMasterName6.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName6.Location = new Point(225, 16);
-            txtMasterName6.MaxLength = 50;
+            txtMasterName6.MaxLength = 5;
             txtMasterName6.Name = "txtMasterName6";
-            txtMasterName6.Size = new Size(114, 27);
+            txtMasterName6.Size = new Size(53, 27);
             txtMasterName6.TabIndex = 92;
             // 
             // txtMasterRegStartAddress6
@@ -2886,6 +6088,7 @@
             // 
             // groupBox30
             // 
+            groupBox30.Controls.Add(cmbDecimalPoint7);
             groupBox30.Controls.Add(label221);
             groupBox30.Controls.Add(cmbMasterFunctionCode7);
             groupBox30.Controls.Add(cmbMasterByteOrder7);
@@ -2903,6 +6106,15 @@
             groupBox30.TabIndex = 105;
             groupBox30.TabStop = false;
             // 
+            // cmbDecimalPoint7
+            // 
+            cmbDecimalPoint7.FormattingEnabled = true;
+            cmbDecimalPoint7.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint7.Location = new Point(817, 16);
+            cmbDecimalPoint7.Name = "cmbDecimalPoint7";
+            cmbDecimalPoint7.Size = new Size(55, 28);
+            cmbDecimalPoint7.TabIndex = 140;
+            // 
             // label221
             // 
             label221.AutoSize = true;
@@ -2916,7 +6128,7 @@
             // 
             cmbMasterFunctionCode7.FormattingEnabled = true;
             cmbMasterFunctionCode7.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode7.Location = new Point(645, 16);
+            cmbMasterFunctionCode7.Location = new Point(585, 16);
             cmbMasterFunctionCode7.Name = "cmbMasterFunctionCode7";
             cmbMasterFunctionCode7.Size = new Size(155, 28);
             cmbMasterFunctionCode7.TabIndex = 100;
@@ -2925,7 +6137,7 @@
             // 
             cmbMasterByteOrder7.FormattingEnabled = true;
             cmbMasterByteOrder7.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder7.Location = new Point(548, 16);
+            cmbMasterByteOrder7.Location = new Point(488, 16);
             cmbMasterByteOrder7.Name = "cmbMasterByteOrder7";
             cmbMasterByteOrder7.Size = new Size(92, 28);
             cmbMasterByteOrder7.TabIndex = 99;
@@ -2934,7 +6146,7 @@
             // 
             cmbMasterDataType7.FormattingEnabled = true;
             cmbMasterDataType7.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType7.Location = new Point(413, 16);
+            cmbMasterDataType7.Location = new Point(353, 16);
             cmbMasterDataType7.Name = "cmbMasterDataType7";
             cmbMasterDataType7.Size = new Size(130, 28);
             cmbMasterDataType7.TabIndex = 98;
@@ -2943,7 +6155,7 @@
             // 
             cmbMasterActivation7.FormattingEnabled = true;
             cmbMasterActivation7.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation7.Location = new Point(341, 16);
+            cmbMasterActivation7.Location = new Point(281, 16);
             cmbMasterActivation7.Name = "cmbMasterActivation7";
             cmbMasterActivation7.Size = new Size(68, 28);
             cmbMasterActivation7.TabIndex = 97;
@@ -2975,7 +6187,7 @@
             // txtMasterScaleFactor7
             // 
             txtMasterScaleFactor7.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor7.Location = new Point(804, 16);
+            txtMasterScaleFactor7.Location = new Point(744, 16);
             txtMasterScaleFactor7.MaxLength = 10;
             txtMasterScaleFactor7.Name = "txtMasterScaleFactor7";
             txtMasterScaleFactor7.Size = new Size(69, 27);
@@ -2985,9 +6197,9 @@
             // 
             txtMasterName7.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName7.Location = new Point(223, 16);
-            txtMasterName7.MaxLength = 50;
+            txtMasterName7.MaxLength = 5;
             txtMasterName7.Name = "txtMasterName7";
-            txtMasterName7.Size = new Size(114, 27);
+            txtMasterName7.Size = new Size(53, 27);
             txtMasterName7.TabIndex = 92;
             // 
             // txtMasterRegStartAddress7
@@ -3012,6 +6224,7 @@
             // 
             // groupBox31
             // 
+            groupBox31.Controls.Add(cmbDecimalPoint5);
             groupBox31.Controls.Add(label223);
             groupBox31.Controls.Add(cmbMasterFunctionCode5);
             groupBox31.Controls.Add(cmbMasterByteOrder5);
@@ -3029,6 +6242,15 @@
             groupBox31.TabIndex = 104;
             groupBox31.TabStop = false;
             // 
+            // cmbDecimalPoint5
+            // 
+            cmbDecimalPoint5.FormattingEnabled = true;
+            cmbDecimalPoint5.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint5.Location = new Point(817, 16);
+            cmbDecimalPoint5.Name = "cmbDecimalPoint5";
+            cmbDecimalPoint5.Size = new Size(55, 28);
+            cmbDecimalPoint5.TabIndex = 139;
+            // 
             // label223
             // 
             label223.AutoSize = true;
@@ -3042,7 +6264,7 @@
             // 
             cmbMasterFunctionCode5.FormattingEnabled = true;
             cmbMasterFunctionCode5.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode5.Location = new Point(645, 16);
+            cmbMasterFunctionCode5.Location = new Point(585, 16);
             cmbMasterFunctionCode5.Name = "cmbMasterFunctionCode5";
             cmbMasterFunctionCode5.Size = new Size(155, 28);
             cmbMasterFunctionCode5.TabIndex = 100;
@@ -3051,7 +6273,7 @@
             // 
             cmbMasterByteOrder5.FormattingEnabled = true;
             cmbMasterByteOrder5.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder5.Location = new Point(548, 16);
+            cmbMasterByteOrder5.Location = new Point(488, 16);
             cmbMasterByteOrder5.Name = "cmbMasterByteOrder5";
             cmbMasterByteOrder5.Size = new Size(92, 28);
             cmbMasterByteOrder5.TabIndex = 99;
@@ -3060,7 +6282,7 @@
             // 
             cmbMasterDataType5.FormattingEnabled = true;
             cmbMasterDataType5.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType5.Location = new Point(413, 16);
+            cmbMasterDataType5.Location = new Point(353, 16);
             cmbMasterDataType5.Name = "cmbMasterDataType5";
             cmbMasterDataType5.Size = new Size(130, 28);
             cmbMasterDataType5.TabIndex = 98;
@@ -3069,7 +6291,7 @@
             // 
             cmbMasterActivation5.FormattingEnabled = true;
             cmbMasterActivation5.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation5.Location = new Point(341, 16);
+            cmbMasterActivation5.Location = new Point(281, 16);
             cmbMasterActivation5.Name = "cmbMasterActivation5";
             cmbMasterActivation5.Size = new Size(68, 28);
             cmbMasterActivation5.TabIndex = 97;
@@ -3101,7 +6323,7 @@
             // txtMasterScaleFactor5
             // 
             txtMasterScaleFactor5.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor5.Location = new Point(804, 16);
+            txtMasterScaleFactor5.Location = new Point(744, 16);
             txtMasterScaleFactor5.MaxLength = 10;
             txtMasterScaleFactor5.Name = "txtMasterScaleFactor5";
             txtMasterScaleFactor5.Size = new Size(69, 27);
@@ -3111,9 +6333,9 @@
             // 
             txtMasterName5.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName5.Location = new Point(223, 16);
-            txtMasterName5.MaxLength = 50;
+            txtMasterName5.MaxLength = 5;
             txtMasterName5.Name = "txtMasterName5";
-            txtMasterName5.Size = new Size(114, 27);
+            txtMasterName5.Size = new Size(53, 27);
             txtMasterName5.TabIndex = 92;
             // 
             // txtMasterRegStartAddress5
@@ -3138,6 +6360,7 @@
             // 
             // groupBox22
             // 
+            groupBox22.Controls.Add(cmbDecimalPoint4);
             groupBox22.Controls.Add(label224);
             groupBox22.Controls.Add(cmbMasterFunctionCode4);
             groupBox22.Controls.Add(cmbMasterByteOrder4);
@@ -3155,6 +6378,15 @@
             groupBox22.TabIndex = 103;
             groupBox22.TabStop = false;
             // 
+            // cmbDecimalPoint4
+            // 
+            cmbDecimalPoint4.FormattingEnabled = true;
+            cmbDecimalPoint4.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint4.Location = new Point(818, 15);
+            cmbDecimalPoint4.Name = "cmbDecimalPoint4";
+            cmbDecimalPoint4.Size = new Size(55, 28);
+            cmbDecimalPoint4.TabIndex = 138;
+            // 
             // label224
             // 
             label224.AutoSize = true;
@@ -3168,7 +6400,7 @@
             // 
             cmbMasterFunctionCode4.FormattingEnabled = true;
             cmbMasterFunctionCode4.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode4.Location = new Point(646, 16);
+            cmbMasterFunctionCode4.Location = new Point(586, 16);
             cmbMasterFunctionCode4.Name = "cmbMasterFunctionCode4";
             cmbMasterFunctionCode4.Size = new Size(155, 28);
             cmbMasterFunctionCode4.TabIndex = 100;
@@ -3177,7 +6409,7 @@
             // 
             cmbMasterByteOrder4.FormattingEnabled = true;
             cmbMasterByteOrder4.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder4.Location = new Point(549, 16);
+            cmbMasterByteOrder4.Location = new Point(489, 16);
             cmbMasterByteOrder4.Name = "cmbMasterByteOrder4";
             cmbMasterByteOrder4.Size = new Size(92, 28);
             cmbMasterByteOrder4.TabIndex = 99;
@@ -3186,7 +6418,7 @@
             // 
             cmbMasterDataType4.FormattingEnabled = true;
             cmbMasterDataType4.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType4.Location = new Point(414, 16);
+            cmbMasterDataType4.Location = new Point(354, 16);
             cmbMasterDataType4.Name = "cmbMasterDataType4";
             cmbMasterDataType4.Size = new Size(130, 28);
             cmbMasterDataType4.TabIndex = 98;
@@ -3195,7 +6427,7 @@
             // 
             cmbMasterActivation4.FormattingEnabled = true;
             cmbMasterActivation4.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation4.Location = new Point(342, 16);
+            cmbMasterActivation4.Location = new Point(282, 16);
             cmbMasterActivation4.Name = "cmbMasterActivation4";
             cmbMasterActivation4.Size = new Size(68, 28);
             cmbMasterActivation4.TabIndex = 97;
@@ -3227,7 +6459,7 @@
             // txtMasterScaleFactor4
             // 
             txtMasterScaleFactor4.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor4.Location = new Point(805, 16);
+            txtMasterScaleFactor4.Location = new Point(745, 16);
             txtMasterScaleFactor4.MaxLength = 10;
             txtMasterScaleFactor4.Name = "txtMasterScaleFactor4";
             txtMasterScaleFactor4.Size = new Size(69, 27);
@@ -3237,9 +6469,9 @@
             // 
             txtMasterName4.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName4.Location = new Point(224, 16);
-            txtMasterName4.MaxLength = 50;
+            txtMasterName4.MaxLength = 5;
             txtMasterName4.Name = "txtMasterName4";
-            txtMasterName4.Size = new Size(114, 27);
+            txtMasterName4.Size = new Size(53, 27);
             txtMasterName4.TabIndex = 92;
             // 
             // txtMasterRegStartAddress4
@@ -3264,6 +6496,7 @@
             // 
             // groupBox24
             // 
+            groupBox24.Controls.Add(cmbDecimalPoint3);
             groupBox24.Controls.Add(label225);
             groupBox24.Controls.Add(cmbMasterFunctionCode3);
             groupBox24.Controls.Add(cmbMasterByteOrder3);
@@ -3281,6 +6514,15 @@
             groupBox24.TabIndex = 102;
             groupBox24.TabStop = false;
             // 
+            // cmbDecimalPoint3
+            // 
+            cmbDecimalPoint3.FormattingEnabled = true;
+            cmbDecimalPoint3.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint3.Location = new Point(817, 16);
+            cmbDecimalPoint3.Name = "cmbDecimalPoint3";
+            cmbDecimalPoint3.Size = new Size(55, 28);
+            cmbDecimalPoint3.TabIndex = 139;
+            // 
             // label225
             // 
             label225.AutoSize = true;
@@ -3294,7 +6536,7 @@
             // 
             cmbMasterFunctionCode3.FormattingEnabled = true;
             cmbMasterFunctionCode3.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode3.Location = new Point(645, 16);
+            cmbMasterFunctionCode3.Location = new Point(585, 16);
             cmbMasterFunctionCode3.Name = "cmbMasterFunctionCode3";
             cmbMasterFunctionCode3.Size = new Size(155, 28);
             cmbMasterFunctionCode3.TabIndex = 100;
@@ -3303,7 +6545,7 @@
             // 
             cmbMasterByteOrder3.FormattingEnabled = true;
             cmbMasterByteOrder3.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder3.Location = new Point(548, 16);
+            cmbMasterByteOrder3.Location = new Point(488, 16);
             cmbMasterByteOrder3.Name = "cmbMasterByteOrder3";
             cmbMasterByteOrder3.Size = new Size(92, 28);
             cmbMasterByteOrder3.TabIndex = 99;
@@ -3312,7 +6554,7 @@
             // 
             cmbMasterDataType3.FormattingEnabled = true;
             cmbMasterDataType3.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType3.Location = new Point(413, 16);
+            cmbMasterDataType3.Location = new Point(353, 16);
             cmbMasterDataType3.Name = "cmbMasterDataType3";
             cmbMasterDataType3.Size = new Size(130, 28);
             cmbMasterDataType3.TabIndex = 98;
@@ -3321,7 +6563,7 @@
             // 
             cmbMasterActivation3.FormattingEnabled = true;
             cmbMasterActivation3.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation3.Location = new Point(341, 16);
+            cmbMasterActivation3.Location = new Point(281, 16);
             cmbMasterActivation3.Name = "cmbMasterActivation3";
             cmbMasterActivation3.Size = new Size(68, 28);
             cmbMasterActivation3.TabIndex = 97;
@@ -3353,7 +6595,7 @@
             // txtMasterScaleFactor3
             // 
             txtMasterScaleFactor3.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor3.Location = new Point(804, 16);
+            txtMasterScaleFactor3.Location = new Point(744, 16);
             txtMasterScaleFactor3.MaxLength = 10;
             txtMasterScaleFactor3.Name = "txtMasterScaleFactor3";
             txtMasterScaleFactor3.Size = new Size(69, 27);
@@ -3363,9 +6605,9 @@
             // 
             txtMasterName3.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName3.Location = new Point(223, 16);
-            txtMasterName3.MaxLength = 50;
+            txtMasterName3.MaxLength = 5;
             txtMasterName3.Name = "txtMasterName3";
-            txtMasterName3.Size = new Size(114, 27);
+            txtMasterName3.Size = new Size(53, 27);
             txtMasterName3.TabIndex = 92;
             // 
             // txtMasterRegStartAddress3
@@ -3390,6 +6632,7 @@
             // 
             // groupBox20
             // 
+            groupBox20.Controls.Add(cmbDecimalPoint1);
             groupBox20.Controls.Add(label227);
             groupBox20.Controls.Add(cmbMasterFunctionCode1);
             groupBox20.Controls.Add(cmbMasterByteOrder1);
@@ -3407,6 +6650,15 @@
             groupBox20.TabIndex = 0;
             groupBox20.TabStop = false;
             // 
+            // cmbDecimalPoint1
+            // 
+            cmbDecimalPoint1.FormattingEnabled = true;
+            cmbDecimalPoint1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cmbDecimalPoint1.Location = new Point(816, 15);
+            cmbDecimalPoint1.Name = "cmbDecimalPoint1";
+            cmbDecimalPoint1.Size = new Size(55, 28);
+            cmbDecimalPoint1.TabIndex = 141;
+            // 
             // label227
             // 
             label227.AutoSize = true;
@@ -3420,7 +6672,7 @@
             // 
             cmbMasterFunctionCode1.FormattingEnabled = true;
             cmbMasterFunctionCode1.Items.AddRange(new object[] { "Read Coil", "Read Discrete Input", "Read Holding Register", "Read Input Register" });
-            cmbMasterFunctionCode1.Location = new Point(645, 16);
+            cmbMasterFunctionCode1.Location = new Point(585, 16);
             cmbMasterFunctionCode1.Name = "cmbMasterFunctionCode1";
             cmbMasterFunctionCode1.Size = new Size(155, 28);
             cmbMasterFunctionCode1.TabIndex = 100;
@@ -3429,7 +6681,7 @@
             // 
             cmbMasterByteOrder1.FormattingEnabled = true;
             cmbMasterByteOrder1.Items.AddRange(new object[] { "Big Endian", "Little Endian" });
-            cmbMasterByteOrder1.Location = new Point(548, 16);
+            cmbMasterByteOrder1.Location = new Point(488, 16);
             cmbMasterByteOrder1.Name = "cmbMasterByteOrder1";
             cmbMasterByteOrder1.Size = new Size(92, 28);
             cmbMasterByteOrder1.TabIndex = 99;
@@ -3438,7 +6690,7 @@
             // 
             cmbMasterDataType1.FormattingEnabled = true;
             cmbMasterDataType1.Items.AddRange(new object[] { "BYTE", "UINT16", "INT16", "UINT32", "INT32", "FLOAT32" });
-            cmbMasterDataType1.Location = new Point(413, 16);
+            cmbMasterDataType1.Location = new Point(353, 16);
             cmbMasterDataType1.Name = "cmbMasterDataType1";
             cmbMasterDataType1.Size = new Size(130, 28);
             cmbMasterDataType1.TabIndex = 98;
@@ -3447,7 +6699,7 @@
             // 
             cmbMasterActivation1.FormattingEnabled = true;
             cmbMasterActivation1.Items.AddRange(new object[] { "Yes", "No" });
-            cmbMasterActivation1.Location = new Point(341, 16);
+            cmbMasterActivation1.Location = new Point(281, 16);
             cmbMasterActivation1.Name = "cmbMasterActivation1";
             cmbMasterActivation1.Size = new Size(68, 28);
             cmbMasterActivation1.TabIndex = 97;
@@ -3479,7 +6731,7 @@
             // txtMasterScaleFactor1
             // 
             txtMasterScaleFactor1.BorderStyle = BorderStyle.FixedSingle;
-            txtMasterScaleFactor1.Location = new Point(804, 16);
+            txtMasterScaleFactor1.Location = new Point(744, 16);
             txtMasterScaleFactor1.MaxLength = 10;
             txtMasterScaleFactor1.Name = "txtMasterScaleFactor1";
             txtMasterScaleFactor1.Size = new Size(69, 27);
@@ -3489,9 +6741,9 @@
             // 
             txtMasterName1.BorderStyle = BorderStyle.FixedSingle;
             txtMasterName1.Location = new Point(223, 16);
-            txtMasterName1.MaxLength = 50;
+            txtMasterName1.MaxLength = 5;
             txtMasterName1.Name = "txtMasterName1";
-            txtMasterName1.Size = new Size(114, 27);
+            txtMasterName1.Size = new Size(53, 27);
             txtMasterName1.TabIndex = 92;
             // 
             // txtMasterRegStartAddress1
@@ -3517,72 +6769,80 @@
             // label207
             // 
             label207.AutoSize = true;
-            label207.Location = new Point(659, 35);
+            label207.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label207.Location = new Point(615, 35);
             label207.Name = "label207";
-            label207.Size = new Size(104, 20);
+            label207.Size = new Size(91, 17);
             label207.TabIndex = 103;
             label207.Text = "Function Code";
             // 
             // label206
             // 
             label206.AutoSize = true;
-            label206.Location = new Point(543, 35);
+            label206.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label206.Location = new Point(501, 35);
             label206.Name = "label206";
-            label206.Size = new Size(80, 20);
+            label206.Size = new Size(71, 17);
             label206.TabIndex = 102;
             label206.Text = "Byte Order";
             // 
             // label205
             // 
             label205.AutoSize = true;
-            label205.Location = new Point(787, 35);
+            label205.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label205.Location = new Point(738, 35);
             label205.Name = "label205";
-            label205.Size = new Size(88, 20);
+            label205.Size = new Size(78, 17);
             label205.TabIndex = 101;
             label205.Text = "Scale Factor";
             // 
             // label196
             // 
             label196.AutoSize = true;
-            label196.Location = new Point(338, 35);
+            label196.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label196.Location = new Point(288, 35);
             label196.Name = "label196";
-            label196.Size = new Size(76, 20);
+            label196.Size = new Size(64, 17);
             label196.TabIndex = 100;
             label196.Text = "Activation";
             // 
             // label201
             // 
             label201.AutoSize = true;
-            label201.Location = new Point(94, 35);
+            label201.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label201.Location = new Point(104, 35);
             label201.Name = "label201";
-            label201.Size = new Size(127, 20);
+            label201.Size = new Size(114, 17);
             label201.TabIndex = 99;
             label201.Text = "Reg Start Address";
             // 
             // label202
             // 
             label202.AutoSize = true;
-            label202.Location = new Point(239, 35);
+            label202.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label202.Location = new Point(217, 35);
             label202.Name = "label202";
-            label202.Size = new Size(76, 20);
+            label202.Size = new Size(68, 17);
             label202.TabIndex = 98;
             label202.Text = "Tag Name";
             // 
             // label203
             // 
             label203.AutoSize = true;
-            label203.Location = new Point(425, 35);
+            label203.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label203.Location = new Point(387, 35);
             label203.Name = "label203";
-            label203.Size = new Size(76, 20);
+            label203.Size = new Size(66, 17);
             label203.TabIndex = 97;
             label203.Text = "Data Type";
             // 
             // label204
             // 
             label204.AutoSize = true;
-            label204.Location = new Point(12, 35);
+            label204.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point);
+            label204.Location = new Point(31, 35);
             label204.Name = "label204";
-            label204.Size = new Size(75, 20);
+            label204.Size = new Size(66, 17);
             label204.TabIndex = 96;
             label204.Text = "Reg Index";
             // 
@@ -3708,7 +6968,7 @@
             btnSlaveConnectionWriteMemory.TabIndex = 85;
             btnSlaveConnectionWriteMemory.Text = "Write Memory";
             btnSlaveConnectionWriteMemory.UseVisualStyleBackColor = false;
-            btnSlaveConnectionWriteMemory.Click += btnSlaveConnectionWriteMemory_Click;
+            btnSlaveConnectionWriteMemory.Click += (this.btnSlaveConnectionWriteMemory_Click);
             // 
             // btnSlaveConnectionReadMemory
             // 
@@ -3721,7 +6981,7 @@
             btnSlaveConnectionReadMemory.TabIndex = 84;
             btnSlaveConnectionReadMemory.Text = "Read Memory";
             btnSlaveConnectionReadMemory.UseVisualStyleBackColor = false;
-            btnSlaveConnectionReadMemory.Click += btnSlaveConnectionReadMemory_Click;
+            btnSlaveConnectionReadMemory.Click += (this.btnSlaveConnectionReadMemory_Click);
             // 
             // cmbMasterSlaveIndex
             // 
@@ -3745,7 +7005,7 @@
             // label45
             // 
             label45.AutoSize = true;
-            label45.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label45.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label45.Location = new Point(481, 6);
             label45.Name = "label45";
             label45.Size = new Size(182, 31);
@@ -3775,7 +7035,7 @@
             btnModbusSlaveWriteMemory.TabIndex = 64;
             btnModbusSlaveWriteMemory.Text = "Write Memory";
             btnModbusSlaveWriteMemory.UseVisualStyleBackColor = false;
-            btnModbusSlaveWriteMemory.Click += btnModbusSlaveWriteMemory_Click;
+            btnModbusSlaveWriteMemory.Click += (this.btnModbusSlaveWriteMemory_Click);
             // 
             // btnModbusSlaveReadMemory
             // 
@@ -3788,7 +7048,7 @@
             btnModbusSlaveReadMemory.TabIndex = 63;
             btnModbusSlaveReadMemory.Text = "Read Memory";
             btnModbusSlaveReadMemory.UseVisualStyleBackColor = false;
-            btnModbusSlaveReadMemory.Click += btnModbusSlaveReadMemory_Click;
+            btnModbusSlaveReadMemory.Click += (this.btnModbusSlaveReadMemory_Click);
             // 
             // groupBox17
             // 
@@ -3925,7 +7185,7 @@
             // label44
             // 
             label44.AutoSize = true;
-            label44.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label44.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label44.Location = new Point(464, 19);
             label44.Name = "label44";
             label44.Size = new Size(164, 31);
@@ -3955,7 +7215,7 @@
             btnPulseWriteMemory.TabIndex = 58;
             btnPulseWriteMemory.Text = "Write Memory";
             btnPulseWriteMemory.UseVisualStyleBackColor = false;
-            btnPulseWriteMemory.Click += btnPulseWriteMemory_Click;
+            btnPulseWriteMemory.Click += (this.btnPulseWriteMemory_Click);
             // 
             // btnPulseReadMemory
             // 
@@ -3968,7 +7228,7 @@
             btnPulseReadMemory.TabIndex = 57;
             btnPulseReadMemory.Text = "Read Memory";
             btnPulseReadMemory.UseVisualStyleBackColor = false;
-            btnPulseReadMemory.Click += btnPulseReadMemory_Click;
+            btnPulseReadMemory.Click += (this.btnPulseReadMemory_Click);
             // 
             // groupBox7
             // 
@@ -4087,7 +7347,7 @@
             // label42
             // 
             label42.AutoSize = true;
-            label42.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label42.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label42.Location = new Point(475, 4);
             label42.Name = "label42";
             label42.Size = new Size(165, 31);
@@ -4565,7 +7825,7 @@
             btnIOStatusRead.TabIndex = 26;
             btnIOStatusRead.Text = "Read";
             btnIOStatusRead.UseVisualStyleBackColor = true;
-            btnIOStatusRead.Click += btnIOStatusRead_Click;
+            btnIOStatusRead.Click += (this.btnIOStatusRead_Click);
             // 
             // label165
             // 
@@ -4686,7 +7946,7 @@
             btnStatusGSMRead.TabIndex = 22;
             btnStatusGSMRead.Text = "Read";
             btnStatusGSMRead.UseVisualStyleBackColor = true;
-            btnStatusGSMRead.Click += btnStatusGSMRead_Click;
+            btnStatusGSMRead.Click += (this.btnStatusGSMRead_Click);
             // 
             // lblSignal2
             // 
@@ -5006,7 +8266,7 @@
             // label164
             // 
             label164.AutoSize = true;
-            label164.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label164.Font = new Font("Calibri", 16.2F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label164.Location = new Point(498, 4);
             label164.Name = "label164";
             label164.Size = new Size(88, 35);
@@ -5054,11 +8314,11 @@
             btnConsoleSend.TabIndex = 6;
             btnConsoleSend.Text = "Send";
             btnConsoleSend.UseVisualStyleBackColor = true;
-            btnConsoleSend.Click += btnConsoleSend_Click;
+            btnConsoleSend.Click += (this.btnConsoleSend_Click);
             // 
             // groupBox23
             // 
-            groupBox23.BackColor = Color.FromArgb(255, 224, 192);
+            groupBox23.BackColor = Color.FromArgb((int)(byte)255, (int)(byte)224, (int)(byte)192);
             groupBox23.Controls.Add(btnModbusRead);
             groupBox23.Controls.Add(btnLogMonitorOff);
             groupBox23.Controls.Add(btnClear);
@@ -5085,7 +8345,7 @@
             btnLogMonitorOff.TabIndex = 1;
             btnLogMonitorOff.Text = "Log Monitor Off";
             btnLogMonitorOff.UseVisualStyleBackColor = true;
-            btnLogMonitorOff.Click += btnLogMonitorOff_Click;
+            btnLogMonitorOff.Click += (this.btnLogMonitorOff_Click);
             // 
             // btnClear
             // 
@@ -5095,12 +8355,12 @@
             btnClear.TabIndex = 0;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
-            btnClear.Click += btnClear_Click;
+            btnClear.Click += (this.btnClear_Click);
             // 
             // label188
             // 
             label188.AutoSize = true;
-            label188.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label188.Font = new Font("Calibri", 16.2F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label188.Location = new Point(498, 4);
             label188.Name = "label188";
             label188.Size = new Size(107, 35);
@@ -5134,7 +8394,7 @@
             btnDIWriteMemory.TabIndex = 49;
             btnDIWriteMemory.Text = "Write Memory";
             btnDIWriteMemory.UseVisualStyleBackColor = false;
-            btnDIWriteMemory.Click += btnDIWriteMemory_Click;
+            btnDIWriteMemory.Click += (this.btnDIWriteMemory_Click);
             // 
             // btnDIReadMemory
             // 
@@ -5147,7 +8407,7 @@
             btnDIReadMemory.TabIndex = 48;
             btnDIReadMemory.Text = "Read Memory";
             btnDIReadMemory.UseVisualStyleBackColor = false;
-            btnDIReadMemory.Click += btnDIReadMemory_Click;
+            btnDIReadMemory.Click += (this.btnDIReadMemory_Click);
             // 
             // groupBox5
             // 
@@ -5664,7 +8924,7 @@
             // label41
             // 
             label41.AutoSize = true;
-            label41.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label41.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label41.Location = new Point(498, 14);
             label41.Name = "label41";
             label41.Size = new Size(132, 31);
@@ -5696,7 +8956,7 @@
             btnDOWriteMemory.TabIndex = 56;
             btnDOWriteMemory.Text = "Write Memory";
             btnDOWriteMemory.UseVisualStyleBackColor = false;
-            btnDOWriteMemory.Click += btnDOWriteMemory_Click;
+            btnDOWriteMemory.Click += (this.btnDOWriteMemory_Click);
             // 
             // btnDOReadMemory
             // 
@@ -5709,7 +8969,7 @@
             btnDOReadMemory.TabIndex = 55;
             btnDOReadMemory.Text = "Read Memory";
             btnDOReadMemory.UseVisualStyleBackColor = false;
-            btnDOReadMemory.Click += btnDOReadMemory_Click;
+            btnDOReadMemory.Click += (this.btnDOReadMemory_Click);
             // 
             // cmbDOSelectChannel
             // 
@@ -5872,7 +9132,7 @@
             // label40
             // 
             label40.AutoSize = true;
-            label40.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label40.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label40.Location = new Point(486, 6);
             label40.Name = "label40";
             label40.Size = new Size(142, 31);
@@ -6006,7 +9266,7 @@
             btnGPRSWriteMemory.TabIndex = 60;
             btnGPRSWriteMemory.Text = "Write Memory";
             btnGPRSWriteMemory.UseVisualStyleBackColor = false;
-            btnGPRSWriteMemory.Click += btnGPRSWriteMemory_Click;
+            btnGPRSWriteMemory.Click += (this.btnGPRSWriteMemory_Click);
             // 
             // btnGPRSReadMemory
             // 
@@ -6019,7 +9279,7 @@
             btnGPRSReadMemory.TabIndex = 59;
             btnGPRSReadMemory.Text = "Read Memory";
             btnGPRSReadMemory.UseVisualStyleBackColor = false;
-            btnGPRSReadMemory.Click += btnGPRSReadMemory_Click;
+            btnGPRSReadMemory.Click += (this.btnGPRSReadMemory_Click);
             // 
             // gbGprsTopics
             // 
@@ -6121,7 +9381,7 @@
             btnMQTTShowPass.Size = new Size(28, 27);
             btnMQTTShowPass.TabIndex = 16;
             btnMQTTShowPass.UseVisualStyleBackColor = true;
-            btnMQTTShowPass.Click += btnMQTTShowPass_Click;
+            btnMQTTShowPass.Click += (this.btnMQTTShowPass_Click);
             // 
             // cmbQosLevel
             // 
@@ -6261,7 +9521,7 @@
             cmbConnectProtocol.Name = "cmbConnectProtocol";
             cmbConnectProtocol.Size = new Size(181, 28);
             cmbConnectProtocol.TabIndex = 5;
-            cmbConnectProtocol.SelectedIndexChanged += cmbConnectProtocol_SelectedIndexChanged;
+            cmbConnectProtocol.SelectedIndexChanged += (this.cmbConnectProtocol_SelectedIndexChanged);
             // 
             // groupBox16
             // 
@@ -6406,7 +9666,7 @@
             btnIPSettPassView.Size = new Size(28, 27);
             btnIPSettPassView.TabIndex = 7;
             btnIPSettPassView.UseVisualStyleBackColor = true;
-            btnIPSettPassView.Click += btnIPSettPassView_Click;
+            btnIPSettPassView.Click += (this.btnIPSettPassView_Click);
             // 
             // txtSimPassword
             // 
@@ -6569,7 +9829,7 @@
             // label67
             // 
             label67.AutoSize = true;
-            label67.Font = new Font("Calibri", 16.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label67.Font = new Font("Calibri", 16.2F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label67.Location = new Point(469, 13);
             label67.Name = "label67";
             label67.Size = new Size(174, 35);
@@ -6613,7 +9873,7 @@
             btnWriteMemoryAI.TabIndex = 40;
             btnWriteMemoryAI.Text = "Write Memory";
             btnWriteMemoryAI.UseVisualStyleBackColor = false;
-            btnWriteMemoryAI.Click += btnWriteMemory_Click;
+            btnWriteMemoryAI.Click += (this.btnWriteMemory_Click);
             // 
             // btnReadMemoryAI
             // 
@@ -6626,7 +9886,7 @@
             btnReadMemoryAI.TabIndex = 39;
             btnReadMemoryAI.Text = "Read Memory";
             btnReadMemoryAI.UseVisualStyleBackColor = false;
-            btnReadMemoryAI.Click += btnReadMemory_Click;
+            btnReadMemoryAI.Click += (this.btnReadMemory_Click);
             // 
             // groupBox4
             // 
@@ -7100,7 +10360,7 @@
             chkTotalizer.Size = new Size(18, 17);
             chkTotalizer.TabIndex = 7;
             chkTotalizer.UseVisualStyleBackColor = true;
-            chkTotalizer.CheckedChanged += chkTotalizer_CheckedChanged;
+            chkTotalizer.CheckedChanged += (this.chkTotalizer_CheckedChanged);
             // 
             // cmbSelectChannel
             // 
@@ -7379,247 +10639,12 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label4.Location = new Point(438, 14);
             label4.Name = "label4";
             label4.Size = new Size(131, 31);
             label4.TabIndex = 32;
             label4.Text = "AI Settings";
-            // 
-            // pnlGeneralSettings
-            // 
-            pnlGeneralSettings.Controls.Add(btnGeneralWriteMemory);
-            pnlGeneralSettings.Controls.Add(btnGeneralReadMemory);
-            pnlGeneralSettings.Controls.Add(groupBox13);
-            pnlGeneralSettings.Controls.Add(label2);
-            pnlGeneralSettings.Location = new Point(321, 9);
-            pnlGeneralSettings.Name = "pnlGeneralSettings";
-            pnlGeneralSettings.Size = new Size(1133, 822);
-            pnlGeneralSettings.TabIndex = 1;
-            pnlGeneralSettings.Visible = false;
-            // 
-            // btnGeneralWriteMemory
-            // 
-            btnGeneralWriteMemory.BackColor = Color.Red;
-            btnGeneralWriteMemory.Cursor = Cursors.Hand;
-            btnGeneralWriteMemory.ForeColor = Color.White;
-            btnGeneralWriteMemory.Location = new Point(604, 690);
-            btnGeneralWriteMemory.Name = "btnGeneralWriteMemory";
-            btnGeneralWriteMemory.Size = new Size(172, 42);
-            btnGeneralWriteMemory.TabIndex = 59;
-            btnGeneralWriteMemory.Text = "Write Memory";
-            btnGeneralWriteMemory.UseVisualStyleBackColor = false;
-            btnGeneralWriteMemory.Click += btnGeneralWriteMemory_Click;
-            // 
-            // btnGeneralReadMemory
-            // 
-            btnGeneralReadMemory.BackColor = Color.DarkKhaki;
-            btnGeneralReadMemory.Cursor = Cursors.Hand;
-            btnGeneralReadMemory.ForeColor = Color.White;
-            btnGeneralReadMemory.Location = new Point(332, 690);
-            btnGeneralReadMemory.Name = "btnGeneralReadMemory";
-            btnGeneralReadMemory.Size = new Size(190, 42);
-            btnGeneralReadMemory.TabIndex = 58;
-            btnGeneralReadMemory.Text = "Read Memory";
-            btnGeneralReadMemory.UseVisualStyleBackColor = false;
-            btnGeneralReadMemory.Click += btnGeneralReadMemory_Click;
-            // 
-            // groupBox13
-            // 
-            groupBox13.Controls.Add(txtIemiNo);
-            groupBox13.Controls.Add(chkGeneralRtcDebug);
-            groupBox13.Controls.Add(label136);
-            groupBox13.Controls.Add(chkGeneralModbusDebug);
-            groupBox13.Controls.Add(label135);
-            groupBox13.Controls.Add(label111);
-            groupBox13.Controls.Add(txtGeneralSetTime);
-            groupBox13.Controls.Add(dtGeneralSetDate);
-            groupBox13.Controls.Add(label61);
-            groupBox13.Controls.Add(label60);
-            groupBox13.Controls.Add(txtGeneralUserId);
-            groupBox13.Controls.Add(txtGeneralDataLogSec);
-            groupBox13.Controls.Add(label63);
-            groupBox13.Controls.Add(txtGeneralSmsLogSec);
-            groupBox13.Controls.Add(label66);
-            groupBox13.Controls.Add(label109);
-            groupBox13.Controls.Add(label110);
-            groupBox13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox13.Location = new Point(273, 93);
-            groupBox13.Name = "groupBox13";
-            groupBox13.Size = new Size(533, 427);
-            groupBox13.TabIndex = 57;
-            groupBox13.TabStop = false;
-            groupBox13.Text = "Settings";
-            // 
-            // txtIemiNo
-            // 
-            txtIemiNo.BorderStyle = BorderStyle.FixedSingle;
-            txtIemiNo.Location = new Point(324, 84);
-            txtIemiNo.MaxLength = 15;
-            txtIemiNo.Name = "txtIemiNo";
-            txtIemiNo.ReadOnly = true;
-            txtIemiNo.Size = new Size(188, 27);
-            txtIemiNo.TabIndex = 45;
-            // 
-            // chkGeneralRtcDebug
-            // 
-            chkGeneralRtcDebug.AutoSize = true;
-            chkGeneralRtcDebug.Location = new Point(325, 338);
-            chkGeneralRtcDebug.Name = "chkGeneralRtcDebug";
-            chkGeneralRtcDebug.Size = new Size(18, 17);
-            chkGeneralRtcDebug.TabIndex = 44;
-            chkGeneralRtcDebug.UseVisualStyleBackColor = true;
-            // 
-            // label136
-            // 
-            label136.AutoSize = true;
-            label136.Location = new Point(15, 337);
-            label136.MaximumSize = new Size(150, 0);
-            label136.Name = "label136";
-            label136.Size = new Size(82, 20);
-            label136.TabIndex = 43;
-            label136.Text = "Rtc Debug";
-            // 
-            // chkGeneralModbusDebug
-            // 
-            chkGeneralModbusDebug.AutoSize = true;
-            chkGeneralModbusDebug.Location = new Point(325, 304);
-            chkGeneralModbusDebug.Name = "chkGeneralModbusDebug";
-            chkGeneralModbusDebug.Size = new Size(18, 17);
-            chkGeneralModbusDebug.TabIndex = 42;
-            chkGeneralModbusDebug.UseVisualStyleBackColor = true;
-            // 
-            // label135
-            // 
-            label135.AutoSize = true;
-            label135.Location = new Point(15, 295);
-            label135.MaximumSize = new Size(150, 0);
-            label135.Name = "label135";
-            label135.Size = new Size(116, 20);
-            label135.TabIndex = 41;
-            label135.Text = "Modbus Debug";
-            // 
-            // label111
-            // 
-            label111.AutoSize = true;
-            label111.Location = new Point(450, 264);
-            label111.MaximumSize = new Size(164, 60);
-            label111.Name = "label111";
-            label111.Size = new Size(63, 20);
-            label111.TabIndex = 40;
-            label111.Text = "HH:MM";
-            // 
-            // txtGeneralSetTime
-            // 
-            txtGeneralSetTime.BorderStyle = BorderStyle.FixedSingle;
-            txtGeneralSetTime.Location = new Point(324, 260);
-            txtGeneralSetTime.MaxLength = 5;
-            txtGeneralSetTime.Name = "txtGeneralSetTime";
-            txtGeneralSetTime.Size = new Size(114, 27);
-            txtGeneralSetTime.TabIndex = 39;
-            // 
-            // dtGeneralSetDate
-            // 
-            dtGeneralSetDate.Location = new Point(325, 216);
-            dtGeneralSetDate.Name = "dtGeneralSetDate";
-            dtGeneralSetDate.Size = new Size(188, 27);
-            dtGeneralSetDate.TabIndex = 38;
-            // 
-            // label61
-            // 
-            label61.AutoSize = true;
-            label61.Location = new Point(15, 253);
-            label61.MaximumSize = new Size(164, 60);
-            label61.Name = "label61";
-            label61.Size = new Size(70, 20);
-            label61.TabIndex = 37;
-            label61.Text = "Set Time";
-            // 
-            // label60
-            // 
-            label60.AutoSize = true;
-            label60.Location = new Point(15, 211);
-            label60.MaximumSize = new Size(164, 60);
-            label60.Name = "label60";
-            label60.Size = new Size(68, 20);
-            label60.TabIndex = 36;
-            label60.Text = "Set Date";
-            // 
-            // txtGeneralUserId
-            // 
-            txtGeneralUserId.BorderStyle = BorderStyle.FixedSingle;
-            txtGeneralUserId.Location = new Point(324, 40);
-            txtGeneralUserId.MaxLength = 10;
-            txtGeneralUserId.Name = "txtGeneralUserId";
-            txtGeneralUserId.Size = new Size(188, 27);
-            txtGeneralUserId.TabIndex = 34;
-            // 
-            // txtGeneralDataLogSec
-            // 
-            txtGeneralDataLogSec.BorderStyle = BorderStyle.FixedSingle;
-            txtGeneralDataLogSec.Location = new Point(324, 128);
-            txtGeneralDataLogSec.MaxLength = 6;
-            txtGeneralDataLogSec.Name = "txtGeneralDataLogSec";
-            txtGeneralDataLogSec.Size = new Size(188, 27);
-            txtGeneralDataLogSec.TabIndex = 31;
-            // 
-            // label63
-            // 
-            label63.AutoSize = true;
-            label63.Location = new Point(14, 127);
-            label63.MaximumSize = new Size(164, 60);
-            label63.Name = "label63";
-            label63.Size = new Size(99, 20);
-            label63.TabIndex = 30;
-            label63.Text = "Data Log Sec";
-            // 
-            // txtGeneralSmsLogSec
-            // 
-            txtGeneralSmsLogSec.BorderStyle = BorderStyle.FixedSingle;
-            txtGeneralSmsLogSec.Location = new Point(324, 172);
-            txtGeneralSmsLogSec.MaxLength = 6;
-            txtGeneralSmsLogSec.Name = "txtGeneralSmsLogSec";
-            txtGeneralSmsLogSec.Size = new Size(189, 27);
-            txtGeneralSmsLogSec.TabIndex = 29;
-            // 
-            // label66
-            // 
-            label66.AutoSize = true;
-            label66.Location = new Point(13, 169);
-            label66.MaximumSize = new Size(164, 60);
-            label66.Name = "label66";
-            label66.Size = new Size(100, 20);
-            label66.TabIndex = 28;
-            label66.Text = "SMS Log Min";
-            // 
-            // label109
-            // 
-            label109.AutoSize = true;
-            label109.Location = new Point(13, 85);
-            label109.MaximumSize = new Size(150, 0);
-            label109.Name = "label109";
-            label109.Size = new Size(103, 20);
-            label109.TabIndex = 19;
-            label109.Text = "IEMI Number";
-            // 
-            // label110
-            // 
-            label110.AutoSize = true;
-            label110.Location = new Point(15, 43);
-            label110.Name = "label110";
-            label110.Size = new Size(75, 20);
-            label110.TabIndex = 28;
-            label110.Text = "Device ID";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label2.Location = new Point(463, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(190, 31);
-            label2.TabIndex = 35;
-            label2.Text = "General Settings";
             // 
             // pnlUser
             // 
@@ -7664,7 +10689,7 @@
             btnUserWriteMemory.TabIndex = 62;
             btnUserWriteMemory.Text = "Write Memory";
             btnUserWriteMemory.UseVisualStyleBackColor = false;
-            btnUserWriteMemory.Click += btnUserWriteMemory_Click;
+            btnUserWriteMemory.Click += (this.btnUserWriteMemory_Click);
             // 
             // btnUserReadMemory
             // 
@@ -7677,7 +10702,7 @@
             btnUserReadMemory.TabIndex = 61;
             btnUserReadMemory.Text = "Read Memory";
             btnUserReadMemory.UseVisualStyleBackColor = false;
-            btnUserReadMemory.Click += btnUserReadMemory_Click;
+            btnUserReadMemory.Click += (this.btnUserReadMemory_Click);
             // 
             // groupBox15
             // 
@@ -7900,7 +10925,7 @@
             // label43
             // 
             label43.AutoSize = true;
-            label43.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label43.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label43.Location = new Point(538, 6);
             label43.Name = "label43";
             label43.Size = new Size(62, 31);
@@ -8602,7 +11627,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
             label3.Location = new Point(473, 15);
             label3.Name = "label3";
             label3.Size = new Size(196, 31);
@@ -8624,45 +11649,45 @@
             menu.ImageList = menuImgList;
             menu.Location = new Point(3, 3);
             menu.Name = "menu";
-            treeNode1.Name = "GeneralSettings";
-            treeNode1.Text = "General Settings";
-            treeNode2.ImageIndex = 1;
-            treeNode2.Name = "DOSettings";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "DO Settings";
-            treeNode3.ImageIndex = 1;
-            treeNode3.Name = "DISettings";
-            treeNode3.SelectedImageIndex = 1;
-            treeNode3.Text = "DI Settings";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "AISettings";
-            treeNode4.SelectedImageIndex = 1;
-            treeNode4.Text = "AI Settings";
-            treeNode5.Name = "IOSettings";
-            treeNode5.Text = "IO Settings";
-            treeNode6.ImageIndex = 0;
-            treeNode6.Name = "PulseSettings";
-            treeNode6.SelectedImageIndex = 0;
-            treeNode6.Text = "Pulse Settings";
-            treeNode7.ImageIndex = 0;
-            treeNode7.Name = "User";
-            treeNode7.SelectedImageIndex = 0;
-            treeNode7.Text = "User";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "ModbusMaster";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "Modbus Master";
-            treeNode9.ImageIndex = 0;
-            treeNode9.Name = "ModbusSlave";
-            treeNode9.SelectedImageIndex = 0;
-            treeNode9.Text = "Modbus Slave";
-            treeNode10.Name = "GPRSSettings";
-            treeNode10.Text = "GPRS Settings";
-            treeNode11.Name = "status";
-            treeNode11.Text = "Status";
-            treeNode12.Name = "console";
-            treeNode12.Text = "Console";
-            menu.Nodes.AddRange(new TreeNode[] { treeNode1, treeNode5, treeNode6, treeNode7, treeNode8, treeNode9, treeNode10, treeNode11, treeNode12 });
+            treeNode13.Name = "GeneralSettings";
+            treeNode13.Text = "General Settings";
+            treeNode14.ImageIndex = 1;
+            treeNode14.Name = "DOSettings";
+            treeNode14.SelectedImageIndex = 1;
+            treeNode14.Text = "DO Settings";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "DISettings";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "DI Settings";
+            treeNode16.ImageIndex = 1;
+            treeNode16.Name = "AISettings";
+            treeNode16.SelectedImageIndex = 1;
+            treeNode16.Text = "AI Settings";
+            treeNode17.Name = "IOSettings";
+            treeNode17.Text = "IO Settings";
+            treeNode18.ImageIndex = 0;
+            treeNode18.Name = "PulseSettings";
+            treeNode18.SelectedImageIndex = 0;
+            treeNode18.Text = "Pulse Settings";
+            treeNode19.ImageIndex = 0;
+            treeNode19.Name = "User";
+            treeNode19.SelectedImageIndex = 0;
+            treeNode19.Text = "User";
+            treeNode20.ImageIndex = 0;
+            treeNode20.Name = "ModbusMaster";
+            treeNode20.SelectedImageIndex = 0;
+            treeNode20.Text = "Modbus Master";
+            treeNode21.ImageIndex = 0;
+            treeNode21.Name = "ModbusSlave";
+            treeNode21.SelectedImageIndex = 0;
+            treeNode21.Text = "Modbus Slave";
+            treeNode22.Name = "GPRSSettings";
+            treeNode22.Text = "GPRS Settings";
+            treeNode23.Name = "status";
+            treeNode23.Text = "Status";
+            treeNode24.Name = "console";
+            treeNode24.Text = "Console";
+            menu.Nodes.AddRange(new TreeNode[] { treeNode13, treeNode17, treeNode18, treeNode19, treeNode20, treeNode21, treeNode22, treeNode23, treeNode24 });
             menu.SelectedImageIndex = 0;
             menu.Size = new Size(300, 813);
             menu.TabIndex = 0;
@@ -8675,11 +11700,246 @@
             menuImgList.Images.SetKeyName(0, "RootNode.png");
             menuImgList.Images.SetKeyName(1, "ChildNode.png");
             // 
+            // pnlGeneralSettings
+            // 
+            pnlGeneralSettings.Controls.Add(btnGeneralWriteMemory);
+            pnlGeneralSettings.Controls.Add(btnGeneralReadMemory);
+            pnlGeneralSettings.Controls.Add(groupBox13);
+            pnlGeneralSettings.Controls.Add(label2);
+            pnlGeneralSettings.Location = new Point(321, 9);
+            pnlGeneralSettings.Name = "pnlGeneralSettings";
+            pnlGeneralSettings.Size = new Size(1133, 822);
+            pnlGeneralSettings.TabIndex = 1;
+            pnlGeneralSettings.Visible = false;
+            // 
+            // btnGeneralWriteMemory
+            // 
+            btnGeneralWriteMemory.BackColor = Color.Red;
+            btnGeneralWriteMemory.Cursor = Cursors.Hand;
+            btnGeneralWriteMemory.ForeColor = Color.White;
+            btnGeneralWriteMemory.Location = new Point(604, 690);
+            btnGeneralWriteMemory.Name = "btnGeneralWriteMemory";
+            btnGeneralWriteMemory.Size = new Size(172, 42);
+            btnGeneralWriteMemory.TabIndex = 59;
+            btnGeneralWriteMemory.Text = "Write Memory";
+            btnGeneralWriteMemory.UseVisualStyleBackColor = false;
+            btnGeneralWriteMemory.Click += (this.btnGeneralWriteMemory_Click);
+            // 
+            // btnGeneralReadMemory
+            // 
+            btnGeneralReadMemory.BackColor = Color.DarkKhaki;
+            btnGeneralReadMemory.Cursor = Cursors.Hand;
+            btnGeneralReadMemory.ForeColor = Color.White;
+            btnGeneralReadMemory.Location = new Point(332, 690);
+            btnGeneralReadMemory.Name = "btnGeneralReadMemory";
+            btnGeneralReadMemory.Size = new Size(190, 42);
+            btnGeneralReadMemory.TabIndex = 58;
+            btnGeneralReadMemory.Text = "Read Memory";
+            btnGeneralReadMemory.UseVisualStyleBackColor = false;
+            btnGeneralReadMemory.Click += (this.btnGeneralReadMemory_Click);
+            // 
+            // groupBox13
+            // 
+            groupBox13.Controls.Add(txtIemiNo);
+            groupBox13.Controls.Add(chkGeneralRtcDebug);
+            groupBox13.Controls.Add(label136);
+            groupBox13.Controls.Add(chkGeneralModbusDebug);
+            groupBox13.Controls.Add(label135);
+            groupBox13.Controls.Add(label111);
+            groupBox13.Controls.Add(txtGeneralSetTime);
+            groupBox13.Controls.Add(dtGeneralSetDate);
+            groupBox13.Controls.Add(label61);
+            groupBox13.Controls.Add(label60);
+            groupBox13.Controls.Add(txtGeneralUserId);
+            groupBox13.Controls.Add(txtGeneralDataLogSec);
+            groupBox13.Controls.Add(label63);
+            groupBox13.Controls.Add(txtGeneralSmsLogSec);
+            groupBox13.Controls.Add(label66);
+            groupBox13.Controls.Add(label109);
+            groupBox13.Controls.Add(label110);
+            groupBox13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox13.Location = new Point(273, 93);
+            groupBox13.Name = "groupBox13";
+            groupBox13.Size = new Size(533, 427);
+            groupBox13.TabIndex = 57;
+            groupBox13.TabStop = false;
+            groupBox13.Text = "Settings";
+            // 
+            // txtIemiNo
+            // 
+            txtIemiNo.BorderStyle = BorderStyle.FixedSingle;
+            txtIemiNo.Location = new Point(324, 84);
+            txtIemiNo.MaxLength = 15;
+            txtIemiNo.Name = "txtIemiNo";
+            txtIemiNo.ReadOnly = true;
+            txtIemiNo.Size = new Size(188, 27);
+            txtIemiNo.TabIndex = 45;
+            // 
+            // chkGeneralRtcDebug
+            // 
+            chkGeneralRtcDebug.AutoSize = true;
+            chkGeneralRtcDebug.Location = new Point(325, 338);
+            chkGeneralRtcDebug.Name = "chkGeneralRtcDebug";
+            chkGeneralRtcDebug.Size = new Size(18, 17);
+            chkGeneralRtcDebug.TabIndex = 44;
+            chkGeneralRtcDebug.UseVisualStyleBackColor = true;
+            // 
+            // label136
+            // 
+            label136.AutoSize = true;
+            label136.Location = new Point(15, 337);
+            label136.MaximumSize = new Size(150, 0);
+            label136.Name = "label136";
+            label136.Size = new Size(82, 20);
+            label136.TabIndex = 43;
+            label136.Text = "Rtc Debug";
+            // 
+            // chkGeneralModbusDebug
+            // 
+            chkGeneralModbusDebug.AutoSize = true;
+            chkGeneralModbusDebug.Location = new Point(325, 304);
+            chkGeneralModbusDebug.Name = "chkGeneralModbusDebug";
+            chkGeneralModbusDebug.Size = new Size(18, 17);
+            chkGeneralModbusDebug.TabIndex = 42;
+            chkGeneralModbusDebug.UseVisualStyleBackColor = true;
+            // 
+            // label135
+            // 
+            label135.AutoSize = true;
+            label135.Location = new Point(15, 295);
+            label135.MaximumSize = new Size(150, 0);
+            label135.Name = "label135";
+            label135.Size = new Size(116, 20);
+            label135.TabIndex = 41;
+            label135.Text = "Modbus Debug";
+            // 
+            // label111
+            // 
+            label111.AutoSize = true;
+            label111.Location = new Point(450, 264);
+            label111.MaximumSize = new Size(164, 60);
+            label111.Name = "label111";
+            label111.Size = new Size(63, 20);
+            label111.TabIndex = 40;
+            label111.Text = "HH:MM";
+            // 
+            // txtGeneralSetTime
+            // 
+            txtGeneralSetTime.BorderStyle = BorderStyle.FixedSingle;
+            txtGeneralSetTime.Location = new Point(324, 260);
+            txtGeneralSetTime.MaxLength = 5;
+            txtGeneralSetTime.Name = "txtGeneralSetTime";
+            txtGeneralSetTime.Size = new Size(114, 27);
+            txtGeneralSetTime.TabIndex = 39;
+            // 
+            // dtGeneralSetDate
+            // 
+            dtGeneralSetDate.Location = new Point(325, 216);
+            dtGeneralSetDate.Name = "dtGeneralSetDate";
+            dtGeneralSetDate.Size = new Size(188, 27);
+            dtGeneralSetDate.TabIndex = 38;
+            // 
+            // label61
+            // 
+            label61.AutoSize = true;
+            label61.Location = new Point(15, 253);
+            label61.MaximumSize = new Size(164, 60);
+            label61.Name = "label61";
+            label61.Size = new Size(70, 20);
+            label61.TabIndex = 37;
+            label61.Text = "Set Time";
+            // 
+            // label60
+            // 
+            label60.AutoSize = true;
+            label60.Location = new Point(15, 211);
+            label60.MaximumSize = new Size(164, 60);
+            label60.Name = "label60";
+            label60.Size = new Size(68, 20);
+            label60.TabIndex = 36;
+            label60.Text = "Set Date";
+            // 
+            // txtGeneralUserId
+            // 
+            txtGeneralUserId.BorderStyle = BorderStyle.FixedSingle;
+            txtGeneralUserId.Location = new Point(324, 40);
+            txtGeneralUserId.MaxLength = 10;
+            txtGeneralUserId.Name = "txtGeneralUserId";
+            txtGeneralUserId.Size = new Size(188, 27);
+            txtGeneralUserId.TabIndex = 34;
+            // 
+            // txtGeneralDataLogSec
+            // 
+            txtGeneralDataLogSec.BorderStyle = BorderStyle.FixedSingle;
+            txtGeneralDataLogSec.Location = new Point(324, 128);
+            txtGeneralDataLogSec.MaxLength = 6;
+            txtGeneralDataLogSec.Name = "txtGeneralDataLogSec";
+            txtGeneralDataLogSec.Size = new Size(188, 27);
+            txtGeneralDataLogSec.TabIndex = 31;
+            // 
+            // label63
+            // 
+            label63.AutoSize = true;
+            label63.Location = new Point(14, 127);
+            label63.MaximumSize = new Size(164, 60);
+            label63.Name = "label63";
+            label63.Size = new Size(99, 20);
+            label63.TabIndex = 30;
+            label63.Text = "Data Log Sec";
+            // 
+            // txtGeneralSmsLogSec
+            // 
+            txtGeneralSmsLogSec.BorderStyle = BorderStyle.FixedSingle;
+            txtGeneralSmsLogSec.Location = new Point(324, 172);
+            txtGeneralSmsLogSec.MaxLength = 6;
+            txtGeneralSmsLogSec.Name = "txtGeneralSmsLogSec";
+            txtGeneralSmsLogSec.Size = new Size(189, 27);
+            txtGeneralSmsLogSec.TabIndex = 29;
+            // 
+            // label66
+            // 
+            label66.AutoSize = true;
+            label66.Location = new Point(13, 169);
+            label66.MaximumSize = new Size(164, 60);
+            label66.Name = "label66";
+            label66.Size = new Size(100, 20);
+            label66.TabIndex = 28;
+            label66.Text = "SMS Log Min";
+            // 
+            // label109
+            // 
+            label109.AutoSize = true;
+            label109.Location = new Point(13, 85);
+            label109.MaximumSize = new Size(150, 0);
+            label109.Name = "label109";
+            label109.Size = new Size(103, 20);
+            label109.TabIndex = 19;
+            label109.Text = "IEMI Number";
+            // 
+            // label110
+            // 
+            label110.AutoSize = true;
+            label110.Location = new Point(15, 43);
+            label110.Name = "label110";
+            label110.Size = new Size(75, 20);
+            label110.TabIndex = 28;
+            label110.Text = "Device ID";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13.8F, (FontStyle)(FontStyle.Bold) | (FontStyle.Underline), GraphicsUnit.Point);
+            label2.Location = new Point(463, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(190, 31);
+            label2.TabIndex = 35;
+            label2.Text = "General Settings";
+            // 
             // LoginTimer
             // 
             LoginTimer.Enabled = true;
             LoginTimer.Interval = 1000;
-            LoginTimer.Tick += LoginTimer_Tick;
+            LoginTimer.Tick += (this.LoginTimer_Tick);
             // 
             // btnConnect
             // 
@@ -8693,7 +11953,7 @@
             btnConnect.TabIndex = 33;
             btnConnect.Text = "Connect";
             btnConnect.UseVisualStyleBackColor = true;
-            btnConnect.Click += btnConnect_Click;
+            btnConnect.Click += (this.btnConnect_Click);
             // 
             // cmbComPorts
             // 
@@ -8731,7 +11991,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(192, 255, 192);
+            button2.BackColor = Color.FromArgb((int)(byte)192, (int)(byte)255, (int)(byte)192);
             button2.Cursor = Cursors.Hand;
             button2.Location = new Point(938, 19);
             button2.Name = "button2";
@@ -8742,7 +12002,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(192, 255, 192);
+            button1.BackColor = Color.FromArgb((int)(byte)192, (int)(byte)255, (int)(byte)192);
             button1.Cursor = Cursors.Hand;
             button1.Location = new Point(828, 19);
             button1.Name = "button1";
@@ -8753,7 +12013,7 @@
             // 
             // btnOpenConfigFile
             // 
-            btnOpenConfigFile.BackColor = Color.FromArgb(192, 255, 192);
+            btnOpenConfigFile.BackColor = Color.FromArgb((int)(byte)192, (int)(byte)255, (int)(byte)192);
             btnOpenConfigFile.Cursor = Cursors.Hand;
             btnOpenConfigFile.Location = new Point(694, 19);
             btnOpenConfigFile.Name = "btnOpenConfigFile";
@@ -8771,7 +12031,7 @@
             btnPortRefresh.Size = new Size(28, 28);
             btnPortRefresh.TabIndex = 40;
             btnPortRefresh.UseVisualStyleBackColor = true;
-            btnPortRefresh.Click += btnPortRefresh_Click;
+            btnPortRefresh.Click += (this.btnPortRefresh_Click);
             // 
             // lblProgressPercent
             // 
@@ -8795,7 +12055,7 @@
             // 
             errorReset.Enabled = true;
             errorReset.Interval = 300000;
-            errorReset.Tick += errorReset_Tick;
+            errorReset.Tick += (this.errorReset_Tick);
             // 
             // lnkLogin
             // 
@@ -8806,7 +12066,7 @@
             lnkLogin.TabIndex = 47;
             lnkLogin.TabStop = true;
             lnkLogin.Text = "Login";
-            lnkLogin.LinkClicked += lnkLogin_LinkClicked;
+            lnkLogin.LinkClicked += (this.lnkLogin_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -8821,26 +12081,66 @@
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1471, 931);
-            Controls.Add(pictureBox1);
-            Controls.Add(lnkLogin);
-            Controls.Add(pnlConnect);
-            Controls.Add(pnlDashboard);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            MaximumSize = new Size(1519, 1018);
-            Name = "Dashboard";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Dashboard";
-            Load += Dashboard_Load;
+            this.AutoScaleDimensions = new SizeF(8F, 20F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.ClientSize = new Size(1471, 931);
+            this.Controls.Add(pictureBox1);
+            this.Controls.Add(lnkLogin);
+            this.Controls.Add(pnlConnect);
+            this.Controls.Add(pnlDashboard);
+            this.Icon = (Icon)resources.GetObject("$this.Icon");
+            this.MaximizeBox = false;
+            this.MaximumSize = new Size(1519, 1018);
+            this.Name = "Dashboard";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Dashboard";
+            this.Load += (this.Dashboard_Load);
             pnlDashboard.ResumeLayout(false);
             pnlModbusMaster.ResumeLayout(false);
             pnlModbusMaster.PerformLayout();
             groupBox19.ResumeLayout(false);
             groupBox19.PerformLayout();
             pnlMasterScroll.ResumeLayout(false);
+            groupBox44.ResumeLayout(false);
+            groupBox44.PerformLayout();
+            groupBox45.ResumeLayout(false);
+            groupBox45.PerformLayout();
+            groupBox46.ResumeLayout(false);
+            groupBox46.PerformLayout();
+            groupBox47.ResumeLayout(false);
+            groupBox47.PerformLayout();
+            groupBox48.ResumeLayout(false);
+            groupBox48.PerformLayout();
+            groupBox49.ResumeLayout(false);
+            groupBox49.PerformLayout();
+            groupBox50.ResumeLayout(false);
+            groupBox50.PerformLayout();
+            groupBox51.ResumeLayout(false);
+            groupBox51.PerformLayout();
+            groupBox52.ResumeLayout(false);
+            groupBox52.PerformLayout();
+            groupBox53.ResumeLayout(false);
+            groupBox53.PerformLayout();
+            groupBox54.ResumeLayout(false);
+            groupBox54.PerformLayout();
+            groupBox55.ResumeLayout(false);
+            groupBox55.PerformLayout();
+            groupBox56.ResumeLayout(false);
+            groupBox56.PerformLayout();
+            groupBox57.ResumeLayout(false);
+            groupBox57.PerformLayout();
+            groupBox58.ResumeLayout(false);
+            groupBox58.PerformLayout();
+            groupBox59.ResumeLayout(false);
+            groupBox59.PerformLayout();
+            groupBox60.ResumeLayout(false);
+            groupBox60.PerformLayout();
+            groupBox61.ResumeLayout(false);
+            groupBox61.PerformLayout();
+            groupBox62.ResumeLayout(false);
+            groupBox62.PerformLayout();
+            groupBox63.ResumeLayout(false);
+            groupBox63.PerformLayout();
             groupBox34.ResumeLayout(false);
             groupBox34.PerformLayout();
             groupBox35.ResumeLayout(false);
@@ -8954,10 +12254,6 @@
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            pnlGeneralSettings.ResumeLayout(false);
-            pnlGeneralSettings.PerformLayout();
-            groupBox13.ResumeLayout(false);
-            groupBox13.PerformLayout();
             pnlUser.ResumeLayout(false);
             pnlUser.PerformLayout();
             groupBox15.ResumeLayout(false);
@@ -8973,11 +12269,15 @@
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
             pnlMenu.ResumeLayout(false);
+            pnlGeneralSettings.ResumeLayout(false);
+            pnlGeneralSettings.PerformLayout();
+            groupBox13.ResumeLayout(false);
+            groupBox13.PerformLayout();
             pnlConnect.ResumeLayout(false);
             pnlConnect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
@@ -9741,5 +13041,286 @@
         private Button btnOpenConfigFile;
         private LinkLabel lnkLogin;
         private PictureBox pictureBox1;
+        private Label label133;
+        private ComboBox cmbDecimalPoint11;
+        private ComboBox cmbDecimalPoint10;
+        private ComboBox cmbDecimalPoint12;
+        private ComboBox cmbDecimalPoint18;
+        private ComboBox cmbDecimalPoint16;
+        private ComboBox cmbDecimalPoint17;
+        private ComboBox cmbDecimalPoint15;
+        private ComboBox cmbDecimalPoint14;
+        private ComboBox cmbDecimalPoint13;
+        private ComboBox cmbDecimalPoint20;
+        private ComboBox cmbDecimalPoint19;
+        private ComboBox cmbDecimalPoint2;
+        private ComboBox cmbDecimalPoint4;
+        private ComboBox cmbDecimalPoint3;
+        private ComboBox cmbDecimalPoint1;
+        private ComboBox cmbDecimalPoint9;
+        private ComboBox cmbDecimalPoint8;
+        private ComboBox cmbDecimalPoint6;
+        private ComboBox cmbDecimalPoint7;
+        private ComboBox cmbDecimalPoint5;
+        private GroupBox groupBox44;
+        private ComboBox cmbDecimalPoint32;
+        private Label label178;
+        private ComboBox cmbMasterFunctionCode32;
+        private ComboBox cmbMasterByteOrder32;
+        private ComboBox cmbMasterDataType32;
+        private ComboBox cmbMasterActivation32;
+        private Button btnRegWriteMemory32;
+        private Button btnRegReadMemory32;
+        private TextBox txtMasterScaleFactor32;
+        private TextBox txtMasterName32;
+        private TextBox txtMasterRegStartAddress32;
+        private TextBox txtMasterRegIndex32;
+        private GroupBox groupBox45;
+        private ComboBox cmbDecimalPoint40;
+        private Label label179;
+        private ComboBox cmbMasterFunctionCode40;
+        private ComboBox cmbMasterByteOrder40;
+        private ComboBox cmbMasterDataType40;
+        private ComboBox cmbMasterActivation40;
+        private Button btnRegWriteMemory40;
+        private Button btnRegReadMemory40;
+        private TextBox txtMasterScaleFactor40;
+        private TextBox txtMasterName40;
+        private TextBox txtMasterRegStartAddress40;
+        private TextBox txtMasterRegIndex40;
+        private GroupBox groupBox46;
+        private ComboBox cmbDecimalPoint39;
+        private Label label180;
+        private ComboBox cmbMasterFunctionCode39;
+        private ComboBox cmbMasterByteOrder39;
+        private ComboBox cmbMasterDataType39;
+        private ComboBox cmbMasterActivation39;
+        private Button btnRegWriteMemory39;
+        private Button btnRegReadMemory39;
+        private TextBox txtMasterScaleFactor39;
+        private TextBox txtMasterName39;
+        private TextBox txtMasterRegStartAddress39;
+        private TextBox txtMasterRegIndex39;
+        private GroupBox groupBox47;
+        private ComboBox cmbDecimalPoint38;
+        private Label label181;
+        private ComboBox cmbMasterFunctionCode38;
+        private ComboBox cmbMasterByteOrder38;
+        private ComboBox cmbMasterDataType38;
+        private ComboBox cmbMasterActivation38;
+        private Button btnRegWriteMemory38;
+        private Button btnRegReadMemory38;
+        private TextBox txtMasterScaleFactor38;
+        private TextBox txtMasterName38;
+        private TextBox txtMasterRegStartAddress38;
+        private TextBox txtMasterRegIndex38;
+        private GroupBox groupBox48;
+        private ComboBox cmbDecimalPoint36;
+        private Label label228;
+        private ComboBox cmbMasterFunctionCode36;
+        private ComboBox cmbMasterByteOrder36;
+        private ComboBox cmbMasterDataType36;
+        private ComboBox cmbMasterActivation36;
+        private Button btnRegWriteMemory36;
+        private Button btnRegReadMemory36;
+        private TextBox txtMasterScaleFactor36;
+        private TextBox txtMasterName36;
+        private TextBox txtMasterRegStartAddress36;
+        private TextBox txtMasterRegIndex36;
+        private GroupBox groupBox49;
+        private ComboBox cmbDecimalPoint37;
+        private Label label229;
+        private ComboBox cmbMasterFunctionCode37;
+        private ComboBox cmbMasterByteOrder37;
+        private ComboBox cmbMasterDataType37;
+        private ComboBox cmbMasterActivation37;
+        private Button btnRegWriteMemory37;
+        private Button btnRegReadMemory37;
+        private TextBox txtMasterScaleFactor37;
+        private TextBox txtMasterName37;
+        private TextBox txtMasterRegStartAddress37;
+        private TextBox txtMasterRegIndex37;
+        private GroupBox groupBox50;
+        private ComboBox cmbDecimalPoint35;
+        private Label label230;
+        private ComboBox cmbMasterFunctionCode35;
+        private ComboBox cmbMasterByteOrder35;
+        private ComboBox cmbMasterDataType35;
+        private ComboBox cmbMasterActivation35;
+        private Button btnRegWriteMemory35;
+        private Button btnRegReadMemory35;
+        private TextBox txtMasterScaleFactor35;
+        private TextBox txtMasterName35;
+        private TextBox txtMasterRegStartAddress35;
+        private TextBox txtMasterRegIndex35;
+        private GroupBox groupBox51;
+        private ComboBox cmbDecimalPoint34;
+        private Label label231;
+        private ComboBox cmbMasterFunctionCode34;
+        private ComboBox cmbMasterByteOrder34;
+        private ComboBox cmbMasterDataType34;
+        private ComboBox cmbMasterActivation34;
+        private Button btnRegWriteMemory34;
+        private Button btnRegReadMemory34;
+        private TextBox txtMasterScaleFactor34;
+        private TextBox txtMasterName34;
+        private TextBox txtMasterRegStartAddress34;
+        private TextBox txtMasterRegIndex34;
+        private GroupBox groupBox52;
+        private ComboBox cmbDecimalPoint33;
+        private Label label232;
+        private ComboBox cmbMasterFunctionCode33;
+        private ComboBox cmbMasterByteOrder33;
+        private ComboBox cmbMasterDataType33;
+        private ComboBox cmbMasterActivation33;
+        private Button btnRegWriteMemory33;
+        private Button btnRegReadMemory33;
+        private TextBox txtMasterScaleFactor33;
+        private TextBox txtMasterName33;
+        private TextBox txtMasterRegStartAddress33;
+        private TextBox txtMasterRegIndex33;
+        private GroupBox groupBox53;
+        private ComboBox cmbDecimalPoint31;
+        private Label label233;
+        private ComboBox cmbMasterFunctionCode31;
+        private ComboBox cmbMasterByteOrder31;
+        private ComboBox cmbMasterDataType31;
+        private ComboBox cmbMasterActivation31;
+        private Button btnRegWriteMemory31;
+        private Button btnRegReadMemory31;
+        private TextBox txtMasterScaleFactor31;
+        private TextBox txtMasterName31;
+        private TextBox txtMasterRegStartAddress31;
+        private TextBox txtMasterRegIndex31;
+        private GroupBox groupBox54;
+        private ComboBox cmbDecimalPoint22;
+        private Label label234;
+        private ComboBox cmbMasterFunctionCode22;
+        private ComboBox cmbMasterByteOrder22;
+        private ComboBox cmbMasterDataType22;
+        private ComboBox cmbMasterActivation22;
+        private Button btnRegWriteMemory22;
+        private Button btnRegReadMemory22;
+        private TextBox txtMasterScaleFactor22;
+        private TextBox txtMasterName22;
+        private TextBox txtMasterRegStartAddress22;
+        private TextBox txtMasterRegIndex22;
+        private GroupBox groupBox55;
+        private ComboBox cmbDecimalPoint30;
+        private Label label235;
+        private ComboBox cmbMasterFunctionCode30;
+        private ComboBox cmbMasterByteOrder30;
+        private ComboBox cmbMasterDataType30;
+        private ComboBox cmbMasterActivation30;
+        private Button btnRegWriteMemory30;
+        private Button btnRegReadMemory30;
+        private TextBox txtMasterScaleFactor30;
+        private TextBox txtMasterName30;
+        private TextBox txtMasterRegStartAddress30;
+        private TextBox txtMasterRegIndex30;
+        private GroupBox groupBox56;
+        private ComboBox cmbDecimalPoint29;
+        private Label label236;
+        private ComboBox cmbMasterFunctionCode29;
+        private ComboBox cmbMasterByteOrder29;
+        private ComboBox cmbMasterDataType29;
+        private ComboBox cmbMasterActivation29;
+        private Button btnRegWriteMemory29;
+        private Button btnRegReadMemory29;
+        private TextBox txtMasterScaleFactor29;
+        private TextBox txtMasterName29;
+        private TextBox txtMasterRegStartAddress29;
+        private TextBox txtMasterRegIndex29;
+        private GroupBox groupBox57;
+        private ComboBox cmbDecimalPoint28;
+        private Label label237;
+        private ComboBox cmbMasterFunctionCode28;
+        private ComboBox cmbMasterByteOrder28;
+        private ComboBox cmbMasterDataType28;
+        private ComboBox cmbMasterActivation28;
+        private Button btnRegWriteMemory28;
+        private Button btnRegReadMemory28;
+        private TextBox txtMasterScaleFactor28;
+        private TextBox txtMasterName28;
+        private TextBox txtMasterRegStartAddress28;
+        private TextBox txtMasterRegIndex28;
+        private GroupBox groupBox58;
+        private ComboBox cmbDecimalPoint26;
+        private Label label238;
+        private ComboBox cmbMasterFunctionCode26;
+        private ComboBox cmbMasterByteOrder26;
+        private ComboBox cmbMasterDataType26;
+        private ComboBox cmbMasterActivation26;
+        private Button btnRegWriteMemory26;
+        private Button btnRegReadMemory26;
+        private TextBox txtMasterScaleFactor26;
+        private TextBox txtMasterName26;
+        private TextBox txtMasterRegStartAddress26;
+        private TextBox txtMasterRegIndex26;
+        private GroupBox groupBox59;
+        private ComboBox cmbDecimalPoint27;
+        private Label label239;
+        private ComboBox cmbMasterFunctionCode27;
+        private ComboBox cmbMasterByteOrder27;
+        private ComboBox cmbMasterDataType27;
+        private ComboBox cmbMasterActivation27;
+        private Button btnRegWriteMemory27;
+        private Button btnRegReadMemory27;
+        private TextBox txtMasterScaleFactor27;
+        private TextBox txtMasterName27;
+        private TextBox txtMasterRegStartAddress27;
+        private TextBox txtMasterRegIndex27;
+        private GroupBox groupBox60;
+        private ComboBox cmbDecimalPoint25;
+        private Label label240;
+        private ComboBox cmbMasterFunctionCode25;
+        private ComboBox cmbMasterByteOrder25;
+        private ComboBox cmbMasterDataType25;
+        private ComboBox cmbMasterActivation25;
+        private Button btnRegWriteMemory25;
+        private Button btnRegReadMemory25;
+        private TextBox txtMasterScaleFactor25;
+        private TextBox txtMasterName25;
+        private TextBox txtMasterRegStartAddress25;
+        private TextBox txtMasterRegIndex25;
+        private GroupBox groupBox61;
+        private ComboBox cmbDecimalPoint24;
+        private Label label241;
+        private ComboBox cmbMasterFunctionCode24;
+        private ComboBox cmbMasterByteOrder24;
+        private ComboBox cmbMasterDataType24;
+        private ComboBox cmbMasterActivation24;
+        private Button btnRegWriteMemory24;
+        private Button btnRegReadMemory24;
+        private TextBox txtMasterScaleFactor24;
+        private TextBox txtMasterName24;
+        private TextBox txtMasterRegStartAddress24;
+        private TextBox txtMasterRegIndex24;
+        private GroupBox groupBox62;
+        private ComboBox cmbDecimalPoint23;
+        private Label label242;
+        private ComboBox cmbMasterFunctionCode23;
+        private ComboBox cmbMasterByteOrder23;
+        private ComboBox cmbMasterDataType23;
+        private ComboBox cmbMasterActivation23;
+        private Button btnRegWriteMemory23;
+        private Button btnRegReadMemory23;
+        private TextBox txtMasterScaleFactor23;
+        private TextBox txtMasterName23;
+        private TextBox txtMasterRegStartAddress23;
+        private TextBox txtMasterRegIndex23;
+        private GroupBox groupBox63;
+        private ComboBox cmbDecimalPoint21;
+        private Label label243;
+        private ComboBox cmbMasterFunctionCode21;
+        private ComboBox cmbMasterByteOrder21;
+        private ComboBox cmbMasterDataType21;
+        private ComboBox cmbMasterActivation21;
+        private Button btnRegWriteMemory21;
+        private Button btnRegReadMemory21;
+        private TextBox txtMasterScaleFactor21;
+        private TextBox txtMasterName21;
+        private TextBox txtMasterRegStartAddress21;
+        private TextBox txtMasterRegIndex21;
     }
 }

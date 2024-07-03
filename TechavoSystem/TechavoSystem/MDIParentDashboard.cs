@@ -322,6 +322,26 @@ namespace TechavoSystem
                 btnRegReadMemory18.Enabled = enable;
                 btnRegReadMemory19.Enabled = enable;
                 btnRegReadMemory20.Enabled = enable;
+                btnRegReadMemory21.Enabled = enable;
+                btnRegReadMemory22.Enabled = enable;
+                btnRegReadMemory23.Enabled = enable;
+                btnRegReadMemory24.Enabled = enable;
+                btnRegReadMemory25.Enabled = enable;
+                btnRegReadMemory26.Enabled = enable;
+                btnRegReadMemory27.Enabled = enable;
+                btnRegReadMemory28.Enabled = enable;
+                btnRegReadMemory29.Enabled = enable;
+                btnRegReadMemory30.Enabled = enable;
+                btnRegReadMemory31.Enabled = enable;
+                btnRegReadMemory32.Enabled = enable;
+                btnRegReadMemory33.Enabled = enable;
+                btnRegReadMemory34.Enabled = enable;
+                btnRegReadMemory35.Enabled = enable;
+                btnRegReadMemory36.Enabled = enable;
+                btnRegReadMemory37.Enabled = enable;
+                btnRegReadMemory38.Enabled = enable;
+                btnRegReadMemory39.Enabled = enable;
+                btnRegReadMemory40.Enabled = enable;
                 btnIOStatusRead.Enabled = enable;
                 btnModbusRead.Enabled = enable;
                 btnStatusGSMRead.Enabled = enable;
@@ -356,6 +376,26 @@ namespace TechavoSystem
                 btnRegWriteMemory18.Enabled = enable;
                 btnRegWriteMemory19.Enabled = enable;
                 btnRegWriteMemory20.Enabled = enable;
+                btnRegWriteMemory21.Enabled = enable;
+                btnRegWriteMemory22.Enabled = enable;
+                btnRegWriteMemory23.Enabled = enable;
+                btnRegWriteMemory24.Enabled = enable;
+                btnRegWriteMemory25.Enabled = enable;
+                btnRegWriteMemory26.Enabled = enable;
+                btnRegWriteMemory27.Enabled = enable;
+                btnRegWriteMemory28.Enabled = enable;
+                btnRegWriteMemory29.Enabled = enable;
+                btnRegWriteMemory30.Enabled = enable;
+                btnRegWriteMemory31.Enabled = enable;
+                btnRegWriteMemory32.Enabled = enable;
+                btnRegWriteMemory33.Enabled = enable;
+                btnRegWriteMemory34.Enabled = enable;
+                btnRegWriteMemory35.Enabled = enable;
+                btnRegWriteMemory36.Enabled = enable;
+                btnRegWriteMemory37.Enabled = enable;
+                btnRegWriteMemory38.Enabled = enable;
+                btnRegWriteMemory39.Enabled = enable;
+                btnRegWriteMemory40.Enabled = enable;
                 btnConsoleSend.Enabled = enable;
                 btnSlaveConnectionWriteMemory.Enabled = enable;
                 btnMasterWriteAll.Enabled = enable;
@@ -1615,7 +1655,7 @@ namespace TechavoSystem
         private void assignEvents()
         {
             Control[] c;
-            for (int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 40; i++)
             {
                 c = groupBox19.Controls.Find("txtMasterRegIndex" + i.ToString(), true);
                 if (c != null && c.Length > 0)
@@ -1734,6 +1774,9 @@ namespace TechavoSystem
             sb.Append(",");
             c = groupBox19.Controls.Find("txtMasterScaleFactor" + index.ToString(), true);
             sb.Append(((TextBox)c[0]).Text.Trim());
+            sb.Append(",");
+            c = groupBox19.Controls.Find("cmbDecimalPoint" + index.ToString(), true);
+            sb.Append(((ComboBox)c[0]).SelectedIndex);
             sb.Append("#");
             return sb.ToString();
         }
@@ -1762,6 +1805,8 @@ namespace TechavoSystem
                 ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[8]);
                 c = groupBox19.Controls.Find("txtMasterScaleFactor" + index.ToString(), true);
                 ((TextBox)c[0]).Text = fields[9];
+                c = groupBox19.Controls.Find("cmbDecimalPoint" + index.ToString(), true);
+                ((ComboBox)c[0]).SelectedIndex = Convert.ToInt32(fields[10]);
             }
             catch (Exception ex)
             {
@@ -1797,13 +1842,13 @@ namespace TechavoSystem
                 StringBuilder sb = new StringBuilder();
                 pbProcessing.Value = 0;
                 lblProgressPercent.Text = "0%";
-                for (int i = 1; i < 21; i++)
+                for (int i = 1; i < 41; i++)
                 {
                     sb.Append(CreateCommaSeparatedRegisterConnection(i));
-                    if (i < 20)
+                    if (i < 40)
                         sb.Append("|");
-                    pbProcessing.Value = 4 * i;
-                    lblProgressPercent.Text = (4 * i).ToString();
+                    pbProcessing.Value = 2 * i;
+                    lblProgressPercent.Text = (2 * i).ToString();
                 }
                 if (IsConnected == 0)
                 {
